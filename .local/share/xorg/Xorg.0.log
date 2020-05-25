@@ -1,0 +1,83 @@
+[ 31174.616] 
+X.Org X Server 1.20.8
+X Protocol Version 11, Revision 0
+[ 31174.648] Build Operating System: OpenBSD 6.7 amd64 
+[ 31174.664] Current Operating System: OpenBSD styx 6.7 GENERIC.MP#182 amd64
+[ 31174.681] Build Date: 07 May 2020  11:44:28AM
+[ 31174.697]  
+[ 31174.713] Current version of pixman: 0.38.4
+[ 31174.729] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[ 31174.729] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[ 31174.761] (==) Log file: "/home/jsr/.local/share/xorg/Xorg.0.log", Time: Mon May 18 08:11:41 2020
+[ 31174.769] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[ 31174.775] (==) Using system config directory "/usr/X11R6/share/X11/xorg.conf.d"
+[ 31174.776] (==) No Layout section.  Using the first Screen section.
+[ 31174.776] (==) No screen section available. Using defaults.
+[ 31174.776] (**) |-->Screen "Default Screen Section" (0)
+[ 31174.776] (**) |   |-->Monitor "<default monitor>"
+[ 31174.776] (==) No device specified for screen "Default Screen Section".
+	Using the first device section listed.
+[ 31174.776] (**) |   |-->Device "drm"
+[ 31174.776] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[ 31174.776] (==) Automatically adding devices
+[ 31174.776] (==) Automatically enabling devices
+[ 31174.776] (==) Not automatically adding GPU devices
+[ 31174.776] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[ 31174.777] (**) FontPath set to:
+	/home/jsr/.config/fonts/ttf/,
+	/usr/X11R6/lib/X11/fonts/misc/,
+	/usr/X11R6/lib/X11/fonts/TTF/,
+	/usr/X11R6/lib/X11/fonts/OTF/,
+	/usr/X11R6/lib/X11/fonts/Type1/,
+	/usr/X11R6/lib/X11/fonts/100dpi/,
+	/usr/X11R6/lib/X11/fonts/75dpi/
+[ 31174.777] (==) ModulePath set to "/usr/X11R6/lib/modules"
+[ 31174.777] (II) The server relies on wscons to provide the list of input devices.
+	If no devices become available, reconfigure wscons or disable AutoAddDevices.
+[ 31174.777] (II) Loader magic: 0xf2b6b8a1000
+[ 31174.777] (II) Module ABI versions:
+[ 31174.777] 	X.Org ANSI C Emulation: 0.4
+[ 31174.777] 	X.Org Video Driver: 24.1
+[ 31174.777] 	X.Org XInput driver : 24.1
+[ 31174.777] 	X.Org Server Extension : 10.0
+[ 31174.777] (--) Using wscons driver on /dev/ttyC4
+[ 31174.790] (WW) checkDevMem: failed to open /dev/xf86 and /dev/mem
+	(Permission denied)
+	Check that you have set 'machdep.allowaperture=1'
+	in /etc/sysctl.conf and reboot your machine
+	refer to xf86(4) for details
+[ 31174.790] 	linear framebuffer access unavailable
+[ 31174.790] (II) LoadModule: "glx"
+[ 31174.791] (II) Loading /usr/X11R6/lib/modules/extensions/libglx.so
+[ 31174.793] (II) Module glx: vendor="X.Org Foundation"
+[ 31174.793] 	compiled for 1.20.8, module version = 1.0.0
+[ 31174.793] 	ABI class: X.Org Server Extension, version 10.0
+[ 31174.793] (II) LoadModule: "intel"
+[ 31174.793] (II) Loading /usr/X11R6/lib/modules/drivers/intel_drv.so
+[ 31174.794] (II) Module intel: vendor="X.Org Foundation"
+[ 31174.794] 	compiled for 1.20.8, module version = 2.99.916
+[ 31174.794] 	Module class: X.Org Video Driver
+[ 31174.794] 	ABI class: X.Org Video Driver, version 24.1
+[ 31174.794] (II) intel: Driver for Intel(R) Integrated Graphics Chipsets:
+	i810, i810-dc100, i810e, i815, i830M, 845G, 854, 852GM/855GM, 865G,
+	915G, E7221 (i915), 915GM, 945G, 945GM, 945GME, Pineview GM,
+	Pineview G, 965G, G35, 965Q, 946GZ, 965GM, 965GME/GLE, G33, Q35, Q33,
+	GM45, 4 Series, G45/G43, Q45/Q43, G41, B43
+[ 31174.794] (II) intel: Driver for Intel(R) HD Graphics: 2000-6000
+[ 31174.794] (II) intel: Driver for Intel(R) Iris(TM) Graphics: 5100, 6100
+[ 31174.794] (II) intel: Driver for Intel(R) Iris(TM) Pro Graphics: 5200, 6200, P6300
+[ 31174.794] (EE) No devices detected.
+[ 31174.794] (EE) 
+Fatal server error:
+[ 31174.794] (EE) no screens found(EE) 
+[ 31174.794] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[ 31174.794] (EE) Please also check the log file at "/home/jsr/.local/share/xorg/Xorg.0.log" for additional information.
+[ 31174.795] (EE) 
+[ 31174.802] (EE) Server terminated with error (1). Closing log file.

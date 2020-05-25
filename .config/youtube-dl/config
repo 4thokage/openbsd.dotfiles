@@ -1,0 +1,29 @@
+# youtube-dl config
+# https://redd.it/akgrow
+
+# Program
+--ignore-errors             # Continue on download errors
+
+# Metadata
+--add-metadata              # Write metadata to the video file
+--xattrs                    # Write metadata to the video file's xattrs
+
+# Subtitles
+--all-subs                  # Download all the available subtitles of the video
+--embed-subs                # Embed subtitles in the video
+--sub-format "srt/ass/best" # Subtitle format
+--convert-subs srt          # Convert the subtitles to other format
+
+# Thumbnails
+--write-thumbnail           # Write thumbnail image to disk
+
+# Postprocessor
+--prefer-ffmpeg             # Prefer ffmpeg over avconv
+
+# Formats
+--prefer-free-formats       # Prefer free video formats
+--merge-output-format mkv   # Output to given container format
+
+# Downloader
+--external-downloader aria2c                          # Use the specified external downloader
+--external-downloader-args "-c -j 3 -x 3 -s 3 -k 1M"  # Give these arguments to the external downloader

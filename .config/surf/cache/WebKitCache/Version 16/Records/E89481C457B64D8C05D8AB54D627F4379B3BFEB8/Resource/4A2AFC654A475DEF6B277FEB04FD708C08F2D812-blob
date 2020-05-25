@@ -1,0 +1,2591 @@
+<!doctype html>
+<html>
+    <head>
+        <!--[if IE 8 ]>
+        <script>window.is_ie_8 = true;</script>
+        <![endif]-->
+        <!--[if IE 9 ]>
+        <script>window.is_ie_9 = true;</script>
+        <![endif]-->
+        <style type="text/css">
+            html, body {
+    height: 100%;
+}
+
+body {
+    background: white;
+    border: 1px #cccccc;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    color: #808080;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+}
+
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #4E76C9;
+}
+
+.account {
+    display: inline-block;
+    max-width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.image-link {
+    color: white;
+}
+
+.panel {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.panel:hover .hover {
+    opacity: 0.8;
+}
+
+.post {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.video-container {
+    display: inline;
+}
+
+.embed-header {
+    min-height: 28px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.embed-header .avatar-container {
+    height: 28px;
+}
+.embed-header .avatar {
+    width: 28px;
+    height: 28px;
+    margin: auto 10px auto 0;
+}
+.avatar {
+    border-radius: 50%;
+    background-color: #cccccc;
+    background-size: contain;
+}
+.embed-header .username {
+    font-size: 13px;
+    font-weight: bold;
+    color: #646972;
+    margin: auto 0;
+}
+.embed-header .username-container {
+    display: inline-flex;
+}
+.embed-header #action-container {
+    height: 28px;
+    overflow: hidden;
+    display: flex;
+}
+#action-container .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 28px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #31be7c;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial;
+    text-align: center;
+    cursor: pointer;
+}
+
+.action-button .share-img {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+}
+
+#shareModal {
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#shareModal.hidden {
+    display: none;
+}
+
+.share-modal {
+    max-width: 611px;
+    width: 100%;
+}
+
+.share-body {
+    background-image: linear-gradient(to bottom, #2c3085, #241c5a);
+    padding-left: 51px;
+    padding-right: 60px;
+    position: relative;
+    box-shadow: 0 6px 10px 0 rgba(27, 28, 30, .31);
+    margin: auto 10px;
+    border-radius: 3px;
+}
+
+.share-header {
+    height: 52px;
+    border-bottom: solid 2px #484fb1;
+}
+.share-header .close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 40px;
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    cursor: pointer;
+}
+.share-label {
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #c6c1ff;
+}
+
+.share-header .share-label {
+    padding-top: 28px;
+    vertical-align: middle;
+}
+
+.share-content {
+    padding-bottom: 40px;
+}
+
+.share-target {
+    margin: 29px auto;
+    align-items: center;
+    text-align: center;
+}
+
+.share-target .target-item {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: auto 9px;
+}
+
+.share-target .facebook {
+    background-image: linear-gradient(to bottom, #7b8bf5, #4b58ea);
+}
+
+.share-target .twiter {
+    background-image: linear-gradient(to bottom, #5ebbe7, #3693da 100%);
+}
+
+.share-target .pinterest {
+    background-image: linear-gradient(to bottom, #e8454f, #cc2127);
+}
+
+.share-target .reddit {
+    background-image: linear-gradient(to bottom, #ff7b00, #ff4500);
+}
+
+.share-control {
+    width: 90%;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #292866;
+    border: solid 2px #484fb1;
+    padding: 2px;
+    margin: auto;
+    display: flex;
+}
+
+.share-link input {
+    flex: 1;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #ffffff;
+    background: transparent;
+    margin: auto 0 auto 15px;
+    border: none;
+}
+.share-link button::before {
+    content: "";
+    width: 30px;
+    height: 35px;
+    position: relative;
+    float: left;
+    left: -40px;
+    top: 25px;
+    margin-top: -35px;
+    background: linear-gradient(to right, rgba(46, 38, 100, 0.1),  rgba(46, 38, 100, 1) 80%, rgba(46, 38, 100, 1));
+}
+.share-tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -2px;
+}
+
+.share-tab .share-label {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: solid 2px #c6c1ff;
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+.share-tab .share-label:not(.isActive) {
+    color: #4a51b7;
+    border: none;
+}
+
+.share-control .btn-copy {
+    width: 63px;
+    height: 22px;
+    border-radius: 3px;
+    border: solid 2px #1bb76e;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #1bb76e;
+    background: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: auto 5px;
+    ;
+}
+
+.share-control .btn-copy:active {
+    border: solid 2px #2b6d4e;
+}
+.share-control .btn-copy:focus {
+    outline: none;
+}
+
+.share-footer {
+    display: flex;
+    background-image: url('//s.imgur.com/images/embed/app3d.png');
+    background-position: right bottom;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    margin-left: -51px;
+    margin-right: -60px;
+}
+
+.share-footer.background-left {
+    background-position-x: 200px;
+}
+
+#shareModal.share-small .share-footer {
+    display: none;
+}
+
+.share-footer .footer-content {
+    border-top: solid 2px #484fb1;
+    width: 100%;
+    margin-left: 51px;
+    margin-right: 60px;
+    padding-top: 15px;
+}
+
+.share-footer .footer-text-0 {
+    width: 190px;
+    height: 42px;
+    font-family: Arial;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.11;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 7px;
+}
+
+.share-footer .footer-text-1 {
+    width: 165px;
+    height: 42px;
+    font-family: Arial;
+    font-size: 11px;
+    line-height: 1.27;
+    letter-spacing: 0;
+    text-align: left;
+    color: #c6c1ff;
+    margin-bottom: 13px;
+}
+
+.share-footer .get-imgur-app {
+    border-radius: 3px;
+    background-color: #1bb76e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px 12px;
+    margin-bottom: 32px;
+    display: inline-block;
+}
+
+.share-header .close:focus,
+.share .btn-copy:focus,
+.share-link input:focus {
+    outline: none;
+}
+
+.embed-footer {
+    padding: 16px 16px 39px 16px;
+    position: relative;
+}
+
+.embed-footer .title {
+    display: flex;
+    width: 100%;
+}
+
+.embed-footer>*:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.embed-footer #title-text {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.09;
+    text-align: left;
+    color: #242522;
+    flex: 1;
+    overflow: hidden;
+    max-height: 34px;
+    position: relative;
+}
+
+.embed-footer .text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.embed-footer .description,
+.embed-footer .description a,
+.descriptions {
+    font-size: 13px;
+    line-height: 1.23;
+    text-align: left;
+}
+
+.embed-footer .description,
+.descriptions {
+    color: #747a84;
+    position: relative;
+}
+
+.embed-footer #description-text,
+.descriptions>* {
+    flex: 1;
+    overflow: hidden;
+    max-height: 34px;
+}
+
+.descriptions {
+    position: absolute;
+    visibility: hidden;
+    bottom: -100%;
+    left: 16px;
+    right: 16px;
+}
+
+.embed-footer #description-text>.internal-link {
+    color: #747a84;
+    text-decoration: none;
+}
+
+.embed-footer .read-more {
+    display: none;
+    color: #747a84;
+    background-color: white;
+    padding-left: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.embed-footer .ellipsis>.read-more {
+    display: flex;
+}
+
+.embed-footer .info {
+    position:absolute;
+    display: flex;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+.embed-footer .info-items {
+    display: flex;
+}
+
+.embed-footer .info-item {
+    margin: auto;
+    white-space: nowrap;
+    display: flex;
+}
+
+.embed-footer #views:first-child img {
+   vertical-align: text-top;
+}
+
+.embed-footer .info-item img {
+    margin: auto;
+}
+
+.embed-footer .info-item .label {
+    opacity: 0.94;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: #747a84;
+    margin: auto 6px;
+}
+
+.embed-footer .info-item .label.label--reddit {
+    font-weight: normal;
+    margin: auto;
+    color: #8F9294;
+}
+
+.embed-footer .info-item:not(:first-child) {
+    margin-left: 14px;
+}
+
+.center-container {
+    align-items: center;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.embed-footer .embed-logo {
+    float: right;
+}
+
+.embed-footer .counter {
+    border-radius: 2.6px;
+    background-color: #b5b9c2;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.19;
+    text-align: center;
+    color: #ffffff;
+    padding: 2px 8px;
+    height: 14px;
+}
+
+.embed-footer .counter>span {
+    vertical-align: middle;
+    max-width: 23px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.embed-footer .info .counter {
+    margin-right: 10px;
+}
+
+*[aria-hidden=true]{
+    display: none !important;
+}
+
+
+            #image-link {
+                overflow: hidden;
+                width: 100%;
+            }
+
+            #image-container {
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .smooth { transition: transform  0.5s linear }
+
+            .image {
+                position: relative;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: auto;
+                text-align: center;
+                background-color: #3c424b;
+                height: auto;
+                width: 100%;
+                min-height: 200px;
+                overflow: hidden;
+            }
+
+            .hide {
+                display: none !important;
+            }
+
+            .hover {
+                display: none;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 71px;
+                width: 32px;
+                cursor: pointer;
+                z-index: 101;
+                -webkit-transition: opacity 0.2s ease-in-out; /* Safari */
+                transition: opacity 0.2s ease-in-out;
+                -moz-transition: opacity 0.2s ease-in-out;
+            }
+
+            .prev-hover {
+                left: 0;
+                border-radius: 0 4px 4px 0;
+                background-image: url("//s.imgur.com/images/embed/prev.svg");
+            }
+
+            .next-hover {
+                right: 0;
+                border-radius: 4px 0 0 4px;
+                background-image: url("//s.imgur.com/images/embed/next.svg");
+            }
+
+            .panel .prev-hover.mobile, .panel .next-hover.mobile {
+                opacity: 1;
+            }
+
+            .panel .prev-hover:hover, .panel .next-hover:hover {
+                opacity: 1;
+            }
+
+            .image-title {
+                padding: 0 0 10px 0;
+                font-size: 14px;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .video-elements {
+                display: none;
+            }
+
+            .scale-video-element {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .arrow a:hover {
+                color: #000;
+            }
+
+            @media screen and (max-width: 300px){
+                .image-title {
+                    padding-top: 5px;
+                }
+
+                .arrow {
+                    width: 60px;
+                }
+            }
+        </style>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M6N38SF');</script>
+<!-- End Google Tag Manager -->
+
+
+        <script type="text/javascript">
+            var $analytics;
+            if (!String.prototype.trim) {
+                (function() {
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            var platform = 'web';
+
+            if (navigator.userAgent.match(/Android/)) {
+                platform = 'android';
+            } else if (navigator.userAgent.match(/\biPhone\b|\biPod\b/)) {
+                platform = 'apple';
+            } else if (navigator.userAgent.match(/Windows Phone 10.0|Windows Phone 8.1|Windows Phone 8.0|Windows Phone OS|XBLWP7|ZuneWP7|Windows NT 6.[23]; ARM;/)) {
+                platform = 'windowsphone';
+            }
+
+            window.ImgurJafo = (function() {
+                var jafo    = new Object(),
+                    verDate = new Date();
+
+                window.clone = function(obj) {
+                    if(obj == null || typeof(obj) != 'object') {
+                        return obj;
+                    }
+
+                    var temp = new Object();
+
+                    for(var key in obj) {
+                        if(obj.hasOwnProperty(key)) {
+                            temp[key] = clone(obj[key]);
+                        }
+                    }
+                    return temp;
+                };
+
+                jafo.isObject = function(obj) {
+                    return (obj !== null && typeof obj === 'object');
+                };
+
+                jafo.isString = function(str) {
+                    return (typeof str == 'string' || str instanceof String);
+                }
+
+                jafo._ = {
+                    attrBound: false,
+                    attrRegex: /^\s*({.+\})\s*?/,
+                    chrRegex: /\@\@/g,
+                    cookieOpts: {
+                        expires: 180
+                    },
+                    dataAttr: 'data-jafo',
+                    imgLoc: '//i.imgur.com/lumbar.gif',
+                    legacyQueue: [],
+                    lsArrayName: 'jafoData',
+                    lsAvail: false,
+                    lsKeyName: 'jafo-data',
+                    maxBatch: 2,
+                    pollDelay: 800,
+                    scheduled: null,
+                    selfRefRgx: /^([^:]+:)\/\/([^.]+\.)*imgur(-dev)?\.com(\/.*)?$/,
+                    sessionFired: false,
+                    uidCookie: 'IMGURUIDJAFO',
+                    userDetails: {
+                        UID: null,
+                        accountId: null,
+                        sessionId: null,
+                        platform: 'embed',
+                        source: 'frontend',
+                        referrer: 'https://cdn.embedly.com/',
+                        userAgent: navigator.userAgent,
+                        version: verDate.getFullYear() + '.' + Math.ceil(verDate.getMonth()/3),
+                        host: window.location.host
+                    },
+                    el: {
+                        $body: document.body
+                    }
+                };
+
+                jafo.batch = function() {
+                    var aParm,
+                        iter,
+                        len = arguments.length,
+                        parms = [],
+                        sify;
+
+                    for(iter = 0; iter < len; iter++) {
+
+                        if(typeof arguments[iter] === 'object') {
+                            aParm = arguments[iter];
+
+                            if(jafo._isArr(aParm)) {
+                                aParm = aParm.pop();
+                            }
+                            sify = JSON.stringify(aParm);
+                            parms.push(jafo._parmLabel(iter)+'='+encodeURIComponent(sify));
+
+                        } else if(typeof arguments[iter] === 'string') {
+                            parms.push(jafo._parmLabel(iter)+'='+encodeURIComponent(arguments[iter]));
+                        }
+
+                    }
+
+                    return parms.join('&');
+                };
+
+                jafo._canUseLs = function() {
+                    try {
+                        localStorage.setItem('testitem', 0);
+                        localStorage.removeItem('testitem');
+                        return true;
+                    } catch(e) {
+                    }
+                    return false;
+                };
+
+                jafo._fire = function(url) {
+                    // no pixel setup? Forget it.
+                    if(!jafo._.imgLoc) {
+                        return;
+                    }
+                    var img = document.createElement('img');
+                    img.src = url;
+                };
+
+                jafo._fp = function() {
+                    var pFp = jafo.cookie(''),
+                        nav = navigator,
+                        srn = window.screen,
+                        np,
+                        ret = '';
+
+                    for(var i in nav) {
+                        if (typeof nav[i] === 'string' || !isNaN(nav[i])) {
+                            // we only care about the strings and numbers
+                            ret += ''+nav[i];
+                        }
+                    }
+
+                    np = nav.plugins;
+
+                    for(var iter = 0; iter < np.length; iter++) {
+                        ret += jafo._nav2str(np[i]);
+                    }
+
+                    if (typeof srn === 'object') {
+                        ret += jafo._nav2str(srn);
+                    }
+
+                    if (!Date.prototype.toISOString) {
+                        (function() {
+                            var pad = function (number) {
+                                var r = String(number);
+                                if ( r.length === 1 ) {
+                                    r = '0' + r;
+                                }
+                                return r;
+                            };
+                            Date.prototype.toISOString = function() {
+                                return this.getUTCFullYear()
+                                    + '-' + pad( this.getUTCMonth() + 1 )
+                                    + '-' + pad( this.getUTCDate() )
+                                    + 'T' + pad( this.getUTCHours() )
+                                    + ':' + pad( this.getUTCMinutes() )
+                                    + ':' + pad( this.getUTCSeconds() )
+                                    + '.' + String( (this.getUTCMilliseconds()/1000).toFixed(3) ).slice( 2, 5 )
+                                    + 'Z';
+                            };
+                        }() );
+                    }
+
+                    return jafo._sha256(ret + (new Date().toISOString()));
+                };
+
+                jafo._fromLegacy = function() {
+                    return jafo._.legacyQueue;
+                };
+
+                jafo._fromLs = function(kill) {
+                    var localString,
+                        tempData,
+                        localData = [];
+
+                    try{
+                        localString = localStorage.getItem(jafo._.lsKeyName);
+
+                        if(localString) {
+                            tempData = JSON.parse(localString);
+
+                            if(typeof tempData === 'object' && tempData[jafo._.lsArrayName]) {
+                                localData = tempData[jafo._.lsArrayName];
+                            }
+
+                            if(kill) {
+                                localStorage.removeItem(jafo._.lsKeyName);
+                            }
+                        }
+
+                    } catch(e) {
+                    }
+
+                    return jafo._isArr(localData)? localData: [];
+                };
+
+                jafo._getQueue = function() {
+                    if(jafo._.lsAvail) {
+                        return jafo._fromLs();
+                    }
+
+                    return jafo._fromLegacy();
+                };
+
+                jafo._handleAttrClick = function(ev) {
+                    var attrData,
+                        strJson,
+                        strValue,
+                        $targ = $(ev.currentTarget);
+
+                    if(ev.type === 'click' || (ev.type === 'mouseup' && ev.which === 2)) {
+
+                        if($targ.length) {
+                            strValue = ($targ.attr(jafo._.dataAttr)+'').match(jafo._.attrRegex);
+
+                            if(strValue && strValue.length > 1) {
+                                try {
+                                    strJson = (''+strValue[1]).replace(jafo._.chrRegex, '"');
+                                    attrData = JSON.parse(strJson);
+                                } catch(err) {
+                                    return false;
+                                }
+                            }
+
+                            if(attrData) {
+                                jafo.logAction(attrData);
+                            }
+                        }
+
+                    }
+                };
+
+                jafo._isArr = function(arr) {
+                    return Object.prototype.toString.call(arr) === '[object Array]';
+                };
+
+                jafo._mergeData = function(action) {
+                    var preJson, tD;
+
+                    if(typeof action === 'object' && typeof action.action === 'undefined' && typeof action.event === 'string') {
+                        tD = new Date();
+
+                        preJson = jafo._.userDetails;
+
+                        preJson.action    = clone(action);
+                        preJson.timestamp = tD.getTime();
+                        preJson.location  = document.location.toString();
+
+                        return preJson;
+                    }
+
+                    return;
+                };
+
+                jafo._nav2str = function(obj) {
+                    var out = [];
+
+                    if (typeof obj !== 'object') {
+                        return ''+obj;
+                    }
+
+                    for (var memb in obj) {
+
+                        if (obj.hasOwnProperty(memb)) {
+                            if (jafo._isArr(obj[memb])) {
+
+                                out.push.apply(out, obj[memb].map(function(part) {
+                                    return memb+'[]='+part;
+                                }));
+
+                            } else if (typeof obj[memb] === 'object' && obj[memb] !== obj) {
+
+                                out.push(memb+'='+jafo._nav2str(obj[memb]));
+
+                            } else if (typeof obj[memb] != 'function') {
+
+                                out.push(memb+'='+obj[memb]);
+
+                            }
+                        }
+
+                    }
+
+                    return out.length > 0? out.join('&'): false;
+                };
+
+                jafo._parmLabel = function(num) {
+                    var mod = num % 26,
+                        pow = num / 26 | 0,
+                        out = String.fromCharCode(97 + mod);
+
+                    return pow > 0? jafo._parmLabel(pow - 1) + out: out;
+                };
+
+                jafo._pollQueue = function() {
+                    var smoulder = jafo._sliceQueue(jafo._.maxBatch),
+                        url;
+
+                    if(jafo._.scheduled !== null) {
+                        clearTimeout(jafo._.scheduled);
+                    }
+
+                    if(jafo._isArr(smoulder) && smoulder.length) {
+                        url = jafo._.imgLoc+'?'+jafo.batch.apply(jafo, smoulder);
+
+                        jafo._fire(url);
+                    }
+
+                    jafo._.scheduled = null;
+                    jafo._schedPoll();
+
+                    return url;
+                };
+
+                jafo._queue = function(data) {
+                    if(jafo._.lsAvail) {
+                        jafo._queueLs(data);
+                    }
+
+                    jafo._queueLegacy(data);
+
+                    return jafo._pollQueue();
+                };
+
+                jafo._queueLs = function(data) {
+                    var extant  = jafo._fromLs(),
+                        argData = clone(data);
+
+                    extant.push(argData);
+                    jafo._saveQueueLs(extant)
+
+                    return argData;
+                };
+
+                jafo._queueLegacy = function(data) {
+                    var argData = clone(data);
+
+                    jafo._.legacyQueue.push(argData);
+
+                    return argData;
+                };
+
+                jafo._sessionStart = function() {
+                    if(jafo._.sessionFired) {
+                        return;
+                    }
+                    jafo._.sessionFired = true;
+                                            if(!jafo._.selfRefRgx.test(jafo._.userDetails.referrer)) {
+                            $analytics.sessionStart();
+                        }
+                    
+                };
+
+                jafo._sha256 = function(s) {
+                    var chrsz   = 8
+                        , hexcase = 0;
+                    function safe_add (x, y) {
+                        var lsw = (x & 0xFFFF) + (y & 0xFFFF)
+                            , msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+                        return (msw << 16) | (lsw & 0xFFFF);
+                    }
+                    function S (X, n) { return ( X >>> n ) | (X << (32 - n)); }
+                    function R (X, n) { return ( X >>> n ); }
+                    function Ch(x, y, z) { return ((x & y) ^ ((~x) & z)); }
+                    function Maj(x, y, z) { return ((x & y) ^ (x & z) ^ (y & z)); }
+                    function Sigma0256(x) { return (S(x, 2) ^ S(x, 13) ^ S(x, 22)); }
+                    function Sigma1256(x) { return (S(x, 6) ^ S(x, 11) ^ S(x, 25)); }
+                    function Gamma0256(x) { return (S(x, 7) ^ S(x, 18) ^ R(x, 3)); }
+                    function Gamma1256(x) { return (S(x, 17) ^ S(x, 19) ^ R(x, 10)); }
+                    function core_sha256 (m, l) {
+                        var K = new Array(0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5, 0x3956C25B, 0x59F111F1, 0x923F82A4, 0xAB1C5ED5, 0xD807AA98, 0x12835B01, 0x243185BE, 0x550C7DC3, 0x72BE5D74, 0x80DEB1FE, 0x9BDC06A7, 0xC19BF174, 0xE49B69C1, 0xEFBE4786, 0xFC19DC6, 0x240CA1CC, 0x2DE92C6F, 0x4A7484AA, 0x5CB0A9DC, 0x76F988DA, 0x983E5152, 0xA831C66D, 0xB00327C8, 0xBF597FC7, 0xC6E00BF3, 0xD5A79147, 0x6CA6351, 0x14292967, 0x27B70A85, 0x2E1B2138, 0x4D2C6DFC, 0x53380D13, 0x650A7354, 0x766A0ABB, 0x81C2C92E, 0x92722C85, 0xA2BFE8A1, 0xA81A664B, 0xC24B8B70, 0xC76C51A3, 0xD192E819, 0xD6990624, 0xF40E3585, 0x106AA070, 0x19A4C116, 0x1E376C08, 0x2748774C, 0x34B0BCB5, 0x391C0CB3, 0x4ED8AA4A, 0x5B9CCA4F, 0x682E6FF3, 0x748F82EE, 0x78A5636F, 0x84C87814, 0x8CC70208, 0x90BEFFFA, 0xA4506CEB, 0xBEF9A3F7, 0xC67178F2)
+                            , HASH = new Array(0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A, 0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19)
+                            , W = new Array(64)
+                            , a, b, c, d, e, f, g, h, i, j
+                            , T1, T2;
+                        m[l >> 5] |= 0x80 << (24 - l % 32);
+                        m[((l + 64 >> 9) << 4) + 15] = l;
+                        for ( var i = 0; i<m.length; i+=16 ) {
+                            a = HASH[0];
+                            b = HASH[1];
+                            c = HASH[2];
+                            d = HASH[3];
+                            e = HASH[4];
+                            f = HASH[5];
+                            g = HASH[6];
+                            h = HASH[7];
+                            for ( var j = 0; j<64; j++) {
+                                if (j < 16) W[j] = m[j + i];
+                                else W[j] = safe_add(safe_add(safe_add(Gamma1256(W[j - 2]), W[j - 7]), Gamma0256(W[j - 15])), W[j - 16]);
+                                T1 = safe_add(safe_add(safe_add(safe_add(h, Sigma1256(e)), Ch(e, f, g)), K[j]), W[j]);
+                                T2 = safe_add(Sigma0256(a), Maj(a, b, c));
+                                h = g;
+                                g = f;
+                                f = e;
+                                e = safe_add(d, T1);
+                                d = c;
+                                c = b;
+                                b = a;
+                                a = safe_add(T1, T2);
+                            }
+                            HASH[0] = safe_add(a, HASH[0]);
+                            HASH[1] = safe_add(b, HASH[1]);
+                            HASH[2] = safe_add(c, HASH[2]);
+                            HASH[3] = safe_add(d, HASH[3]);
+                            HASH[4] = safe_add(e, HASH[4]);
+                            HASH[5] = safe_add(f, HASH[5]);
+                            HASH[6] = safe_add(g, HASH[6]);
+                            HASH[7] = safe_add(h, HASH[7]);
+                        }
+                        return HASH;
+                    }
+                    function str2binb (str) {
+                        var bin = Array()
+                            , mask = (1 << chrsz) - 1;
+                        for(var i = 0; i < str.length * chrsz; i += chrsz) {
+                            bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (24 - i%32);
+                        }
+                        return bin;
+                    }
+                    function Utf8Encode(string) {
+                        string = string.replace(/\r\n/g,"\n");
+                        var utftext = "";
+                        for (var n = 0; n < string.length; n++) {
+                            var c = string.charCodeAt(n);
+                            if (c < 128) {
+                                utftext += String.fromCharCode(c);
+                            }
+                            else if((c > 127) && (c < 2048)) {
+                                utftext += String.fromCharCode((c >> 6) | 192);
+                                utftext += String.fromCharCode((c & 63) | 128);
+                            }
+                            else {
+                                utftext += String.fromCharCode((c >> 12) | 224);
+                                utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+                                utftext += String.fromCharCode((c & 63) | 128);
+                            }
+                        }
+                        return utftext;
+                    }
+                    function binb2hex (binarray) {
+                        var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef"
+                            , str = "";
+                        for(var i = 0; i < binarray.length * 4; i++) {
+                            str += hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8+4)) & 0xF) +
+                            hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8  )) & 0xF);
+                        }
+                        return str;
+                    }
+                    s = Utf8Encode(s);
+                    return binb2hex(core_sha256(str2binb(s), s.length * chrsz));
+                };
+
+                jafo._saveQueueLs = function(qData) {
+                    var argData = qData.slice(),
+                        tempObj = new Object();
+
+                    if(jafo._isArr(argData)) {
+                        tempObj[jafo._.lsArrayName] = argData;
+
+                        try {
+                            localStorage.setItem(jafo._.lsKeyName, JSON.stringify(tempObj));
+                        } catch(err) {
+                            return false;
+                        }
+
+                        return argData;
+                    }
+                };
+
+                jafo._schedPoll = function() {
+                    var remnant = jafo._getQueue();
+
+                    if(jafo._.scheduled !== null && remnant.length) {
+                        jafo._.scheduled = setTimeout(jafo._pollQueue, jafo._.pollDelay);
+                    }
+
+                    return jafo._.scheduled;
+                };
+
+                jafo._sliceQueue = function(length) {
+                    if(jafo._.lsAvail) {
+                        return jafo._sliceQueueLs(length);
+                    }
+
+                    return jafo._sliceQueueLegacy(length);
+                };
+
+                jafo._sliceQueueLegacy = function(len) {
+                    var q = jafo._.legacyQueue,
+                        pxs = [],
+                        iter;
+
+                    if(!isNaN(len) && jafo._isArr(q)) {
+                        for(iter = 0; iter < len; iter++) {
+                            if(q.length) {
+                                pxs.push(q.shift());
+                            }
+                        }
+                    }
+
+                    return pxs;
+                };
+
+                jafo.cookie = function(cookieName, cookieValue, expires ) {
+                    var cookArr    = new String(document.cookie).split( /; ?/ ),
+                        cookObj    = new Object(),
+                        newStr     = null,
+                        cookieName = cookieName.trim();
+                    if ( this.isString(cookieName) && ( typeof(cookieValue) != 'undefined' ) ) {
+                        if ( !this.isString(expires) ) {
+                            expires = new Date( new Date().getTime() + parseInt( 1000*60*60*24*365 ) ).toGMTString();
+                        }
+                        newStr = cookieName + '=' + escape(cookieValue) + ';expires=' + expires +
+                            ';domain=.' + window.location.host + ';path=/';
+                        if ( document.cookie = newStr ) {
+                            return jafo.cookie( cookieName );
+                        };
+                    } else {
+                        for ( var cookie in cookArr ) {
+                            if ( typeof(cookArr[cookie].match) == 'function' ) {
+                                var kN = cookArr[cookie].match( /[^=]+/ )+'';
+                                var kV;
+                                if ( kN !== '' ) {
+                                    var reRex = new RegExp( '^'+kN+'=' );
+                                    kV = unescape( cookArr[cookie].replace( reRex, '' ) );
+                                }
+                                cookObj[kN] = kV;
+                            }
+                        }
+                        if ( cookieName === undefined ) {
+                            return cookObj;
+                        } else if ( this.isObject(cookObj) && this.isString(cookObj[cookieName]) ) {
+                            return cookObj[cookieName];
+                        }
+                    }
+                    return;
+                };
+
+                jafo._sliceQueueLs = function(len) {
+                    var q = jafo._getQueue(),
+                        pxs = [],
+                        iter;
+
+                    if(!isNaN(len) && jafo._isArr(q)) {
+                        for(iter = 0; iter < len; iter++) {
+                            if(q.length) {
+                                pxs.push(q.shift());
+                            }
+                        }
+
+                        jafo._saveQueueLs(q);
+                    }
+
+                    return pxs;
+                };
+
+                jafo.logAction = function(action) {
+                    var data = jafo._mergeData(action);
+
+                    if(typeof data === 'object') {
+                        return jafo._queue(data);
+                    }
+
+                    return false;
+                };
+
+                jafo._.userDetails.UID = jafo.cookie(jafo._.uidCookie) || jafo._fp();
+                jafo.cookie(jafo._.uidCookie, jafo._.userDetails.UID, jafo._.cookieOpts.expires);
+
+                jafo._.lsAvail = jafo._canUseLs();
+
+                return jafo;
+            })();
+        </script>
+        <script type="text/javascript">
+            // NOTICE: This file is included as a dwoo template.
+
+function textOverflowTwoRow(id, isReadMore) {
+    const element = document.getElementById(id);
+    const TEXT_ELLIPSIS = 'text-ellipsis';
+    // class name for analytics
+    const DESCRIPTION_ITEM = 'description-item';
+    const innerText = [];
+    const outerHTML = [];
+
+    if (!element) {
+        return element;
+    }
+    removeClassElement(element, TEXT_ELLIPSIS);
+    removeClassElement(element.parentNode, 'ellipsis');
+    const dataHref = element.getAttribute('data-href');
+    // extract from the text content and html links
+    extractTextContent(dataHref);
+    // for multiline text should be set max-height the block with text
+    if (element.scrollHeight - element.clientHeight > 1 || element.scrollWidth - element.clientWidth > 1 ) {
+        //when we have one long word without spaces
+        //we use one row with ellipsis
+        if (innerText.length === 1 && !/\s+/.test(innerText[0].text.trim())) {
+            setOverflowParameters();
+            return element;
+        }
+        // create tempory html element
+        element.innerHTML = '<span>A</span><canvas></canvas>';
+        const tempElement = element.childNodes[0];
+        // get singl width for calculation part url
+        const maxWidthText = element.childNodes[1].getContext("2d").measureText('A').width;
+        var offsetHeight = tempElement.offsetHeight;
+        tempElement.innerHTML = "";
+        for (var index = 0; index < innerText.length; ++index) {
+            const items = innerText[index].text.split(/\s+/);
+            var i = 0;
+            while (i < items.length) {
+                // calculate length string
+                const lengthString = Number.parseInt((element.clientWidth - tempElement.offsetWidth) / maxWidthText);
+                tempElement.innerText += (index ? '' : ' ').concat(items[i]);
+                if (tempElement.offsetHeight > offsetHeight) {
+                    if (innerText[index].isLink) {
+                        const reg = new RegExp(/(<a\b[^>]*>).*?(<\/a>)/, 'gi');
+                        const txt = innerText[index].text;
+                        const newString = escapeHTML(txt.slice(0, lengthString)) + '<br>' + escapeHTML(txt.slice(lengthString));
+                        outerHTML[index] = outerHTML[index].replace(reg, '$1' + newString + '$2');
+                    } else {
+                        outerHTML[index] = getTextAsLink(items.splice(0, i).join(' '), dataHref) + '<br>' + getTextAsLink(items.join(' '), dataHref);
+                    }
+                    setOverflowParameters();
+                    return element;
+                }
+                i++;
+            }
+        };
+    }
+
+    element.innerHTML = outerHTML.join(' ');
+    addTargetBlankForLinks(element);
+    return element;
+
+    function setOverflowParameters() {
+        element.innerHTML = outerHTML.join(' ');
+        element.classList.toggle(TEXT_ELLIPSIS, true);
+        if (isReadMore) {
+            element.parentNode.classList.toggle('ellipsis', true);
+        }
+        addTargetBlankForLinks(element);
+    }
+
+    function extractTextContent(url) {
+        const childNodes = element.childNodes;
+        for (var i = 0; i < childNodes.length; ++i) {
+            const child = childNodes[i];
+            const isLink = child.tagName === 'A';
+            if (isLink) {
+                child.classList.toggle(DESCRIPTION_ITEM, true);
+            }
+            innerText.push({
+                isLink: isLink,
+                text: isLink ? child.innerText : child.nodeValue
+            });
+            outerHTML.push(isLink ? child.outerHTML : getTextAsLink(child.nodeValue, url));
+        }
+    }
+
+    function getTextAsLink(value, url) {
+        if (!url || !value) {
+            return escapeHTML(value);
+        }
+        return '<a class="internal-link ' + DESCRIPTION_ITEM + '" target="_blank" href="' + url + '">' + value + '</a>';
+    }
+}
+
+var ESC_MAP = {
+    '&': "&amp;",
+    '<': "&lt;",
+    '>': "&gt;",
+    '"': "&quot;",
+    "'": "&apos;",
+    '`': "&#31;",
+    '!': "&#33;",
+    '@': "&#40;",
+    '$': "&#24;",
+    '%': "&#25;",
+    '(': "&#28;",
+    ')': "&#29;",
+    '=': "&#3D;",
+    '+': "&#2B;",
+    '{': "&#7B;",
+    '}': "&#7D;",
+    '[': "&#5B;",
+    ']': "&#5D;",
+};
+
+function escapeHTML(s, forAttribute) {
+    return s.replace(forAttribute ? /[&<>'"]/g : /[&<>]/g, function(c) {
+        return ESC_MAP[c];
+    });
+}
+
+function addTargetBlankForLinks(element) {
+    if (!element) {
+        return;
+    }
+    var items = element.getElementsByTagName('a');
+    for (var i = 0; i < items.length; i++) {
+        items[i].setAttribute("target", '_blank');
+    }
+}
+
+function removeClassElement(element, className) {
+    if (element.classList.contains(className)) {
+        element.classList.remove(className);
+    }
+}
+
+
+
+
+
+            const DESCRIPTION_CLASS = 'description';
+const DESCRIPTION_TEXT_ID = 'description-text';
+
+function changeDescription(parent, text, linkReadMore, maxHeight) {
+
+    removeRenderedDescription();
+
+    if (!parent || (!text && !maxHeight)) {
+        return null;
+    }
+    const description = createDescription(parent, text, linkReadMore);
+    checkAndPatchDescriptionMargin(maxHeight, description);
+}
+
+function removeRenderedDescription() {
+    const description = document.querySelector('.' + DESCRIPTION_CLASS);
+    if (description) {
+        description.remove();
+    }
+}
+
+function createChildElement(options) {
+    if (!options || !options.tag) {
+        return null;
+    }
+    var newElement = document.createElement(options.tag);
+    if (options.attrs) {
+        Object.keys(options.attrs).forEach(function (key) {
+            newElement.setAttribute(key, options.attrs[key]);
+        });
+    }
+    if (options.innerHTML) {
+        newElement.innerHTML = options.innerHTML;
+    }
+    if (options.parent) {
+        options.parent.appendChild(newElement);
+    }
+    return newElement;
+}
+
+function createDescriptionText(parent, text, linkReadMore) {
+     return createChildElement({
+        tag: 'div',
+        attrs: {
+            id: DESCRIPTION_TEXT_ID,
+            'data-href': linkReadMore,
+        },
+        innerHTML: text,
+        parent: parent,
+    });
+}
+
+function createReadmore(parent, linkReadMore) {
+    const READ_MORE_CLASS = 'read-more';
+    const TEXT_READ_MORE = '... [Read more]';
+    return createChildElement({
+        tag: 'a',
+        attrs: {
+            class: READ_MORE_CLASS,
+            href: linkReadMore,
+            target: '_blank',
+            id: 'readMore',
+        },
+        innerHTML: TEXT_READ_MORE,
+        parent: parent,
+    });
+}
+
+function createDescription(parent, text, linkReadMore) {
+    if (!parent) {
+        return null;
+    }
+    const description = createChildElement({
+        tag: 'div',
+        attrs: {
+            class: DESCRIPTION_CLASS,
+        }
+    });
+
+    createDescriptionText(description, text, linkReadMore);
+    createReadmore(description, linkReadMore);
+
+    var lastChild = parent.lastElementChild;
+    if (lastChild && lastChild.classList.contains('info')) {
+        parent.insertBefore(description, lastChild);
+    } else {
+        parent.appendChild(description);
+    }
+    return description;
+}
+
+function getMaxHeightDescription() {
+    const DESCRIPTION_MAX_HEIGHT = 34;
+    const descriptions = document.querySelector('.descriptions');
+    if (!descriptions) {
+        return 0;
+    }
+    var maxHeight = 0;
+    const childNodes = descriptions.children;
+    for (var i = 0, child; child = childNodes[i]; i++) {
+        const height = child.clientHeight;
+        if (maxHeight < height) {
+            maxHeight = height;
+        }
+    }
+    // is one row return zero
+    if (DESCRIPTION_MAX_HEIGHT / 2 > maxHeight) {
+        return 0;
+    }
+    return maxHeight;
+}
+
+function checkAndPatchDescriptionMargin(maxHeight, description) {
+    if (!maxHeight) {
+        return;
+    }
+    if (!description) {
+        description = document.querySelector('.' + DESCRIPTION_CLASS);
+    }
+    const descriptionText = document.getElementById(DESCRIPTION_TEXT_ID);
+    if (!description || !descriptionText) {
+        return;
+    }
+    const height = descriptionText.clientHeight;
+    const marginBottom = maxHeight - height + 16;
+    if (marginBottom > 16) {
+        description.style.marginBottom = marginBottom + 'px';
+    }
+}
+
+            const ANALYTICS_UPVOTES = 'embedClickUpvotes';
+const ANALYTICS_VIEWS = 'embedClickViewCount';
+const ANALYTICS_LOGO = 'embedClickLogo';
+const ANALYTICS_USERNAME = 'embedClickUsername';
+const ANALYTICS_COMMENTS = 'embedClickComments';
+const ANALYTICS_READ_MORE = 'embedClickReadMore';
+const ANALYTICS_IMAGE = 'embedClickImage';
+const ANALYTICS_DOWNLOAD = 'appDownloadLink';
+const ANALYTICS_NAV = 'embedNav';
+const ANALYTICS_ITEM = 'item';
+const ANALYTICS_SESSION_START = 'sessionStart';
+const ANALYTICS_IMAGE_DESCRIPTION = 'embedClickImageDescription';
+const ANALYTICS_SHARE_MODAL = 'shareModal';
+const ANALYTICS_SHARE = 'share';
+
+function initAnalytics(hash, platform, data) {
+    return {
+        isLog: function () {
+            return window.ImgurJafo && hash && platform;
+        },
+        on: function (eventName, element, options = { }) {
+            if (!element || !this.isLog()) {
+                return;
+            }
+            const self = this;
+            element.onclick = function (event) {
+                var meta = options.meta || { };
+                var accept = true;
+                eventName === ANALYTICS_SHARE && self.shareMeta(meta);
+                if (typeof options.beforeAnalytics === 'function') {
+                    accept = options.beforeAnalytics(event, meta) !== false;
+                }
+                meta.hash = hash;
+                accept && self.send(eventName, meta);
+            };
+        },
+        sessionStart: function () {
+            this.send(ANALYTICS_SESSION_START, {
+                language: navigator.language,
+                screenResolution: window.screen.width + 'x' + window.screen.height,
+                timezone: (new Date().getTimezoneOffset()) * 60,
+                secure: document.location.proto === 'https',
+            });
+        },
+        mainGalleryItem: function (isAlbum, context) {
+            this.send(ANALYTICS_ITEM, {
+                hash,
+                isAlbum,
+                context,
+            });
+        },
+        albumImagesNavigator: function(buttonType, direction) {
+            this.send(ANALYTICS_NAV, {
+                hash,
+                buttonType,
+                direction,
+            });
+        },
+        shareMeta: function (meta) {
+            if (meta && data) {
+                const tags = data.tags || [];
+                meta.isAlbum = data.isAlbum;
+                meta.inGallery = data.inGallery;
+                meta.isAnimated = data.isAnimated;
+                meta.nsfw = data.nsfw;
+                meta.promoted = data.promoted;
+                meta.tags = !Array.isArray(tags) ? tags.split(',') : tags;
+            }
+            return meta;
+        },
+        send: function (eventName, meta = { }) {
+            if (!this.isLog()) {
+                return;
+            }
+            meta.platform = platform
+            window.ImgurJafo.logAction({
+                event: eventName,
+                meta: meta,
+            });
+        },
+    }
+};
+
+/*use for testing*/
+if ('undefined' !== typeof module) {
+    module.exports = {
+        ANALYTICS_UPVOTES: ANALYTICS_UPVOTES,
+        ANALYTICS_VIEWS: ANALYTICS_VIEWS,
+        ANALYTICS_LOGO: ANALYTICS_LOGO,
+        ANALYTICS_USERNAME: ANALYTICS_USERNAME,
+        ANALYTICS_COMMENTS: ANALYTICS_COMMENTS,
+        ANALYTICS_READ_MORE: ANALYTICS_READ_MORE,
+        ANALYTICS_IMAGE: ANALYTICS_IMAGE,
+        ANALYTICS_DOWNLOAD: ANALYTICS_DOWNLOAD,
+        ANALYTICS_NAV: ANALYTICS_NAV,
+        ANALYTICS_ITEM: ANALYTICS_ITEM,
+        ANALYTICS_SESSION_START: ANALYTICS_SESSION_START,
+        ANALYTICS_IMAGE_DESCRIPTION: ANALYTICS_IMAGE_DESCRIPTION,
+        ANALYTICS_SHARE_MODAL: ANALYTICS_SHARE_MODAL,
+        ANALYTICS_SHARE: ANALYTICS_SHARE,
+        initAnalytics: initAnalytics,
+    }
+}
+
+
+            (function() {
+                var images            = {"count":1,"images":[{"hash":"pGdjOgU","title":"","description":null,"has_sound":false,"width":2220,"height":1080,"size":605444,"ext":".jpg","animated":false,"prefer_video":false,"looping":false,"datetime":"2020-04-29 01:08:09","edited":"0"}]},
+                    albumHash         = 'LNMBYGA',
+                    currentIndex      = 0,
+                    cdnUrl            = '//i.imgur.com',
+                    host              = 'imgur.com',
+                    albumUrl          = '//imgur.com/' + 'a' + '/LNMBYGA',
+                    d                 = document,
+                    bodyPadding       = 16,
+                    parent            = window.parent === window.top ? window.top : window.parent,
+                    minHeight         = 200,
+                    preloadedVideoBuf = null,
+                    maxWidth, maxImageWidth, message, $prev, $next, $currentImage, $imageElement, $videoContainer, $header,
+                    $videoElement, $imageLink, $nextHover, $prevHover, $readMore, $footer, $maxHeightDescription,
+                    $descriptionText;
+
+                    window.gifvViewer = function(videoItem, onloadHandler) {
+                    var removeLoader, onVideoErrorError, hideControls, hideLoader, onVideoError, setDimensions;
+                    var me = d.getElementById('video-elements');
+                    setDimensions = function(el, video) {
+                        var containerWidth = $image.offsetWidth;
+
+                        if(videoItem.width >= containerWidth) {
+                            var ratio = containerWidth/videoItem.width;
+
+                            el.style.width  = containerWidth+'px';
+                            el.style.height = videoItem.height*ratio+'px';
+                        }
+                    };
+
+                    onVideoError = function(video, object) {
+                        if(videoItem.size < 1024*1024*20) {
+                            var img = new Image();
+                            img.src = videoItem.gifUrl;
+
+                            setDimensions(img, video);
+                            video.parentNode.insertBefore(img, video);
+
+                        } else if(object && video.parentNode) {
+                            video.parentNode.insertBefore(object, video);
+                        }
+
+                        video.setAttribute('style', 'display: none');
+                    };
+
+                    if(me && me.previousElementSibling) {
+                        var cur           = me,
+                            object        = null,
+                            video         = null,
+                            progress      = null,
+                            videoElements = null;
+
+                        do {
+                            var tagName = cur.tagName && cur.tagName.toLowerCase();
+
+                            if(tagName === 'video') {
+                                video = cur;
+                                break;
+                            } else if(cur.getAttribute('class') == 'video-elements') {
+                                videoElements = cur;
+                            } else if(tagName === 'progress') {
+                                progress = cur;
+                            }
+                        } while ((cur = cur.previousElementSibling) != null);
+
+                        if(!video || !videoElements) { return; }
+
+                        for(var i = 0; i < videoElements.childNodes.length; i++) {
+                            if(videoElements.childNodes[i].tagName && videoElements.childNodes[i].tagName.toLowerCase() === 'object') {
+                                object = videoElements.childNodes[i];
+                                break;
+                            }
+                        }
+                        setDimensions(video);
+                        video.controls = videoItem.hasSound;
+
+                        if(videoItem.looping || typeof videoItem.looping == 'undefined') {
+                            video.loop = false;
+
+                            video.addEventListener('ended', function() {
+                                video.currentTime = 0;
+                                video.play();
+                            }, false);
+                        }
+
+                        hideLoader = function() {
+                            video.controls = videoItem.hasSound;
+                        };
+
+                        hideControls = function() {
+                            if(video.controls) { video.controls = videoItem.hasSound; }
+                        };
+
+                        video.addEventListener('loadedmetadata', hideLoader);
+                        video.addEventListener('loadeddata', onloadHandler);
+                        video.addEventListener('play', hideLoader);
+                        video.addEventListener('playing', hideLoader);
+                        video.addEventListener('playing', hideControls);
+
+                        removeLoader = function() {
+                            video.removeEventListener('loadedmetadata', hideLoader);
+                            video.removeEventListener('play', hideLoader);
+                            video.removeEventListener('playing', hideLoader);
+                            video.removeEventListener('canplaythrough', removeLoader);
+                            video.removeEventListener('error', onVideoErrorError);
+                            video.removeEventListener('loadeddata', onloadHandler);
+                        };
+
+                        video.addEventListener('canplaythrough', removeLoader);
+
+                        onVideoErrorError = function() {
+                           onVideoError(video, object);
+                        };
+
+                        //IE doesn't listen for errors on sources
+                        video.addEventListener('error', onVideoErrorError);
+
+                        if(progress) {
+                            video.addEventListener('progress', function(e) {
+                                try {
+                                    if(e.target.buffered.length > 0) {
+                                        var percent = Math.round((e.target.buffered.end(0) / e.target.duration) * 100);
+                                        progress.setAttribute('value', percent);
+
+                                        if(percent >= 100) {
+                                            progress.remove();
+                                            progress = null;
+                                        }
+                                    }
+                                } catch(e) {
+                                }
+                            });
+                        }
+
+
+                        video.innerHTML = videoElements.innerHTML;
+                        video.play();
+
+                        var sources = video.querySelectorAll('source');
+
+                        //IE9 doesn't work with dynamic source elements, must set video
+                        if(sources.length) {
+                            sources[sources.length-1].addEventListener('error', function() {
+                               onVideoError(video, object);
+                            });
+                        } else {
+                            video.src = preloadedVideoBuf || videoItem.gifUrl.replace('.gif', '.mp4');
+                        }
+                        if(videoItem.width > maxImageWidth || videoItem.height > $image.offsetHeight) {
+                            $videoElement.className += ' scale-video-element';
+                        }
+
+                        $image.className = 'image';
+                        me.parentNode.removeChild(videoElements);
+
+                    }
+                };
+
+                var createVideo = function(image, nextPreloadImage) {
+                    var newVideoElement = d.createElement('video'),
+                        newVideoMeta    = d.createElement('div'),
+                        sourceMP4       = d.createElement('source');
+
+                    while ($videoContainer.hasChildNodes()) {
+                        $videoContainer.removeChild($videoContainer.firstChild);
+                    }
+
+                    newVideoMeta.className = 'video-elements';
+                    newVideoMeta.id = 'video-elements';
+                    newVideoElement.className = 'post video-post';
+                    newVideoElement.id = 'video-element';
+                    newVideoElement.poster = cdnUrl + '/' + image.hash + 'h.jpg';
+                    newVideoElement.preload = 'auto';
+                    newVideoElement.setAttribute('muted', 'muted');
+                    newVideoElement.setAttribute('loop', 'loop');
+                    newVideoElement.setAttribute('webkit-playsinline', '');
+                    sourceMP4.type = 'video/mp4';
+                    sourceMP4.src = preloadedVideoBuf || cdnUrl + '/' + image.hash + '.mp4';
+
+                    newVideoMeta.appendChild(sourceMP4);
+                    $videoContainer.innerHTML = $videoContainer.innerHTML + newVideoElement.outerHTML + newVideoMeta.outerHTML;
+
+                    var videoItem = {
+                        looping:  image.looping ? true: false,
+                        width:    image.width,
+                        height:   image.height,
+                        size:     image.size,
+                        gifUrl:   cdnUrl + '/' + image.hash + '.gif',
+                        hasSound: !!image.has_sound || false,
+                        hash:     image.hash
+                    };
+
+                    $imageElement.className += ' hide';
+                    $videoContainer.className = 'video-container';
+                    $videoElement = newVideoElement;
+
+                    var preloadHandler = function() {
+                        preloadImage(nextPreloadImage);
+                    };
+
+                    window.gifvViewer(videoItem, preloadHandler);
+
+                };
+
+                var isVideo = function(image) {
+                    return image.ext === '.mp4' || (image.ext === '.gif' && image.animated && image.size > 2097152);
+                };
+
+                var getImageUrl = function(image) {
+                    return cdnUrl + '/' + image.hash + (image.ext !== '.gif' && (image.width/image.height > 0.33) ? 'l' : '') + image.ext;
+                }
+
+                var preloadImage = function(image) {
+                    preloadedVideoBuf = null;
+                    if (!image) {
+                        return;
+                    }
+                    if (isVideo(image)) {
+                        var req = new XMLHttpRequest();
+                        req.open('GET', cdnUrl + '/' + image.hash + '.mp4', true);
+                        req.responseType = 'blob';
+                        req.onload = function() {
+                            if (this.status === 200) {
+                                preloadedVideoBuf = URL.createObjectURL(this.response);
+                            }
+                        };
+                        req.onerror = function() {
+                            preloadedVideoBuf = null;
+                        };
+                        req.send();
+
+                    } else {
+                        (new Image()).src = getImageUrl(image);
+                    }
+                }
+
+                var fillPrevNextImage = function(image, element) {
+                    if (!image) {
+                        element.classList.toggle('hide', true);
+                        return;
+                    }
+                    element.classList.toggle('hide', false);
+                    var imgSrc;
+                    if(isVideo(image)) {
+                        imgSrc = cdnUrl + '/' + image.hash + 'h.jpg'
+                    } else {
+                        imgSrc = getImageUrl(image);
+                    }
+                    element.src = imgSrc;
+                };
+
+                var swapImage = function(nextImage, direction, location, nextPreloadImage) {
+                    var $newImage, imgSrc;
+                    if($videoElement && $videoElement.pause) {
+                        $videoElement.pause();
+                        $videoElement.src = '';
+                    }
+
+                    $imageLink.href = albumUrl + '#' + nextImage.hash;
+                    if(isVideo(nextImage)) {
+                        createVideo(nextImage, nextPreloadImage);
+                    } else {
+                        //remove video
+                        while ($videoContainer.hasChildNodes()) {
+                            $videoContainer.removeChild($videoContainer.firstChild);
+                        }
+                        $videoContainer.className = 'video-container hide';
+
+                        imgSrc = getImageUrl(nextImage);
+                        if($imageElement.src.indexOf(imgSrc) === -1) {
+                            $newImage = d.createElement('img');
+                            $newImage.onload = function() {
+                                preloadImage(nextPreloadImage);
+                            };
+                            $newImage.src = imgSrc;
+                            $newImage.style.width = 'auto';
+                            $newImage.style.height = 'auto';
+                            if(nextImage.width > parseInt($image.style.width)) {
+                                $newImage.style['max-width'] = $image.style.width;
+                            }
+                            if(nextImage.height > parseInt($image.style.height)) {
+                                $newImage.style['max-height'] = $image.style.height;
+                            }
+
+
+                            $imageElement.parentNode.replaceChild($newImage, $imageElement);
+                            $imageElement = $newImage;
+                        }
+
+                        $image.className = 'image';
+
+                        $imageElement.className = 'post';
+                    }
+                    $analytics.albumImagesNavigator(location, direction);
+                };
+
+                var nextClickHandler = function(location) {
+                    var nextImage;
+                    if(currentIndex < images.count - 1) {
+                        $prevHover.className = 'prev-hover hover';
+                        nextImage = images.images[++currentIndex];
+                        swapImage(nextImage, 'next', location, images.images[currentIndex + 1]);
+
+                        if($currentImage.innerText) {
+                            $currentImage.innerText = currentIndex + 1;
+                        } else {
+                            $currentImage.textContent = currentIndex + 1;
+                        }
+                        if(currentIndex === images.count - 1) {
+                            $nextHover.classList.add('hide');
+                        }
+
+
+                    } else if(currentIndex === images.count - 1) {
+                        //return to first image
+                        currentIndex = 0;
+                        nextImage = images.images[currentIndex];
+                        swapImage(nextImage, 'restart', location);
+                        if($currentImage.innerText) {
+                            $currentImage.innerText = 1;
+                        } else {
+                            $currentImage.textContent = 1;
+                        }
+                        $prevHover.className += ' hide';
+
+                    }
+                    updateDescription(nextImage);
+                    fillPrevNextImage(images.images[currentIndex - 1], $prevImage);
+                    fillPrevNextImage(images.images[currentIndex + 1], $nextImage);
+                };
+
+                var prevClickHandler = function(location) {
+                    var prevImage;
+                    if(currentIndex > 0) {
+                        prevImage = images.images[--currentIndex];
+                        swapImage(prevImage, 'prev', location);
+                        if($currentImage.innerText) {
+                            $currentImage.innerText = currentIndex + 1;
+                        } else {
+                            $currentImage.textContent = currentIndex + 1;
+                        }
+                        if(currentIndex === 0) {
+                            $prevHover.className += ' hide';
+                        }
+                        $nextHover.classList.contains('hide') && $nextHover.classList.remove('hide');
+                    }
+                    updateDescription(prevImage);
+                    fillPrevNextImage(images.images[currentIndex - 1], $prevImage);
+                    fillPrevNextImage(images.images[currentIndex + 1], $nextImage);
+                };
+
+                var beforeDescriptionAnalytics = function(event, meta) {
+                    var target = event.target;
+                    return target.classList.contains('description-item');
+                };
+
+                var updateDescription = function(image) {
+                    if (!image || !image.hash) {
+                        return;
+                    }
+                    // get element with description from list items
+                    var $descItem = d.getElementById('description-'+ image.hash);
+                    if (!$descItem) {
+                        return;
+                    }
+                    // try update description
+                    changeDescription($footer, $descItem.innerHTML, $descItem.getAttribute('data-href'), $maxHeightDescription);
+                    $descriptionText = textOverflowTwoRow('description-text', true);
+                    $analytics.on(ANALYTICS_IMAGE_DESCRIPTION, $descriptionText, {
+                        beforeAnalytics: beforeDescriptionAnalytics,
+                    });
+
+                    // action for the analytics
+                    $readMore = d.getElementById('readMore');
+                    $analytics.on(ANALYTICS_READ_MORE, $readMore);
+                }
+
+                var stopEvent = function(e) {
+                    if(e && e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        window.event.returnValue = false;
+                    }
+                }
+
+                var nextHoverClickHandler = function(e) {
+                    stopEvent(e);
+                    nextClickHandler('hover');
+                };
+
+                var prevHoverClickHandler = function(e) {
+                    stopEvent(e);
+                    prevClickHandler('hover');
+                };
+
+                var scaleHeight = function(height1, width1, width2) {
+                    return ((height1 / width1) * width2);
+                };
+
+                var toggleShareModal = function() {
+                    document.getElementById('shareModal').classList.toggle('hidden');
+                };
+
+                function sharePost(data) {
+    if (!data || !data.url) {
+        return;
+    }
+    var url = data.url;
+    var dimensions = 'left=20,top=20,width=560,height=500,toolbar=1';
+    const title = data.title;
+    switch (data.shareType) {
+        case 'facebook':
+            url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+            dimensions = 'left=20,top=20,width=500,height=500,toolbar=1';
+            break;
+        case 'twitter':
+            url = 'https://twitter.com/home?status=' + encodeURIComponent(title + ' ' + url);
+            break;
+        case 'pinterest':
+            if (!data.src) {
+                return;
+            }
+            url = 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(url) + '&media=' + encodeURIComponent(data.src) + '&description=' + title;
+            dimensions = 'left=20,top=20,width=750,height=601,toolbar=1';
+            break;
+        case 'reddit':
+            url = 'https://www.reddit.com/submit?title=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
+            dimensions = 'left=20,top=20,width=860,height=700,toolbar=1';
+            break;
+    }
+    window.open(url, 'sharer', dimensions);
+};
+
+function getShareSource() {
+    var element = document.getElementById('image-element');
+    if (element) {
+        return element.getAttribute('src');
+    }
+    element = document.getElementById('video-container');
+    if (element) {
+        return element.getElementsByTagName('video')[0].getAttribute('poster');
+    }
+    return null;
+}
+
+function verifySharedHeight(height) {
+    const SMALL_HEIGHT_SHARED = 450;
+    const shareDialog = document.getElementById('shareModal');
+    if (shareDialog && height < SMALL_HEIGHT_SHARED) {
+        shareDialog.classList.toggle('share-small', true);
+    }
+}
+
+function verifySharedWidth(width) {
+    const SMALL_WIDTH_SHARED = 620;
+    const sharFooter = document.getElementsByClassName('share-footer')[0];
+    if (sharFooter && width < SMALL_WIDTH_SHARED) {
+        sharFooter.classList.toggle('background-left', true);
+    }
+}
+
+                function prepareAppLink(elements, platform, callback) {
+    if (!elements) {
+        return;
+    }
+    appLink = getAppLinkByPlatform(platform);
+    if (!appLink) {
+        return;
+    }
+    const isMobile = isMobilePlatform(platform);
+    for (var i= 0; i < elements.length; i++) {
+        element = elements[i]
+        element.href = appLink;
+        element.setAttribute('target', '_blank');
+        if (isMobile) {
+            element.classList.remove('isRemoved');
+        }
+        if (typeof callback === 'function') {
+            callback(element);
+        }
+    }
+}
+
+function getAppLinkByPlatform(platform) {
+    const branch_campaign = 'embed_v2_get_app';
+    const config = {
+        branch: 'https://iob.imgur.com',
+        channel: 'getAppButton',
+        branch_key: 'key_live_cjjQIIE2tMns5AZEouVU2bjdFyeQxPvd',
+        android:  {
+            key: '$android_url',
+            url: 'market://details/',
+            params: {
+                id: 'com.imgur.mobile',
+                utm_source: 'mobile',
+                utm_medium: 'viewInAppButton',
+                utm_campaign: branch_campaign,
+            },
+        },
+        apple: {
+            key: '$ios_url',
+            url: 'itms-apps://itunes.apple.com/app/id639881495',
+            params: {
+                at: '1001l5T8',
+                pt: '2036292',
+                ct: branch_campaign,
+            },
+        },
+        web: {
+
+        },
+        getRedirectEndPoint : function (app) {
+            if (!app || !app.key) {
+                return '';
+            }
+            const params = Object.keys(app.params).map(function(key) {
+                value = app.params[key];
+                return encodeURIComponent(key) + '=' + encodeURIComponent(value)
+            }).join('&');
+            return encodeURIComponent(app.key) + '=' + encodeURIComponent(app.url) + '?' + params;
+        }
+    };
+    const app = config[platform];
+    if (!app) {
+        return null;
+    }
+
+    return config.branch + '/a/' + config.branch_key + '?channel=' +
+        config.channel + config.getRedirectEndPoint(app);
+}
+
+function isMobilePlatform(platform) {
+    const mobiles = ['android', 'apple', 'windowsphone'];
+    return mobiles.indexOf(platform) > -1;
+}
+
+function getEmbedPlatform(platform) {
+    return isMobilePlatform(platform) ? 'mobileweb' : 'web'
+}
+
+/*use for testing*/
+if ('undefined' !== typeof module) {
+    module.exports = {
+        prepareAppLink: prepareAppLink,
+        getAppLinkByPlatform: getAppLinkByPlatform,
+        isMobilePlatform: isMobilePlatform,
+        getEmbedPlatform: getEmbedPlatform,
+    }
+}
+
+
+                var targetItemClick = function(e) {
+                    const itemValue = e.target.getAttribute('data-value');
+                    if (!itemValue) {
+                        return;
+                    }
+                    e.stopPropagation();
+                    sharePost({
+                        url: 'https://imgur.com/a/LNMBYGA',
+                        title: '',
+                        shareType: itemValue,
+                        src:  getShareSource(),
+                    });
+                }
+
+                var clipboardCopyLinkHandler = function(event) {
+                    var element = document.getElementById('shareLink');
+                    element.select();
+                    try {
+                        document.execCommand('copy');
+                    } catch(e) {
+                    }
+                    window.getSelection().removeAllRanges();
+                };
+
+                var createEmbedLink = function() {
+                    var hash = 'LNMBYGA';
+                    var title = '';
+                    var host = "//imgur.com";
+                    var blockquote = '<blockquote class="imgur-embed-pub" lang="en" data-id="a/' + hash + '"><a href="' + host + '/' + hash + '">' + title + '</a></blockquote>';
+                    var script = '<script async src="//s.imgur.com/min/embed.js" charset="utf-8"><\/script>';
+                    return blockquote + script;
+                };
+
+                var linkData = {
+                    link: "https://imgur.com/a/LNMBYGA",
+                    embed: createEmbedLink(),
+                };
+
+                var populateActiveLinkString = function(activeLinkName) {
+                    var link = document.getElementById('shareLink');
+                    link.value = linkData[activeLinkName];
+                };
+
+                var toggleActiveLinkTabName = function(element, activeTabName) {
+                    if(element.dataset.value === activeTabName) {
+                        element.classList.add('isActive');
+                    } else {
+                        element.classList.remove('isActive');
+                    }
+                };
+
+                var switchLinkTabHandler = function(event) {
+                    if (!(event.target.dataset && event.target.dataset.value)) {
+                        return;
+                    }
+                    event.stopPropagation();
+                    var activeTabName = event.target.dataset.value;
+                    var tabs = document.querySelector('.share-link .share-tab').children;
+                    for (var i = 0; i < tabs.length; ++i) {
+                        toggleActiveLinkTabName(tabs[i], activeTabName);
+                    }
+                    populateActiveLinkString(activeTabName);
+                };
+
+                var addMobileClass = function(elements) {
+                    elements.forEach(function(element) {
+                        element.classList.add('mobile');
+                    });
+                };
+
+                var swipeControl = function(container) {
+                    // taken from https://stackoverflow.com/a/53978294/7509668
+                    // at least 100 px are a swipe
+                    // you can use the value relative to screen size: window.innerWidth * .1
+                    var offset = 100;
+                    var xStart, yStart;
+
+                    var getTouch = function (e) {
+                        return e.changedTouches[0]
+                    };
+
+                    container.addEventListener('touchstart', e => {
+                        var firstTouch = getTouch(e);
+
+                        xStart = firstTouch.clientX;
+                        yStart = firstTouch.clientY;
+
+                        container.dispatchEvent(new Event('swipe.start'));
+                    });
+
+                    container.addEventListener('touchmove', e => {
+                        var touch = getTouch(e);
+
+                        if (touch.clientX !== xStart || touch.clientY !== yStart) {
+                            container.dispatchEvent(new CustomEvent('swipe.move', { detail: {
+                                offsetX: touch.clientX - xStart,
+                                offsetY: touch.clientY - yStart,
+                            }}));
+
+                        }
+                    });
+
+                    container.addEventListener('touchend', e => {
+                        if (!xStart || !yStart) {
+                            return;
+                        }
+
+                        var touch = getTouch(e);
+                        var xOffset = touch.clientX - xStart;
+                        var yOffset = touch.clientY - xStart;
+
+                        // at least <offset> are a swipe
+                        if (Math.max(Math.abs(xOffset), Math.abs(yOffset)) < offset ) {
+                            container.dispatchEvent(new Event('swipe.abort'));
+                            return;
+                        }
+
+                        container.dispatchEvent(new CustomEvent('swipe.end', { detail: {
+                            offsetX: xOffset,
+                            offsetY: yOffset,
+                        }}));
+                    });
+                };
+
+                window.onload = function() {
+                    $header          = d.getElementById('header');
+                    $getApp          = d.getElementsByClassName('get-app');
+                    $nav             = d.getElementById('nav');
+                    $footer          = d.getElementById('footer');
+                    $image           = d.getElementById('image');
+                    $imageContainer  = d.getElementById('image-container');
+                    $prevImage       = d.getElementById('prev-image');
+                    $nextImage       = d.getElementById('next-image');
+                    $nextHover       = d.getElementById('next-hover');
+                    $prevHover       = d.getElementById('prev-hover');
+                    $currentImage    = d.getElementById('current-image');
+                    $imageElement    = d.getElementById('image-element');
+                    $videoContainer  = d.getElementById('video-container');
+                    $imageLink       = d.getElementById('image-link');
+                    $logo            = d.getElementById('logo-container');
+                    $username        = d.getElementById('username');
+                    $comments        = d.getElementById('comments');
+                    $upvotes         = d.getElementById('upvotes');
+                    $views           = d.getElementById('views');
+                    $readMore        = d.getElementById('readMore');
+                    $shareOpen       = d.getElementById('share-button');
+                    $shareClose      = d.querySelector('.share-header .close');
+                    $shareTarget     = d.querySelector('.share-modal .share-target');
+                    $shareCopy       = d.querySelector('.share-modal .share-control .btn-copy');
+                    $shareTabs       = d.querySelector('.share-link .share-tab');
+                    $getAppButton    = d.getElementById('getAppButton');
+
+                    $analytics = initAnalytics(
+                        'LNMBYGA',
+                        platform,
+                        {
+                            isAlbum: true,
+                            inGallery: false,
+                            isAnimated: images.images[0].animated,
+                            nsfw: false,
+                            tags: ``,
+                            promoted: false,
+                        },
+                    );
+
+                    if ($shareOpen && $getAppButton && isMobilePlatform(platform)) {
+                        addMobileClass([ $nextHover, $prevHover ]);
+                        $shareOpen.setAttribute('aria-hidden', true);
+                        $getAppButton.removeAttribute('aria-hidden');
+                    }
+
+                    $nextHover.onclick = nextHoverClickHandler;
+                    $prevHover.onclick = prevHoverClickHandler;
+
+                    $shareClose.onclick = toggleShareModal;
+                    $shareTabs.onclick = switchLinkTabHandler;
+
+                    var embedPlatform = getEmbedPlatform(platform);
+                    $analytics.on(ANALYTICS_LOGO, $logo);
+                    $analytics.on(ANALYTICS_IMAGE, $imageLink, {
+                        beforeAnalytics: function(event, meta) {
+                            meta.currentIndex = currentIndex,
+                            meta.imageHash= images.images[currentIndex].hash;
+                        },
+                    });
+                    $analytics.on(ANALYTICS_USERNAME, $username);
+                    $analytics.on(ANALYTICS_COMMENTS, $comments);
+                    $analytics.on(ANALYTICS_UPVOTES, $upvotes);
+                    $analytics.on(ANALYTICS_VIEWS, $views);
+                    $analytics.on(ANALYTICS_READ_MORE, $readMore);
+
+                    prepareAppLink($getApp, platform, function(element) {
+                        $analytics.on(ANALYTICS_DOWNLOAD, element, {
+                            meta: {
+                                embedPlatform,
+                            },
+                        });
+                    });
+                    $analytics.on(ANALYTICS_SHARE_MODAL, $shareOpen, {
+                        beforeAnalytics: toggleShareModal,
+                        meta: {
+                            embedPlatform,
+                        },
+                    });
+
+                     $analytics.on(ANALYTICS_SHARE, $shareTarget, {
+                        beforeAnalytics: function(event, meta) {
+                            const itemValue = event.target.getAttribute('data-value');
+                            if (!itemValue) {
+                                return false;
+                            }
+                            meta.shareTo = itemValue;
+                            targetItemClick(event);
+                        },
+                    });
+
+                    $analytics.on(ANALYTICS_SHARE, $shareCopy, {
+                        beforeAnalytics: function(event, meta) {
+                            const activeTab =  $shareTabs.querySelector('.share-tab-item.isActive');
+                            const value = activeTab.dataset.value;
+                            meta.shareTo = 'copy' + value.charAt(0).toUpperCase() + value.substr(1);
+                            clipboardCopyLinkHandler(event);
+                        },
+                    });
+
+                    maxWidth        = d.body.parentElement.offsetWidth;
+                    var widthLimit = images.images[0].width > images.images[0].height ? 640 : 480;
+                    maxImageWidth   = Math.min(maxWidth, widthLimit);
+
+                    var parent            = window.parent === window.top ? window.top : window.parent,
+                        message, bodyHeight;
+
+                    populateActiveLinkString('link');
+
+                    var iWidth, iHeight;
+                    if(images.images[0].width > maxImageWidth ) {
+                        $imageElement.style.width = iWidth = maxImageWidth + 'px';
+                        $imageElement.style.height = iHeight = scaleHeight(images.images[0].height, images.images[0].width, maxImageWidth) + 'px';
+                    } else {
+                        $imageElement.style['max-width'] = iWidth = images.images[0].width + 'px';
+                        $imageElement.style['max-height'] = iHeight = images.images[0].height + 'px';
+                    }
+                    $prevImage.parentNode.style.width = $nextImage.parentNode.style.width = $image.style.width = iWidth;
+                    $prevImage.parentNode.style.height = $nextImage.parentNode.style.height = $image.style.height = iHeight;
+
+                    //load video if neeeded
+                    if(isVideo(images.images[0])) {
+                        createVideo(images.images[0]);
+                    }
+
+                    $image.style.height = $image.offsetHeight + 'px';
+                    $image.style.width = maxWidth + 'px';
+
+                    fillPrevNextImage(images.images[currentIndex - 1], $prevImage);
+                    fillPrevNextImage(images.images[currentIndex + 1], $nextImage);
+                    var initialOffset = -1 * parseInt(iWidth);
+                    $imageContainer.style.width = 3 * parseInt(iWidth) + 'px';
+                    function setPosition(value) {
+                        $imageContainer.style.transform = 'translate(' + value + 'px)';
+                    }
+                    function setInitialPosition() {
+                        setPosition(initialOffset);
+                    }
+
+                    setInitialPosition();
+                    swipeControl($imageContainer);
+                    $imageContainer.addEventListener('swipe.start', function(e) {
+                        $imageContainer.classList.toggle('smooth', false);
+                    });
+                    $imageContainer.addEventListener('swipe.abort', function(e) {
+                        setInitialPosition();
+                    });
+                    $imageContainer.addEventListener('swipe.move', function(e) {
+                        setPosition(initialOffset + e.detail.offsetX);
+                    });
+                    $imageContainer.addEventListener('swipe.end', function(e) {
+                        $imageContainer.classList.toggle('smooth', true);
+                        if((e.detail.offsetX > 0 && currentIndex > 0) ||
+                            (e.detail.offsetX < 0 && currentIndex < images.count - 1)
+                        ) {
+                            setPosition(e.detail.offsetX > 0 ? 0 : 2 * initialOffset);
+                            $imageContainer.addEventListener("transitionend", function() {
+                                e.detail.offsetX > 0 ? prevClickHandler('swipe') : nextClickHandler('swipe');
+                                $imageContainer.classList.toggle('smooth', false);
+                                setInitialPosition();
+                            }, { once: true }, false);
+                        } else {
+                            setInitialPosition();
+                        }
+                    });
+
+                    $maxHeightDescription = getMaxHeightDescription();
+                    textOverflowTwoRow('title-text');
+                    $descriptionText = textOverflowTwoRow('description-text', true);
+                    checkAndPatchDescriptionMargin($maxHeightDescription);
+                    $analytics.on(ANALYTICS_IMAGE_DESCRIPTION, $descriptionText, {
+                        beforeAnalytics: beforeDescriptionAnalytics,
+                    });
+
+                    bodyHeight = Math.max(d.getElementById('content').offsetHeight, minHeight);
+
+                    verifySharedHeight(bodyHeight);
+                    verifySharedWidth(maxWidth);
+
+                    message = JSON.stringify({
+                        message  : 'resize_imgur',
+                        href     : window.location.href,
+                        height   : bodyHeight,
+                        width    : d.documentElement.clientWidth,
+                        context  : false
+                    });
+
+                    parent.postMessage(message,'*');
+
+                    window.ImgurJafo._sessionStart();
+                    $analytics.mainGalleryItem(true, false);
+                };
+        })();
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6N38SF"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <div id="content">
+                            
+            
+            
+            <div class="embed-main-image">
+                <div class="panel">
+                    
+                    
+                    
+                                            
+                    
+                    
+                    <div id="prev-hover" class="prev-hover hover hide"></div>
+                    <div id="next-hover" class="next-hover hover"></div>
+                    <a id="image-link" class="image-link" href="//imgur.com/a/LNMBYGA#pGdjOgU" target="_blank">
+                        <div id="image-container">
+                            <div class="image">
+                                <img id="prev-image" class="prev-image-element post" src="" />
+                            </div>
+                            <div id="image" class="image">
+                                <img id="image-element" class="post " src="//i.imgur.com/pGdjOgUl.jpg" />
+                                <div id="video-container" class="video-container hide">
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img id="next-image" class="next-image-element post" src="" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="embed-footer" id="footer">
+    
+    <div class="info">
+        
+        
+        
+        
+                    
+            <a class="info-item" id="views" target="_blank" href="//imgur.com/a/LNMBYGA#pGdjOgU">
+                <span class="label label--reddit">0 views</span>
+            </a>
+        
+        <div class="center-container"></div>
+        
+        <a class="embed-logo" href="//imgur.com" target="_blank">
+            <img id="logo-container" height="20" src="//s.imgur.com/images/embed/logoblock.png" />
+        </a>
+    </div>
+</div>
+
+
+            </div>
+            <div id="shareModal" class="hidden">
+            <div class="share-modal">
+    <div class="share-body">
+        <div class="share-header">
+            <div class="share-label">Share</div>
+            <button class="close" id="cancel">&times;</button>
+        </div>
+        <div class="share-content">
+            <div class="share-target">
+                <a href="javascript:void(0)" class="target-item
+                    facebook" data-value="facebook" title="Facebook"
+                    style="background-image:
+                    url('//s.imgur.com/images/embed/facebook.svg')"></a>
+                <a href="javascript:void(0)" class="target-item twiter"
+                    data-value="twitter" title="Twitter"
+                    style="background-image:
+                    url('//s.imgur.com/images/embed/twitter.svg')"></a>
+                <a href="javascript:void(0)" class="target-item
+                    pinterest" data-value="pinterest" title="Pinterest"
+                    style="background-image:
+                    url('//s.imgur.com/images/embed/pinterest.svg')"></a>
+                <a href="javascript:void(0)" class="target-item reddit"
+                    data-value="reddit" title="Reddit"
+                    style="background-image:
+                    url('//s.imgur.com/images/embed/reddit.svg')"></a>
+            </div>
+            <div class="share-link">
+                <div class="share-tab">
+                    <div class="share-tab-item share-label isActive"
+                        data-value="link">Link</div>
+                    <div class="share-tab-item share-label" data-value="embed">Embed</div>
+                </div>
+                <div class="share-control">
+                    <input id="shareLink" name="share-link-input" />
+                    <button class="btn-copy">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="share-footer">
+            <div class="footer-content">
+                <div class="footer-text-0">
+                    Discover the magic of the Internet
+                </div>
+                <div class="footer-text-1">
+                    The Best Dogs • GIFs • Memes • Science &amp; Tech •
+                    Videos •
+                    Pancakes • LOLz
+                </div>
+                <a class="get-app get-imgur-app" target="_blank">Get the Imgur App</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+            
+        </div>
+    </body>
+</html>

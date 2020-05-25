@@ -1,0 +1,1645 @@
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="pagehead repohead hx_repohead readability-menu bg-gray-light pb-0 pt-3">
+
+    <div class="d-flex container-lg mb-4 px-3">
+
+      <div class="flex-auto min-width-0 width-fit mr-3">
+        <h1 class="public  d-flex flex-wrap flex-items-center break-word float-none ">
+  <span class="flex-self-stretch" style="margin-top: -2px;">
+      <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  </span>
+  <span class="author ml-2 flex-self-stretch" itemprop="author">
+    <a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/users/aguslr/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/aguslr">aguslr</a>
+  </span>
+  <span class="path-divider flex-self-stretch">/</span>
+  <strong itemprop="name" class="mr-2 flex-self-stretch">
+    <a data-pjax="#js-repo-pjax-container" href="/aguslr/.dotfiles">.dotfiles</a>
+  </strong>
+  
+</h1>
+
+
+      </div>
+
+      <ul class="pagehead-actions flex-shrink-0 " >
+
+
+
+
+  <li>
+    
+  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="3f6be16a01c86d94007af72c97e9e43ebad724a430b471bc2f7c92af012627ed" href="/login?return_to=%2Faguslr%2F.dotfiles">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+</a>    <a class="social-count" href="/aguslr/.dotfiles/watchers"
+       aria-label="2 users are watching this repository">
+      2
+    </a>
+
+  </li>
+
+  <li>
+        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:950091,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="b828ce4bd6759ac5edc5e0a952ce52855c8b62c42cb9f2757d2761a69992aaf4" href="/login?return_to=%2Faguslr%2F.dotfiles">
+      <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+
+      Star
+</a>
+    <a class="social-count js-social-count" href="/aguslr/.dotfiles/stargazers"
+      aria-label="6 users starred this repository">
+      6
+    </a>
+
+  </li>
+
+  <li>
+      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:950091,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="907429a2cf082950901d89de484088533d1417886fed3b6fc13e30b728de7ade" href="/login?return_to=%2Faguslr%2F.dotfiles">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+</a>
+    <a href="/aguslr/.dotfiles/network/members" class="social-count"
+       aria-label="0 users forked this repository">
+      0
+    </a>
+  </li>
+</ul>
+
+    </div>
+      
+<nav class="hx_reponav reponav js-repo-nav js-sidenav-container-pjax clearfix container-lg px-3"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /aguslr/.dotfiles" href="/aguslr/.dotfiles">
+      <div class="d-inline"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg></div>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" data-skip-pjax="true" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /aguslr/.dotfiles/pulls" href="/aguslr/.dotfiles/pulls">
+      <div class="d-inline"><svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg></div>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="4">
+</a>  </span>
+
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="position-relative float-left">
+      <a data-hotkey="g w" data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="repo_actions /aguslr/.dotfiles/actions" href="/aguslr/.dotfiles/actions">
+        <div class="d-inline"><svg class="octicon octicon-play" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 8A7 7 0 110 8a7 7 0 0114 0zm-8.223 3.482l4.599-3.066a.5.5 0 000-.832L5.777 4.518A.5.5 0 005 4.934v6.132a.5.5 0 00.777.416z"></path></svg></div>
+        Actions
+</a>
+    </span>
+
+
+
+    <a data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="security overview alerts policy token_scanning code_scanning /aguslr/.dotfiles/security" href="/aguslr/.dotfiles/security">
+      <div class="d-inline"><svg class="octicon octicon-shield" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 2l7-2 7 2v6.02C14 12.69 8.69 16 7 16c-1.69 0-7-3.31-7-7.98V2zm1 .75L7 1l6 1.75v5.268C13 12.104 8.449 15 7 15c-1.449 0-6-2.896-6-6.982V2.75zm1 .75L7 2v12c-1.207 0-5-2.482-5-5.985V3.5z"></path></svg></div>
+      Security
+          <span class="Counter js-security-tab-count" data-url="/aguslr/.dotfiles/security/overall-count" hidden></span>
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people /aguslr/.dotfiles/pulse" href="/aguslr/.dotfiles/pulse">
+      <div class="d-inline"><svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg></div>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+
+<div class="container-lg clearfix new-discussion-timeline  px-3">
+  <div class="repository-content ">
+
+    
+    
+    <signup-prompt-controller class="signup-prompt-bg rounded-1" data-prompt="signup" hidden>
+    <div class="signup-prompt p-4 text-center mb-4 rounded-1">
+      <div class="position-relative">
+        <button
+          type="button"
+          class="position-absolute top-0 right-0 btn-link link-gray"
+          data-action="click:signup-prompt-controller#dismiss"
+          data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss"
+        >
+          Dismiss
+        </button>
+        <h3 class="pt-2">Join GitHub today</h3>
+        <p class="col-6 mx-auto">GitHub is home to over 40 million developers working together to host and review code, manage projects, and build software together.</p>
+        <a class="btn btn-primary" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;files signup prompt&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d9c37bd49ab92b1ca00b3e19aa5168890422e8e35d7d041874b1c0cbd8a4bbfc" href="/join?source=prompt-code&amp;source_repo=aguslr%2F.dotfiles">Sign up</a>
+      </div>
+    </div>
+  </signup-prompt-controller>
+
+
+
+      <div class="">  <div class="f4">
+        <span class="text-gray-dark mr-2" itemprop="about">
+          Configuration files from my main computer
+        </span>
+        <span itemprop="url"><a rel="nofollow" href="https://git.io/mycfg">https://git.io/mycfg</a></span>
+  </div>
+</div>
+
+    <div class="repository-topics-container mt-2 mb-3 js-topics-list-container">  <div class="list-topics-container f6">
+      <a class="topic-tag topic-tag-link " href="/topics/dotfiles" title="Topic: dotfiles" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:dotfiles">
+  dotfiles
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/stow" title="Topic: stow" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:stow">
+  stow
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/zsh" title="Topic: zsh" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:zsh">
+  zsh
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/bash" title="Topic: bash" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:bash">
+  bash
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/mpd" title="Topic: mpd" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:mpd">
+  mpd
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/tmux" title="Topic: tmux" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:tmux">
+  tmux
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/mutt" title="Topic: mutt" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:mutt">
+  mutt
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/shell" title="Topic: shell" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:shell">
+  shell
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/vimrc" title="Topic: vimrc" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:vimrc">
+  vimrc
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/tmux-configs" title="Topic: tmux-configs" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:tmux-configs">
+  tmux-configs
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/ncmpcpp" title="Topic: ncmpcpp" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:ncmpcpp">
+  ncmpcpp
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/lynx" title="Topic: lynx" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:lynx">
+  lynx
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/logrotate" title="Topic: logrotate" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:logrotate">
+  logrotate
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/mplayer" title="Topic: mplayer" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:mplayer">
+  mplayer
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/mpv" title="Topic: mpv" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:mpv">
+  mpv
+</a>
+
+      <a class="topic-tag topic-tag-link " href="/topics/htop" title="Topic: htop" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:htop">
+  htop
+</a>
+
+  </div>
+</div>
+
+
+
+      <div class="overall-summary border-bottom-0 mb-0 rounded-bottom-0">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/aguslr/.dotfiles/commits/master">
+            <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"></path></svg>
+            <span class="num text-emphasized">
+              2,627
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/aguslr/.dotfiles/branches">
+          <svg class="octicon octicon-git-branch" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 00-1-3.72C.88 1 0 1.89 0 3a2 2 0 001 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+          <span class="num text-emphasized">
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+        <li>
+          <a data-pjax href="/aguslr/.dotfiles/packages" data-ga-click="Repository, packages click, location:repo overview">
+            <svg class="octicon octicon-package" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1 4.27v7.47c0 .45.3.84.75.97l6.5 1.73c.16.05.34.05.5 0l6.5-1.73c.45-.13.75-.52.75-.97V4.27c0-.45-.3-.84-.75-.97l-6.5-1.74a1.4 1.4 0 00-.5 0L1.75 3.3c-.45.13-.75.52-.75.97zm7 9.09l-6-1.59V5l6 1.61v6.75zM2 4l2.5-.67L11 5.06l-2.5.67L2 4zm13 7.77l-6 1.59V6.61l2-.55V8.5l2-.53V5.53L15 5v6.77zm-2-7.24L6.5 2.8l2-.53L15 4l-2 .53z"></path></svg>
+            <span class="num text-emphasized">
+              0
+            </span>
+            packages
+          </a>
+
+        </li>
+
+      <li>
+        <a href="/aguslr/.dotfiles/releases">
+          <svg class="octicon octicon-tag" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 000-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>
+          <span class="num text-emphasized">
+            0
+          </span>
+          releases
+        </a>
+      </li>
+
+        <li >
+            <a href="/aguslr/.dotfiles/graphs/contributors">
+  <svg class="octicon octicon-organization" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4z"></path></svg>
+    <span class="num text-emphasized">
+      2
+    </span>
+    contributors
+</a>
+        </li>
+
+        <li>
+          <a href="/aguslr/.dotfiles/blob/master/LICENSE">
+            <svg class="octicon octicon-law" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z"></path></svg>
+              GPL-3.0
+          </a>
+        </li>
+    </ul>
+  </div>
+
+    <details class="details-reset">
+      <summary title="Click for language details" data-ga-click="Repository, language bar stats toggle, location:repo overview">
+        <div class="d-flex repository-lang-stats-graph">
+            <span class="language-color" aria-label="Shell 70.5%" style="width:70.5%; background-color:#89e051;" itemprop="keywords">Shell</span>
+            <span class="language-color" aria-label="Vim script 12.9%" style="width:12.9%; background-color:#199f4b;" itemprop="keywords">Vim script</span>
+            <span class="language-color" aria-label="CSS 7.5%" style="width:7.5%; background-color:#563d7c;" itemprop="keywords">CSS</span>
+            <span class="language-color" aria-label="JavaScript 6.9%" style="width:6.9%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+            <span class="language-color" aria-label="Lua 1.8%" style="width:1.8%; background-color:#000080;" itemprop="keywords">Lua</span>
+            <span class="language-color" aria-label="Other 0.4%" style="width:0.4%; background-color:#ededed;" itemprop="keywords">Other</span>
+        </div>
+      </summary>
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/aguslr/.dotfiles/search?l=shell"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#89e051;"></span>
+                <span class="lang">Shell</span>
+                <span class="percent">70.5%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/aguslr/.dotfiles/search?l=vim-script"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#199f4b;"></span>
+                <span class="lang">Vim script</span>
+                <span class="percent">12.9%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/aguslr/.dotfiles/search?l=css"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#563d7c;"></span>
+                <span class="lang">CSS</span>
+                <span class="percent">7.5%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/aguslr/.dotfiles/search?l=javascript"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">6.9%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/aguslr/.dotfiles/search?l=lua"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#000080;"></span>
+                <span class="lang">Lua</span>
+                <span class="percent">1.8%</span>
+              </a>
+          </li>
+          <li>
+              <span>
+                <span class="color-block language-color" style="background-color:#ededed;"></span>
+                <span class="lang">Other</span>
+                <span class="percent">0.4%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </details>
+
+
+
+
+
+
+<div class="file-navigation in-mid-page mb-2 d-flex flex-items-start">
+  
+<details class="details-reset details-overlay branch-select-menu " id="branch-select-menu">
+  <summary class="btn css-truncate btn-sm"
+           data-hotkey="w"
+           title="Switch branches or tags">
+    <i>Branch:</i>
+    <span class="css-truncate-target" data-menu-button>master</span>
+    <span class="dropdown-caret"></span>
+  </summary>
+
+  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/aguslr/.dotfiles/refs/master?source_action=disambiguate&amp;source_controller=files" preload>
+    <div class="SelectMenu-modal">
+      <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
+        <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"></path></svg>
+      </include-fragment>
+    </div>
+  </details-menu>
+</details>
+
+
+        <button type="button" class="btn btn-sm disabled tooltipped tooltipped-n new-pull-request-btn ml-2" aria-label="You must be signed in to create a pull request">
+          New pull request
+        </button>
+
+  <div class="breadcrumb flex-auto">
+    
+  </div>
+
+    <div class="BtnGroup ml-2">
+
+      <a class="btn btn-sm empty-icon float-right BtnGroup-item" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:950091,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="26ccdf1a4fd7a329cc2640aa25edbb010e3cb0465b1572f9a0918d9939418b3d" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/aguslr/.dotfiles/find/master">Find file</a>
+    </div>
+
+
+    <span class="d-flex">
+        
+
+        
+<get-repo-controller>
+  <details class="position-relative details-overlay details-reset" data-action="toggle:get-repo-controller#onDetailsToggle">
+    <summary class="btn btn-sm ml-2 btn-primary" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;repository_id&quot;:950091,&quot;target&quot;:&quot;CLONE_OR_DOWNLOAD_BUTTON&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="1f7367c89c3536120fef77f5f33b68ea2cd0422985de84a1b85a40f3509cb690">
+        Clone or download
+      <span class="dropdown-caret"></span>
+</summary>    <div class="position-relative">
+      <div class="get-repo-modal dropdown-menu dropdown-menu-sw pb-0 js-toggler-container " data-target="get-repo-controller.modal">
+  
+        <div class="get-repo-modal-options">
+            <div class="clone-options https-clone-options">
+  
+              <h4 class="mb-1">
+                Clone with HTTPS
+                <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank" title="Which remote URL should I use?">
+                  <svg class="octicon octicon-question" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 011.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"></path></svg>
+                </a>
+              </h4>
+              <p class="mb-2 get-repo-decription-text">
+                Use Git or checkout with SVN using the web URL.
+              </p>
+  
+              <div class="input-group">
+  <input type="text" class="form-control input-monospace input-sm" data-autoselect value="https://github.com/aguslr/.dotfiles.git" aria-label="Clone this repository at https://github.com/aguslr/.dotfiles.git" readonly>
+  <div class="input-group-button">
+    <clipboard-copy value="https://github.com/aguslr/.dotfiles.git" aria-label="Copy to clipboard" class="btn btn-sm" data-hydro-click="{&quot;event_type&quot;:&quot;clone_or_download.click&quot;,&quot;payload&quot;:{&quot;feature_clicked&quot;:&quot;COPY_URL&quot;,&quot;git_repository_type&quot;:&quot;REPOSITORY&quot;,&quot;repository_id&quot;:950091,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="8a3a3a6374fe8ba7e87b4f0724be853be51a40f5685376682a7f4464cb3fd190"><svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"></path></svg></clipboard-copy>
+  </div>
+</div>
+
+            </div>
+  
+          <div class="mt-2 d-flex">
+            <a class="btn btn-outline get-repo-btn tooltipped tooltipped-s tooltipped-multiline js-remove-unless-platform" aria-label="Clone aguslr/.dotfiles to your computer and use it in GitHub Desktop." data-hydro-click="{&quot;event_type&quot;:&quot;clone_or_download.click&quot;,&quot;payload&quot;:{&quot;feature_clicked&quot;:&quot;OPEN_IN_DESKTOP&quot;,&quot;git_repository_type&quot;:&quot;REPOSITORY&quot;,&quot;repository_id&quot;:950091,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d6bdc994bbc7e25bb2a71dfa3ff053dab5530fe7100c3f2b961c607280249c36" data-platforms="windows,mac" data-action="click:get-repo-controller#showDownloadMessage" href="https://desktop.github.com">Open in Desktop</a>
+
+<a class="flex-1 btn btn-outline get-repo-btn" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;clone_or_download.click&quot;,&quot;payload&quot;:{&quot;feature_clicked&quot;:&quot;DOWNLOAD_ZIP&quot;,&quot;git_repository_type&quot;:&quot;REPOSITORY&quot;,&quot;repository_id&quot;:950091,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="e577efef3f019107c553fc189cc1de50019c11ed24cc6a049a448de950324480" data-ga-click="Repository, download zip, location:repo overview" data-open-app="link" data-action="click:get-repo-controller#showDownloadMessage" href="/aguslr/.dotfiles/archive/master.zip">Download ZIP</a>
+
+          </div>
+        </div>
+  
+          <div data-target="get-repo-controller.platforms" data-platform="link" hidden>
+            <div class="py-2 px-3">
+              <h4 class="lh-condensed mb-3">Downloading<span class="AnimatedEllipsis"></span></h4>
+              <p class="text-gray">
+                Want to be notified of new releases in
+                <span class="text-bold">aguslr/.dotfiles</span>?
+              </p>
+            </div>
+            <div class="width-full d-flex">
+              <a rel="nofollow" class="get-repo-btn btn btn-outline" style="width: 50%" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;download popover&quot;,&quot;repository_id&quot;:950091,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="77ca0949a64ad11d2a4d6c24c1f3ba4cc0266a4894b001f058cca7827700a594" href="/login?return_to=https%3A%2F%2Fgithub.com%2Faguslr%2F.dotfiles%3F_pjax%3D%2523js-repo-pjax-container">Sign in</a>
+              <a rel="nofollow" class="get-repo-btn btn btn-primary" style="width: 50%" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;download popover&quot;,&quot;repository_id&quot;:950091,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="397a4b681663f4835e9d97ab0a588cb1865d69cc0dd3417b48a72baf9c638f91" href="/join?branch=master&amp;source=download&amp;source_repo=aguslr%2F.dotfiles">Sign up</a>
+            </div>
+          </div>
+  
+        <div class="py-2 px-3" data-target="get-repo-controller.platforms" data-platform="mac" hidden>
+          <h4 class="lh-condensed mb-3">Launching GitHub Desktop<span class="AnimatedEllipsis"></span></h4>
+          <p class="text-gray">If nothing happens, <a href="https://desktop.github.com/">download GitHub Desktop</a> and try again.</p>
+          <p><button class="btn-link" data-action="click:get-repo-controller#onDetailsToggle">Go back</button></p>
+        </div>
+  
+        <div class="py-2 px-3" data-target="get-repo-controller.platforms" data-platform="windows" hidden>
+          <h4 class="lh-condensed mb-3">Launching GitHub Desktop<span class="AnimatedEllipsis"></span></h4>
+          <p class="text-gray">If nothing happens, <a href="https://desktop.github.com/">download GitHub Desktop</a> and try again.</p>
+          <p><button class="btn-link" data-action="click:get-repo-controller#onDetailsToggle">Go back</button></p>
+        </div>
+  
+        <div class="py-2 px-3" data-target="get-repo-controller.platforms" data-platform="xcode" hidden>
+          <h4 class="lh-condensed mb-3">Launching Xcode<span class="AnimatedEllipsis"></span></h4>
+          <p class="text-gray">If nothing happens, <a href="https://developer.apple.com/xcode/">download Xcode</a> and try again.</p>
+          <p><button class="btn-link" data-action="click:get-repo-controller#onDetailsToggle">Go back</button></p>
+        </div>
+  
+        <div class="py-2 px-3" data-target="get-repo-controller.platforms" data-platform="visual-studio" hidden>
+          <h4 class="lh-condensed mb-3">Launching Visual Studio<span class="AnimatedEllipsis"></span></h4>
+          <p class="text-gray">If nothing happens, <a href="https://visualstudio.github.com/">download the GitHub extension for Visual Studio</a> and try again.</p>
+          <p><button class="btn-link" data-action="click:get-repo-controller#onDetailsToggle">Go back</button></p>
+        </div>
+  
+      </div>
+    </div>
+  </details>
+</get-repo-controller>
+
+
+    </span>
+
+</div>
+
+
+
+
+<div class="Box mb-3 Box--condensed">
+  <div class="Box-header Box-header--blue position-relative "
+    style="margin-bottom:-1px;">
+    <h2 class="sr-only">Latest commit</h2>
+    <div class="commit-tease js-details-container Details d-flex rounded-top-1 flex-auto" data-issue-and-pr-hovercards-enabled>
+        
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="aguslr">
+        <a class="avatar avatar-user" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/aguslr/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/aguslr">
+          <img height="20" width="20" alt="@aguslr" src="https://avatars1.githubusercontent.com/u/421687?s=60&amp;u=e6d83915b11a951d8fe0304d9613a5f7f86caf01&amp;v=4" class=" avatar-user" />
+</a>  </div>
+</div>
+
+    <div class="flex-auto f6 mr-3">
+      
+      <a href="/aguslr/.dotfiles/commits?author=aguslr"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by aguslr">aguslr</a>
+
+
+  
+
+
+        <a data-pjax="true" title="scripts: vagrantmenu.sh: Fix comments" class="message text-inherit" href="/aguslr/.dotfiles/commit/78c1cc7548abf0d3f83418bb26c846191deaa7f9">scripts: vagrantmenu.sh: Fix comments</a>
+
+    </div>
+    <div class="no-wrap d-flex flex-self-start flex-items-baseline">
+        <span class="mr-2 flex-self-center">
+          <include-fragment accept="text/fragment+html" src="/aguslr/.dotfiles/commit/78c1cc7548abf0d3f83418bb26c846191deaa7f9/rollup?direction=w" class="d-inline"></include-fragment>
+        </span>
+      <span class="mr-1">Latest commit</span>
+      <a class="commit-tease-sha mr-1" href="/aguslr/.dotfiles/commit/78c1cc7548abf0d3f83418bb26c846191deaa7f9" data-pjax>
+        78c1cc7
+      </a>
+      <span itemprop="dateModified"><relative-time datetime="2019-05-26T10:20:56Z" class="no-wrap">May 26, 2019</relative-time></span>
+    </div>
+    </div>
+  </div>
+  <h2 id="files"  class="sr-only">Files</h2>
+  
+
+
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/aguslr/.dotfiles/tree/78c1cc7548abf0d3f83418bb26c846191deaa7f9">Permalink</a>
+
+    <table class="files js-navigation-container js-active-navigation-container " data-pjax>
+      <thead>
+        <tr>
+          <th><span class="sr-only">Type</span></th>
+          <th><span class="sr-only">Name</span></th>
+          <th><span class="sr-only">Latest commit message</span></th>
+          <th><span class="sr-only">Commit time</span></th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <tr class="warning include-fragment-error">
+          <td class="icon"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></td>
+          <td class="content" colspan="3">Failed to load latest commit information.</td>
+        </tr>
+
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".calcurse" id="f7f365ed2ab39e30e39c12e87ef28882-7bd32231f127faf0608a393aa6bf412fa594f73c" href="/aguslr/.dotfiles/tree/master/.calcurse">.calcurse</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".config" id="5c3a99ab9c081acb3281ff5036721e79-12d0245493b07edf94acff7be15a16673d6424a2" href="/aguslr/.dotfiles/tree/master/.config">.config</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="sxhkd: Add chord shortcut to start screensaver" class="link-gray" href="/aguslr/.dotfiles/commit/0bd73d0dd45dbdacc13c78d6a5495a17e2e70258">sxhkd: Add chord shortcut to start screensaver</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-18T16:58:11Z" class="no-wrap">May 18, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".links2" id="ba81cbfc7e58e0f51b5ebda5c745fb3b-b36622525bc086a8ce41cc6d1d9bcb1844479e0d" href="/aguslr/.dotfiles/tree/master/.links2">.links2</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="This path skips through empty directories" id="ea34e5c5cd2632c28a27df136abd61ce-0f5b8db2d8957328474c78b01a0fa73c839f499d" href="/aguslr/.dotfiles/tree/master/.local/share"><span class="text-gray-light">.local/</span>share</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="mime: Use transmission-remote-cli for torrents" class="link-gray" href="/aguslr/.dotfiles/commit/0ff56a6657d646e81cea8af220f003b7b26760a0">mime: Use transmission-remote-cli for torrents</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-01T16:33:40Z" class="no-wrap">May 1, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".lynx" id="2dd610274e0ba9cfd5aabd8fe474df85-d8ad1cbc665d74afca47180760418c940964b879" href="/aguslr/.dotfiles/tree/master/.lynx">.lynx</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="This path skips through empty directories" id="5140425ad80bd760a26100a690a7e47a-ff0e6bfc2fcd3dac90654c280d3ad660cefeb357" href="/aguslr/.dotfiles/tree/master/.mozilla/firefox"><span class="text-gray-light">.mozilla/</span>firefox</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="firefox: Use remote DNS when using a SOCKSv5 proxy
+
+http://kb.mozillazine.org/Network.proxy.socks_remote_dns" class="link-gray" href="/aguslr/.dotfiles/commit/65bca65fb61ee4a5bda14c7053a0acdeadff7f32">firefox: Use remote DNS when using a SOCKSv5 proxy</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-05T10:28:30Z" class="no-wrap">May 5, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".ncmpcpp" id="325827a877048ed2df65eb2a695bd762-3c861c856f26e229c62950faff215d08c942e365" href="/aguslr/.dotfiles/tree/master/.ncmpcpp">.ncmpcpp</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".shellrc" id="ec0db11ae28f87ae609d03006ae0cdc4-739384aa586185ea9f5638076043b2f8a596971a" href="/aguslr/.dotfiles/tree/master/.shellrc">.shellrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="shell: Add some aliases for systemd" class="link-gray" href="/aguslr/.dotfiles/commit/632818104661e5356a1271d4f3281aa69c86b049">shell: Add some aliases for systemd</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-15T14:11:16Z" class="no-wrap">May 15, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".ssh" id="cb8c8e9d73e8e1088ed383f5cbcc67d7-a242e6686f64b6d7cf01a31c700b2eb69bfdcb2a" href="/aguslr/.dotfiles/tree/master/.ssh">.ssh</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="ssh: Add more domains and IP ranges for VM hosts" class="link-gray" href="/aguslr/.dotfiles/commit/93621f2fcf832bf17cbfa68cf057772305527e91">ssh: Add more domains and IP ranges for VM hosts</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-09T20:56:19Z" class="no-wrap">Apr 9, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".tmux" id="50c48e912f6dfb24f362d2c81b8465f1-1da6869c281b44d4b59abaa66d59886f7ab3cd57" href="/aguslr/.dotfiles/tree/master/.tmux">.tmux</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="bash, shell, scripts, tmux, xorg: Retab shell scripts" class="link-gray" href="/aguslr/.dotfiles/commit/91d58dc40ce3c5b46c262f49e7a0609eafd50b82">bash, shell, scripts, tmux, xorg: Retab shell scripts</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-06T11:50:46Z" class="no-wrap">Feb 6, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="This path skips through empty directories" id="4e28325ad9a922fdbc74a767f5b3b9a7-a9efea67f57c0d55c9d354bb866d049047636229" href="/aguslr/.dotfiles/tree/master/.urxvt/ext"><span class="text-gray-light">.urxvt/</span>ext</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="urxvt: Remove broken symlink
+
+Remove broken symlink that pointed to a extension that was removed." class="link-gray" href="/aguslr/.dotfiles/commit/7828d10464b1f9f548c9f45b7241aadc40ada63e">urxvt: Remove broken symlink</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-19T17:05:10Z" class="no-wrap">May 19, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="This path skips through empty directories" id="0432e24e4107f92ef1d43342ea45de0d-8c2e96a8e0fa160fbc789e5ca1680e05e8921d47" href="/aguslr/.dotfiles/tree/master/.vim/skel"><span class="text-gray-light">.vim/</span>skel</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".w3m" id="edee2fe7bb8b13d9bcdf082554468294-0d59df1981b3eebc69e097c6d8c2601233af25cb" href="/aguslr/.dotfiles/tree/master/.w3m">.w3m</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="bin" id="c1111bd512b29e821b120b86446026b8-cafdf1e8e71bc48e8d81d247d2fa5d627b3810f4" href="/aguslr/.dotfiles/tree/master/bin">bin</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="scripts: vagrantmenu.sh: Fix comments" class="link-gray" href="/aguslr/.dotfiles/commit/78c1cc7548abf0d3f83418bb26c846191deaa7f9">scripts: vagrantmenu.sh: Fix comments</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-26T10:20:56Z" class="no-wrap">May 26, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".Xdefaults" id="c22e5dd267ff8b9022292e8bb4070677-70e956f1d9dd5c26028d31da1cd67a9f07aaef15" href="/aguslr/.dotfiles/blob/master/.Xdefaults">.Xdefaults</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".Xresources" id="0daaafbab97b516116ffc5d69826e86e-9ef8917cf212264d8f22eec9db01fdf74be00cc0" href="/aguslr/.dotfiles/blob/master/.Xresources">.Xresources</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="xorg: Add link to list of URxvt extensions
+
+https://manpages.debian.org/jump?q=urxvt-extensions" class="link-gray" href="/aguslr/.dotfiles/commit/97bf0e06d4270cbe1b18eeb67d3a68024518ae4f">xorg: Add link to list of URxvt extensions</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-10T08:40:50Z" class="no-wrap">May 10, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".bash_logout" id="eda0a494fc7458ea7aeac39811299e39-e3ddddd005afb153b271cc3ffda797590772b18f" href="/aguslr/.dotfiles/blob/master/.bash_logout">.bash_logout</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="bash, shell, scripts, tmux, xorg: Retab shell scripts" class="link-gray" href="/aguslr/.dotfiles/commit/91d58dc40ce3c5b46c262f49e7a0609eafd50b82">bash, shell, scripts, tmux, xorg: Retab shell scripts</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-06T11:50:46Z" class="no-wrap">Feb 6, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".bashrc" id="85cf9b51417c7cfb8766aa6b56f7edb9-47e15edaffe1fef04be2e258a748ee48b82c44c1" href="/aguslr/.dotfiles/blob/master/.bashrc">.bashrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="bash, shell, zsh: Use custom venv prompt
+
+https://stackoverflow.com/a/20026992" class="link-gray" href="/aguslr/.dotfiles/commit/870f1814bf41a0ae1a19b668642c3562355406a6">bash, shell, zsh: Use custom venv prompt</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-14T09:21:17Z" class="no-wrap">Apr 14, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".cshrc" id="23df3205440ec8633a2cde67695b8606-d4c2f42a3c5e27ca91cbcb99042d419df68df96f" href="/aguslr/.dotfiles/blob/master/.cshrc">.cshrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".curlrc" id="960f5fd5d6f8fa4b19a3f2c224c1bd02-a93148c79f68f0da69524acdc0d20e60135fc05a" href="/aguslr/.dotfiles/blob/master/.curlrc">.curlrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".dmenurc" id="5e2bc9613d8e2f7b29c88c256a899812-074368b087d52e68b07136032053f48c167e01c6" href="/aguslr/.dotfiles/blob/master/.dmenurc">.dmenurc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="dmenu, surf: Use getXcolor.sh to configure colors" class="link-gray" href="/aguslr/.dotfiles/commit/ede79343ae5dc9719f6f538da37de7c1632dcd86">dmenu, surf: Use getXcolor.sh to configure colors</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-07T18:27:07Z" class="no-wrap">Apr 7, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gitignore" id="a084b794bc0759e7a6b77810e01874f2-886a5cdfd448e35db1e25adde69ee5dc9a2e73a0" href="/aguslr/.dotfiles/blob/master/.gitignore">.gitignore</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Ignore bare repository directory" class="link-gray" href="/aguslr/.dotfiles/commit/0c39214f42b05f5c56557b58305fa7079856a4a0">Ignore bare repository directory</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-02T18:58:59Z" class="no-wrap">Feb 2, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gitmodules" id="8903239df476d7401cf9e76af0252622-0d8f44d1e30f73655d74271a6eaa5bcdcca4796a" href="/aguslr/.dotfiles/blob/master/.gitmodules">.gitmodules</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="urxvt: Remove tabbedex submodule" class="link-gray" href="/aguslr/.dotfiles/commit/ec0c9fd2b12e1ef7c6dbd22a1995d60e8cfdbac6">urxvt: Remove tabbedex submodule</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-25T15:13:18Z" class="no-wrap">Apr 25, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gtkrc-2.0" id="96f5d82a90ad5b50480916f82ff3b6b7-aee9f4ac3300a82935bcea5516ab5f808c46972f" href="/aguslr/.dotfiles/blob/master/.gtkrc-2.0">.gtkrc-2.0</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="gtk2, gtk3, xorg: Change mouse cursor theme" class="link-gray" href="/aguslr/.dotfiles/commit/caa32ce86807d87f75ce47b57973b4f62035b379">gtk2, gtk3, xorg: Change mouse cursor theme</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-11T18:14:14Z" class="no-wrap">Feb 11, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gtkrc-2.0.mine" id="882b70de6d13e2a4e76fa61e5eb1a866-d67e1f466e089fcaac07f93e401dd0be4e11a19c" href="/aguslr/.dotfiles/blob/master/.gtkrc-2.0.mine">.gtkrc-2.0.mine</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".inputrc" id="d3e0d9a3f526156e8bd853962ddcc16f-02a92e3a19122c09282dc3b07dc2918eb1bdb300" href="/aguslr/.dotfiles/blob/master/.inputrc">.inputrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="shell: Use history-substring-search-*
+
+https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html" class="link-gray" href="/aguslr/.dotfiles/commit/334baad99318d353af6be600136256d6d33a9ea2">shell: Use history-substring-search-*</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-06T11:50:47Z" class="no-wrap">Feb 6, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".login" id="cdd1ac4294425857d39b7185c59c3094-9123ced5ebca943a8ade9b08afe92d11f0cf4125" href="/aguslr/.dotfiles/blob/master/.login">.login</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".logrotate.conf" id="73d9b09b180ace05fc1594a9fa9c51a1-6a80b02c28c795f0965890caf69995306325299a" href="/aguslr/.dotfiles/blob/master/.logrotate.conf">.logrotate.conf</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="logrotate: Add note to use PROMPT_COMMAND for history log
+
+https://debian-administration.org/article/543/Bash_eternal_history
+https://spin.atomicobject.com/2016/05/28/log-bash-history/" class="link-gray" href="/aguslr/.dotfiles/commit/a51413a572ce2d5503848209788e42d471c57aa6">logrotate: Add note to use PROMPT_COMMAND for history log</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-02T18:58:59Z" class="no-wrap">Feb 2, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".lynxrc" id="da8c8a43f51c8e88775998e039e369b3-c99d2306bd3a8f5a28e01645c7046768dbd420b3" href="/aguslr/.dotfiles/blob/master/.lynxrc">.lynxrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".nvimrc" id="135bac5319d5c759f67915693caa3730-1490f7ab0821b037ba088c07c62fb49964a83530" href="/aguslr/.dotfiles/blob/master/.nvimrc">.nvimrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".profile" id="593308ff3a1800e7975e8fdd7f830dd3-fb17dddebdbcd8dc47a15e4c88a30601ac428dbf" href="/aguslr/.dotfiles/blob/master/.profile">.profile</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="shell: Don&#39;t display errors" class="link-gray" href="/aguslr/.dotfiles/commit/a615f52b1ca62b0f115f8d7b80619b6bb9b63950">shell: Don't display errors</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-25T15:13:18Z" class="no-wrap">Apr 25, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".screenrc" id="4d99483a610dc6644a3d1d339b91686e-909fbf4ac25a185772a07120c26b4f3be612827f" href="/aguslr/.dotfiles/blob/master/.screenrc">.screenrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".stalonetrayrc" id="1efae74c9095475112b6acee4cb7432d-8057370e6d778dba3667d1ef7d2aa4e8b00492a5" href="/aguslr/.dotfiles/blob/master/.stalonetrayrc">.stalonetrayrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".stow-local-ignore" id="fc257a9a4fa305ea223b49d7f2d1114b-5c2cc25b76b86b81172ac8574293980939ec72df" href="/aguslr/.dotfiles/blob/master/.stow-local-ignore">.stow-local-ignore</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Add Stow ignore list" class="link-gray" href="/aguslr/.dotfiles/commit/847b52d3f5b5cd1a1dd0afb89f06db8ae89a5329">Add Stow ignore list</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-06T13:34:50Z" class="no-wrap">May 6, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".tmux.conf" id="404ba9c46ceac3673911dd713648cee5-6d4cac080af4671b074116807164108dd6e8fd78" href="/aguslr/.dotfiles/blob/master/.tmux.conf">.tmux.conf</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="tmux: Change color of pane borders" class="link-gray" href="/aguslr/.dotfiles/commit/05b2aff9f49dc4a572bf36d1da2c2456217cabbc">tmux: Change color of pane borders</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-07T16:46:20Z" class="no-wrap">Feb 7, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".udisks-glue.conf" id="db1b2c16892337cc9e05502f573366ca-1a929bb72e32b4f91c381018267d4b17e13c64c4" href="/aguslr/.dotfiles/blob/master/.udisks-glue.conf">.udisks-glue.conf</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".urlview" id="b565ab0cdc510562f0d3e92ad5f52121-5d332417a586662c38f8b7c2c7878244b65f9ecb" href="/aguslr/.dotfiles/blob/master/.urlview">.urlview</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".vimrc" id="4e12c6a37ff2cbb2c93d1b33324a6051-97656ac09fda9f2ef2056337b0cd5ce04976c31f" href="/aguslr/.dotfiles/blob/master/.vimrc">.vimrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="vim: Add commands to edit GPG encrypted files
+
+https://vim.fandom.com/wiki/Edit_gpg_encrypted_files" class="link-gray" href="/aguslr/.dotfiles/commit/753db90faa0b56445e2a330f619b27dec185804b">vim: Add commands to edit GPG encrypted files</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-19T10:38:32Z" class="no-wrap">Apr 19, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".wgetrc" id="bbbf1d1b76795d32d95652a537030331-cde2fd354c6f8fb0bdc8b78dd1b332bfb7834891" href="/aguslr/.dotfiles/blob/master/.wgetrc">.wgetrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".xbindkeysrc" id="d0f220e87a3b8e56f8cf90e4f73fea51-10a0e15c1a1c0458b88d5392572841bb28d23408" href="/aguslr/.dotfiles/blob/master/.xbindkeysrc">.xbindkeysrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="sxhkd, xbindkeys: Use staty.sh to for multimedia keys" class="link-gray" href="/aguslr/.dotfiles/commit/d3078683af34a0f713485af88981ecddbec7f81e">sxhkd, xbindkeys: Use staty.sh to for multimedia keys</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-03-19T17:55:01Z" class="no-wrap">Mar 19, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".xcolors" id="d56bb1b54fc6593f65f04ed2ea40bcce-9eedadaac3a78ccd45e7fe1a6138867cf0ed9906" href="/aguslr/.dotfiles/blob/master/.xcolors">.xcolors</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="xorg: Use light theme" class="link-gray" href="/aguslr/.dotfiles/commit/64330ef6604d156a6b7a65d61f9c6f452adda014">xorg: Use light theme</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-06T11:50:48Z" class="no-wrap">Feb 6, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".xinitrc" id="e8e122e009dedd906bd1c5c948a40a20-cdeb7918fc672c21ac2e4d68a670884f47cb7184" href="/aguslr/.dotfiles/blob/master/.xinitrc">.xinitrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="xorg: Start SSH agent if necessary" class="link-gray" href="/aguslr/.dotfiles/commit/e635302142ff4d30030bcc554e138355badec257">xorg: Start SSH agent if necessary</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-06T14:14:04Z" class="no-wrap">May 6, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".xprofile" id="314638da8f199c59503d13c868b3e36e-62e71dad36d5a313fe7f9e9d811ac3657f4e3ef3" href="/aguslr/.dotfiles/blob/master/.xprofile">.xprofile</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".xserverrc" id="45af89de578ca82bf1b475628ecef8eb-f7f9e13d9baae380a4a3ca1e967d8afb5ab23e04" href="/aguslr/.dotfiles/blob/master/.xserverrc">.xserverrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="xorg: Add .xserverrc file
+
+https://wiki.archlinux.org/index.php/Xinit#xserverrc" class="link-gray" href="/aguslr/.dotfiles/commit/ca53234d4a3add06558c9305ef0796b53076e8dd">xorg: Add .xserverrc file</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-04-05T08:03:16Z" class="no-wrap">Apr 5, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".xsession" id="2003e58f3a41d4f595a7902ce05092ff-03280dfd868a0cfa0acc868715f44960e007ba6b" href="/aguslr/.dotfiles/blob/master/.xsession">.xsession</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".zlogout" id="298adfab09fc975decdcdc9f4f7438b3-762da1309a0ca7c8f85f2e90ea76f5b1d3c81aad" href="/aguslr/.dotfiles/blob/master/.zlogout">.zlogout</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="symlink file" class="octicon octicon-file-symlink-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM6 4.5l4 3-4 3v-2c-.98-.02-1.84.22-2.55.7-.71.48-1.19 1.25-1.45 2.3.02-1.64.39-2.88 1.13-3.73.73-.84 1.69-1.27 2.88-1.27v-2H6z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".zprofile" id="898f196707dc1dd1f313b532e6c2e136-aa7da3a93b7a5d85cac904310bf7f9a57c95a1a2" href="/aguslr/.dotfiles/blob/master/.zprofile">.zprofile</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".zshrc" id="ec20fb240e117fea7b0049c21edf1ef3-64a33b76c5c68a79fafec85fdb75f21e1d3fe91d" href="/aguslr/.dotfiles/blob/master/.zshrc">.zshrc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use bare repository to manage dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" class="link-gray" href="/aguslr/.dotfiles/commit/a44cf6eb1fab6b2e3e38d8904c90cab81014458f">Use bare repository to manage dotfiles</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-01-21T15:01:52Z" class="no-wrap">Jan 21, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="LICENSE" id="9879d6db96fd29134fc802214163b95a-10926e87f113fb026c366866d6fa466061562870" itemprop="license" href="/aguslr/.dotfiles/blob/master/LICENSE">LICENSE</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Add GPL3 license" class="link-gray" href="/aguslr/.dotfiles/commit/20d6741cb52dd297f4485700ca5b71462e0898a0">Add GPL3 license</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-26T09:49:16Z" class="no-wrap">May 26, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="README.md" id="04c6e90faac2675aa89e2176d2eec7d8-8d152eefb4d387446c92ee98bfd510658c753886" href="/aguslr/.dotfiles/blob/master/README.md">README.md</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="README.md: Truncate history when cloning
+
+https://manpages.debian.org/jump?q=git-clone" class="link-gray" href="/aguslr/.dotfiles/commit/33eb34c07f0568a0db8a1acaa040ee8e979b2f06">README.md: Truncate history when cloning</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-05-26T10:04:31Z" class="no-wrap">May 26, 2019</time-ago></span>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+</div>
+
+  <div id="readme" class="Box md js-code-block-container Box--condensed">
+    <div class="Box-header d-flex flex-items-center flex-justify-between ">
+      <h2 class="Box-title pr-3">
+        <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+        README.md
+      </h2>
+    </div>
+        <div class="Popover anim-scale-in js-tagsearch-popover"
+     hidden
+     data-tagsearch-url="/aguslr/.dotfiles/find-symbols"
+     data-tagsearch-ref="master"
+     data-tagsearch-path="README.md"
+     data-tagsearch-lang="Markdown"
+     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:950091,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;Markdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}"
+     data-hydro-click-hmac="61fea85ea8b080f6294d8829e32b0f1e33e4e2c43cce40ae79bfebcca57ba2c1">
+  <div class="Popover-message Popover-message--large Popover-message--top-left TagsearchPopover mt-1 mb-4 mx-auto Box box-shadow-large">
+    <div class="TagsearchPopover-content js-tagsearch-popover-content overflow-auto" style="will-change:transform;">
+    </div>
+  </div>
+</div>
+
+      <div class="Box-body p-5">
+        <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-dotfiles" class="anchor" aria-hidden="true" href="#dotfiles"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dotfiles</h1>
+<h2><a id="user-content-about" class="anchor" aria-hidden="true" href="#about"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About</h2>
+<p>These are some of the configuration files from my Debian box. They are mainly
+arranged from various sources to meet my needs but suit yourself.</p>
+<h2><a id="user-content-installing-with-git-and-stow" class="anchor" aria-hidden="true" href="#installing-with-git-and-stow"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing with Git and Stow</h2>
+<p>In order to clone the repository and create links to the files, we need
+<a href="https://git-scm.com/" rel="nofollow">Git</a> and <a href="https://www.gnu.org/software/stow/" rel="nofollow">GNU Stow</a> to be installed on the system:</p>
+<div class="highlight highlight-source-shell"><pre>sudo apt-get install git stow</pre></div>
+<p>Once we have Git installed, we can go ahead and clone the repository:</p>
+<div class="highlight highlight-source-shell"><pre>git clone --depth 1 --recursive --shallow-submodules https://github.com/aguslr/.dotfiles.git <span class="pl-k">~</span>/.dotfiles</pre></div>
+<p>Now, we can use <em>Stow</em> to link the files from the repository to our home
+directory:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/.dotfiles <span class="pl-k">&amp;&amp;</span> stow --verbose --stow <span class="pl-c1">.</span></pre></div>
+<p>Some files may already exist on our home directory so <em>Stow</em> will refuse to
+overwrite them:</p>
+<div class="highlight highlight-source-shell"><pre>WARNING<span class="pl-k">!</span> stowing <span class="pl-c1">.</span> would cause conflicts:
+  <span class="pl-k">*</span> existing target is neither a link nor a directory: .bash_logout
+  <span class="pl-k">*</span> existing target is neither a link nor a directory: .bashrc
+  <span class="pl-k">*</span> existing target is neither a link nor a directory: .profile
+All operations aborted.</pre></div>
+<p>We will need to rename or delete these files before they can be linked to the
+repository.</p>
+<h3><a id="user-content-undoing-everything" class="anchor" aria-hidden="true" href="#undoing-everything"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Undoing everything</h3>
+<p>If we want to restore our home directory to its previous state, we can remove
+all the links created by <em>Stow</em> with this command:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/.dotfiles <span class="pl-k">&amp;&amp;</span> stow --verbose --delete <span class="pl-c1">.</span></pre></div>
+<h2><a id="user-content-installing-with-git" class="anchor" aria-hidden="true" href="#installing-with-git"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing with Git</h2>
+<h3><a id="user-content-preparing-the-system" class="anchor" aria-hidden="true" href="#preparing-the-system"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Preparing the system</h3>
+<p>Since we are going to use a bare <em>Git</em> repository to <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" rel="nofollow">manage</a> our
+<a href="https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html" rel="nofollow">files</a>, we need to install the appropriate package:</p>
+<div class="highlight highlight-source-shell"><pre>sudo apt-get install git</pre></div>
+<h3><a id="user-content-cloning-the-bare-repository" class="anchor" aria-hidden="true" href="#cloning-the-bare-repository"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cloning the bare repository</h3>
+<p>Once we have Git installed on the system, we can get the files directly from the
+repository:</p>
+<div class="highlight highlight-source-shell"><pre>git clone --bare --depth 1 --recursive --shallow-submodules https://github.com/aguslr/.dotfiles.git <span class="pl-k">~</span>/.dotfiles.git</pre></div>
+<p>First, we need to create a temporary alias to work with the repository:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">alias</span> dotfiles=<span class="pl-s"><span class="pl-pds">"</span>git --git-dir=<span class="pl-smi">$HOME</span>/.dotfiles.git --work-tree=<span class="pl-smi">$HOME</span><span class="pl-pds">"</span></span></pre></div>
+<p>We can now update the submodules:</p>
+<div class="highlight highlight-source-shell"><pre>dotfiles submodule init <span class="pl-k">&amp;&amp;</span> dotfiles submodule update</pre></div>
+<h3><a id="user-content-configuring-the-repository" class="anchor" aria-hidden="true" href="#configuring-the-repository"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring the repository</h3>
+<p>To avoid showing all the untracked files in our home directory, we have to
+change the configuration:</p>
+<div class="highlight highlight-source-shell"><pre>dotfiles config --local status.showUntrackedFiles no</pre></div>
+<p>If we want to specify which files should be moved into our home directory, we
+can enable <a href="https://stackoverflow.com/a/33934496" rel="nofollow">sparse checkout</a>:</p>
+<div class="highlight highlight-source-shell"><pre>dotfiles config --local core.sparseCheckout <span class="pl-c1">true</span></pre></div>
+<p>This way, we can tell <em>Git</em> to checkout a specific list of files. For instance,
+to checkout everything except the <em>LICENSE</em>, <em>README</em> files and <em>Stow</em>'s ignore
+list we do:</p>
+<div class="highlight highlight-source-shell"><pre>cat <span class="pl-s"><span class="pl-k">&lt;&lt;</span>- '<span class="pl-k">EOF</span>' &gt; ~/.dotfiles.git/info/sparse-checkout</span>
+<span class="pl-s">/*</span>
+<span class="pl-s">!LICENSE</span>
+<span class="pl-s">!README.*</span>
+<span class="pl-s">!.stow-local-ignore</span>
+<span class="pl-s"><span class="pl-k">EOF</span></span></pre></div>
+<h3><a id="user-content-using-the-files" class="anchor" aria-hidden="true" href="#using-the-files"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the files</h3>
+<p>Now it's time to checkout our files into our home directory:</p>
+<div class="highlight highlight-source-shell"><pre>dotfiles checkout</pre></div>
+<p>Since some files may already exist, we will get a few errors:</p>
+<div class="highlight highlight-source-shell"><pre>error: The following untracked working tree files would be overwritten by checkout:
+	.bash_logout
+	.bashrc
+	.profile
+Please move or remove them before you switch branches.
+Aborting</pre></div>
+<p>So we will need to delete or move these files before we can do a successful
+checkout.</p>
+<h3><a id="user-content-tldr" class="anchor" aria-hidden="true" href="#tldr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tl;dr</h3>
+<p>To sum it up, these are the commands that are needed:</p>
+<div class="highlight highlight-source-shell"><pre>git clone --bare --depth 1 --recursive --shallow-submodules https://github.com/aguslr/.dotfiles.git <span class="pl-k">~</span>/.dotfiles.git
+<span class="pl-c1">alias</span> dotfiles=<span class="pl-s"><span class="pl-pds">"</span>git --git-dir=<span class="pl-smi">$HOME</span>/.dotfiles.git --work-tree=<span class="pl-smi">$HOME</span><span class="pl-pds">"</span></span>
+dotfiles submodule init <span class="pl-k">&amp;&amp;</span> dotfiles submodule update
+dotfiles config --local status.showUntrackedFiles no
+dotfiles config --local core.sparseCheckout <span class="pl-c1">true</span>
+<span class="pl-c1">printf</span> <span class="pl-s"><span class="pl-pds">'</span>/*\n!LICENSE\n!README.*\n!.stow-local-ignore\n<span class="pl-pds">'</span></span> <span class="pl-k">&gt;</span> <span class="pl-k">~</span>/.dotfiles.git/info/sparse-checkout
+dotfiles checkout</pre></div>
+<h2><a id="user-content-installing-without-git" class="anchor" aria-hidden="true" href="#installing-without-git"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing without Git</h2>
+<p>If Git is not installed, we can still get the files as long as we have a basic
+Unix environment available:</p>
+<div class="highlight highlight-source-shell"><pre>wget https://github.com/aguslr/.dotfiles/tarball/master -O - <span class="pl-k">|</span> tar -xzv --strip-components 1 --exclude=LICENSE --exclude=README.md</pre></div>
+<p>To update the files, we would need to run the command again.</p>
+<p>However, with this method, no Git submodule (see <code>.gitmodules</code> file) will be
+fetched automatically so we will need to download them manually. For instance,
+to install <code>Vundle.vim</code> we'd need to do as follows:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/.vim/bundle/Vundle.vim <span class="pl-k">&amp;&amp;</span> wget https://github.com/gmarik/Vundle.vim/tarball/master -O - <span class="pl-k">|</span> tar -xzv --strip-components 1</pre></div>
+<p>This would have to be done for each Git submodule installed.</p>
+<h2><a id="user-content-references" class="anchor" aria-hidden="true" href="#references"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h2>
+<ul>
+<li><a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" rel="nofollow">The best way to store your dotfiles: A bare Git repository - Atlassian
+Developers</a></li>
+<li><a href="https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html" rel="nofollow">Manage Dotfiles With a Bare Git Repository</a></li>
+</ul>
+<h2><a id="user-content-thanks-to" class="anchor" aria-hidden="true" href="#thanks-to"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Thanks to...</h2>
+<ul>
+<li><a href="https://github.com/derekwyatt/dotfiles">Derek Wyatt</a>,</li>
+<li><a href="https://github.com/nelstrom/dotfiles">Drew Neil</a>,</li>
+<li><a href="https://github.com/JackH79/.dotfiles">JackH79</a>,</li>
+<li><a href="https://github.com/mathiasbynens/dotfiles">Mathias Bynens</a>,</li>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git">Robby Russell</a>,</li>
+<li><a href="https://github.com/tlvince/vim-config/commit/19146d4c6f0a0e4c2c96e0756a4c1d5092467b19">Tom Vincent</a>,</li>
+<li><a href="https://gist.github.com/1689941">Paul Rouget</a>,</li>
+<li><a href="https://github.com/xero/dotfiles">xero harrison</a>,</li>
+<li>and <a href="http://www.dotfiles.org/" rel="nofollow">many</a> <a href="https://dotfiles.github.io/" rel="nofollow">more</a>.</li>
+</ul>
+</article>
+      </div>
+  </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+<div id="pjax-head">
+  <title>GitHub - aguslr/.dotfiles: Configuration files from my main computer</title>
+  <meta name="selected-link" value="repo_source">
+  
+  
+  <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" />
+  
+  <meta name="request-id" content="6390:12D9:10F4490:18AD6E8:5EA5774F" data-pjax-transient="true"/><meta name="html-safe-nonce" content="9a330dbb5b8eab7302fa530945162a62d2c03865" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9hZ3VzbHIvLmRvdGZpbGVzL3RyZWUvbWFzdGVyLy5jb25maWcvbGVtb25iYXIiLCJyZXF1ZXN0X2lkIjoiNjM5MDoxMkQ5OjEwRjQ0OTA6MThBRDZFODo1RUE1Nzc0RiIsInZpc2l0b3JfaWQiOiIyNDQ2OTI5ODgxODYxMjEwNTU1IiwicmVnaW9uX2VkZ2UiOiJpYWQiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true"/><meta name="visitor-hmac" content="ffcb9c2168e5b8d0012b71f8e3270f724c05927503da77f42d8942fe4c2ec5a0" data-pjax-transient="true"/>
+  
+  <meta name="github-keyboard-shortcuts" content="repository" data-pjax-transient="true" />
+
+
+    <link rel="canonical" href="https://github.com/aguslr/.dotfiles" data-pjax-transient>
+    <link href="https://github.com/aguslr/.dotfiles/commits/master.atom" rel="alternate" title="Recent Commits to .dotfiles:master" type="application/atom+xml">
+
+</div>
+
+<div id="js-flash-container">
+
+
+  <template class="js-flash-template">
+    <div class="flash flash-full  js-flash-template-container">
+  <div class="container-lg px-2" >
+    <button class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    
+      <div class="js-flash-template-message"></div>
+
+  </div>
+</div>
+  </template>
+</div>
+
+

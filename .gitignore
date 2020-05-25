@@ -1,0 +1,15 @@
+secret
+.Xauthority
+.cache
+.cpan
+.dbus
+.git
+.gitconfig
+.mailrc
+.pki
+.python_history
+.sndio
+.ssh
+.surf
+Documents/
+Downloads/

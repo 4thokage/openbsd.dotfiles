@@ -1,0 +1,226 @@
+
+
+
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/aguslr/multibootusb/tree/32079450255866b6fbb3c9b3cf383ad6836ad229">Permalink</a>
+
+    <table class="files js-navigation-container js-active-navigation-container " data-pjax>
+      <thead>
+        <tr>
+          <th><span class="sr-only">Type</span></th>
+          <th><span class="sr-only">Name</span></th>
+          <th><span class="sr-only">Latest commit message</span></th>
+          <th><span class="sr-only">Commit time</span></th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <tr class="warning include-fragment-error">
+          <td class="icon"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></td>
+          <td class="content" colspan="3">Failed to load latest commit information.</td>
+        </tr>
+
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="docs" id="e3e2a9bfd88566b05001b02a3f51d286-ffe0112294f656e56cd403af42c930cb182e7593" href="/aguslr/multibootusb/tree/master/docs">docs</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Merge pull request #249 from leliamesteban/patch-1
+
+-localtime flag is deprecated" class="link-gray" href="/aguslr/multibootusb/commit/962b3e2d3e029a02e62dcd9c0b357af5b76a0bac">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="414266356" data-permission-text="Title is private" data-url="https://github.com/aguslr/multibootusb/issues/249" data-hovercard-type="pull_request" data-hovercard-url="/aguslr/multibootusb/pull/249/hovercard" href="https://github.com/aguslr/multibootusb/pull/249">#249</a> <a data-pjax="true" title="Merge pull request #249 from leliamesteban/patch-1
+
+-localtime flag is deprecated" class="link-gray" href="/aguslr/multibootusb/commit/962b3e2d3e029a02e62dcd9c0b357af5b76a0bac">from leliamesteban/patch-1</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-03-02T10:18:22Z" class="no-wrap">Mar 2, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="directory" class="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="mbusb.d" id="7af5b06a2bead133f2d0f9c4d4845ccc-06ace1dfba1914816ac153e99074909dc9c935af" href="/aguslr/multibootusb/tree/master/mbusb.d">mbusb.d</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="A typo in the code" class="link-gray" href="/aguslr/multibootusb/commit/9293a3fb201d38d71536addc857f013a502c24a5">A typo in the code</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-03-28T13:24:01Z" class="no-wrap">Mar 28, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".editorconfig" id="1e70daafb475c0ce3fef7d2728279182-5472006285af97d0529ca28b39873a7d11324fd3" href="/aguslr/multibootusb/blob/master/.editorconfig">.editorconfig</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Add EditConfig file
+
+https://editorconfig.org/" class="link-gray" href="/aguslr/multibootusb/commit/3d3746eebd934b994afcd556f56834c4657c7e5e">Add EditConfig file</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2018-07-06T12:00:54Z" class="no-wrap">Jul 6, 2018</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gitattributes" id="fc723d30b02a4cca7a534518111c1a66-d4583b6b5f31c78c27da4316c1ffce66a6dba9a8" href="/aguslr/multibootusb/blob/master/.gitattributes">.gitattributes</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Force linguist-language to Shell" class="link-gray" href="/aguslr/multibootusb/commit/df670a4732c08688493f374c6fa40b3f5fea8a19">Force linguist-language to Shell</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-16T15:38:48Z" class="no-wrap">Jan 16, 2017</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gitignore" id="a084b794bc0759e7a6b77810e01874f2-584dc01f2ab79603d3222e34d6ef3ccdbb1f8219" href="/aguslr/multibootusb/blob/master/.gitignore">.gitignore</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Use provided grub.cfg as an example" class="link-gray" href="/aguslr/multibootusb/commit/3305a48b4c308ef8839fae4a2486df07657997af">Use provided grub.cfg as an example</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2017-06-23T14:17:35Z" class="no-wrap">Jun 23, 2017</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title=".gitlab-ci.yml" id="96edf7a6f008de9e928d04e1ae5e12a5-6c0345bc5ebad8f5f76e627a82e0bf1f2e72c48d" href="/aguslr/multibootusb/blob/master/.gitlab-ci.yml">.gitlab-ci.yml</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Add compression to GitLab pages build
+
+https://webd97.de/post/gitlab-pages-compression/" class="link-gray" href="/aguslr/multibootusb/commit/8e102f86912082b8290113ce21d1470c94908f45">Add compression to GitLab pages build</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-18T11:25:15Z" class="no-wrap">Feb 18, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="LICENSE" id="9879d6db96fd29134fc802214163b95a-10926e87f113fb026c366866d6fa466061562870" itemprop="license" href="/aguslr/multibootusb/blob/master/LICENSE">LICENSE</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Add GPLv3 license" class="link-gray" href="/aguslr/multibootusb/commit/8e92cabeb9c99499fa9a478d82b20e97d8d2351e">Add GPLv3 license</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2016-11-14T16:37:11Z" class="no-wrap">Nov 14, 2016</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="README.md" id="04c6e90faac2675aa89e2176d2eec7d8-234cbc59c7a8c6e28c272e22ff615cb952670981" href="/aguslr/multibootusb/blob/master/README.md">README.md</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Break long lines in README" class="link-gray" href="/aguslr/multibootusb/commit/bad2a2ffa4433c27858bc15c6155a6348b167295">Break long lines in README</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2018-12-18T16:27:04Z" class="no-wrap">Dec 18, 2018</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="grub.cfg.example" id="d13d107989ac9e62735f7ae7aa742bed-70d5ef7afdb6e3baa8babb0c32153315399ef19c" href="/aguslr/multibootusb/blob/master/grub.cfg.example">grub.cfg.example</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Load custom GRUB configuration in example file" class="link-gray" href="/aguslr/multibootusb/commit/823b977ac3fdb850a24dfa8618fbc339538a6033">Load custom GRUB configuration in example file</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2018-09-16T10:43:36Z" class="no-wrap">Sep 16, 2018</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="makeUSB.sh" id="de4c6192e9f62a3de6b5755082fbf0c2-4071bd53332b50db490818f7d2dab9d87eb10ec2" href="/aguslr/multibootusb/blob/master/makeUSB.sh">makeUSB.sh</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Merge pull request #239 from rhssk/mv_hidden
+
+Fix #243" class="link-gray" href="/aguslr/multibootusb/commit/a6ce9021ce0ba9f9ba0ebd6057d34619a027b080">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="396046818" data-permission-text="Title is private" data-url="https://github.com/aguslr/multibootusb/issues/239" data-hovercard-type="pull_request" data-hovercard-url="/aguslr/multibootusb/pull/239/hovercard" href="https://github.com/aguslr/multibootusb/pull/239">#239</a> <a data-pjax="true" title="Merge pull request #239 from rhssk/mv_hidden
+
+Fix #243" class="link-gray" href="/aguslr/multibootusb/commit/a6ce9021ce0ba9f9ba0ebd6057d34619a027b080">from rhssk/mv_hidden</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2019-02-16T17:05:13Z" class="no-wrap">Feb 16, 2019</time-ago></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="mbusb.cfg" id="513ea5041f59ecd638fa9e41258fb532-5cad7d8ca398326514a4006aec1f5ee3344deac3" href="/aguslr/multibootusb/blob/master/mbusb.cfg">mbusb.cfg</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+                    <a data-pjax="true" title="Load custom configuration inside Multiboot submenu" class="link-gray" href="/aguslr/multibootusb/commit/33717158dde2082e915d5d499e7b0b96f633b2fa">Load custom configuration inside Multiboot submenu</a>
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"><time-ago datetime="2018-09-16T10:43:36Z" class="no-wrap">Sep 16, 2018</time-ago></span>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+

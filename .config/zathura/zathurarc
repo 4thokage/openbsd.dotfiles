@@ -1,0 +1,19 @@
+# zathurarc
+
+# Default fit
+set adjust-open width
+
+# Hide statusbar
+set guioptions ''
+
+# Copy to clipboard
+set selection-clipboard clipboard
+
+# Hide scrollbars
+set show-scrollbars false
+
+# Use ~ instead of $HOME
+set statusbar-home-tilde true
+
+# Show filename as window title
+set window-title-basename true

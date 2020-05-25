@@ -1,0 +1,305 @@
+WRMCB=function(e){var c=console;if(c&&c.log&&c.error){c.log('Error running batched script.');c.error(e);}}
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'editor/page-editor-message.js' */
+define("confluence-editor/editor/page-editor-message",["jquery","ajs","aui/flag","document","underscore"],function(f,i,g,h,d){var b=Object.create(null),e=Object.create(null);h.addEventListener("aui-flag-close",function(a){a&&a.target&&(b=d.filter(Object.keys(b),function(c){return!f(a.target).find("span").hasClass(c)}))});return{handleMessage:function(a,c,d){b[a]||(e[a]?delete e[a]:c&&(b[a]=g({title:c.title?c.title:"",type:c.type,close:c.close?c.close:"manual",persistent:!1,body:"<span class='"+a+
+"'>"+c.message+"</span>"}),d&&d()))},closeMessages:function(a){d.each(a,function(a){b[a]&&(b[a].close(),delete b[a])})},isDisplayed:function(a){return a in b},displayedErrors:function(){return Object.keys(b)},suppressMessage:function(a){e[a]={}}}});
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'editor/page-editor-quit-dialog.js' */
+define("confluence-editor/editor/page-editor-quit-dialog","jquery confluence/templates ajs confluence/meta confluence/legacy window document confluence-editor/editor/page-editor-message confluence/api/constants underscore".split(" "),function(e,l,c,d,g,z,K,m,A,B){function C(b){b.stopPropagation();b.preventDefault();c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.show-diff-clicked"});a.showDiffButton.hide();s();a.hideDiffButton.show()}function t(b){b.stopPropagation();b.preventDefault();
+c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.hide-diff-clicked"});a.hideDiffButton.hide();a.showDiffButton.show();a.dialogEl.removeClass("aui-dialog2-xlarge").addClass("aui-dialog2-medium");j(h)}function D(b){h=i?f.REVERT:f.DELETE;n();c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.discard"});b.stopPropagation();b.preventDefault();g.Editor.UI.setButtonsState(false,a.buttonsAll);u(d.get("content-id"))}function v(){a.editorForm.append(l.Editor.Page.hiddenInputCancel()).submit()}
+function w(a){if(a){a.stopPropagation();a.preventDefault()}c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.keep-draft-clicked",data:{contributorCount:k.length+1}});v()}function E(b){g.Editor.UI.setButtonsState(false,a.buttonsAll);o.save(b);n()}function x(b){b.stopPropagation();b.preventDefault();h=null;c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.draft-status-indicator.click"});p(function(){a.closeButton.show();s()})}function F(b){b.stopPropagation();b.preventDefault();
+a.closeButton.show();d.get("new-page")?j(f.DELETE):j(f.REVERT)}function G(b){b.stopPropagation();b.preventDefault();a.dialog.hide()}function s(){a.dialogEl.removeClass("aui-dialog2-medium").addClass("aui-dialog2-xlarge");j(f.SHOW_DIFF);e.ajax({url:A.CONTEXT_PATH+"/rest/tinymce/1/content/"+d.get("page-id")+"/draft/diff",type:"GET"}).success(function(b){a.dialogContent.find(".wiki-content").html(b).children().first().hasClass("diff-context-placeholder")&&a.dialogContent.find("hr").hide()})}function j(b){function c(){return b===
+f.SHOW_DIFF&&(h===f.REVERT||h===f.DELETE)}if(b===f.UPDATE||b===f.PUBLISH)q=(new Date).getTime()/1E3;var g=b;c()&&(g=h);a.dialogHeader.html(l.Editor.Page.quitDialogHeader({dialogType:g,contentType:d.get("content-type"),newPage:d.get("new-page")}));a.dialogContent.html(l.Editor.Page.quitDialogContent({dialogType:b,contributors:k,contentType:d.get("content-type"),newDialog:h==null}));a.hideDiffButton=e("#qed-hide-diff-button").click(t);if(!d.get("new-page")){b!==f.SHOW_DIFF&&(h=b);a.showDiffButton=e("#qed-show-diff-button").click(C);
+a.showDiffButton.show();a.buttonsAll.push(a.showDiffButton)}if(b===f.DELETE||b===f.REVERT||c()){a.discardButton.show();a.dialogEl.addClass("aui-dialog2-warning")}else a.dialogEl.removeClass("aui-dialog2-warning");a.closeButton.show();a.dialogFooter.find("."+b).show();a.dialog.show()}function H(){n();c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.dialog-closed"});a.dialogEl.removeClass("aui-dialog2-xlarge").addClass("aui-dialog2-medium");g.Editor.UI.toggleSavebarBusy(false);
+a.dialogFooter.find(".aui-button").hide();a.dialogContent.empty()}function n(){var a=(new Date).getTime()/1E3-q;c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog."+h+".displayed",data:{displayTimeInSeconds:a,contentId:d.get("content-id")}});q=0}function u(b,f){var d=c.contextPath(),d=i?d+"/rest/synchrony/1.0/content/"+b+"/changes/unpublished":d+"/rest/api/content/"+b+"?status=draft";i&&m.suppressMessage("editor.synchrony.revert-page");f=f||0;e.ajax({url:d,type:"DELETE",data:{draftId:b},
+contentType:"application/json",dataType:"json"}).done(function(){i&&m.handleMessage("collaborative-editor-discard-error",{type:"success",close:"auto",message:"Successfully reverted to the last published version"});c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.discard-success",data:{contentId:b}});v()}).fail(function(d){if(d.status===409&&f<I){c.trigger("disable-draft-save");u(b,f+1)}else{var e=JSON.parse(d.responseText),h="There were errors discarding your draft.",
+d=d.errors||"An unknown error has occurred. Please check your logs.";if(e.data&&e.data.errors&&e.data.errors[0]&&e.data.errors[0].message.key==="content.delete.published"){h="This page has already been published";d="You can no longer discard this draft because it\u0027s not a draft anymore!"}c.trigger("analyticsEvent",{name:"confluence.synchrony.editor.quit-dialog.discard-error",data:{contentId:b}});c.trigger("enable-draft-save");m.handleMessage("collaborative-editor-discard-error",{type:"error",title:i?"Can\u0027t revert to last published version":
+h,message:i?"We can\u0027t get the last published version of the page at the moment. Give it a few moments then try discarding the draft again.":d});a.dialog.hide();g.Editor.UI.setButtonsState(true,a.buttonsAll)}})}function J(a,c){c&&c.contributors&&(k=B.reject(c.contributors,function(a){return a.name===d.get("remote-user")}))}function p(a){g.Editor.Drafts.save({forceSave:i,skipErrorHandler:true,onSuccessHandler:a||e.noop})}var a={},i,y,f={DELETE:"delete",REVERT:"revert",PUBLISH:"publish",UPDATE:"update",SHOW_DIFF:"diff"},k=[],r=false,o={},h,q=0,I=5;return{init:function(b){if(y=
+d.getBoolean("shared-drafts")&&(d.get("content-type")==="page"||d.get("content-type")==="blogpost"))if(r){o.save=b&&b.saveHandler;a.publishButton.click(E)}else{i=!d.get("new-page");a.discardButton=e("#qed-discard-button").tooltip({gravity:"s",className:"quit-editor-dialog"});if(g.Editor.isLimitedModeEnabled()&&i){g.Editor.UI.setButtonState(false,a.discardButton);a.discardButton.removeAttr("disabled")}else a.discardButton.click(D);a.saveExitButton=e("#qed-save-exit-button").click(w);a.hideDiffButton=
+e("#qed-hide-diff-button").click(t);a.publishButton=e("#qed-publish-button");a.closeButton=e("#qed-close-button").click(G);a.buttonsAll=[a.discardButton,a.saveExitButton,a.showDiffButton,a.hideDiffButton,a.publishButton];a.dialog=c.dialog2("#quit-editor-dialog");a.dialogEl=a.dialog.$el;a.dialogHeader=a.dialogEl.find(".aui-dialog2-header");a.dialogContent=a.dialogEl.find(".aui-dialog2-content");a.dialogFooter=a.dialogEl.find(".aui-dialog2-footer");a.editorForm=e("#wysiwyg").closest("form");e("#rte-show-changes").on("click",
+x);e("#rte-show-revert").on("click",F);if(!d.get("new-page"))e("#pluggable-status").on("click","a",x);a.dialog.on("hide",H);c.bind("editor-heartbeat",J);r=true}},process:function(a){if(y){a.stopPropagation();a.preventDefault();e(z).one("editor-heartbeat rte.heartbeat-error",function(){switch(a.target.id){case g.Editor.UI.saveButton.attr("id"):case g.Editor.UI.versionCommentInput.attr("id"):g.Editor.UI.toggleSavebarBusy(true);if(k.length===0)o.save();else{p();j(i?f.UPDATE:f.PUBLISH)}break;case g.Editor.UI.cancelButton.attr("id"):g.Editor.Drafts.isDraftDirty()&&
+p();w()}});g.Editor.heartbeat()}},_destroy:function(){r=false}}});
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'editor/page-editor.js' */
+define("confluence-editor/editor/page-editor","ajs confluence/legacy jquery document window confluence/meta confluence/api/constants confluence-editor/editor/page-editor-message".split(" "),function(c,d,b,k,N,f,m,l){function n(){var a=f.getBoolean("shared-drafts"),e=f.get("content-type")==="page"||f.get("content-type")==="blogpost",b=c.params.pageId!=="0";return e&&(b||a)}function B(a){b("#editpageform").find("input[name='atl_token']").val(a);f.set("atl-token",a);f.set("atlassian-token",a);b("#atlassian-token").attr("content",
+a)}var u=c.DarkFeatures.isEnabled("editor.ajax.save")&&!c.DarkFeatures.isEnabled("editor.ajax.save.disable")&&f.get("remote-user")!=="",o=[],p=[],q=[],C=false,i=1,v=false,r,D=function(a){d.Editor.UI.setButtonState(a,d.Editor.UI.saveButton);d.Editor.UI.setButtonState(a,d.Editor.UI.previewButton);d.Editor.UI.setButtonState(a,d.Editor.UI.cancelButton)},s=function(a){var a=a||{},e=a.messageKey||"editor-error-message",b=a.message||"Something went wrong with the editor. Copy your unsaved changes and refresh the page to keep editing.";l.handleMessage(e,{title:a.title,
+type:"error",message:b},function(){a.disablePublish&&D(false)})},E=function(){return f.get("edit-mode")==="limited"},P=function(a){var e=true;l.closeMessages(["offline-before-save-error"]);for(var b=0;b<p.length;b++){p[b](a)===false&&(e=false);if(a.isImmediatePropagationStopped())break}if(!e||a.isDefaultPrevented()||a.isPropagationStopped())return false;a.preventDefault();F(a).done(w).fail(O)},O=function(a){var e=a||{};s({messageKey:e.messageKey||"offline-before-save-error",message:e.disablePublish?
+"Something went wrong with the editor. Copy your unsaved changes and refresh the page to keep editing.":"Unable to communicate with server. Saving is not possible at the moment.",disablePublish:e.disablePublish});a&&c.trigger("analytics",{name:"editor.save.error."+a.origin+"."+a.cause});d.Editor.UI.toggleSavebarBusy(false);d.Editor.Drafts.bindUnloadMessage()},F=function(a){var e=b.Deferred();e.resolve(a);return e.promise()},G=function(){var a=function(){v=true;b(d.Editor.getCurrentForm()).submit();c.trigger("analytics",{name:"confluence.editor.close",data:{source:"publishButton"}})},
+e=d.Editor.Drafts.getDraftSavingPromise();e?e.always(a):a()},w=G;c.bind("rte-ready",function(){c.Meta.getBoolean("collaborative-content")||b('meta[name="ajs-collaborative-editor-status"]').attr("content","off");d.Editor.UI.saveButton.bind("click",P)});c.bind("editor.error.message",function(a,e){s(e)});c.bind("dismiss.editor.error.message",function(a,e){l.closeMessages([e.messageKey]);e.enablePublish&&D(true)});var Q=function(){var a;for(a=0;a<o.length;a++)d.Editor.UI.cancelButton.click(o[a]);var e=
+b(d.Editor.getCurrentForm());for(a=0;a<q.length;a++)e.submit(q[a]);b.unbind("init.rte",this)},H=function(a,e,d,j){j.push(d);if(c.Rte&&c.Rte.BootstrapManager&&c.Rte.BootstrapManager.isInitComplete())a.bind(e,d);else if(!C){C=true;b.bind("init.rte",Q)}},x=function(a,e,b){var d=null;c.Rte&&(c.Rte.BootstrapManager&&c.Rte.BootstrapManager.isInitComplete())&&(d=function(a,e,b){a.unbind(e,b)});for(var f=b.pop();f;){d&&d(a,e,f);f=b.pop()}},I=function(a){if(g!==a){g&&g.clear();a.start(d.Editor.heartbeat);
+g=a}},g,J=f.getNumber("heartbeat-interval")||3E4,y,K;y={start:function(a){c.debug("Changing heartbeat to the normal scheduler");K=setInterval(a,J)},clear:function(){clearInterval(K)}};var L,M=Math.max(J/5,5E3),z,A;L={start:function(a){c.debug("Changing heartbeat to the recovery scheduler");A=0;var e=function(){a();var b=M*Math.pow(2,A);z=setTimeout(e,Math.min(b,3E5));A++};z=setTimeout(e,M)},clear:function(){clearTimeout(z)}};return{bookmark:"",MODE_RICHTEXT:"richtext",MODE_PREVIEW:"preview",PREVIEW_OUTPUT_TYPE:"PREVIEW",
+currentEditMode:null,contentHasChangedSinceLastSave:false,sourceInitialValue:false,isPublishing:function(a){typeof a!=="undefined"&&(v=a);return v},isLimitedModeEnabled:E,overrideBeforeSave:function(a){F=a},overrideSave:function(a){w=a},restoreDefaultSave:function(){w=G},getNumConcurrentEditors:function(){return i},addCancelHandler:function(a){H(d.Editor.UI.cancelButton,"click",a,o)},addSaveHandler:function(a){p.push(a)},addSubmitHandler:function(a){H(b(d.Editor.getCurrentForm()),"submit",a,q)},removeAllCancelHandlers:function(){x(d.Editor.UI.cancelButton,
+"click",o)},removeAllSaveHandlers:function(){x(d.Editor.UI.saveButton,"click",p)},removeAllSubmitHandlers:function(){x(b(d.Editor.getCurrentForm()),"submit",q)},hasContentChanged:function(){return!this.inRichTextMode()&&!this.contentHasChangedSinceLastSave?false:this.editorHasContentChanged()},editorHasContentChanged:function(){if(c.Rte.getEditor()==null){c.debug("Confluence.Editor: editorHasContentChanged - No active editor present. Returning false.");return false}return c.Rte.Content.editorHasContentChanged()},
+isEmpty:function(){var a=b(c.Rte.getEditor().getContent()).text();return!b.trim(a)},getResumeDraftUrl:function(){var a=[];a.push(m.CONTEXT_PATH);a.push("/pages/"+(c.params.newPage?"create":"edit")+c.params.draftType+".action");a.push("?useDraft=true");a.push("&pageId="+c.params.pageId);a.push("&contentChanged="+this.hasContentChanged());this.getCurrentForm().spaceKey&&a.push("&spaceKey="+f.get("space-key"));return a.join("")},getCurrentTitle:function(){return b("#content-title")&&b("#content-title").val()},
+contentFormSubmit:function(){(E()||!d.Editor.Drafts.isSharedDraftsEnabled())&&d.Editor.Drafts.unBindUnloadMessage();b(".editable-title #content-title").prop("disabled",true);return true},metadataSyncRequired:n,heartbeat:function(){var a={dataType:"json",contentId:f.get("content-id"),draftType:f.get("content-type"),spaceKey:c.params.spaceKey,contributorsHash:f.get("contributors-hash")};r=c.safe.post(m.CONTEXT_PATH+"/json/startheartbeatactivity.action",a,function(a){if(!n()&&a){B(a.atlToken);c.Meta.set("shared-drafts",
+a.editMode!=="legacy");c.trigger("rte.heartbeat",a)}else if(!a||!a.atlToken||!(a.activityResponses instanceof Array)){c.trigger("rte.heartbeat-error","Invalid server response");c.logError("Unexpected server response for heartbeat:");c.log(a)}else{f.set("contributors-hash",a.contributorsHash);c.Meta.set("shared-drafts",a.editMode!=="legacy");var h=a.activityResponses;B(a.atlToken);d.Editor.heartbeatType.normal();c.trigger("rte.heartbeat",h);i=(h.length||0)+1;if(i>1){var j=!u?b("#other-users-span"):
+b("#reliable-other-users-span").length===0?b("<span id='reliable-other-users-span'></span>"):b("#reliable-other-users-span");j.empty();for(var t=0;t<i-1;++t){t>0&&j.append(", ");var g=h[t];j.append(c("a").attr("href",m.CONTEXT_PATH+"/display/~"+encodeURIComponent(g.userName)).text(g.fullName));g.lastEditMessage!=null&&j.append(" ").append(c("span").addClass("smalltext").text(g.lastEditMessage))}u&&!l.isDisplayed(["heartBeat"])&&j.html().trim()!==""&&l.handleMessage("heartBeat",{type:"info",message:c.format("This page is also being edited by {0}. Your changes will be merged with theirs when you save.",
+"<span id='reliable-other-users-span'>"+j.html()+"</span>")});c.isVisible("#heartbeat-div")||c.Confluence.Analytics.publish("rte.notification.concurrent-editing",{numEditors:i,pageId:c.params.pageId,draftType:c.params.draftType})}u&&i<=1&&l.closeMessages(["heartBeat"]);c.setVisible("#heartbeat-div",i>1);b(k).trigger("resize.resizeplugin");c.trigger("editor-heartbeat",a);a=a.editMode;if(a!==f.get("edit-mode")&&!(a==="collaborative"&&f.get("edit-mode")!=="limited")){f.set("edit-mode",a);a=a==="collaborative"?
+"Collaborative editing was switched off, but it\u0027s back in business. Copy your changes and refresh the page to keep editing.":"Copy any changes you want to keep, then refresh the page to continue editing.";s({messageKey:"edit-mode-transition",message:a,disablePublish:true})}}},"json").fail(function(a,b,j){(a.status>=500||a.status===0)&&d.Editor.heartbeatType.recovery();if(a.status===403||a.status===401)c.logError("Heartbeat error: Unauthorized");else if(a.status===405)c.logError("Heartbeat error: Method not allowed");else{c.logError("Server error on heartbeat request:");c.log(j)}c.trigger("rte.heartbeat-error",
+a)})},heartbeatType:{normal:function(){I(y)},recovery:function(){I(L)},reset:function(){g&&g.clear();g=y;g.start(d.Editor.heartbeat)},cleanup:function(){if(g){g.clear();g=null}r&&r.abort&&r.abort()}},disableFrame:function(a){b("form",a).each(function(){b(this).unbind();this.onsubmit=function(){return false}});b("a",a).each(function(){var a=b(this),c=a.attr("href");a.unbind();if(c&&c.charAt(0)!=="#"){a.attr("target","_top");a.bind("click",function(b){b.preventDefault();a.blur()})}});b("input, img",
+a).each(function(){b(this).unbind()})},previewFrameOnload:function(a,e){var h=require("tinymce");d.Editor.setMode(d.Editor.MODE_PREVIEW);h.activeEditor.setProgressState(false);d.Editor.disableFrame(a);b(".tipsy").remove();var j=b("#main",a)[0];if(f.get("content-type")!=="comment"&&b(j).find("#main-header").length===0){var g=b("#title-heading"),l=g.attr("class");b(j).prepend('<div id="preview-header"><div id="title-heading" class="'+l+'">'+g.html()+"</div></div>")}if(b(c.Rte.getEditor().getBody()).hasClass("resizable")){var m=
+b(e||"#previewArea iframe"),i=0,n=0,o,p=m.height();j&&function R(){var a=b(j).outerHeight(true);if(i!==a){a!==m.height()&&m.height(0).height(Math.max(a,p));i=a;n=0}else n++;n<500&&(o=setTimeout(R,500))}();b(k).one("mode-changed.resize-editor",function(a,b){b!==d.Editor.MODE_PREVIEW&&o&&clearTimeout(o)})}else if(h.isIE||h.isOpera){h=b(N).height();g=b("#header-precursor").height()+b("#header").height()+b("#editor-precursor").height();l=b("#savebar-container").height();b("#preview iframe").height(h-
+g-l-4);b("#content.edit").height("auto")}},showRichText:function(a){var e=require("tinymce");c.setVisible("#wysiwyg",a);b(".toolbar-group-preview").toggleClass("assistive",!a);b(".toolbar-group-edit").toggleClass("assistive",a);b("#main").toggleClass("active-richtext",a);e.isGecko&&a&&c.Rte.fixEditorFocus(d.Editor.bookmark)},showPreview:function(a){if(f.get("content-type")!=="comment"){var d=b("#content-title");if(d.hasClass("placeholded")){b("#preview-title-text").text("");b("#title-text").text("")}else{b("#preview-title-text").text(d.val());
+b("#title-text").text(d.val())}}c.setVisible("#preview",a);b(".toolbar-group-preview").toggleClass("assistive",a);b(".toolbar-group-edit").toggleClass("assistive",!a);b("#main").toggleClass("active-preview",a);b("#full-height-container").length&&b("#full-height-container").toggleClass("active-preview",a)},setMode:function(a){c.debug("Set mode: "+a);if(a===d.Editor.MODE_RICHTEXT){this.showRichText(true);this.showPreview(false)}else if(a===d.Editor.MODE_PREVIEW){this.showPreview(true);this.showRichText(false);
+d.Editor.UI.spinner.removeClass("aui-icon-wait")}setTimeout(function(){var a=b(".toolbar-group-preview");a.height(0);a.height();a.height("auto")},1);this.currentEditMode=a;b(k).trigger("mode-changed",[a])},getContentId:function(){return d.getContentId()},addErrorMessage:function(a,d,h){var f=b("#"+a),h=h?"#all-messages":"#editor-messages";f.length?f.empty():f=b("<div></div>").attr("id",a).appendTo(h);c.messages.error(f,{closeable:true,body:d})},changeMode:function(a,e){var h=require("tinymce");c.debug("Change mode: "+
+a);e=e||{};if(this.inRichTextMode()&&!c.Rte.BootstrapManager.isInitComplete()||this.currentEditMode===a)return false;var g=this.currentEditMode;c.trigger("rte-changeMode",a);if(a===d.Editor.MODE_PREVIEW){var i=c.Rte.getEditor();if(h.isGecko&&g===d.Editor.MODE_RICHTEXT&&!d.Editor.bookmark)d.Editor.bookmark=h.activeEditor.selection.getBookmark();this.currentEditMode=a;h={contentId:d.getContentId(),contentType:f.get("content-type"),spaceKey:f.get("space-key"),xHtml:i.getContent(),outputType:d.Editor.PREVIEW_OUTPUT_TYPE};
+c.safe.ajax({type:"POST",url:m.CONTEXT_PATH+"/pages/rendercontent.action",data:h,success:d.Editor.replysetPreviewArea,timeout:2E4,error:function(){c.trigger("rte-preview-action-selected");c.trigger("rte.preview.error",{status:0});l.closeMessages(["server-offline"]);s({messageKey:"server-offline",message:"Can\u0027t reach the server. Check you\u0027re connected to the internet and Confluence is up and running.",disablePublish:false});d.Editor.currentEditMode=g;e.errorCallback&&e.errorCallback()}})}else this.setMode(a);a===d.Editor.MODE_RICHTEXT&&b(k).trigger("resize.resizeplugin");
+if(g===d.Editor.MODE_PREVIEW)if(h=k.getElementById("editor-preview-iframe")){i=h.contentDocument||h.contentWindow.document;i.removeChild(i.documentElement);b(h).remove()}return false},replysetPreviewArea:function(a){var d=require("tinymce");c.trigger("rte-preview-action-selected");b("#preview-error").remove();d.activeEditor.setProgressState(true);var d=b("#previewArea"),f=b('<iframe id="editor-preview-iframe" src="about:blank" scrolling="yes" frameborder="0"></iframe>');d.html(f);d=f[0].contentDocument||
+f[0].contentWindow.document;d.open();d.write(a);d.close()},inRichTextMode:function(){return this.currentEditMode===d.Editor.MODE_RICHTEXT},isNewPage:function(){return b("#createpageform, #createpagetemplate").length>0},onInit:function(){d.Editor.setMode(d.Editor.MODE_RICHTEXT);c.Rte.getEditor().onClick.add(function(){var a=d.Editor.UI.postingDatePicker;a&&a.hide()})},contentChangeHandler:function(){this.contentHasChangedSinceLastSave=true},getCurrentForm:function(){return c.Rte.getEditor().formElement},
+setToolBarInactive:function(a){b("#rte-toolbar").toggleClass("disabled",a)},isVisible:function(){return b("#wysiwyg:visible").length>0||b("#preview:visible").length>0}}});
+require("confluence/module-exporter").safeRequire("confluence-editor/editor/page-editor",function(c){var d=require("confluence/legacy"),b=require("jquery"),k=require("ajs");d.Editor=b.extend(d.Editor||{},c);k.toInit(function(b){b(document).ajaxError(function(b,c){if(405===c.status)try{var d=JSON.parse(c.responseText).reason;"undefined"!==typeof d&&"READ_ONLY"===d&&(k.log("*** READ_ONLY mode detected ***"),k.trigger("rte.heartbeat-error",null,c))}catch(n){k.logError("Cannot parse xhr.responseText: "+
+n)}});k.bind("init.rte",d.Editor.onInit)});k.Editor=d.Editor});
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'editor/page-editor-ui.js' */
+define("confluence-editor/editor/page-editor-ui","jquery confluence/templates ajs confluence/meta confluence/legacy window moment document confluence/api/constants confluence-editor/editor/page-editor-message confluence-editor/editor/page-editor-quit-dialog".split(" "),function(b,f,c,e,d,k,p,h,r,s,l){return function(){var a={},j=function(b,c){for(var c=c||a.buttons,d=0;d<c.length;d++)m(b,c[d])},m=function(a,b){if(b)if(a){b.removeAttr("aria-disabled");b.removeAttr("disabled");b.removeClass("disabled")}else{b.attr("aria-disabled",
+"true");b.attr("disabled","disabled");b.addClass("disabled")}},n=function(a){return a.length&&a.attr("aria-disabled")!=="true"},g=function(){return e.get("new-page")},o=function(){var a="";g()||(a="Edit"+" - ");return a};a.spinner=b("#rte-spinner");var i;i=f.Editor.Page.saveButton({contentType:e.get("content-type"),sharedDraftsEnabled:e.getBoolean("shared-drafts"),isNewPage:g()});b("#rte-button-publish").replaceWith(i);i=b("#rte-button-publish");a.saveButton=i;a.overwriteButton=
+b("#rte-button-overwrite");a.editButton=b("#rte-button-edit");a.previewButton=b("#rte-button-preview");a.cancelButton=b("#rte-button-cancel");a.versionCommentInput=b("#versionComment");a.watchPageCheckbox=b("#watchPage");a.watchPageToolbarGroup=b(".toolbar-group-watch-page");a.buttons=[a.saveButton,a.overwriteButton,a.editButton,a.previewButton,a.cancelButton];c.bind("editor-shared-drafts-published",function(){var b=/\(.+\)/g.exec(a.saveButton.data("tooltip"))[0];a.saveButton.text(f.Editor.Page.saveButtonText({contentType:e.get("content-type"),
+sharedDraftsEnabled:e.getBoolean("shared-drafts"),isNewPage:g()})).attr("title",f.Editor.Page.saveButtonTitle({contentType:e.get("content-type"),sharedDraftsEnabled:e.getBoolean("shared-drafts"),isNewPage:g()})+b).tooltip({gravity:"s"})});a.setButtonsState=j;a.setButtonState=m;a.isButtonEnabled=n;a.registerFormButton=function(b,c){a[b]=c;a.buttons.push(c)};a.postingDatePicker=null;a.isFormEnabled=function(){for(var b=0;b<a.buttons.length;b++)if(n(a.buttons[b]))return true;return false};a.toggleSavebarBusy=
+function(b){if(b){if(!a.isFormEnabled())return false;a.spinner.addClass("aui-icon-wait");j(false)}else{a.spinner.removeClass("aui-icon-wait");j(true)}return true};a.init=function(){function f(){b("#rte-ellipsis-menu").is(":visible")&&b("#rte-button-ellipsis").trigger("aui-button-invoke")}l.init();d.Editor.addSaveHandler(function(b){if(a.isButtonEnabled(a.saveButton)){a.toggleSavebarBusy(true);c.trigger("confluence.editor.on.save")}else{b.stopImmediatePropagation();b.preventDefault()}});c.trigger("rte.init.ui");
+d.Editor.isNewPage()&&b("#content-title").focus().select();d.Editor.addCancelHandler(function(a){d.Editor.getNumConcurrentEditors()>1&&c.Confluence.Analytics.publish("rte.notification.concurrent-editing.cancel",{numEditors:d.Editor.getNumConcurrentEditors(),pageId:c.params.pageId,draftType:c.params.draftType});l.process(a)});e.get("content-type")==="comment"&&d.Editor.addSaveHandler(function(){var b=require("confluence/editor-notifications");if(c.Rte.Content.isEmpty()){b.notify("warning","Comment text is empty. Cannot create empty comments.");
+a.toggleSavebarBusy(false);return false}});(e.get("content-type")==="comment"||e.get("content-type")==="template")&&d.Editor.addCancelHandler(function(b){if(a.isFormEnabled()&&d.Editor.hasContentChanged()&&!d.Editor.isEmpty()){var q=e.get("content-type")==="comment"?"Your comment will be lost.":"Your unsaved template changes will be lost.";if(!k.confirm(q)){b.stopImmediatePropagation();return false}}});a.versionCommentInput.on("keypress",function(a){a.keyCode===13&&l.process(a)});d.Editor.addSaveHandler(function(){d.Editor.getNumConcurrentEditors()>
+1&&c.Confluence.Analytics.publish("rte.notification.concurrent-editing.save",{numEditors:d.Editor.getNumConcurrentEditors(),pageId:c.params.pageId,draftType:c.params.draftType})});d.Editor.addSubmitHandler(function(a){return d.Editor.contentFormSubmit(a)});this.currentEditMode=this.MODE_RICHTEXT;a.editButton.click(function(b){var e=require("tinymce");if(a.isFormEnabled()){d.Editor.changeMode(d.Editor.MODE_RICHTEXT);setTimeout(function(){c.Rte.getEditor().focus();e.isGecko&&d.Editor.bookmark&&c.Rte.getEditor().selection.moveToBookmark(d.Editor.bookmark)},
+0);a.cancelButton.enable()}b.preventDefault()});a.previewButton.click(function(b){var c=require("tinymce");if(a.isFormEnabled()&&d.Editor.currentEditMode!==d.Editor.MODE_PREVIEW){f();j(false);a.spinner.addClass("aui-icon-wait");if(c.isGecko&&!d.Editor.bookmark)d.Editor.bookmark=c.activeEditor.selection.getBookmark();d.Editor.changeMode(d.Editor.MODE_PREVIEW,{errorCallback:function(){j(true);a.spinner.removeClass("aui-icon-wait")}});e.get("content-type")==="comment"||e.get("content-type")==="template"?
+a.cancelButton.disable():a.cancelButton.enable()}b.preventDefault()});b("#rte-button-labels").bind("updateLabel",function(){var a=+e.get("num-labels")||0,d="Labels";a===1?d=c.format("{0} Label",a):a>1&&(d=c.format("{0} Labels",a));b("#rte-button-labels").attr("data-tooltip",d)});b("#draft-status-lozenge").length&&b("#draft-status-lozenge").tooltip();var g=b("#PostingDate");if(g.length){g.attr("max",p().format("YYYY-MM-DD"));a.postingDatePicker=
+g.datePicker({overrideBrowserDefault:true});a.postingDatePicker.hide()}b("#wysiwygTextarea_parent .mceProgress, #wysiwygTextarea_parent .mceBlocker").on("click",function(){c.Rte.getEditor().focus()});b(k).bind("render-content-loaded",function(c,e){var f=b("#previewArea iframe");if(f.contents().find("body")[0]==e){d.Editor.previewFrameOnload(e,f);[a.saveButton,a.overwriteButton,a.editButton,a.previewButton].forEach(function(a){m(true,a)});f.focus();k.focus();b(h).trigger("iframeAppended",f)}});if(e.get("heartbeat")){d.Editor.heartbeat();
+d.Editor.heartbeatType.normal();c.bind("rte-destroyed",d.Editor.heartbeatType.cleanup)}c.bind("watchpage.pageoperation",function(){a.toggleWatchPage(false)});c.bind("unwatchpage.pageoperation",function(){a.toggleWatchPage(true)});if(e.get("new-page")&&e.get("form-name")==="inlinecommentform")h.title="Edit"+h.title;var i=h.title;if(e.get("new-page")&&b.trim(b("input#content-title").val()))h.title=o()+b("input#content-title").val()+" - "+e.get("space-name")+" - "+e.get("site-title");
+b("input#content-title").on("change input",function(){if(e.get("content-type")!=="template"){var a=o();h.title=b.trim(this.value)?a+this.value+" - "+e.get("space-name")+" - "+e.get("site-title"):i}});b("body",b("#wysiwygTextarea_ifr").contents()).click(f);c.trigger("init.rte-control")};a.toggleWatchPage=function(b){if(b&&e.get("content-type")==="comment"){a.watchPageToolbarGroup.show();if(a.watchPageCheckbox.length)a.watchPageCheckbox[0].checked=false}else a.watchPageToolbarGroup.hide()};return a}});
+require("confluence/module-exporter").safeRequire("confluence-editor/editor/page-editor-ui",function(b){var f=require("confluence/legacy");require("confluence/api/event").bind("init.rte",function(){var c=b();f.Editor.UI=c;c.init()})});
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'tinymce3/plugins/insertwiki/insert-wiki-markup.soy' */
+// This file was automatically generated from insert-wiki-markup.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace Confluence.Templates.InsertWiki.
+ */
+
+if (typeof Confluence == 'undefined') { var Confluence = {}; }
+if (typeof Confluence.Templates == 'undefined') { Confluence.Templates = {}; }
+if (typeof Confluence.Templates.InsertWiki == 'undefined') { Confluence.Templates.InsertWiki = {}; }
+
+
+Confluence.Templates.InsertWiki.originalDefaultTempWikiMarkupDialog = function(opt_data, opt_ignored) {
+  return '<form action=\'#\' method=\'post\' id="insert-wiki-markup-form" class="aui"><textarea class=\'monospaceInput textarea originalDefault\' id=\'insert-wiki-textarea\' name=\'wikitext\'/></form>';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.InsertWiki.originalDefaultTempWikiMarkupDialog.soyTemplateName = 'Confluence.Templates.InsertWiki.originalDefaultTempWikiMarkupDialog';
+}
+
+
+Confluence.Templates.InsertWiki.previewWikiIframeContent = function(opt_data, opt_ignored) {
+  return '<!DOCTYPE html><html class="insert-wiki-markup-dialog"><head></head><body class="wiki-content previewWiki"></body></html>';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.InsertWiki.previewWikiIframeContent.soyTemplateName = 'Confluence.Templates.InsertWiki.previewWikiIframeContent';
+}
+
+
+Confluence.Templates.InsertWiki.wikiMarkupDialog = function(opt_data, opt_ignored) {
+  return '<p id="insert-wiki-info-title">' + soy.$$escapeHtml('Enter wiki markup or markdown below. Confluence will convert your content to editor format and insert it into your page.') + '</p><form action=\'#\' method=\'post\' id="insert-wiki-markup-form" class="aui"><h3 class="wiki-title"><span id="insert-wiki-insert-title">' + soy.$$escapeHtml('Insert') + '</span><span id="insert-wiki-preview-title">' + soy.$$escapeHtml('Preview') + '</span></h3><textarea class=\'monospaceInput textarea\' id=\'insert-wiki-textarea\' name=\'wikitext\'/><!-- --><div class=\'example-container\' id=\'insert-wiki-textarea-preview\'></div></form>';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.InsertWiki.wikiMarkupDialog.soyTemplateName = 'Confluence.Templates.InsertWiki.wikiMarkupDialog';
+}
+
+
+Confluence.Templates.InsertWiki.wikiErrorSubDialog = function(opt_data, opt_ignored) {
+  return '<p class=\'warning\'>' + soy.$$escapeHtml(opt_data.warningMessage) + '</p><p class=\'exception-report\'><span class=\'exceptionMessage\'>' + soy.$$escapeHtml(opt_data.exceptionMessage) + '</span></p>';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.InsertWiki.wikiErrorSubDialog.soyTemplateName = 'Confluence.Templates.InsertWiki.wikiErrorSubDialog';
+}
+
+
+Confluence.Templates.InsertWiki.wikiParserSelector = function(opt_data, opt_ignored) {
+  var output = '<span class="wiki-parser-selector"><form action="#" method="post" id="d" class="aui"><select class="select medium-field" id="wiki-parser-selection-tool" name="wiki-parser-selection-tool" title="wiki parser selector"><option value="' + soy.$$escapeHtml(opt_data.DEFAULT.val) + '">' + soy.$$escapeHtml(opt_data.DEFAULT.label) + '</option>';
+  var wikiLangList26 = soy.$$getMapKeys(opt_data.WIKI);
+  var wikiLangListLen26 = wikiLangList26.length;
+  for (var wikiLangIndex26 = 0; wikiLangIndex26 < wikiLangListLen26; wikiLangIndex26++) {
+    var wikiLangData26 = wikiLangList26[wikiLangIndex26];
+    output += (opt_data.WIKI[wikiLangData26].val != opt_data.DEFAULT.val) ? '<option value="' + soy.$$escapeHtml(opt_data.WIKI[wikiLangData26].val) + '">' + soy.$$escapeHtml(opt_data.WIKI[wikiLangData26].label) + '</option>' : '';
+  }
+  output += '</select></form></span>';
+  return output;
+};
+if (goog.DEBUG) {
+  Confluence.Templates.InsertWiki.wikiParserSelector.soyTemplateName = 'Confluence.Templates.InsertWiki.wikiParserSelector';
+}
+
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'editor/page-editor.soy' */
+// This file was automatically generated from page-editor.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace Confluence.Templates.Editor.Page.
+ */
+
+if (typeof Confluence == 'undefined') { var Confluence = {}; }
+if (typeof Confluence.Templates == 'undefined') { Confluence.Templates = {}; }
+if (typeof Confluence.Templates.Editor == 'undefined') { Confluence.Templates.Editor = {}; }
+if (typeof Confluence.Templates.Editor.Page == 'undefined') { Confluence.Templates.Editor.Page = {}; }
+
+
+Confluence.Templates.Editor.Page.saveButton = function(opt_data, opt_ignored) {
+  return '<button id="rte-button-publish" class="aui-button aui-button-primary default-submit" type="submit" name="confirm" value="Save" title="' + Confluence.Templates.Editor.Page.saveButtonTitle(opt_data) + '" tabindex="101">' + Confluence.Templates.Editor.Page.saveButtonText(opt_data) + '</button>';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.saveButton.soyTemplateName = 'Confluence.Templates.Editor.Page.saveButton';
+}
+
+
+Confluence.Templates.Editor.Page.saveButtonTitle = function(opt_data, opt_ignored) {
+  return '' + ((opt_data.contentType == 'blogpost') ? soy.$$escapeHtml('Publish your blog post') : (opt_data.contentType == 'page') ? (opt_data.sharedDraftsEnabled) ? (opt_data.isNewPage) ? soy.$$escapeHtml('Publish changes') : soy.$$escapeHtml('Update published page') : soy.$$escapeHtml('Save your page') : soy.$$escapeHtml('Save'));
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.saveButtonTitle.soyTemplateName = 'Confluence.Templates.Editor.Page.saveButtonTitle';
+}
+
+
+Confluence.Templates.Editor.Page.previewButton = function(opt_data, opt_ignored) {
+  return '<button class="aui-button toolbar-item" id="rte-button-preview" title="' + soy.$$escapeHtml('Preview') + '" type="button"><span class="trigger-text">' + soy.$$escapeHtml('Preview') + '</span></button>';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.previewButton.soyTemplateName = 'Confluence.Templates.Editor.Page.previewButton';
+}
+
+
+Confluence.Templates.Editor.Page.saveButtonText = function(opt_data, opt_ignored) {
+  return '' + ((opt_data.sharedDraftsEnabled && (opt_data.contentType == 'blogpost' || opt_data.contentType == 'page')) ? (opt_data.isNewPage) ? soy.$$escapeHtml('Publish') : soy.$$escapeHtml('Update') : (opt_data.contentType == 'blogpost') ? soy.$$escapeHtml('Publish') : soy.$$escapeHtml('Save'));
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.saveButtonText.soyTemplateName = 'Confluence.Templates.Editor.Page.saveButtonText';
+}
+
+
+Confluence.Templates.Editor.Page.cancelButton = function(opt_data, opt_ignored) {
+  return '' + ((opt_data.sharedDraftsEnabled && (opt_data.contentType == 'page' || opt_data.contentType == 'blogpost')) ? '<ul class="aui-buttons rte-toolbar-group-done close"><button class="aui-button shared-drafts" type="submit" id="rte-button-cancel" name="cancel" value="cancel"><span class="icon aui-icon aui-icon-small aui-iconfont-close-dialog"></span></button></ul>' : '<div class="aui-buttons cancel-button-container-shared-draft cancel-button-container-quick-edit"><button class="aui-button toolbar-item" type="submit" id="rte-button-cancel" name="cancel" value="cancel"><span class="trigger-text">' + ((opt_data.contentType == 'page' || opt_data.contentType == 'blogpost') ? soy.$$escapeHtml('Close') : soy.$$escapeHtml('Cancel')) + '</span></button></div>');
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.cancelButton.soyTemplateName = 'Confluence.Templates.Editor.Page.cancelButton';
+}
+
+
+Confluence.Templates.Editor.Page.quitDialogHeader = function(opt_data, opt_ignored) {
+  var output = '';
+  switch (opt_data.dialogType) {
+    case 'delete':
+    case 'revert':
+      output += (opt_data.newPage) ? (opt_data.contentType == 'blogpost') ? '<h2 class="aui-dialog2-header-main">' + soy.$$escapeHtml('Delete unpublished blog post?') + '</h2>' : '<h2 class="aui-dialog2-header-main">' + soy.$$escapeHtml('Delete unpublished page?') + '</h2>' : '<h2 class="aui-dialog2-header-main">' + soy.$$escapeHtml('Revert to last published version?') + '</h2>';
+      break;
+    case 'publish':
+    case 'update':
+      output += '<h2 class="aui-dialog2-header-main">' + soy.$$escapeHtml('Publish all changes?') + '</h2>';
+      break;
+    case 'diff':
+      output += '<h2 class="aui-dialog2-header-main">' + soy.$$escapeHtml('Unpublished changes') + '</h2>';
+      break;
+  }
+  output += '<a class="aui-dialog2-header-close"><span class="aui-icon aui-icon-small aui-iconfont-close-dialog">' + soy.$$escapeHtml('Close') + '</span></a>';
+  return output;
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.quitDialogHeader.soyTemplateName = 'Confluence.Templates.Editor.Page.quitDialogHeader';
+}
+
+
+Confluence.Templates.Editor.Page.quitDialogContent = function(opt_data, opt_ignored) {
+  var output = '';
+  switch (opt_data.dialogType) {
+    case 'revert':
+      output += (opt_data.contributors.length == 0) ? ((opt_data.contentType == 'blogpost') ? soy.$$filterNoAutoescape('This will permanently delete all the changes you made since this blog post was last published') : soy.$$filterNoAutoescape('This will permanently delete all the changes you made since this page was last published.')) + '<div class="aui-dialog2-footer-hint"><a id="qed-show-diff-button" class="aui-button aui-button-link">' + soy.$$escapeHtml('Show changes') + '</a></div>' : soy.$$filterNoAutoescape('This will permanently delete all the changes that the following people have made since this page was last published.') + '<div class="aui-dialog2-footer-hint"><a id="qed-show-diff-button" class="aui-button aui-button-link">' + soy.$$escapeHtml('Show changes') + '</a></div>' + Confluence.Templates.Editor.Page.contributorList(opt_data);
+      break;
+    case 'delete':
+      output += (opt_data.contributors.length == 0) ? (opt_data.contentType == 'blogpost') ? soy.$$filterNoAutoescape('Once you delete an unpublished blog post, it\x27s gone for good.') : soy.$$filterNoAutoescape('If you delete an unpublished page, it\x27s gone for good.') : ((opt_data.contentType == 'blogpost') ? soy.$$filterNoAutoescape('This will permanently delete this blog post, which you and these other people have worked on.') : soy.$$filterNoAutoescape('This will permanently delete this page, which you and these other people have worked on.')) + Confluence.Templates.Editor.Page.contributorList(opt_data);
+      break;
+    case 'publish':
+    case 'update':
+      output += soy.$$filterNoAutoescape('\x3cp\x3eThere are changes made by you and other people that haven\x27t been published yet.\x3c/p\x3e\x3cp\x3eThese people have made changes:\x3c/p\x3e') + Confluence.Templates.Editor.Page.contributorList(opt_data);
+      break;
+    case 'diff':
+      output += '<div><div class="legend"><span class="legend-title">' + soy.$$escapeHtml('Key') + ': </span><span class="diff-html-added">' + soy.$$escapeHtml('This line was added.') + '</span><span class="diff-html-removed">' + soy.$$escapeHtml('This line was removed.') + '</span><span class="diff-html-changed">' + soy.$$escapeHtml('Formatting was changed.') + '</span></div>' + ((! opt_data.newDialog) ? '<a class="aui-button aui-button-link" id="qed-hide-diff-button">' + soy.$$escapeHtml('Hide changes') + '</a>' : '') + '<hr/><div class="wiki-content"></div></div>';
+      break;
+  }
+  return output;
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.quitDialogContent.soyTemplateName = 'Confluence.Templates.Editor.Page.quitDialogContent';
+}
+
+
+Confluence.Templates.Editor.Page.hiddenInputCancel = function(opt_data, opt_ignored) {
+  return '<input type="hidden" name="cancel" value="cancel">';
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.hiddenInputCancel.soyTemplateName = 'Confluence.Templates.Editor.Page.hiddenInputCancel';
+}
+
+
+Confluence.Templates.Editor.Page.contributorList = function(opt_data, opt_ignored) {
+  var output = '<ul class="contributor-list">';
+  var contributorList157 = opt_data.contributors;
+  var contributorListLen157 = contributorList157.length;
+  for (var contributorIndex157 = 0; contributorIndex157 < contributorListLen157; contributorIndex157++) {
+    var contributorData157 = contributorList157[contributorIndex157];
+    output += '<li><div class="contributor-avatar"><span class="aui-avatar aui-avatar-large"><span class="aui-avatar-inner"><img src="' + soy.$$escapeHtml(contributorData157.avatarURL) + '"/></span></span></div><div class="contributor-name"><span>' + soy.$$escapeHtml(contributorData157.fullname) + '</span></div></li>';
+  }
+  output += '</ul>';
+  return output;
+};
+if (goog.DEBUG) {
+  Confluence.Templates.Editor.Page.contributorList.soyTemplateName = 'Confluence.Templates.Editor.Page.contributorList';
+}
+
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'insert-image-dialog/insert-image-dialog.js' */
+define("confluence-editor/insert-image-dialog/insert-image-dialog",["jquery","ajs","underscore","confluence/legacy"],function(c,f,e,h){var g={beforeShowListeners:[],panelComponent:[],sizeToFit:function(){this.each(function(){var a=this,b=c(this).parent(),d=b.height();b.children().each(function(){this!==a&&c(this).is(":visible")&&(d-=c(this).outerHeight())});b=c(this).outerHeight()-c(this).height();c(this).css("height",Math.max(0,d-b)+"px")});return this},defaultInsertImageDialog:function(){f.Rte.BookmarkManager.storeBookmark();
+g.insertImageDialog(function(a){var b=require("tinymce");f.Rte.BookmarkManager.restoreBookmark();var d={};if(a.url)d={url:a.url,filename:a.url,contentId:a.contentId},b.confluence.ImageUtils.insertFromProperties(d);else{var i=!0,h=1<a.selectItems.length;e.each(a.selectItems,function(a){a.isImage()?(d={filename:a.getFileName(),contentId:a.get("ownerId")},b.confluence.ImageUtils.insertFromProperties(d,h)):(i=!1,f.MacroBrowser.getMacroMetadata("view-file")?g._insertFilePlaceholderToEditor(a):g._insertLinkToEditor(a))});
+require(["confluence-drag-and-drop/analytics/files-upload-analytics"],function(b){b.triggerEvent("confluence.insert-files-dialog.insert",a.selectItems,i)})}c("#comments-section").length&&f.Rte.fixEditorFocus()},function(){f.Rte.BookmarkManager.restoreBookmark()})},findPanelComponentById:function(a){for(var b=h.Editor.ImageDialog.panelComponent,d=0,c=b.length;d<c;d++)if(b[d].id==a)return b[d]},insertImageDialog:function(a,b){var d=new h.Editor.FileDialog.FileDialogView({submitCallback:a,cancelCallback:b,
+beforeShowListeners:g.beforeShowListeners,panelComponents:g.panelComponent});d.render();return d},_insertLinkToEditor:function(a){var b=h.Link.fromREST(a.attributes);b.attrs["data-linked-resource-container-id"]=a.get("ownerId");b.attrs.href=a.get("downloadUrl");b.insert()},_insertFilePlaceholderToEditor:function(a){var b={name:a.get("fileName"),page:a.get("parentTitle"),space:a.get("space")?a.get("space").key:"",date:a.get("datePath"),ownerId:a.get("ownerId")};require(["confluence-editor/utils/attachments-insert-utils"],
+function(a){a.insertFilePlaceholder(b)})}};return g});
+require("confluence/module-exporter").safeRequire("confluence-editor/insert-image-dialog/insert-image-dialog",function(c){var f=require("jquery"),e=require("confluence/legacy");f.fn.sizeToFit=c.sizeToFit;e.Editor.ImageDialog=c;e.Editor.defaultInsertImageDialog=c.defaultInsertImageDialog;e.Editor.ImageDialog.findPanelComponentById=c.findPanelComponentById;e.Editor.insertImageDialog=c.insertImageDialog;e.Editor.ImageDialog._insertLinkToEditor=c._insertLinkToEditor;e.Editor.ImageDialog._insertFilePlaceholderToEditor=
+c._insertFilePlaceholderToEditor});
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'panel-components/panel-components-init.js' */
+define("confluence-editor/panel-components/panel-components-init",["confluence/legacy","ajs"],function(a,d){return function(){if(a.Editor&&a.Editor.ImageDialog&&a.Editor.ImageDialog.panelComponent){var b=a.Editor.FileDialog.eventListener,e=a.Editor.FileDialog.ExternalPanelView,f=a.Editor.FileDialog.SearchPanelView,g=a.Editor.FileDialog.AttachmentsPanelView,c=a.Editor.ImageDialog.panelComponent;"template"!==d.Meta.get("content-type")&&(b=new g({eventListener:b}),c.push(b));c.push(new e);c.push(new f)}}});
+require("confluence/module-exporter").safeRequire("confluence-editor/panel-components/panel-components-init",function(a){require("ajs").toInit(a)});
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'drafts/page-editor-drafts.js' */
+define("confluence-editor/page-editor-drafts","jquery ajs confluence/meta confluence/legacy confluence/api/constants confluence-editor/editor/page-editor-message confluence-editor/loader/collaborative-helper".split(" "),function(f,b,d,a,m,q,r){var n=false,l=false,i=false,o=null,s=d.get("remote-user")!=="",t=b.DarkFeatures.isEnabled("editor.ajax.save")&&!b.DarkFeatures.isEnabled("editor.ajax.save.disable"),h=function(b,a,d){f("<input>").attr({type:"hidden",name:b,value:a}).appendTo(d)},k=function(){return d.getBoolean("shared-drafts")};
+b.bind("editor-shared-drafts-published editor-shared-drafts-discarded",function(){l=n=false});return{isDraftSaved:function(){return n},isDraftManuallySaved:function(){return l},isDraftBlank:function(){return b.Rte.Content.isEmpty()&&!f.trim(a.Editor.getCurrentTitle())},isNewContent:function(){return b.Rte.getEditor()&&d.getBoolean("new-page")===true},isDraftDirty:function(){return a.Editor.hasContentChanged()||a.Editor.Drafts.isDraftSaved()&&!a.Editor.Drafts.isDraftManuallySaved()},unloadMessage:function(){var e=
+function(){a.Editor.Drafts.isDraftBlank()&&!k()?a.Editor.Drafts.discardDraft(d.get("draft-id")):a.Editor.Drafts.save({skipErrorHandler:true})};if(typeof seleniumAlert!=="undefined")e();else if(a.Editor.isLimitedModeEnabled()||!k()){if(a.Editor.hasContentChanged()||a.Editor.Drafts.isDraftSaved()&&!a.Editor.Drafts.isDraftManuallySaved()){e();return "A draft will be saved. You can resume editing this draft the next time you open the editor or view all your drafts in your profile."}}else{e();if(i)return "We haven\u0027t finished saving your changes. If you leave before seeing the \u0027Draft saved\u0027 message, you might lose your changes."}},hasPendingChanges:function(){return i},isSharedDraftsEnabled:k,
+bindUnloadMessage:function(){if(!a.Editor.isLimitedModeEnabled()&&k()){b.bind("synchrony.entity.ack",function(b,a){a.pendingChanges||(i=false)});b.bind("editor.local.change",function(){i=true})}f(window).bind("beforeunload",a.Editor.Drafts.unloadMessage)},unBindUnloadMessage:function(){f(window).unbind("beforeunload")},useDraft:function(){var e=d.get("existing-draft-id");a.Editor.Drafts.unBindUnloadMessage();var c=a.Editor.getCurrentForm();h("useDraft","true",c);h("contentChanged",""+a.Editor.hasContentChanged(),
+c);h("pageId",b.params.pageId,c);f("#draftId",a.Editor.getCurrentForm()).val(e);c.spaceKey||h("spaceKey",d.get("space-key"),c);c.action=m.CONTEXT_PATH+"/pages/"+(b.params.newPage?"create":"edit")+b.params.draftType+".action";c.submit()},discardDraft:function(a){return b.safe.ajax({url:m.CONTEXT_PATH+"/json/deletedraft.action",type:"GET",dataType:"json",data:{draftId:a},success:function(a){if(a.actionErrors){for(var e=["<ul>"],a=a.actionErrors,d=0;d<a.length;d++){b.log("error: "+a[d]);e.push("<li>"+
+a[d]+"</li>")}e.push("</ul>");b.messages.error("#editor-messages",{title:"Error",body:"There were errors discarding your draft: "+e.join("\n")})}else{f("#draft-messages").remove();b.messages.success("#editor-messages",{body:"Your draft has been discarded."})}},error:function(a){b.messages.error({title:"Error",body:a.errors||"An unknown error has occurred. Please check your logs."})}})},save:function(e){e=e||{};if(a.Editor.isPublishing()||!a.Editor.editorHasContentChanged()&&!e.forceSave){b.debug("skipping draft save because:");
+a.Editor.isPublishing()?b.debug("The user is publishing the page already."):!a.Editor.editorHasContentChanged()&&!e.forceSave&&b.debug("The content hasn't changed and a forceSave wasn't requested in the options.")}else{b.debug("preparing to save editor draft");var c=f("#content-title"),i=f("#newSpaceKey"),h=f("#originalVersion"),u=a.Editor.inRichTextMode(),p={draftId:d.get("draft-id"),pageId:d.get("page-id"),parentPageId:d.get("parent-page-id"),type:b.params.draftType,title:c.hasClass("placeholded")?
+"":c.val(),spaceKey:i.length?i.val():encodeURIComponent(d.get("space-key"))};r.getEditorContent().pipe(function(c){f.extend(p,c);if(h.length)p.pageVersion=parseInt(h.val(),10);o=f.ajax({type:"POST",url:m.CONTEXT_PATH+"/rest/tinymce/1/drafts",data:f.toJSON(p),contentType:"application/json",dataType:"text json",success:function(c){if(c!=null&&(!(s&&c.draftId===0)||!t)){a.Editor.contentHasChangedSinceLastSave=false;u&&b.Rte.Content.editorResetContentChanged();n=true;l=!!e.manualSave;d.set("draft-id",
+c.draftId+"");f("#draftId",a.Editor.getCurrentForm()).val(c.draftId);f("#draft-error").remove();if(!d.get("collaborative-content")){var i=f("#draft-status"),g;if(!(g=c.time)){var j=new Date;g=j.getHours();var j=j.getMinutes(),h=g>11?"PM":"AM";g=g%12;g=(g==0?"12":g)+":"+(j<10?"0":"")+j+" "+h}j=l?b.format("Draft saved at {0}",g):b.format("Draft autosaved at {0}",g);h=b.params.newPage?j:"<a id='view-diff-link-heartbeat' class='view-diff-link' href='#'>"+j+"</a>";i.attr("data-tooltip",j);
+i.html(h)}if(f.isFunction(e.onSuccessHandler))e.onSuccessHandler(c);a.Editor.Drafts.lastSaveTime=g;b.trigger("rte-draft-saved",{draftId:c.draftId})}},error:function(c,d){var g=function(){a.Editor.addErrorMessage("draft-error",a.Editor.Drafts.lastSaveTime?b.format("Error saving draft. Last draft saved at {0}",a.Editor.Drafts.lastSaveTime):"Error saving draft. No draft has been saved.",true)};if(!e.skipErrorHandler&&!k()){c.status===400?c.responseText.indexOf("Legacy drafts deprecated")>=0?q.handleMessage("legacy-draft-deprecated",
+{type:"error",message:"Collaborative editing is here! That means we need a little help from you to restart your editing session. All you need to do is copy the content, edit this page again, then paste it in and save."}):g():g();if(f.isFunction(e.onErrorHandler))e.onErrorHandler(d)}},timeout:3E4}).always(function(){o=null})})}},getDraftSavingPromise:function(){return o}}});require("confluence/module-exporter").exportModuleAsGlobal("confluence-editor/page-editor-drafts","Confluence.Editor.Drafts");
+}catch(e){WRMCB(e)};
+;
+try {
+/* module-key = 'com.atlassian.confluence.editor:page-editor-js', location = 'editor/page-editor-permissions.js' */
+define("confluence-editor/editor/page-editor-permissions",["ajs","jquery"],function(b,d){var c={updateEditPageRestrictions:function(c,a,e,g){var f=d("#rte-button-restrictions"),i=f.find(".icon"),h="";c||a?(i.removeClass("aui-iconfont-locked aui-iconfont-unlocked icon-red").addClass(c?"aui-iconfont-locked icon-red":"aui-iconfont-unlocked icon-red"),h="Restrictions apply"):(i.removeClass("aui-iconfont-locked aui-iconfont-unlocked icon-red").addClass("aui-iconfont-unlocked"),h=e?
+"Restrictions apply":"Unrestricted");f.attr("data-tooltip",h);f.data("explicit-restrictions",c);f.data("inherited-restrictions",a);f.data("restrictionsHash",g)},handleHeartbeat:function(j,a){if("undefined"!==typeof a.restrictionsHash){var e=d("#rte-button-restrictions");if(e.data("restrictionsHash")!==a.restrictionsHash)if(d("#update-page-restrictions-dialog").is(":visible")&&b.PagePermissions.updateRestrictionsDialog)b.PagePermissions.updateRestrictionsDialog(),
+e.data("restrictionsHash",a.restrictionsHash);else{var g=""!==a.restrictionsHash,f=a.hasViewRestrictions,e=!!e.data("inherited-restrictions");c.updateEditPageRestrictions(f,e,g,a.restrictionsHash)}}},init:function(){b.bind("editor-heartbeat",c.handleHeartbeat);b.bind("edit-page-restrictions-updated",function(b,a){c.updateEditPageRestrictions(a.hasExplicitRestrictions,a.hasInheritedRestrictions,a.hasAnyExplicitRestrictions,a.restrictionsHash)})}};return c});
+require("confluence/module-exporter").safeRequire("confluence-editor/editor/page-editor-permissions",function(b){var d=require("ajs"),c=require("jquery");d.PagePermissions=d.PagePermissions||{};c.extend(d.PagePermissions,{updateEditPageRestrictions:b.updateEditPageRestrictions});d.toInit(b.init)});
+}catch(e){WRMCB(e)};

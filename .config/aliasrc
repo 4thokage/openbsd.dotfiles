@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	bat="apm -l" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	df="df -h" \
+	du="du -h" \
+	mkd="mkdir -p" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	ls="colorls -FHh" \
+	ll="ls -l" \
+	la="ls -lA" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="doas shutdown -p now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	pa="doas pkg_add" \
+	pd="doas pkg_delete"
+
+# This alias is important. It enables the `pauseallmpv` command.
+alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
+
+# Some other stuff
+alias \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+	weather="curl http://wttr.in/Lisbon" \
+	neofetch="neofetch --ascii_distro OpenBSD_small --disable gpu uptime packages --gtk3 off"

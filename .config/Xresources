@@ -1,0 +1,44 @@
+! ===== Color Settings
+*customization: -color
+*VT100*colorULMoDE: ON
+*VT100*colorUL:     #2E3440
+*VT100*colorBD:     #D8DEE9
+! Include personal colors
+#include "Xcolors"
+
+! Set background and foreground colors
+!*cursorColor:  #D8DEE9
+!*background:   #2E3440
+!*foreground:   #D8DEE9
+! ===== fonts
+Xft.autohint  : 0
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : 1
+Xft.antialias : 1
+Xft.rgba      : rgb
+
+! ===== st
+st.alpha: 0.90
+
+! ===== xidle
+! drag pointer to lower left corner to lock screen
+XIdle*position : sw
+! and leave it there for one second.
+XIdle*delay    : 1
+! also lock screen after 5 minutes idle
+XIdle*timeout  : 300
+
+! ===== xlock
+! actually turn the backlight off
+XLock.dpmsoff     : 1
+! plain white-on-black lock screen
+XLock.description : off
+XLock.echokeys    : off
+XLock.info        :
+XLock.background  : #252123
+XLock.foreground  : white
+XLock.mode        : blank
+XLock.username    : username:
+XLock.password    : password:
+

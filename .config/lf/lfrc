@@ -1,0 +1,7 @@
+# Basic vars
+set shell sh
+set shellopts '-eu'
+set previewer ~/.config/lf/scope
+set ifs "\n"
+set scrolloff 10
+set color256

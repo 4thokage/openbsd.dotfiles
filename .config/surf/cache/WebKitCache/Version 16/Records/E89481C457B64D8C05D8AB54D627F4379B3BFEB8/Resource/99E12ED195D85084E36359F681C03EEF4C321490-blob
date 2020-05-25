@@ -1,0 +1,353 @@
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="pagehead repohead hx_repohead readability-menu bg-gray-light pb-0 pt-3">
+
+    <div class="d-flex container-lg mb-4 px-3">
+
+      <div class="flex-auto min-width-0 width-fit mr-3">
+        <h1 class="public  d-flex flex-wrap flex-items-center break-word float-none ">
+  <span class="flex-self-stretch" style="margin-top: -2px;">
+      <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  </span>
+  <span class="author ml-2 flex-self-stretch" itemprop="author">
+    <a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/users/aguslr/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/aguslr">aguslr</a>
+  </span>
+  <span class="path-divider flex-self-stretch">/</span>
+  <strong itemprop="name" class="mr-2 flex-self-stretch">
+    <a data-pjax="#js-repo-pjax-container" href="/aguslr/.dotfiles">.dotfiles</a>
+  </strong>
+  
+</h1>
+
+
+      </div>
+
+      <ul class="pagehead-actions flex-shrink-0 " >
+
+
+
+
+  <li>
+    
+  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles/tree/master/.local/share/themes/colorschemes/tpl?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="889bd79bf5e90ac540164577bf3ab318df6dda10a2dd39a2b72e86e8832ff38a" href="/login?return_to=%2Faguslr%2F.dotfiles">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+</a>    <a class="social-count" href="/aguslr/.dotfiles/watchers"
+       aria-label="2 users are watching this repository">
+      2
+    </a>
+
+  </li>
+
+  <li>
+        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:950091,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles/tree/master/.local/share/themes/colorschemes/tpl?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="6eb68c6e3fd2b23286bd401b86c5234070cd5a7688ddbd3822918d0c9848edcb" href="/login?return_to=%2Faguslr%2F.dotfiles">
+      <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+
+      Star
+</a>
+    <a class="social-count js-social-count" href="/aguslr/.dotfiles/stargazers"
+      aria-label="6 users starred this repository">
+      6
+    </a>
+
+  </li>
+
+  <li>
+      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:950091,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/aguslr/.dotfiles/tree/master/.local/share/themes/colorschemes/tpl?_pjax=%23js-repo-pjax-container&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="ffa7c5e6c30c3ce7895a6c6d5ab6cc72451d398b92c65d04b328303f1c65c837" href="/login?return_to=%2Faguslr%2F.dotfiles">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+</a>
+    <a href="/aguslr/.dotfiles/network/members" class="social-count"
+       aria-label="0 users forked this repository">
+      0
+    </a>
+  </li>
+</ul>
+
+    </div>
+      
+<nav class="hx_reponav reponav js-repo-nav js-sidenav-container-pjax clearfix container-lg px-3"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /aguslr/.dotfiles" href="/aguslr/.dotfiles">
+      <div class="d-inline"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg></div>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" data-skip-pjax="true" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /aguslr/.dotfiles/pulls" href="/aguslr/.dotfiles/pulls">
+      <div class="d-inline"><svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg></div>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="4">
+</a>  </span>
+
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="position-relative float-left">
+      <a data-hotkey="g w" data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="repo_actions /aguslr/.dotfiles/actions" href="/aguslr/.dotfiles/actions">
+        <div class="d-inline"><svg class="octicon octicon-play" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 8A7 7 0 110 8a7 7 0 0114 0zm-8.223 3.482l4.599-3.066a.5.5 0 000-.832L5.777 4.518A.5.5 0 005 4.934v6.132a.5.5 0 00.777.416z"></path></svg></div>
+        Actions
+</a>
+    </span>
+
+
+
+    <a data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="security overview alerts policy token_scanning code_scanning /aguslr/.dotfiles/security" href="/aguslr/.dotfiles/security">
+      <div class="d-inline"><svg class="octicon octicon-shield" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 2l7-2 7 2v6.02C14 12.69 8.69 16 7 16c-1.69 0-7-3.31-7-7.98V2zm1 .75L7 1l6 1.75v5.268C13 12.104 8.449 15 7 15c-1.449 0-6-2.896-6-6.982V2.75zm1 .75L7 2v12c-1.207 0-5-2.482-5-5.985V3.5z"></path></svg></div>
+      Security
+          <span class="Counter js-security-tab-count" data-url="/aguslr/.dotfiles/security/overall-count" hidden></span>
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people /aguslr/.dotfiles/pulse" href="/aguslr/.dotfiles/pulse">
+      <div class="d-inline"><svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg></div>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+
+<div class="container-lg clearfix new-discussion-timeline  px-3">
+  <div class="repository-content ">
+
+    
+    
+
+  <div class="file-navigation ">
+    
+<details class="details-reset details-overlay branch-select-menu float-left" id="branch-select-menu">
+  <summary class="btn css-truncate btn-sm"
+           data-hotkey="w"
+           title="Switch branches or tags">
+    <i>Branch:</i>
+    <span class="css-truncate-target" data-menu-button>master</span>
+    <span class="dropdown-caret"></span>
+  </summary>
+
+  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/aguslr/.dotfiles/refs/master/.local/share/themes/colorschemes/tpl?source_action=disambiguate&amp;source_controller=files" preload>
+    <div class="SelectMenu-modal">
+      <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
+        <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"></path></svg>
+      </include-fragment>
+    </div>
+  </details-menu>
+</details>
+
+    <div class="BtnGroup float-right">
+      
+    <button class="btn btn-sm BtnGroup-item disabled tooltipped tooltipped-n" aria-label="You must be signed in to make or propose changes" type="button">
+      Create new file
+    </button>
+
+
+
+      <a href="/aguslr/.dotfiles/find/master" data-pjax data-hotkey="t" class="js-pjax-capture-input btn btn-sm BtnGroup-item empty-icon">
+        Find file
+      </a>
+      <a href="/aguslr/.dotfiles/commits/master/.local/share/themes/colorschemes/tpl" class="btn btn-sm BtnGroup-item empty-icon">
+        History
+      </a>
+    </div>
+    <div class="breadcrumb mb-2"><span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" href="/aguslr/.dotfiles"><span>.dotfiles</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/aguslr/.dotfiles/tree/master/.local"><span>.local</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/aguslr/.dotfiles/tree/master/.local/share"><span>share</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/aguslr/.dotfiles/tree/master/.local/share/themes"><span>themes</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/aguslr/.dotfiles/tree/master/.local/share/themes/colorschemes"><span>colorschemes</span></a></span><span class="separator">/</span><strong class="final-path">tpl</strong><span class="separator">/</span></div>
+  </div>
+
+  
+
+<div class="Box mb-3 Box--condensed">
+  <div class="Box-header Box-header--blue position-relative "
+    style="margin-bottom:-1px;">
+    <h2 class="sr-only">Latest commit</h2>
+    <div class="commit-tease js-details-container Details d-flex rounded-top-1 flex-auto" data-issue-and-pr-hovercards-enabled>
+        <include-fragment src="/aguslr/.dotfiles/tree-commit/78c1cc7548abf0d3f83418bb26c846191deaa7f9/.local/share/themes/colorschemes/tpl" class="commit-loader">
+          <div class="blank loader-loading">
+            <img alt="" class="loader" src="https://github.githubassets.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+            Fetching latest commit…
+          </div>
+          <div class="loader-error">
+            Cannot retrieve the latest commit at this time.
+          </div>
+</include-fragment>    </div>
+  </div>
+  <h2 id="files"  class="sr-only">Files</h2>
+  
+
+
+  <include-fragment src="/aguslr/.dotfiles/file-list/master/.local/share/themes/colorschemes/tpl">
+      <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/aguslr/.dotfiles/tree/78c1cc7548abf0d3f83418bb26c846191deaa7f9/.local/share/themes/colorschemes/tpl">Permalink</a>
+
+    <table class="files js-navigation-container js-active-navigation-container " data-pjax>
+      <thead>
+        <tr>
+          <th><span class="sr-only">Type</span></th>
+          <th><span class="sr-only">Name</span></th>
+          <th><span class="sr-only">Latest commit message</span></th>
+          <th><span class="sr-only">Commit time</span></th>
+        </tr>
+      </thead>
+        <tr class="up-tree js-navigation-item" >
+          <td></td>
+          <td><a rel="nofollow" title="Go to parent directory" class="js-navigation-open" href="/aguslr/.dotfiles/tree/master/.local/share/themes/colorschemes">..</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+      <tbody>
+        <tr class="warning include-fragment-error">
+          <td class="icon"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></td>
+          <td class="content" colspan="3">Failed to load latest commit information.</td>
+        </tr>
+
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="bspwm.cfg" id="9556e13a5675b8ec4aaa144c2293f60a-34213300a2a4e84f0471a99bb07b17210d0ca4c2" href="/aguslr/.dotfiles/blob/master/.local/share/themes/colorschemes/tpl/bspwm.cfg">bspwm.cfg</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="firefox.css" id="7bb49e7f754133d983bc0748516a7e47-5d69ee3b0cfc3ca6ade3b95c4b0e9ce7539f7cb8" href="/aguslr/.dotfiles/blob/master/.local/share/themes/colorschemes/tpl/firefox.css">firefox.css</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="gtk-2.0.rc" id="74201bc1e00f77e02f835e05f2061f31-9bc755bd8a28bddc5185859aee2a6e3da7e95783" href="/aguslr/.dotfiles/blob/master/.local/share/themes/colorschemes/tpl/gtk-2.0.rc">gtk-2.0.rc</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="gtk-3.0.css" id="5a9187ccdcba8f772c7eed200c2e0dbd-04a6bd741c7901fb5d09b03ec486d7181fa531e9" href="/aguslr/.dotfiles/blob/master/.local/share/themes/colorschemes/tpl/gtk-3.0.css">gtk-3.0.css</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"></span>
+            </td>
+          </tr>
+          <tr class="js-navigation-item">
+            <td class="icon">
+              <svg aria-label="file" class="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>
+              <img width="16" height="16" class="spinner" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" />
+            </td>
+            <td class="content">
+              <span class="css-truncate css-truncate-target"><a class="js-navigation-open " title="vimperator.vimp" id="dff8f5124f4494a73f3e0c694a7d5087-973b0f0bb5ca0e34714db04358b85a29ddffb278" href="/aguslr/.dotfiles/blob/master/.local/share/themes/colorschemes/tpl/vimperator.vimp">vimperator.vimp</a></span>
+            </td>
+            <td class="message">
+              <span class="css-truncate css-truncate-target">
+              </span>
+            </td>
+            <td class="age">
+              <span class="css-truncate css-truncate-target"></span>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+</include-fragment>
+
+
+</div>
+
+  
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+<div id="pjax-head">
+  <title>.dotfiles/.local/share/themes/colorschemes/tpl at master · aguslr/.dotfiles · GitHub</title>
+  <meta name="selected-link" value="repo_source">
+  
+  
+  <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/files/disambiguate" data-pjax-transient="true" />
+  
+  <meta name="request-id" content="39D6:33A6:480F60:6AA6BF:5EA32D37" data-pjax-transient="true"/><meta name="html-safe-nonce" content="377bd059f2e193b507dae29b2c8f383ac5e5b2b9" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9hZ3VzbHIvLmRvdGZpbGVzL3RyZWUvbWFzdGVyLy5sb2NhbC9zaGFyZS90aGVtZXMiLCJyZXF1ZXN0X2lkIjoiMzlENjozM0E2OjQ4MEY2MDo2QUE2QkY6NUVBMzJEMzciLCJ2aXNpdG9yX2lkIjoiMjQ0NjkyOTg4MTg2MTIxMDU1NSIsInJlZ2lvbl9lZGdlIjoiaWFkIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true"/><meta name="visitor-hmac" content="c7cc9975d85a6731adf884ac031e9a02da883d12074d107e76b173f1226baa50" data-pjax-transient="true"/>
+  
+  <meta name="github-keyboard-shortcuts" content="repository,source-code" data-pjax-transient="true" />
+
+
+    <link rel="canonical" href="https://github.com/aguslr/.dotfiles/tree/master/.local/share/themes/colorschemes/tpl" data-pjax-transient>
+    <link href="https://github.com/aguslr/.dotfiles/commits/master.atom" rel="alternate" title="Recent Commits to .dotfiles:master" type="application/atom+xml">
+
+</div>
+
+<div id="js-flash-container">
+
+
+  <template class="js-flash-template">
+    <div class="flash flash-full  js-flash-template-container">
+  <div class="container-lg px-2" >
+    <button class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    
+      <div class="js-flash-template-message"></div>
+
+  </div>
+</div>
+  </template>
+</div>
+
+

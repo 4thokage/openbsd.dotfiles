@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>[SOLVED] No HTML5 video play in any browser! / Applications &amp; Desktop Environments / Arch Linux Forums</title>
+<link rel="stylesheet" type="text/css" href="style/ArchLinux.css" />
+<link rel="canonical" href="viewtopic.php?id=179075" title="Page 1" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=179075&amp;type=atom" title="Atom topic feed" />
+    <link rel="stylesheet" media="screen" href="style/ArchLinux/arch.css?v=4"/>
+        <link rel="stylesheet" media="screen" href="style/ArchLinux/archnavbar.css?v=4"/>
+    
+<link rel="shortcut icon" href="style/ArchLinux/favicon.ico" />
+</head>
+
+<body>
+<div id="archnavbar" class="anb-forum">
+	<div id="archnavbarlogo"><h1><a href="http://www.archlinux.org/">Arch Linux</a></h1></div>
+	<div id="archnavbarmenu">
+		<ul id="archnavbarlist">
+			<li id="anb-home"><a href="http://www.archlinux.org/">Home</a></li><li id="anb-packages"><a href="http://www.archlinux.org/packages/">Packages</a></li><li id="anb-forums" class="anb-selected"><a href="https://bbs.archlinux.org/">Forums</a></li><li id="anb-wiki"><a href="https://wiki.archlinux.org/">Wiki</a></li><li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li><li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li><li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li><li id="anb-download"><a href="http://www.archlinux.org/download/">Download</a></li>		</ul>
+	</div>
+</div>
+
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">Rules</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=18">Applications &amp; Desktop Environments</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=179075">[SOLVED] No HTML5 video play in any browser!</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p1396949" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=1396949#p1396949">2014-03-26 01:19:18</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>[SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>I, i used firefox for a long time, but it use a lot of RAM memory (Chromium and Opera too).</p><p>I decided to try another browser. How i use DWM i choosed surf, that i think is the lightest browser. But in this browser i have no html5 video playback.<br />So i tried with other browser (dwb, luakit, lzlb) and the same with all, no video. I tried other html5 things like some games and animations and everything ok, except video.</p><p>Can you help me?</p>
+						<p class="postedit"><em>Last edited by henriqueleng (2014-04-10 23:06:00)</em></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1396951" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=1396951#p1396951">2014-03-26 01:43:08</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>ooo</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2013-04-10</span></dd>
+						<dd><span>Posts: 1,607</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>I guess webkitgtk uses gstreamer for media playback, in that case one thing you need is appropriate gstreamer plugin(s) for decoding the video.<br />try installing gst-plugins-good and gst-libav for starters if you haven&#039;t got them already.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1396953" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=1396953#p1396953">2014-03-26 01:50:35</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>thiagowfx</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/73061.png?m=1572193435" width="64" height="64" alt="" /></dd>
+						<dd><span>Registered: 2013-07-09</span></dd>
+						<dd><span>Posts: 552</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>Could you please post a link which contains an example HTML5 video you can&#039;t access?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="https://wiki.archlinux.org/index.php/User:Thiagowfx" rel="nofollow">User:Thiagowfx</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1396954" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=1396954#p1396954">2014-03-26 01:59:38</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>There is a simple html5 video that i cant play!<br /><a href="https://duckduckgo.com/about" rel="nofollow">https://duckduckgo.com/about</a></p><p>Whe i click on play symbol it change to pause, but the video dont play!</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1396959" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=1396959#p1396959">2014-03-26 02:39:12</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>thiagowfx</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/73061.png?m=1572193435" width="64" height="64" alt="" /></dd>
+						<dd><span>Registered: 2013-07-09</span></dd>
+						<dd><span>Posts: 552</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>I just installed dwb, this video didn&#039;t work for me out-of-the-box.</p><p>But if you follow <a href="https://wiki.archlinux.org/index.php/Dwb#HTML5_audio_and_video_does_not_work" rel="nofollow">this</a> suggestion from the Wiki, it will work (restart dwb after installing these packages!).</p>
+						<p class="postedit"><em>Last edited by thiagowfx (2014-03-26 02:40:00)</em></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="https://wiki.archlinux.org/index.php/User:Thiagowfx" rel="nofollow">User:Thiagowfx</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1397222" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=1397222#p1397222">2014-03-26 16:56:03</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>I installed all this things and nothing, the same thing! <img src="https://bbs.archlinux.org/img/smilies/sad.png" width="15" height="15" alt="sad" /></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399012" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=1399012#p1399012">2014-03-31 18:20:08</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>Please someone?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399153" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=1399153#p1399153">2014-04-01 00:59:01</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>thiagowfx</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/73061.png?m=1572193435" width="64" height="64" alt="" /></dd>
+						<dd><span>Registered: 2013-07-09</span></dd>
+						<dd><span>Posts: 552</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>It is strange it didn&#039;t work for you.</p><p>Have you tested on Firefox or Chromium? Even they are not &#039;lightweight&#039;, the results could say something useful.</p>
+						<p class="postedit"><em>Last edited by thiagowfx (2014-04-01 00:59:33)</em></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="https://wiki.archlinux.org/index.php/User:Thiagowfx" rel="nofollow">User:Thiagowfx</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399502" class="blockpost rowodd">
+	<h2><span><span class="conr">#9</span> <a href="viewtopic.php?pid=1399502#p1399502">2014-04-01 21:59:51</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>Yes, its stuff on firefox and chromium!</p><p>Its so strange!</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399506" class="blockpost roweven">
+	<h2><span><span class="conr">#10</span> <a href="viewtopic.php?pid=1399506#p1399506">2014-04-01 22:06:31</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Rasi</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/12079.jpg?m=1572193438" width="80" height="80" alt="" /></dd>
+						<dd><span>From: Germany</span></dd>
+						<dd><span>Registered: 2007-08-14</span></dd>
+						<dd><span>Posts: 1,912</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://53280.de" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p><a href="http://html5test.com/" rel="nofollow">http://html5test.com/</a></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>He hoped and prayed that there wasn&#039;t an afterlife. Then he realized there was a contradiction involved here and merely hoped that there wasn&#039;t an afterlife.</p><p>Douglas Adams</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399522" class="blockpost rowodd">
+	<h2><span><span class="conr">#11</span> <a href="viewtopic.php?pid=1399522#p1399522">2014-04-01 22:37:18</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>I run the test, this is the informations abou my browser:</p><p>- Its scored 385 of 555 points<br />- The site recognized my browser (surf 0.6) on Linux</p><p>Lets go to the video info:</p><p>- video elemen = yes<br />- DRM support = No<br />- Media Source Elements = No<br />- Subtitle Supp. = No <br />- Poster Image Supp. = Yes<br />- Codec detection = Yes<br />- MPEG-4 = Yes<br />- H.264 = Yes<br />- Ogg Theora = Yes<br />- WebM whit VP8 and VP9 = Yes</p><p>And Audio:</p><p>- Audio element = Yes<br />- MP3, AAC, PCM, OGG, WEBM, OGGOPUS = Yes</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399532" class="blockpost roweven">
+	<h2><span><span class="conr">#12</span> <a href="viewtopic.php?pid=1399532#p1399532">2014-04-01 22:46:46</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Rasi</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/12079.jpg?m=1572193438" width="80" height="80" alt="" /></dd>
+						<dd><span>From: Germany</span></dd>
+						<dd><span>Registered: 2007-08-14</span></dd>
+						<dd><span>Posts: 1,912</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://53280.de" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>question: do you have sound with flash?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>He hoped and prayed that there wasn&#039;t an afterlife. Then he realized there was a contradiction involved here and merely hoped that there wasn&#039;t an afterlife.</p><p>Douglas Adams</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399537" class="blockpost rowodd">
+	<h2><span><span class="conr">#13</span> <a href="viewtopic.php?pid=1399537#p1399537">2014-04-01 23:01:48</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>I don&#039;t have flash player installed, but i listen to music with cmus, and watch videos on vlc with sound!</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399947" class="blockpost roweven">
+	<h2><span><span class="conr">#14</span> <a href="viewtopic.php?pid=1399947#p1399947">2014-04-02 22:58:05</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>Wath are happening?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1399984" class="blockpost rowodd">
+	<h2><span><span class="conr">#15</span> <a href="viewtopic.php?pid=1399984#p1399984">2014-04-03 00:50:27</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>jasonwryan</strong></dt>
+						<dd class="usertitle"><strong>Anarchist</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/25579.png?m=1572193435" width="80" height="69" alt="" /></dd>
+						<dd><span>From: .nz</span></dd>
+						<dd><span>Registered: 2009-05-09</span></dd>
+						<dd><span>Posts: 28,586</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://jasonwryan.com/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>Please don&#039;t bump your thread: <a href="https://wiki.archlinux.org/index.php/Forum_Etiquette#Bumping" rel="nofollow">https://wiki.archlinux.org/index.php/Fo … te#Bumping</a></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://www.flickr.com/photos/jasonwryan/9333810442/lightbox/" rel="nofollow">Arch + dwm</a>&#160; &#160;•&#160; &#160;<a href="https://hg.sr.ht/~jasonwryan/" rel="nofollow">Mercurial repos</a>&#160; •&#160; &#160;<a href="https://gitlab.com/surfraw/Surfraw" rel="nofollow">Surfraw</a></p><p>Registered Linux User #482438</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1402892" class="blockpost roweven">
+	<h2><span><span class="conr">#16</span> <a href="viewtopic.php?pid=1402892#p1402892">2014-04-10 23:05:15</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<p>Hi, problem solved!</p><p>I really don&#039;t know which software solved my problem, i think that was gst-libav. But now its ok!</p><p>Thanks everyone that helped!</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1402902" class="blockpost rowodd">
+	<h2><span><span class="conr">#17</span> <a href="viewtopic.php?pid=1402902#p1402902">2014-04-10 23:43:32</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>thiagowfx</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/73061.png?m=1572193435" width="64" height="64" alt="" /></dd>
+						<dd><span>Registered: 2013-07-09</span></dd>
+						<dd><span>Posts: 552</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>henriqueleng wrote:</cite><blockquote><div><p>Hi, problem solved!</p><p>I really don&#039;t know which software solved my problem, i think that was gst-libav. But now its ok!</p></div></blockquote></div><p>Hi, I did a quick test on dwb in the DuckDuckGo about page: without gst-libav, only the audio played. With it, both the audio and the video played. Thanks for your feedback, I&#039;ll add this to the dwb wiki page.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="https://wiki.archlinux.org/index.php/User:Thiagowfx" rel="nofollow">User:Thiagowfx</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1402913" class="blockpost roweven">
+	<h2><span><span class="conr">#18</span> <a href="viewtopic.php?pid=1402913#p1402913">2014-04-11 00:21:40</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>henriqueleng</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/79598.png?m=1572193435" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2014-02-18</span></dd>
+						<dd><span>Posts: 77</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] No HTML5 video play in any browser!</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>thiagowfx wrote:</cite><blockquote><div><p>Hi, I did a quick test on dwb in the DuckDuckGo about page: without gst-libav, only the audio played. With it, both the audio and the video played. Thanks for your feedback, I&#039;ll add this to the dwb wiki page.</p></div></blockquote></div><p>Yeah, thats will be a good thing, and it not only solves the problem with dwb, solve with other browsers. Like in my case, i&#039;m using jumanji!</p><p>Bye!</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Emacs - tmux - Cmus - Mutt - Lynx/w3m - ....</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=18">Applications &amp; Desktop Environments</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=179075">[SOLVED] No HTML5 video play in any browser!</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Technical Issues and Assistance">
+							<option value="23">Newbie Corner</option>
+							<option value="17">Installation</option>
+							<option value="22">Kernel &amp; Hardware</option>
+							<option value="18" selected="selected">Applications &amp; Desktop Environments</option>
+							<option value="31">Laptop Issues</option>
+							<option value="8">Networking, Server, and Protection</option>
+							<option value="32">Multimedia and Games</option>
+							<option value="50">System Administration</option>
+							<option value="35">Other Architectures</option>
+						</optgroup>
+						<optgroup label="Arch-centric">
+							<option value="24">Announcements, Package &amp; Security Advisories</option>
+							<option value="1">Arch Discussion</option>
+							<option value="13">Forum &amp; Wiki discussion</option>
+						</optgroup>
+						<optgroup label="Pacman Upgrades, Packaging &amp; AUR">
+							<option value="44">Pacman &amp; Package Upgrade Issues</option>
+							<option value="49">[testing] Repo Forum</option>
+							<option value="4">Creating &amp; Modifying Packages</option>
+							<option value="38">AUR Issues, Discussion &amp; PKGBUILD Requests</option>
+						</optgroup>
+						<optgroup label="Contributions &amp; Discussion">
+							<option value="20">GNU/Linux Discussion</option>
+							<option value="27">Community Contributions</option>
+							<option value="33">Programming &amp; Scripting</option>
+							<option value="30">Other Languages</option>
+							<option value="47">Artwork and Screenshots</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=179075&amp;type=atom">Atom topic feed</a></span></p>
+				<p id="poweredby">Powered by <a href="http://fluxbb.org/">FluxBB</a></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>

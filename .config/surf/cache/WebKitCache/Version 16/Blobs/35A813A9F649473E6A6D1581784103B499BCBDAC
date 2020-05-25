@@ -1,0 +1,2804 @@
+<!-- db tools -->
+<!-- new db -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Bongacams Dynamic Banner</title>
+  <base href="https://i.bongacash.com/dynamic_banner/" target="_blank">
+  <script type="text/javascript" src="https://i.bongacash.com/dynamic_banner/jquery.tools.min.js"></script>
+  <script type="text/javascript">
+    var baseUrl = 'https://i.bongacash.com/dynamic_banner';
+    var homeUrl = "https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https://pt.bongacams.com";
+    var mode = 'mode1';
+    var width = '300';
+    var isFullscreen = '';
+    var isAdaptive = '';
+    var isSlider = '';
+    var isMobile = false;
+    var geoEnabled = false;
+    var footerCorrection = 34;
+    var langHide = false;
+        var thumbWidth = 292;
+    window.videoContainerSelector = '.cam';
+    window.canvasParentSelector = '.bcdb_model_group_active';
+    "use strict";
+
+function fitTextFontSize(selector, parent, options) {
+  parent = parent ? parent : document.body;
+  options = $.extend({ignoreHeight: false}, options);
+
+  function forEach(array, callback) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(null, array[i]); // passes back stuff we need
+    }
+  }
+
+  function isFit(el) {
+    return el.scrollWidth <= el.clientWidth && (el.scrollHeight <= el.clientHeight || options.ignoreHeight);
+  }
+
+  function dichotomy(min, max, el) {
+    if (max - min < 0.5) {
+      el.style.fontSize = min + 'px';
+      return min;
+    } else {
+      var mid = (max + min) / 2;
+      el.style.fontSize = mid + 'px';
+      if (isFit(el)) {
+        return dichotomy(mid, max, el);
+      } else {
+        return dichotomy(min, mid, el);
+      }
+    }
+  }
+
+  var commonMinFS = Infinity;
+  var elements = parent.querySelectorAll(selector);
+  forEach(elements, function (el) {
+    el.style.fontSize = '';
+    var fsize = options.initSize || parseInt(window.getComputedStyle(el)['font-size'], 10);
+    commonMinFS = Math.min(commonMinFS, isFit(el) ? fsize : dichotomy(1, fsize, el));
+  })
+  if (options.syncSize) {
+    forEach(elements, function (el) {
+      el.style.fontSize = commonMinFS + 'px';
+    })
+  }
+}
+
+function Sale2x() {
+  var self = this;
+  this.params = JSON.parse('{"bannerNumber":"","lang":"pt","width":"300","height":"250","header":"0","footer":"footer_text_1","mname":"0","mlink":"0","mode":"mode1","slider":"0","fullscreen":"","msize":"auto","text_color":"#000000"}');
+  this.translates = JSON.parse('{"tokens":"Tokens","2 times":"2 VEZES","cheaper!":"mais baratos!"}');
+
+  this.onDone = function () {
+  };
+
+  this.afterUpdate = function () {
+    var $sale2x = $('.sale2x');
+    if ($sale2x.height() < 100) {
+      $sale2x.addClass('__mini');
+    }
+
+    // fix full-visible coins for wide banners
+    var $coin = $sale2x.find('.sale2x-bg');
+    if ($coin.length) {
+      if ($coin.width() / $coin.height() > 0.8) {
+        $coin.css('min-width', $coin.height() * 1.063);
+      }
+    }
+    fitTextFontSize('.sale2x > .sale2x-wrp > .sale2x-line');
+  }
+
+  this.addOverThumb = function (params, bannerParams) {
+    params = $.extend({number: 2, forceUnderThumbText: false, mlinkTextOnly: false}, params);
+    bannerParams = $.extend({}, {lines: 3}, bannerParams);
+    var $anchor;
+    if ($('.bcdb_model_group > .bcdb_row').length) {
+      $anchor = $('.bcdb_row:nth-child(1) .bcdb_model_item:nth-child(' + params.number + ') .modelimage');
+    } else {
+      $anchor = $('.bcdb_model_item:nth-child(' + params.number + ') .modelimage');
+    }
+    $anchor.append($('<div style="position: absolute; width: ' + this.thumbWidth + 'px; height: ' + (this.thumbHeight + 1) + 'px; z-index: 100">')
+      .append(this.getBanner(bannerParams)));
+    var $link = $anchor.closest('a');
+    var $item = $link.closest('.bcdb_model_item');
+
+    function updateUnderThumbText() {
+      function updateContainerHeight() {
+        fitTextFontSize('[data-newtext]', document.body, {ignoreHeight: true});
+        var $gcont = $link.closest('.bcdb_model_group_container');
+        $gcont.css('height', Math.max($gcont.height(), $link.outerHeight()));
+      }
+
+      if (+self.params.mlink && +self.params.mname || (params.forceUnderThumbText && (+self.params.mlink || +self.params.mname))) {
+        $link.find('.modelname, .modellink').remove();
+        $link.append('<span class="modelname" data-newtext=1 style="overflow: visible; color: ' +
+          self.params.text_color + '">' + self.translates['tokens'] + '</span><span class="modellink" data-newtext=1>' +
+          self.translates['2 times'] + ' ' + self.translates['cheaper!'] + '</span>');
+        if (params.mlinkTextOnly) {
+          $link.find('.modellink').text(self.translates['tokens'] + ' ' +
+            self.translates['2 times'] + ' ' + self.translates['cheaper!']);
+        }
+        if (params.forceUnderThumbText) {
+          $link.find('img').one('load', updateContainerHeight);
+          updateContainerHeight();
+        }
+      } else if (!!+self.params.mlink !== !!+self.params.mname) {
+        $link.find('.modelname, .modellink').attr('data-newtext', 1).text(self.translates['tokens'] + ' ' +
+          self.translates['2 times'] + ' ' + self.translates['cheaper!']);
+        $link.find('img').one('load', updateContainerHeight);
+        updateContainerHeight();
+      }
+      if (self.type !== 'fullscreen') {
+        if (self.itemHeight > 10) {
+          $('.bcdb_model_item').css('height', self.itemHeight + 0.1);
+        }
+        if ($item[0] && $item[0].scrollHeight > $item[0].offsetHeight && !params.forceUnderThumbText) {
+          $link.find('.modelname, .modellink').css({'visibility': 'hidden'})
+        }
+      }
+    }
+
+    updateUnderThumbText();
+    $(document).bind('sale2x:updateModels', updateUnderThumbText);
+    return $anchor;
+  }
+
+  this.addUnderThumb = function (params, bannerParams) {
+    params = $.extend({}, {height: 48}, params);
+    bannerParams = $.extend({}, {lines: 2}, bannerParams);
+    var $anchor = $('.bcdb_model_item .modelimage');
+    $('.bcdb_footer').css({'padding-top': '2px', 'margin-top': 0});
+    var height = Math.min(params.height, $('html').height() - $('.bcdb_header').outerHeight() - $('.bcdb_footer').outerHeight() - this.thumbHeight - 10);
+    $anchor.after($('<div style="position: relative; width: ' + this.thumbWidth + 'px; height: ' + height +
+      'px; z-index: 100; border: solid 1px #ffffff; box-sizing: border-box; margin-top: 4px">')
+      .append(this.getBanner(bannerParams)));
+    $anchor.each(function (index, el) {
+      var $_anchor = $(el);
+      var $link = $_anchor.closest('a');
+      $('.bcdb_model_group_container').height($('html').height() - $('.bcdb_header').outerHeight() - $('.bcdb_footer').outerHeight());
+      if (params.metaOver) {
+        var $mName = $link.find('.modelname');
+        var $mLink = $link.find('.modellink');
+        var $both = $mName.add($mLink);
+        if ($both.length) {
+          $_anchor.append($both);
+          $both.addClass('sale2x-meta-over-thumb').addClass($both.length % 2 === 0 ? '__half' : '');
+        }
+      }
+    })
+  };
+
+  this.addInnerThumb = function (params, bannerParams) {
+    params = $.extend({edge: 'sw', height: 48, maxWidth: 150, css: ''}, params);
+    bannerParams = $.extend({}, {lines: 2}, bannerParams);
+    var $anchor = $('.bcdb_model_item .modelimage');
+    var height = 48;
+    var pos = params.edge[0] === 'n' ? 'top: 0;' : 'bottom: 0;';
+    pos += params.edge[1] === 'w' ? 'left: 0;' : 'right: 0;';
+    $anchor.append($('<div style="position: absolute; max-width: ' + params.maxWidth + 'px; width: ' + this.thumbWidth + 'px; height: ' + params.height +
+      'px; z-index: 100; border: solid 1px #ffffff; box-sizing: border-box; ' + pos + ';' + params.css + '">')
+      .append(this.getBanner(bannerParams)));
+  };
+
+  /**
+   * Shows
+   * @param params
+   * @param bannerParams
+   */
+  this.addOverTwoThumb = function (params, bannerParams) {
+    params = $.extend({number: 2}, params);
+    bannerParams = $.extend({}, {lines: 3}, bannerParams);
+    var $anchor1 = $('.bcdb_model_item:nth-child(' + params.number + ') .modelimage');
+    var $anchor2 = $('.bcdb_model_item:nth-child(' + (params.number + 1) + ') .modelimage');
+    if (!$anchor1.length || !$anchor2.length) {
+      return;
+    }
+    var b1 = $anchor1[0].getBoundingClientRect();
+    var b2 = $anchor2[0].getBoundingClientRect();
+    var height = this.params.height - b1.top * 2;
+    var width = b2.left + b2.width - b1.left;
+
+    $anchor1.closest('a').prepend($('<div style="position: absolute; width: ' + width + 'px; height: ' + height + 'px; z-index: 100">')
+      .append(this.getBanner(bannerParams))).css({width: width + 'px', height: height + 'px'});
+    $anchor1.closest('.bcdb_model_group_container').css('height', height + 'px');
+  };
+
+  this.addAboveFooter = function (params, bannerParams) {
+    params = $.extend({css: '', height: 100}, params);
+    bannerParams = $.extend({}, {lines: 3}, bannerParams);
+    var $banner = $('<div style="height: ' + params.height + 'px; ' + params.css + '">')
+      .append(this.getBanner(bannerParams))
+    var $footer = $('.bcdb_footer');
+    if ($footer.length) {
+      $footer.before($banner);
+    } else {
+      $('.bcdb').append($banner);
+    }
+  }
+
+  this.addRelativeSelector = function (params, bannerParams) {
+    params = $.extend({css: ''}, params);
+    bannerParams = $.extend({}, bannerParams);
+
+    var $anchor = $(params.anchor);
+    $anchor.append($('<div style="position: absolute; z-index: 100; ' + params.css + '">')
+      .append(this.getBanner(bannerParams)));
+  }
+
+  this.addRelativeLink = function (params, bannerParams) {
+    params = $.extend({anchor: '.bcdb_model_item > a'}, params);
+    bannerParams = $.extend({className: 'bordered'}, {lines: 3}, bannerParams);
+    this.addRelativeSelector(params, bannerParams);
+  }
+
+  this.addRelativeGroup = function (params, bannerParams) {
+    params = $.extend({anchor: '.bcdb_model_item'}, params);
+    bannerParams = $.extend({className: 'bordered'}, {lines: 3}, bannerParams);
+    this.addRelativeSelector(params, bannerParams);
+  }
+
+  this.addRelativeBody = function (params, bannerParams) {
+    params = $.extend({anchor: 'body'}, params);
+    bannerParams = $.extend({className: 'bordered'}, {lines: 3}, bannerParams);
+    this.addRelativeSelector(params, bannerParams);
+  }
+
+
+  this.addOverThumbTargeted = function (params, bannerParams) {
+    params = $.extend({number: 2}, params);
+    bannerParams = $.extend({}, {lines: 3}, bannerParams);
+    var $anchor = $('.video-group .video:nth-child(' + params.number + ') .slide-container');
+    $anchor.append($('<div style="position: absolute; width: ' + $anchor.width() + 'px; height: ' + $anchor.height() + 'px; top: 0; z-index: 100">')
+      .append(this.getBanner(bannerParams)));
+    $anchor.closest('a').find('.bage').remove();
+  };
+
+  this.addFlipTargeted = function (params, bannerParams) {
+    params = $.extend({selector: '.logo', css: ''}, params);
+    bannerParams = $.extend({className: 'bordered'}, {lines: 2}, bannerParams);
+    var $anchors = $(params.selector);
+    if (!$anchors.length) {
+      return
+    }
+    $anchors.each(function (i, el) {
+      var $anchor = $(el);
+      var rect = $anchor[0].getBoundingClientRect();
+      var $flip = $('<div class="sale2x-flip-container" style="position: fixed; top: ' + rect.top + 'px; left: ' + rect.left + 'px; width: ' + rect.width + 'px; height: ' + rect.height + 'px; z-index: 100">')
+      var $flipper = $('<div class="sale2x-flipper">').appendTo($flip);
+      $anchor.after($flip).css({top: 0, left: 0, right: 0, bottom: 0, width: '100%', height: '100%'});
+      $flipper.append($('<div class="sale2x-flip-side sale2x-flip-side-a">').append($anchor));
+      $flipper.append($('<div class="sale2x-flip-side sale2x-flip-side-b" style="' + params.css + '">').append(self.getBanner(bannerParams)));
+      setInterval(function () {
+        $flip.toggleClass('__flipped');
+      }, 2000);
+    })
+  }
+
+  this.replaceText = function (params) {
+    params = $.extend({selector: '.text', bgCss: '', textCss: '', shiftLogo: false}, params);
+    setTimeout(function () {
+      var $text = $(params.selector);
+      if (!$text.length) {
+        return
+      }
+      var tb = $text[0].getBoundingClientRect();
+      var coinWidth = tb.height * 0.6;
+      $text.attr('style', params.textCss).css({
+        'opacity': 1,
+        'font-size': '20px',
+        'margin-left': coinWidth + 'px',
+        'text-transform': 'uppercase'
+      });
+      $text.find('.mgctxt-wrapper > *').unwrap();
+      var $welcome = $text.find('.welcome');
+      $welcome.css('padding-left', parseInt($welcome.css('padding-left'), 10) - coinWidth);
+      var $main = $text.find('.main');
+      $main.html(self.translates['tokens'] + ' ' +
+        self.translates['2 times'] + ' <b>' + self.translates['cheaper!'] + '</b>');
+      $welcome.css('display', 'block');
+      if (params.shiftLogo) {
+        $('.logo').css('margin-left', coinWidth)
+      }
+      $text.magicText({minLineHeight: 1.2, verticalAlign: 'center'}).css('opacity', 1);
+      $('.bg').after('<div class="sale2x-bg" style="height: ' + (tb.height + tb.top) + 'px; min-width: ' + coinWidth +
+        'px; top: 0; left: 0; position: absolute; ' + params.bgCss + '">')
+    }, 100);
+  }
+
+  this.applyMagicText = function ($el, css, newText) {
+    setTimeout(function () {
+      if (!css) {
+        css = '';
+      }
+      $el.find('.mgctxt-wrapper > *').unwrap();
+      if (!newText) {
+        newText = $el.html();
+      }
+      $el.html(newText);
+      $el.attr('style', $el.attr('style') + css);
+      $el.magicText({minLineHeight: 1.1, verticalAlign: 'center'}).css('opacity', 1);
+    }, 100);
+  }
+
+  this.replaceTextSimple = function (params) {
+    params = $.extend({selector: '.welcome', css: '', bgCss: ''}, params);
+    var $text = $(params.selector).css('font-size', 30);
+    self.applyMagicText($text, params.css, self.translates['tokens'] + ' ' +
+      self.translates['2 times'] + ' <b>' + self.translates['cheaper!'] + '</b>');
+    $('.bg').after('<div class="sale2x-bg" style="position: absolute; ' + params.bgCss + '">')
+  }
+
+
+  this.getBanner = function (params) {
+    params = $.extend({}, {width: 150, height: 100, lines: 3, className: ''}, params);
+    if (params.lines === 3) {
+      return '<div class="sale2x three-lines ' + params.className + '"><div class="sale2x-bg" /><div class="sale2x-wrp">' +
+        '<div class="sale2x-line sale2x-tokens"><span>' +
+        this.translates['tokens'] +
+        '</span></div><div class="sale2x-line sale2x-times"><span>' +
+        this.translates['2 times'] +
+        '</span></div><div class="sale2x-line sale2x-cheaper"><span>' +
+        this.translates['cheaper!'] +
+        '</span></div></div></div>'
+    } else {
+      var tr2tc = this.translates['2 times'] + ' ' + this.translates['cheaper!'];
+      return '<div class="sale2x two-lines ' + params.className + '"><div class="sale2x-bg" /><div class="sale2x-wrp"><div class="sale2x-line sale2x-tokens"><span>' +
+        this.translates['tokens'] +
+        '</span></div><div class="sale2x-line sale2x-times-cheaper"><span>' + tr2tc + '</span></div></div></div>'
+    }
+  }
+
+  this.process = function () {
+    this.type = this.params.fullscreen === 'on' ? 'fullscreen' : +this.params.slider ? 'slider' : this.params.bannerNumber ? 'targeted' : 'default';
+    var size = this.params.width + 'x' + this.params.height;
+    var subType = this.type === 'targeted' ? '' + this.params.bannerNumber : this.type === 'fullscreen' ? this.params.mode : '';
+    var thumbCount = this.type === 'targeted' ? $('.video-group.active .slide-container').length : $('.bcdb_model_group_active .bcdb_model_item').length;
+    var $anchor;
+    switch (this.type) {
+      case 'default':
+        switch (size) {
+          case '160x650':
+            if (this.params.msize === 'min') {
+              this.addAboveFooter({css: 'margin-top: 8px;'});
+            } else {
+              this.addOverThumb();
+            }
+            break;
+          case '200x300':
+            if (this.params.msize === 'min') {
+              this.addOverThumb();
+            } else {
+              this.addUnderThumb({metaOver: true, height: 50});
+            }
+            break;
+          case '240x480':
+            if (this.params.msize === 'min') {
+              this.addOverThumb();
+            } else {
+              this.addUnderThumb();
+              if (thumbCount > 1) {
+                $('.bcdb_model_item:nth-child(2)').hide();
+                if (this.params.footer !== 'none') {
+                  $('.bcdb_footer').show();
+                }
+              }
+            }
+            break;
+          case '300x250':
+            if (this.params.msize === 'min') {
+              this.addAboveFooter({css: 'margin: auto; margin-top: 8px; width: 70%', height: 50}, {lines: 2});
+              $('.bcdb_model_group_container').css('height', this.itemHeight);
+            } else {
+              this.addInnerThumb();
+            }
+            break;
+          case '300x300':
+            if (this.params.msize === 'min') {
+              this.addAboveFooter({css: 'margin: auto; margin-top: 8px; width: 70%', height: 50}, {lines: 2});
+              $('.bcdb_model_group_container').css('height', this.itemHeight);
+            } else {
+              this.addInnerThumb();
+            }
+            break;
+          case '350x280':
+            if (this.params.msize === 'min') {
+              this.addAboveFooter({css: 'margin: auto; margin-top: 8px; width: 70%', height: 50}, {lines: 2});
+              $('.bcdb_model_group_container').css('height', this.itemHeight);
+            } else {
+              this.addUnderThumb({metaOver: true});
+            }
+            break;
+          case '400x600':
+            if (this.params.msize === 'max') {
+              this.addUnderThumb({height: 100}, {lines: 3});
+            } else {
+              this.addOverThumb();
+            }
+            break;
+          case '700x90':
+          case '728x90':
+            this.addOverTwoThumb();
+            break;
+          case '720x200':
+            this.addOverThumb({forceUnderThumbText: this.params.msize !== 'max'});
+            break
+          case '750x300':
+            this.addOverThumb({forceUnderThumbText: this.params.msize !== 'min'});
+            break
+          default:
+            if (thumbCount > 2) {
+              this.addOverThumb();
+            }
+            break;
+        }
+        break;
+      case 'fullscreen':
+        switch (size) {
+          case '160x650':
+            switch (subType) {
+              case 'mode1':
+                this.addOverThumb();
+                break;
+              case 'mode2':
+                this.addOverThumb();
+                $('.modellink[data-newtext]').css({'visibility': 'hidden'});
+                break;
+              case 'mode3':
+                $anchor = this.addOverThumb();
+                if (!+this.params.mlink) {
+                  $('.modelname[data-newtext]').hide();
+                }
+                $anchor.find('.modellang').hide();
+                break;
+              case 'mode4':
+                $anchor = this.addOverThumb({mlinkTextOnly: true});
+                break;
+            }
+            break;
+          case '200x300':
+            switch (subType) {
+              case 'mode1':
+                this.addUnderThumb({metaOver: true});
+                break;
+              case 'mode2':
+                this.addUnderThumb();
+                $('.modelname').css('bottom', 93);
+                $('.modellink').css({top: 'auto', 'white-space': 'nowrap'});
+                fitTextFontSize('.modellink');
+                break;
+              case 'mode3':
+                this.addUnderThumb();
+                break;
+              case 'mode4':
+                this.addUnderThumb({metaOver: true});
+                break;
+            }
+            break;
+          case '240x480':
+            switch (subType) {
+              case 'mode1':
+                this.addInnerThumb();
+                break;
+              case 'mode2':
+                var left = +this.params.header ? 110 : 2;
+                this.addRelativeSelector({
+                  anchor: '.bcdb',
+                  css: 'top: 2px; right: 2px;height: 56px; left: ' + left + 'px;'
+                }, {lines: 2});
+                break;
+              case 'mode3':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 60px;'}, {lines: 3});
+                break;
+              case 'mode4':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 50px; width: 100%'});
+                break;
+            }
+            break;
+          case '300x250':
+            switch (subType) {
+              case 'mode1':
+                this.addInnerThumb({height: 42});
+                if (!+this.params.header) {
+                  $('.modellink').add('.modelname').css({'padding-left': '50%', 'box-sizing': 'border-box'});
+                }
+                break;
+              case 'mode2':
+                if (+this.params.header) {
+                  this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'top: -5px; width: 150px'});
+                } else {
+                  this.addInnerThumb({edge: 'nw', maxWidth: 150});
+                }
+                break;
+              case 'mode3':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 60px;'}, {lines: 3});
+                break;
+              case 'mode4':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 50px; width: 100%'});
+                break;
+            }
+            break;
+          case '300x300':
+            switch (subType) {
+              case 'mode1':
+                this.addInnerThumb();
+                break;
+              case 'mode2':
+                this.addRelativeSelector({
+                  anchor: '.bcdb',
+                  css: 'bottom: 2px; left: 2px; height: 70px; right: 2px;'
+                }, {lines: 2})
+                break;
+              case 'mode3':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 60px;'}, {lines: 3});
+                break;
+              case 'mode4':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 50px; width: 100%'});
+                break;
+            }
+            break;
+          case '350x280':
+            switch (subType) {
+              case 'mode1':
+                this.addInnerThumb({height: 42});
+                if (!+this.params.header) {
+                  $('.modellink').add('.modelname').css({'padding-left': '50%', 'box-sizing': 'border-box'});
+                }
+                break;
+              case 'mode2':
+                if (+this.params.header) {
+                  this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'top: -5px; width: 150px'});
+                } else {
+                  this.addInnerThumb({edge: 'nw', maxWidth: 150});
+                }
+                break;
+              case 'mode3':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 60px;'}, {lines: 3});
+                break;
+              case 'mode4':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 50px; width: 100%'});
+                break;
+            }
+            break;
+          case '400x600':
+            switch (subType) {
+              case 'mode1':
+                this.addInnerThumb({height: 50, maxWidth: 170});
+                if (!+this.params.header) {
+                  $('.modellink').add('.modelname').css({'padding-left': '50%', 'box-sizing': 'border-box'});
+                }
+                break;
+              case 'mode2':
+                if (+this.params.header) {
+                  this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'top: -5px; width: 150px'});
+                } else {
+                  this.addInnerThumb({edge: 'nw', maxWidth: 150});
+                }
+                break;
+              case 'mode3':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 60px;'}, {lines: 3});
+                break;
+              case 'mode4':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 50px; width: 100%'});
+                break;
+            }
+            break;
+          case '550x550':
+            switch (subType) {
+              case 'mode1':
+                this.addRelativeLink({css: 'height: 100px;  bottom: 6px;  left: 10px;  width: 144px;'});
+                break;
+              case 'mode2':
+                this.addRelativeLink({css: 'height: 100px;bottom: 0;right: -175px;width: 167px;'});
+                break;
+              case 'mode3':
+                this.addRelativeLink({css: 'height: 100px;bottom: 0;right: -208px;width: 200px;'});
+                break;
+              case 'mode4':
+                this.addRelativeLink({css: 'height: 100px;bottom: 0;right: -177px;width: 170px;'});
+                break;
+            }
+            break;
+          case '720x200':
+            switch (subType) {
+              case 'mode1':
+                this.addOverThumb();
+                break;
+              case 'mode2':
+                this.addRelativeSelector({
+                  anchor: '.bcdb',
+                  css: 'bottom: 5px; right: 5px; height: 86px; width: 167px;'
+                });
+                $('.modellink').css({top: 30});
+                break;
+              case 'mode3':
+                this.addRelativeSelector({
+                  anchor: '.bcdb',
+                  css: 'bottom: 5px; right: 5px; height: 62px; width: 226px;'
+                }, {lines: 2});
+                $('.modellink').css({top: 50});
+                break;
+              case 'mode4':
+                this.addRelativeSelector({
+                  anchor: '.bcdb',
+                  css: 'bottom: 5px; right: 5px; height: 55px; width: 176px;'
+                }, {lines: 2});
+                $('.modellink').css({bottom: 75});
+                break;
+            }
+            break;
+          case '750x300':
+            switch (subType) {
+              case 'mode1':
+                this.addInnerThumb({height: 50, maxWidth: 187});
+                if (!+this.params.header) {
+                  $('.modellink').add('.modelname').css({'padding-left': '50%', 'box-sizing': 'border-box'});
+                }
+                break;
+              case 'mode2':
+                if (+this.params.header) {
+                  this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'top: -5px; width: 150px'});
+                } else {
+                  this.addInnerThumb({edge: 'nw', maxWidth: 150});
+                }
+                break;
+              case 'mode3':
+                this.addFlipTargeted({selector: '.bcdb_header, .bcdb_headersecond', css: 'height: 60px;'}, {lines: 3});
+                break;
+              case 'mode4':
+                this.addFlipTargeted({selector: '.bcdb_header', css: 'height: 48px; width: 150px;'});
+                break;
+            }
+            break;
+          default:
+            if (thumbCount > 2) {
+              this.addOverThumb();
+            }
+            break;
+        }
+        break;
+      case 'targeted':
+        if (thumbCount > 2) {
+          this.addOverThumbTargeted();
+        }
+        switch (subType) {
+          case '1':
+            switch (size) {
+              case "160x600":
+                this.addFlipTargeted({selector: '.logo'});
+                break
+              case "200x300":
+                this.replaceText();
+                break
+              case "240x480":
+                this.addRelativeBody({css: 'top: 1px; right: 1px;height: 47px; width: 138px;'}, {lines: 2});
+                $('.logo').css('width', '95px').find('img').css('height', 'auto');
+                break
+              case "300x100":
+                this.replaceText();
+                break
+              case "300x250":
+                this.replaceText();
+                break
+              case "300x300":
+                this.replaceText();
+                break
+              case "350x280":
+                this.replaceText();
+                break
+            }
+            break;
+
+          case '2':
+            switch (size) {
+              case "160x600":
+                this.addRelativeBody({css: 'top: 4px; left: 6px;height: 50px; width: 147px;'}, {lines: 2});
+                $('.logo').css('margin-top', '28px');
+                break
+              case "160x650":
+                this.addRelativeBody({css: 'top: 4px; left: 6px;height: 50px; width: 147px;'}, {lines: 2});
+                $('.logo').css('margin-top', '28px');
+                break
+              case "200x300":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 1px 5px;'});
+                break
+              case "240x480":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 5px 8px;'});
+                break
+              case "300x100":
+                this.replaceText();
+                $('.logo').css('margin-left', 25);
+                break
+              case "300x250":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 4px 10px;'});
+                break
+              case "300x300":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 4px'});
+                break
+              case "350x280":
+                this.addRelativeBody({css: 'top: 2px; right: 2px;height: 56px; width: 185px;'}, {lines: 2});
+                $('.logo').css('margin-right: 185px;');
+                break
+              case "400x600":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 4px 14px;'});
+                break
+              case "550x550":
+                this.addRelativeBody({css: 'top: 2px;left: 56px;height: 60px;width: 200px;'}, {lines: 2});
+                $('.logo').css('margin-left', '200px');
+                break
+              case "700x90":
+                this.addFlipTargeted({selector: '.logo'});
+                break
+              case "720x200":
+                this.addRelativeBody({css: 'top: 5px;left: 5px;height: 50px;width: 125px;'}, {lines: 2});
+                break
+              case "728x90":
+                this.addFlipTargeted({selector: '.logo'});
+                break
+              case "750x300":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 14px 14px 0'});
+                break
+              case "950x250":
+                this.addRelativeBody({css: 'top: 8px; left: 8px;height: 86px; width: 300px;'}, {lines: 2});
+                $('.logo').css('margin-left', '300px');
+                break
+            }
+            break;
+          case '3':
+            switch (size) {
+              case "160x600":
+                this.addRelativeBody({css: 'top: 195px; left: 5px;height: 86px; width: 150px;'});
+                $('.text').css({top: 280, height: 254});
+                break
+              case "160x650":
+                this.addRelativeBody({css: 'top: 195px; left: 5px;height: 86px; width: 150px;'});
+                $('.text').css({top: 280, height: 284});
+                break
+              case "200x300":
+                this.replaceText({bgCss: 'top: 175px; height: 79px'});
+                break
+              case "240x480":
+                this.addRelativeBody({css: 'top: 6px; left: 10px;height: 91px; width: 218px;'});
+                $('.logo').css({
+                  top: '130px',
+                  'z-index': 100,
+                  background: '#00000050',
+                  width: '100px',
+                  left: '10px',
+                  padding: '5px 10px 0px',
+                  'border-radius': '0 22px 22px 0'
+                }).find('img').css({height: 'auto'});
+                break
+              case "300x100":
+                this.replaceText({bgCss: 'left: 131px; height: 66px'});
+                break
+              case "300x250":
+                this.replaceText({bgCss: 'top: 135px; height: 75px'});
+                break
+              case "300x300":
+                this.replaceText({bgCss: 'top: 175px; height: 75px'});
+                break
+              case "350x280":
+                this.addFlipTargeted({selector: '.logo', css: 'height: 76px; top: -18px; width: 124px;'}, {lines: 3});
+                break
+              case "400x600":
+                this.addRelativeSelector({
+                  anchor: '.slide-container',
+                  css: 'width: 40%; height: 20%; bottom: ' + $('.name').height() + 'px'
+                }, {lines: 2})
+                break
+              case "550x550":
+                this.addRelativeSelector({
+                  anchor: '.slide-container',
+                  css: 'width: 40%; height: 20%; bottom: ' + $('.name').height() + 'px'
+                }, {lines: 2})
+                break
+              case "700x90":
+                this.addFlipTargeted({
+                  selector: '.logo',
+                  css: 'height: 84px; top: -26px; width: 157px; left: 2px;'
+                }, {lines: 3});
+                break
+              case "720x200":
+                this.addRelativeBody({css: 'height: 64px; top: 4px; width: 200px; right: 4px;'}, {lines: 2});
+                $('.logo').css('padding-right', 200);
+                break
+              case "728x90":
+                this.addFlipTargeted({
+                  selector: '.logo',
+                  css: 'height: 84px; top: -22px; width: 157px; left: 2px;'
+                }, {lines: 3});
+                break
+              case "750x300":
+                this.addRelativeSelector({
+                  anchor: '.slide-container',
+                  css: 'width: 40%; height: 20%; bottom: ' + $('.name').height() + 'px'
+                }, {lines: 2})
+                break
+              case "950x250":
+                this.addRelativeBody({css: 'height: 84px; top: 4px; width: 260px; right: 4px;'}, {lines: 2});
+                $('.logo').css('right', 318);
+                break
+            }
+            break;
+          case '4':
+            switch (size) {
+              case "160x600":
+                this.addRelativeBody({css: 'top: 47px; left: 5px;height: 74px; width: 150px;'});
+                $('.text').css({top: 124, height: 254});
+                $('.logo').css({'padding-top': 10})
+                break
+              case "160x650":
+                this.addRelativeBody({css: 'top: 47px; left: 5px;height: 74px; width: 150px;'});
+                $('.text').css({top: 128, height: 284});
+                $('.logo').css({'padding-top': 10})
+                break
+              case "200x300":
+                $('.third-field').hide();
+                this.replaceText({bgCss: 'top: 50px; height: 100px'});
+                break
+              case "240x480":
+                this.addFlipTargeted({selector: '.logo', css: 'margin: -19px 0;top: 19px'}, {lines: 2});
+                break
+              case "300x100":
+                $('.logo').css('left', 44)
+                $('.third-field').hide();
+                this.replaceText();
+                break
+              case "300x250":
+                $('.third-field').hide();
+                this.replaceText({bgCss: 'top: 126px; height: 79px; z-index: 2'});
+                break
+              case "300x300":
+                $('.third-field').hide();
+                this.replaceText({bgCss: 'top: 186px; height: 68px; z-index: 2'});
+                break
+              case "350x280":
+                $('.third-field').hide();
+                this.replaceText({bgCss: 'top: 165px; height: 67px; z-index: 2'});
+                break
+              case "400x600":
+                $('.logo').css({
+                  padding: '19px 8px', width: '50%', right: 0, left: 'auto'
+                }).find('img').css('height', 'auto');
+                $('.logo .signature').css({top: 62, left: 79, width: 82, height: 8, 'background-size': 'contain'});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 86px; width: 50%;'}, {lines: 2});
+                break
+              case "550x550":
+                $('.logo').css({
+                  padding: '19px 8px', width: '50%', right: 0, left: 'auto'
+                }).find('img').css('height', 'auto');
+                $('.logo .signature').css({top: 76, left: 109, width: 116, height: 8});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 136px; width: 50%;'}, {lines: 3});
+                break
+              case "700x90":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 3});
+                break
+              case "720x200":
+                $('.logo').css({left: 200}).find('img').css('height', 'auto');
+                $('.logo .signature').css({left: 108});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 76px; width: 200px;'}, {lines: 3});
+                break
+              case "728x90":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 3});
+                break
+              case "750x300":
+                $('.logo').css({left: 176, padding: '36px 8px 0'}).find('img').css('height', 'auto');
+                $('.logo .signature').css({top: 71, left: 72, width: 70, height: 8, 'background-size': 'contain'});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 118px; width: 176px;'}, {lines: 3});
+                break
+              case "950x250":
+                $('.logo').css({left: 310, padding: '13px 8px 0'}).find('img').css('height', 'auto');
+                $('.logo .signature').css({top: 70, left: 130, width: 108, height: 8});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 90px; width: 310px;'}, {lines: 2});
+                break
+            }
+            break;
+          case '6':
+            switch (size) {
+              case "160x600":
+              case "160x650":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 2});
+                break
+              case "200x300":
+                this.replaceTextSimple({
+                  selector: '.welcome_text',
+                  bgCss: 'height: 60px; top: 21px; min-width: 26px; left: 0px;',
+                  css: 'margin-left: 24px;'
+                });
+                this.applyMagicText($('.main').css('margin-left', 24));
+                break
+              case "300x100":
+                this.replaceTextSimple({
+                  selector: '.welcome_text',
+                  bgCss: 'height: 40px; top: 21px; min-width: 20px; left: 0px;',
+                  css: 'margin-left: 20px;'
+                });
+                this.applyMagicText($('.main').css('margin-left', 20));
+                break
+              case "300x250":
+              case "300x300":
+              case "350x280":
+                this.replaceTextSimple({
+                  selector: '.welcome_text',
+                  bgCss: 'height: 60px; top: 21px; min-width: 25px; left: 0px;',
+                  css: 'margin-left: 20px;'
+                });
+                this.applyMagicText($('.main').css('margin-left', 20));
+                break
+              case "700x90":
+              case "728x90":
+                this.replaceTextSimple({
+                  selector: '.welcome_text',
+                  bgCss: 'height: 40px; top: 0; min-width: 25px; left: 40px;',
+                  css: 'margin-left: 20px;'
+                });
+                this.applyMagicText($('.main').css('margin-left', 20));
+                break
+              case "720x200":
+                var bnd = $('.video-group.active .video:nth-child(2) a')[0].getBoundingClientRect();
+                $('body').append('<div style="position: fixed; left: ' + bnd.left + 'px; top: ' + bnd.top +
+                  'px; width: ' + bnd.width + 'px; height: ' + bnd.height + 'px; z-index: 100;" id="secondThumbOverlay">');
+                this.addFlipTargeted({selector: '#secondThumbOverlay'}, {lines: 3});
+                break
+            }
+            break
+          case '7':
+            switch (size) {
+              case "160x600":
+                this.addRelativeBody({css: 'top: 47px; left: 4px;height: 59px; width: 150px;'}, {lines: 2});
+                $('.text').css({top: 106, height: 240});
+                $('.logo').css({'padding-top': 10})
+                break
+              case "160x650":
+                this.addRelativeBody({css: 'top: 47px; left: 4px;height: 59px; width: 150px;'}, {lines: 2});
+                $('.text').css({top: 106, height: 256});
+                $('.logo').css({'padding-top': 10})
+                break
+              case "200x300":
+                this.replaceText({bgCss: 'top: 0; height: 115px;', textCss: 'width: auto; right: 0;'});
+                break
+              case "240x480":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 2});
+                break
+              case "300x100":
+                this.replaceText({bgCss: 'top: 0; height: 72px;'});
+                break
+              case "300x250":
+                $('.logo').css({left: 0, right: 'auto', width: '55%'}).find('img').css('height', 'auto');
+                this.addRelativeBody({css: 'top: 0px; right: 0px;height: 44px; width: 135px;'}, {lines: 2});
+                break
+              case "300x300":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 2});
+                break
+              case "350x280":
+                $('.logo').css({left: 0, right: 'auto', width: '55%'}).find('img').css('height', 'auto');
+                this.addRelativeBody({css: 'top: 0px; right: 0px;height: 51px; width: 161px;'}, {lines: 2});
+                break
+              case "400x600":
+                $('.logo').css({
+                  padding: '19px 8px', width: '50%', right: 0, left: 'auto'
+                }).find('img').css('height', 'auto');
+                $('.logo .signature').css({top: 62, left: 79, width: 82, height: 8, 'background-size': 'contain'});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 86px; width: 50%;'}, {lines: 2});
+                break
+              case "550x550":
+                $('.logo').css({right: 0, left: 'auto', width: '50%'}).find('img').css('height', 'auto');
+                $('.logo .signature').css({top: 61, left: 112, width: 102, height: 8});
+                this.addRelativeBody({css: 'top: 0px; left: 0px;height: 70px; width: 50%;'}, {lines: 2});
+                break
+              case "700x90":
+                this.addFlipTargeted({selector: '.logo', css: 'padding: 0 12px'}, {lines: 2});
+                break
+              case "720x200":
+                $('.logo').css({right: 200, width: 267}).find('img').css('height', 'auto');
+                $('.logo .signature').css({left: 117});
+                this.addRelativeBody({css: 'top: 0px; right: 0px;height: 50px; width: 200px;'}, {lines: 2});
+                break
+              case "728x90":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 2});
+                break
+              case "750x300":
+                this.addFlipTargeted({selector: '.logo'}, {lines: 2});
+                break
+              case "950x250":
+                this.addRelativeBody({css: 'top: 4px; right: 4px;height: 61px; width: 180px;'}, {lines: 2});
+                break
+            }
+
+            break;
+          case '8':
+            switch (size) {
+              case "200x300":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -9px; height: 45px;'}, {lines: 2});
+                break
+              case "240x480":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -9px; height: 45px;'}, {lines: 2});
+                break
+              case "300x100":
+                this.replaceText({bgCss: 'top: 0; height: 72px;', shiftLogo: 1});
+                break
+              case "300x250":
+                this.replaceText({bgCss: 'top: 0; height: 83px;', shiftLogo: 1});
+                break
+              case "300x300":
+                this.replaceText({bgCss: 'top: 0; height: 120px;', shiftLogo: 1});
+                break
+              case "350x280":
+                this.replaceText({bgCss: 'top: 0; height: 100px;', shiftLogo: 1});
+                break
+              case "700x90":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -8px; height: 42px;'}, {lines: 2});
+                break
+              case "728x90":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -10px; height: 42px;width: 210px'}, {lines: 2});
+                break
+            }
+
+            break;
+          case '9':
+            switch (size) {
+              case "160x600":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -14px; height: 54px;width: 158px'}, {lines: 2});
+                break
+              case "200x300":
+                //this.addFlipTargeted({selector: '.welcome'}, {lines: 2});
+                this.replaceTextSimple({
+                  bgCss: 'left: 0; height: 65px; top: 30px; min-width: 30px',
+                  css: 'margin-left: 30px'
+                });
+                break
+              case "240x480":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -10px; height: 55px;width: 238px'}, {lines: 2});
+                break
+              case "300x100":
+                $('.welcome').css('height', 39);
+                $('.main').hide();
+                this.replaceTextSimple({
+                  bgCss: 'left: 0; height: 40px; top: 30px; min-width: 20px',
+                  css: 'margin-left: 20px'
+                });
+                break
+              case "300x250":
+                this.addFlipTargeted({selector: '.logo', css: 'top: -4px; height: 60px'}, {lines: 3});
+                break
+              case "300x300":
+                this.addRelativeBody({css: 'top: 0px; right: 0px;height: 50px; width: 162px;'}, {lines: 2});
+                break
+              case "350x280":
+                this.addFlipTargeted({selector: '.logo', css: 'height: 65px'}, {lines: 3});
+                break
+              case "700x90":
+                this.replaceTextSimple({
+                  selector: '.main',
+                  bgCss: 'height: 57px; top: -7px; min-width: 45px; left: 435px;',
+                  css: 'width: 218px'
+                });
+                break
+              case "728x90":
+                this.replaceTextSimple({
+                  selector: '.main',
+                  bgCss: 'height: 57px; top: -7px; min-width: 45px; left: 435px;',
+                  css: 'width: 243px'
+                });
+                break
+            }
+            break
+        }
+        break;
+      case 'slider':
+        this.addOverThumb();
+        $('.bcdb_model_item:nth-child(2)').addClass('__no_before');
+        break;
+    }
+  }
+
+  this.handleSale2xClick = function () {
+    var $links = $('.video-group.active a, .bcdb_model_group_active a')
+      .filter(function (i, el) {
+        return !$(el).find('.sale2x').length; // filter hovered thumbs
+      });
+    var link = $links[Math.floor(Math.random() * $links.length)];
+    if (link) {
+      window.open(link.getAttribute('href'))
+      return false;
+    }
+  }
+
+  this.onCreate = function () {
+    if ($('html[lang]').length) {
+      $('body').addClass('lang_' + $('html').attr('lang'));
+    }
+    $(document).bind('sale2x:update', this.afterUpdate.bind(this));
+    this.process();
+    this.afterUpdate();
+    $('.sale2x').bind('click', this.handleSale2xClick);
+  };
+
+  $('img.thumb').one('load', function () {
+    if (!self.created) {
+      var img = this;
+      var waitThumbCounter = 0
+      var waitThumb = setInterval(function () {
+        if (self.created || !$(img).is(':visible')) {
+          clearInterval(waitThumb);
+          return;
+        }
+        waitThumbCounter++;
+        var modelimage = $(img).closest('.modelimage')[0];
+        if (modelimage) {
+          self.thumbWidth = modelimage.getBoundingClientRect().width;
+          self.thumbHeight = modelimage.getBoundingClientRect().height;
+        }
+        var item = $(img).closest('.bcdb_model_item')[0];
+        if (item) {
+          self.itemHeight = item.getBoundingClientRect().height;
+        }
+        if (waitThumbCounter > 10 || self.thumbHeight > 10 || !modelimage) {
+          clearInterval(waitThumb);
+          self.created = true;
+          self.onCreate();
+        }
+      }, 100);
+    }
+  })
+}
+
+$(function () {
+  window.Sale2x = new Sale2x();
+});
+  </script>
+</head>
+<body class="load lang_pt mode1 s300x250">
+<script type="text/javascript">
+      var modelsData =  $.parseJSON('{"geo_models":[{"username":"SallyeLeins","profile_page_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/profile\/SallyeLeins","display_name":"SallyeLeins","display_age":"20","profile_images":{"profile_image":"\/\/i.bimbolive.com\/02a\/14c\/083\/e1222dcd2c9fb5b19cfc6cb6a095b6df_profile.jpg","thumbnail_image_small":"\/\/i.bimbolive.com\/02a\/14c\/083\/e1222dcd2c9fb5b19cfc6cb6a095b6df_thumb.jpg","thumbnail_image_medium":"\/\/i.bimbolive.com\/02a\/14c\/083\/e1222dcd2c9fb5b19cfc6cb6a095b6df_thumb_medium.jpg","thumbnail_image_big":"\/\/i.bimbolive.com\/02a\/14c\/083\/e1222dcd2c9fb5b19cfc6cb6a095b6df_thumb_big.jpg","thumbnail_image_small_live":"\/\/i.bimbolive.com\/live\/02a\/14c\/083\/small\/e63132.jpg","thumbnail_image_medium_live":"\/\/i.bimbolive.com\/live\/02a\/14c\/083\/medium\/e63132.jpg","thumbnail_image_big_live":"\/\/i.bimbolive.com\/live\/02a\/14c\/083\/big\/e63132.jpg"},"chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat-popup\/SallyeLeins","random_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat?livetab=female","popular_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/popular-chat?livetab=female","chat_url_on_home_page":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/SallyeLeins","direct_chat_url":"https:\/\/bongacams.com\/chat-popup\/SallyeLeins","chat_url_on_home_page_for_popunder":"https:\/\/bongacams.com\/SallyeLeins?https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235","chat_url_on_home_page_for_bc_popup":"https:\/\/bongacams.com\/SallyeLeins","flags":["spanish","english"],"online_time":413,"vs_url_root":"https:\/\/db.bngpt.com\/stream_SallyeLeins","chat_status":"public","marker":"nice","gender":"female"},{"username":"AnaCarrera","profile_page_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/profile\/AnaCarrera","display_name":"AnaCarrera","display_age":"24","profile_images":{"profile_image":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_profile.jpg","thumbnail_image_small":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb.jpg","thumbnail_image_medium":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb_medium.jpg","thumbnail_image_big":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb_big.jpg","thumbnail_image_small_live":"\/\/i.bimbolive.com\/live\/03b\/20d\/028\/small\/441eae.jpg","thumbnail_image_medium_live":"\/\/i.bimbolive.com\/live\/03b\/20d\/028\/medium\/441eae.jpg","thumbnail_image_big_live":"\/\/i.bimbolive.com\/live\/03b\/20d\/028\/big\/441eae.jpg"},"chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat-popup\/AnaCarrera","random_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat?livetab=female","popular_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/popular-chat?livetab=female","chat_url_on_home_page":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/AnaCarrera","direct_chat_url":"https:\/\/bongacams.com\/chat-popup\/AnaCarrera","chat_url_on_home_page_for_popunder":"https:\/\/bongacams.com\/AnaCarrera?https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235","chat_url_on_home_page_for_bc_popup":"https:\/\/bongacams.com\/AnaCarrera","flags":["english","spanish"],"online_time":3986,"vs_url_root":"https:\/\/db.bngpt.com\/stream_AnaCarrera","chat_status":"public","marker":"nice","gender":"female"},{"username":"ImCharlotteX","profile_page_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/profile\/ImCharlotteX","display_name":"ImCharlotteX","display_age":"21","profile_images":{"profile_image":"\/\/i.bimbolive.com\/04b\/2fe\/23e\/4ef11128b144f6730e6364c4105b66fc_profile.jpg","thumbnail_image_small":"\/\/i.bimbolive.com\/04b\/2fe\/23e\/4ef11128b144f6730e6364c4105b66fc_thumb.jpg","thumbnail_image_medium":"\/\/i.bimbolive.com\/04b\/2fe\/23e\/4ef11128b144f6730e6364c4105b66fc_thumb_medium.jpg","thumbnail_image_big":"\/\/i.bimbolive.com\/04b\/2fe\/23e\/4ef11128b144f6730e6364c4105b66fc_thumb_big.jpg","thumbnail_image_small_live":"\/\/i.bimbolive.com\/live\/04b\/2fe\/23e\/small\/bdbbff.jpg","thumbnail_image_medium_live":"\/\/i.bimbolive.com\/live\/04b\/2fe\/23e\/medium\/bdbbff.jpg","thumbnail_image_big_live":"\/\/i.bimbolive.com\/live\/04b\/2fe\/23e\/big\/bdbbff.jpg"},"chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat-popup\/ImCharlotteX","random_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat?livetab=female","popular_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/popular-chat?livetab=female","chat_url_on_home_page":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/ImCharlotteX","direct_chat_url":"https:\/\/bongacams.com\/chat-popup\/ImCharlotteX","chat_url_on_home_page_for_popunder":"https:\/\/bongacams.com\/ImCharlotteX?https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235","chat_url_on_home_page_for_bc_popup":"https:\/\/bongacams.com\/ImCharlotteX","flags":["spanish","english"],"online_time":11366,"vs_url_root":"https:\/\/db.bngpt.com\/stream_ImCharlotteX","chat_status":"public","marker":"nice","gender":"female"},{"username":"xcarlett1","profile_page_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/profile\/xcarlett1","display_name":"xcarlett1","display_age":"24","profile_images":{"profile_image":"\/\/i.bimbolive.com\/046\/21f\/228\/e696081d26a3325ea129a4a738d9151d_profile.jpg","thumbnail_image_small":"\/\/i.bimbolive.com\/046\/21f\/228\/e696081d26a3325ea129a4a738d9151d_thumb.jpg","thumbnail_image_medium":"\/\/i.bimbolive.com\/046\/21f\/228\/e696081d26a3325ea129a4a738d9151d_thumb_medium.jpg","thumbnail_image_big":"\/\/i.bimbolive.com\/046\/21f\/228\/e696081d26a3325ea129a4a738d9151d_thumb_big.jpg","thumbnail_image_small_live":"\/\/i.bimbolive.com\/live\/046\/21f\/228\/small\/4ed2c5.jpg","thumbnail_image_medium_live":"\/\/i.bimbolive.com\/live\/046\/21f\/228\/medium\/4ed2c5.jpg","thumbnail_image_big_live":"\/\/i.bimbolive.com\/live\/046\/21f\/228\/big\/4ed2c5.jpg"},"chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat-popup\/xcarlett1","random_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat?livetab=female","popular_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/popular-chat?livetab=female","chat_url_on_home_page":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/xcarlett1","direct_chat_url":"https:\/\/bongacams.com\/chat-popup\/xcarlett1","chat_url_on_home_page_for_popunder":"https:\/\/bongacams.com\/xcarlett1?https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235","chat_url_on_home_page_for_bc_popup":"https:\/\/bongacams.com\/xcarlett1","flags":["spanish","english"],"online_time":4151,"vs_url_root":"https:\/\/db.bngpt.com\/stream_xcarlett1","chat_status":"public","marker":"nice","gender":"female"}],"top_models":[{"username":"LilithPopsy","profile_page_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/profile\/LilithPopsy","display_name":"LilithPopsy","display_age":"19","profile_images":{"profile_image":"\/\/i.bimbolive.com\/040\/1ee\/392\/c9f59758d01ddfe194b42797568e55d1_profile.jpg","thumbnail_image_small":"\/\/i.bimbolive.com\/040\/1ee\/392\/c9f59758d01ddfe194b42797568e55d1_thumb.jpg","thumbnail_image_medium":"\/\/i.bimbolive.com\/040\/1ee\/392\/c9f59758d01ddfe194b42797568e55d1_thumb_medium.jpg","thumbnail_image_big":"\/\/i.bimbolive.com\/040\/1ee\/392\/c9f59758d01ddfe194b42797568e55d1_thumb_big.jpg","thumbnail_image_small_live":"\/\/i.bimbolive.com\/live\/040\/1ee\/392\/small\/e81818.jpg","thumbnail_image_medium_live":"\/\/i.bimbolive.com\/live\/040\/1ee\/392\/medium\/e81818.jpg","thumbnail_image_big_live":"\/\/i.bimbolive.com\/live\/040\/1ee\/392\/big\/e81818.jpg"},"chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat-popup\/LilithPopsy","random_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat?livetab=female","popular_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/popular-chat?livetab=female","chat_url_on_home_page":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/LilithPopsy","direct_chat_url":"https:\/\/bongacams.com\/chat-popup\/LilithPopsy","chat_url_on_home_page_for_popunder":"https:\/\/bongacams.com\/LilithPopsy?https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235","chat_url_on_home_page_for_bc_popup":"https:\/\/bongacams.com\/LilithPopsy","flags":["russian","english"],"online_time":13349,"vs_url_root":"https:\/\/db.bngpt.com\/stream_LilithPopsy","chat_status":"public","marker":"nice","gender":"female"}],"initial_models":[{"username":"AnaCarrera","profile_page_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/profile\/AnaCarrera","display_name":"AnaCarrera","display_age":"24","profile_images":{"profile_image":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_profile.jpg","thumbnail_image_small":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb.jpg","thumbnail_image_medium":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb_medium.jpg","thumbnail_image_big":"\/\/i.bimbolive.com\/03b\/20d\/028\/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb_big.jpg","thumbnail_image_small_live":"\/\/i.bimbolive.com\/live\/03b\/20d\/028\/small\/441eae.jpg","thumbnail_image_medium_live":"\/\/i.bimbolive.com\/live\/03b\/20d\/028\/medium\/441eae.jpg","thumbnail_image_big_live":"\/\/i.bimbolive.com\/live\/03b\/20d\/028\/big\/441eae.jpg"},"chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat-popup\/AnaCarrera","random_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/chat?livetab=female","popular_chat_url":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/popular-chat?livetab=female","chat_url_on_home_page":"https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https:\/\/bongacams.com\/AnaCarrera","direct_chat_url":"https:\/\/bongacams.com\/chat-popup\/AnaCarrera","chat_url_on_home_page_for_popunder":"https:\/\/bongacams.com\/AnaCarrera?https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235","chat_url_on_home_page_for_bc_popup":"https:\/\/bongacams.com\/AnaCarrera","flags":["english","spanish"],"online_time":3986,"vs_url_root":"https:\/\/db.bngpt.com\/stream_AnaCarrera","chat_status":"public","marker":"nice","gender":"female"}]}');
+
+    function topmodels (models) {
+              var levels = {
+  amazing: 5,
+  nice: 4,
+  average: 3,
+  bad: 2,
+  ugly: 1
+};
+
+var getLevel = function(performer) {
+  return performer.marker && levels.hasOwnProperty(performer.marker) ? levels[performer.marker] : 0;
+};
+
+models.sort(function(a, b) {
+  var levelA = getLevel(a);
+  var levelB = getLevel(b);
+  if (levelA > levelB) {
+    return -1;
+  }
+  else if (levelB > levelA) {
+    return 1;
+  }
+  return 0;
+});
+            return models;
+    }
+
+    function setHref ($element, url) {
+            $element.attr('href', url);
+          }
+
+    function live ($el, model) {
+              var camDiv = $el.find('.cam');
+var isVisible = camDiv.css('display') !== 'none';
+
+camDiv.attr('data-loadsrc', model.vs_url_root);
+if (!window.onlyImagePlayer) {
+  if (isVisible) {
+    var promoVideo = camDiv.data('video');
+    if (promoVideo) {
+      promoVideo.embed(model.vs_url_root, {
+        poster: model.profile_images.thumbnail_image_medium
+      });
+    }
+  } else {
+    var $video = camDiv.find('.loaded');
+    if ($video.length) {
+      try {
+        var video = $video[0];
+        var promise = $video.data('promise') || video.play();
+        promise.then(function () {
+          $video.data('promise', video.pause());
+        });
+      } catch (e) {
+        $video[0].pause();
+      }
+    }
+  }
+} else {
+  if (isVisible && !camDiv.imagePlayer(model.vs_url_root)) {
+    camDiv.html('');
+    showThumbOnVideoError($el.find('img.thumb_hidden'));
+  }
+}
+          }
+
+    var autoupdateTimer;
+var loadTimer;
+
+function autoupdate () {
+  startTimer();
+}
+
+function arrayUnique(array) {
+  var usernames = [];
+  var result = [];
+  for (var i = 0; i < array.length; i++){
+    if (!(usernames.indexOf(array[i].username) + 1)) {
+      usernames.push(array[i].username);
+      result.push(array[i]);
+    }
+  }
+  usernames = null;
+  return result;
+}
+
+function startTimer() {
+  var initial_models = modelsData['initial_models'];
+  var geo_models = modelsData['geo_models'];
+  var top_models = modelsData['top_models'];
+
+  loadTimer = null;
+
+  autoupdateTimer = setTimeout(function(){
+    shuffle(initial_models);
+    shuffle(geo_models);
+    shuffle(top_models);
+
+    geo_models = topmodels(geo_models);
+    top_models = topmodels(top_models);
+
+    var models = geoEnabled ? arrayUnique(geo_models.concat(top_models).concat(initial_models)) : arrayUnique(top_models.concat(geo_models).concat(initial_models));
+    var $modelsItem = $('.bcdb_model_item');
+    if (models.length > $modelsItem.length) {
+      models = models.slice(0, $modelsItem.length);
+    }
+    var modelsLength = models.length;
+
+    embedThumbsCounter = 0;
+
+    $modelsItem.each(function(i){
+      var $this = $(this);
+      var index = $this.data('index') + 1 ? $this.data('index') : i;
+      live($this, models[index % modelsLength]);
+    });
+
+    if (!window.onlyImagePlayer) {
+      loadTimer = setTimeout(function () {
+        updateProccess(models);
+        startTimer();
+      }, 4*1000);
+    } else {
+      updateProccess(models);
+      startTimer();
+    }
+  }, 13*1000);
+}
+
+function updateProccess (models) {
+  var modelsLength = models.length;
+  $('.bcdb_model_item').each(function(i){
+    var $this = $(this);
+    var index = $this.data('index') + 1 ? $this.data('index') : i;
+    var model = models[index % modelsLength];
+    if (!model) {
+      return;
+    }
+
+    var $cam = $this.find('.cam');
+    var $lang = $this.find('.modellang');
+
+    $lang.html('');
+    model.flags.forEach(function(flag){
+      $lang.append('<img src="' + baseUrl + '/images/lang/'+flag+'.png" />');
+    });
+
+    var $langImg = $lang.find('img');
+    if ($cam.length && $cam.width() < 90) {
+      $langImg.hide();
+    } else {
+      if (((mode === 'mode3') && (['160'].indexOf(width) > -1)) || ((['mode4', 'mode2'].indexOf(mode) > -1) && (['728', '700'].indexOf(width) > -1)) && models[i].display_name.length > 8) {
+        if (models[i].display_name.length > 11) {
+          $langImg.hide();
+        } else {
+          $langImg.filter(':nth-child(2)').hide();
+        }
+      } else {
+        $langImg.show();
+      }
+    }
+
+    setHref($this.find('a'), model.chat_url_on_home_page);
+
+    $this.find('img.thumb_active').attr({
+      'data-url': isSlider ? '' : model.profile_images.thumbnail_image_medium,
+      'data-vs-url': model.vs_url_root,
+      'src': isSlider ? model.profile_images.thumbnail_image_medium_live : model.profile_images.thumbnail_image_medium,
+    });
+    $this.find('img.thumb').not('.thumb_active').attr({
+      'src': isSlider ? model.vs_url_root + '/1.jpg' : model.profile_images.thumbnail_image_medium_live,
+      'data-vs-url': model.vs_url_root,
+    });
+    $this.find('.modelname').html( model.display_name);
+
+    $cam.attr('data-src', model.vs_url_root);
+    var promoVideo = $cam.data('video');
+    if ($cam.css('display') !== 'none' && promoVideo) {
+      promoVideo.showEmbed();
+      promoVideo.play(model.vs_url_root);
+    }
+  });
+  $(document).trigger('sale2x:updateModels');
+}
+  
+  function replayLive () {
+        $('.cam').each(function () {
+      var $this = $(this);
+      if ($this.css('display') === 'none' && $this.find('.loaded').length) {
+         var $video =  $this.find('.loaded');
+        if ($video.length) {
+          try {
+            var video = $video[0];
+            var promise = $video.data('promise') || video.play();
+            promise.then(function () {
+              $video.data('promise', video.pause());
+            });
+          } catch (e) {
+            $video[0].pause();
+          }
+        }
+      }
+      if (!window.onlyImagePlayer) {
+        var promoVideo = $this.data('video');
+        if (promoVideo) {
+          promoVideo.play($this.attr('data-src'));
+        }
+      } else {
+        if (!$this.find('canvas').length && !$this.imagePlayer($this.attr('data-src') || $this.attr('data-loadsrc'))) {
+          $this.html('');
+          showThumbOnVideoError($this.parent().find('img.thumb_hidden'));
+        }
+      }
+    });
+      }
+
+  
+  function initContent ($el, src, isClone) {
+    var $parent = $el.parent();
+    var result;
+          function initLive ($el, $parent, src, isClone) {
+  var camDiv = $parent.find('.cam');
+  var videoSrc = src || $el.attr('data-vs-url');
+  var isVisible = camDiv.css('display') !== 'none';
+
+  if ($el.data('width')) {
+    var thumbWidth = $el.data('width');
+    camDiv.width(thumbWidth).height(Math.round(thumbWidth * 3 / 4));
+  } else if (isSlider) {
+    camDiv.width($el.parents('.bcdb_model_item').height() * 4 / 3);
+  } else {
+    camDiv.width($el.width()).height(Math.round($el.width() * 3 / 4));
+  }
+
+  camDiv.attr('data-loadsrc', videoSrc);
+  if (!window.onlyImagePlayer) {
+    camDiv.videoEmbed(videoSrc, {
+      poster: camDiv.siblings('img.thumb_active').attr('data-url'),
+      autoLoad: isVisible,
+      atOnce: true,
+      isClone: isClone,
+      isOutsource: !src,
+      probability: isMobile ? 30 : 0,
+      onSuccess: function () {
+        var promoVideo = camDiv.data('video');
+        if (promoVideo) {
+          promoVideo.play();
+          camDiv.attr('data-src', camDiv.attr('data-loadsrc'));
+        }
+      },
+      onError: function () {
+        window.onlyImagePlayer = true;
+        if (isVisible && !camDiv.imagePlayer(videoSrc)) {
+          camDiv.html('');
+          showThumbOnVideoError($parent.find('img.thumb_hidden'));
+        }
+        camDiv.attr('data-src', camDiv.attr('data-loadsrc'));
+      }
+    });
+  } else {
+    if (isVisible && !camDiv.imagePlayer(videoSrc)) {
+      camDiv.html('');
+      showThumbOnVideoError($parent.find('img.thumb_hidden'));
+    }
+    camDiv.attr('data-src', camDiv.attr('data-loadsrc'));
+  }
+}
+
+var lastInteractedItem = null;
+function liveOnDemandOn($item) {
+  liveOnDemandOff();
+  var $modelimage = $item.find('.modelimage');
+  lastInteractedItem = $item;
+  var html = '<div class="cam">' +
+    '<video autoplay muted loop playsinline webkitPlaysinline preload="auto"></video>' +
+    '<video autoplay muted loop playsinline webkitPlaysinline preload="auto"></video>' +
+    '</div>';
+  $modelimage.append(html);
+  initLive($modelimage.find('.thumb_active'), $modelimage);
+  // trigger dom tree refresh -- otherwise video overlap overlay (chrome)
+  var $group = $('.bcdb_model_group');
+  $group.width($group.width() + 1);
+  $group.width($group.width() - 1);
+}
+
+function liveOnDemandOff() {
+  if (lastInteractedItem) {
+    lastInteractedItem.find('.cam').remove();
+    lastInteractedItem = null;
+  }
+}
+      initLive($el, $parent, src, isClone);
+    
+        return result;
+  }
+
+  function groupEffect () {
+    var enable = false;
+    var $bcdb = $('.bcdb');
+    var $group = $('.bcdb_model_group');
+    var activeClass = 'bcdb_model_group_active';
+    var animateParams = {};
+    var cssAfter = {};
+
+    if ($group.length <= 1) {
+      return;
+    }
+
+    
+    if (!enable) {
+      return;
+    }
+    setInterval(function(){
+      $group.animate(animateParams, getEffectSpeed(), function() {
+        var $this = $(this);
+        if ($this.hasClass(activeClass)) {
+          $this.css(cssAfter).removeClass(activeClass)
+        } else {
+          $this.addClass(activeClass);
+        }
+        $(document).trigger('sale2x:update');
+      });
+    }, 5*1000);
+  }
+
+  function onBodyClick (e) {
+    if (!$(e.target).parents('a').length) {
+            window.open($(".bcdb_model_item a:first").attr("href"));
+            return false;
+    }
+  }
+
+  function photoEffect () {
+      }
+
+  function getEffectSpeed() {
+    return 800;
+  }
+
+  function showThumbOnVideoError($thumb) {
+    $thumb.attr('src', $thumb.attr('data-url')).removeClass('thumb_hidden');
+  }
+
+  (function($) {
+
+  function ImagePlayer($self, url) {
+    var $this = this;
+    $this.url = url;
+    var $oldPlayer = $self.data('ImagePlayer');
+    var f = 1;
+    var display = $self.find('canvas');
+    if (display.length) {
+      display = display[0];
+    } else {
+      display = document.createElement('canvas');
+      $self.html(display);
+    }
+
+    var loadFrame = function(){
+      if (!$this.url) {
+        return;
+      }
+      var img = new Image();
+      img.onload = imageOnLoad;
+      img.onerror = imageOnError;
+      img.timestamp = new Date().getTime();
+      img.url = $this.url;
+      img.src = $this.url + '/' + f + '.jpg?t=' + (img.timestamp);
+
+      function imageOnLoad() {
+        if (!$this || !$this.url) {
+          return;
+        }
+
+        if ($oldPlayer) {
+          $oldPlayer.destroy();
+          $oldPlayer = null;
+        }
+
+        var loadTime = new Date().getTime() - this.timestamp;
+        drawFrame(this);
+        clearTimeout($this.timeout);
+
+        $this.timeout = setTimeout(function(){
+          loadFrame();
+        }, 200-loadTime);
+      }
+
+      function imageOnError() {
+        if (f === 1) {
+          f++;
+        } else {
+          f = 1;
+        }
+        var loadTime = new Date().getTime() - this.timestamp;
+        clearTimeout($this.timeout);
+        $this.timeout = setTimeout(function(){
+          loadFrame();
+        }, 400-loadTime);
+      }
+    };
+
+    var drawFrame =  function(image){
+      f++;
+      var displayContext = display.getContext("2d");
+      display.width = $self.width();
+      display.height = $self.width() * 3 / 4 * 1.1;
+      if (displayContext != null) {
+        try {
+          displayContext.drawImage(image, 0, 0, image.width, image.height, 0, 0, $self.width(), $self.height());
+        } catch (e) {
+
+        }
+      }
+    };
+
+    var clearDisplay =  function(image){
+      var displayContext = display.getContext("2d");
+      if (displayContext != null) {
+        try {
+          f = 1;
+          displayContext.clearRect(0, 0, display.width, display.height);
+        } catch (e) {
+
+        }
+      }
+    };
+
+    loadFrame();
+
+    return {
+      setUrl:function(u){
+        $this.url = u;
+        clearDisplay();
+      },
+      destroy:function(){
+        if (!$this) {
+          return;
+        }
+        $this.url = null;
+        clearTimeout($this.timeout);
+        $this = null;
+      }
+    }
+  }
+
+  // Make jQuery Plugin
+  $.fn.imagePlayer = function(url) {
+    this.each(function() {
+      $(this).data("ImagePlayer", new ImagePlayer($(this), url));
+    });
+
+    return this;
+  };
+
+})(jQuery);
+  var embedThumbsCounter = 0;
+
+(function($){
+  var ua = navigator.userAgent.toLowerCase();
+  var isWinPhone = /windows phone/.test(ua);
+  var isIeMobile = /iemobile/.test(ua);
+  var isIOS = /ipad|iphone|ipod/.test(ua) && !window.MSStream;
+  var isIOSPuffin = isIOS && /puffin/.test(ua);
+  var isOldIOS = isIOS && /os (5|6|7|8|9)_/.test(ua);
+  var isUC = /ucbrowser/.test(ua) && !window.MSStream;
+
+  window.videoContainerSelector = window.videoContainerSelector || '.cam';
+  window.canvasParentSelector = window.canvasParentSelector || '.bcdb_model_group_active';
+
+  var visibleThumbs;
+
+  var inited = false;
+
+  function init () {
+    inited = true;
+    visibleThumbs = $(window.videoContainerSelector).filter(':visible').length;
+
+    $(window).bind('resize', function () {
+      visibleThumbs = $(window.videoContainerSelector).filter(':visible').length;
+      embedThumbsCounter = 0;
+    });
+  }
+
+  var PromoVideo = function ($video1, $video2) {
+    this.$activeVideo = $video1;
+    this.$loadVideo = $video2;
+    this.init();
+  };
+
+  PromoVideo.prototype.init = function () {
+    this.$activeVideo.addClass('loaded');
+    this.$loadVideo.removeClass('loaded');
+    this.removeLoad(this.$activeVideo);
+    this.removeLoad(this.$loadVideo);
+
+    this.setLoad(this.$loadVideo);
+    if (isUC || isOldIOS || isIOSPuffin) {
+      this.error = true;
+      return;
+    }
+    if (isIeMobile) {
+      this.$activeVideo.remove();
+      this.removeLoad(this.$loadVideo);
+    }
+  };
+
+  PromoVideo.prototype.play = function (activeSrc) {
+    var $plugin = this;
+    activeSrc = this.trimSrc(activeSrc);
+    if (activeSrc) {
+      var currentSrc = this.trimSrc(this.$activeVideo.find('source').attr('src'));
+      if (currentSrc !== activeSrc) {
+        this.src = activeSrc;
+      }
+    }
+    if (!this.src) {
+      try {
+        var video = this.$activeVideo[0];
+        var promise = this.$activeVideo.data('promise') || video.play();
+        promise.then(function () {
+          $plugin.$activeVideo.data('promise', video.play());
+        }).catch(function (){
+        });
+      } catch (e) {
+        this.$activeVideo[0].play();
+      }
+      return;
+    }
+    this.embed(this.src, {
+      autoLoad: true,
+      atOnce: true,
+      onSuccess: function () {
+        $plugin.play();
+      }
+    })
+  };
+
+  PromoVideo.prototype.showEmbed = function () {
+    var self = this;
+    if (!isIeMobile) {
+
+      if (!this.$loadVideo.find('source').length) {
+        return;
+      }
+
+      this.$activeVideo.data('canvasVideo') && this.$activeVideo.data('canvasVideo').destroy();
+      try {
+        var video = this.$activeVideo[0];
+        var promise = this.$activeVideo.data('promise') || video.play();
+        promise.then(function () {
+          self.$activeVideo.data('promise', video.pause());
+        }).catch(function (e){
+          if (typeof e !== 'string') {
+            e = e.message || e.toString();
+          }
+          if (e.indexOf('play() request was interrupted') !== -1 || e.indexOf('was aborted') !== -1) {
+            return;
+          }
+          self.$activeVideo[0].pause();
+        });
+      } catch (e) {
+        this.$activeVideo[0].pause();
+      }
+      var tmp = this.$activeVideo;
+      this.$activeVideo = this.$loadVideo;
+      this.removeLoad(this.$activeVideo);
+      this.$activeVideo.addClass('loaded');
+      this.$loadVideo = tmp;
+      this.setLoad(this.$loadVideo);
+      this.$loadVideo.removeClass('loaded');
+      this.$loadVideo.html('');
+      if (this.$loadVideo[0]) {
+        try {
+          var video = this.$loadVideo[0];
+          var promise = this.$loadVideo.data('promise') || video.play();
+          promise.then(function () {
+            self.$loadVideo.data('promise', video.pause());
+          }).catch(function (e){
+            self.$loadVideo[0].pause();
+          });
+        } catch (e) {
+          this.$loadVideo[0].pause();
+        }
+      }
+    }
+  };
+
+  PromoVideo.prototype.setLoad = function ($el) {
+    $el.css({
+      'position': 'absolute',
+      'visibility': 'hidden',
+      'z-index': '-1'
+    });
+  };
+
+  PromoVideo.prototype.removeLoad = function ($el) {
+    $el.css({
+      'position': '',
+      'visibility': '',
+      'z-index': ''
+    });
+  };
+
+  PromoVideo.prototype.afterLoad = function (options) {
+    if (options.atOnce) {
+      this.showEmbed();
+    }
+    if (options.onSuccess && "function" === typeof options.onSuccess) {
+      options.onSuccess();
+    }
+  };
+
+  PromoVideo.prototype.trimSrc = function (src) {
+    if (!src) {
+      return null;
+    }
+    return src.replace(/(.mp4|.webm|.flv)$/g, "");
+  };
+
+  PromoVideo.prototype.embed = function (src, options) {
+    options = options || {};
+    if (options.poster) {
+      if (options.atOnce) {
+        this.$activeVideo.attr("poster", options.poster);
+        this.$activeVideo.css("background", "url(" + options.poster + ") center center / cover no-repeat");
+      }
+      this.$loadVideo.attr("poster", options.poster);
+      this.$loadVideo.css("background", "url(" + options.poster + ") center center / cover no-repeat");
+    }
+
+    // if (isMobile) {
+    //   var maxEmbedThumbs = Math.ceil(visibleThumbs * this.probability / 100);
+    //   if (visibleThumbs > 10 && (embedThumbsCounter >= maxEmbedThumbs || embedThumbsCounter < maxEmbedThumbs && Math.floor(Math.random() * 2))) {
+    //     return;
+    //   }
+    //   embedThumbsCounter++;
+    // }
+
+    var $plugin = this;
+    src = this.trimSrc(src);
+    this.src = null;
+    this.$loadVideo.html('');
+
+    if (!isIOS) {
+      this.$loadVideo.append($("<source>", {
+        type: "video/webm",
+        src: src + ".webm"
+      }))
+    }
+
+    this.$loadVideo.append($("<source>", {
+      type: "video/mp4",
+      src: src + ".mp4"
+    }));
+
+    this.$loadVideo.data('promise', this.$loadVideo[0].load());
+    this.$loadVideo.unbind("canplay, canplaythrough");
+    this.$loadVideo.bind("canplay, canplaythrough", function () {
+      try {
+        var promise = $plugin.$loadVideo[0].play();
+        $plugin.$loadVideo.data('promise', promise);
+        if (isMobile) {
+          promise.catch(function (e) {
+            if (typeof e !== 'string') {
+              e = e.message || e.toString();
+            }
+            if (e.indexOf('play() request was interrupted') !== -1 || e.indexOf('was aborted') !== -1) {
+              return;
+            }
+            $plugin.$loadVideo[0].pause();
+            if (options.onError && "function" === typeof options.onError) {
+              options.onError();
+            }
+          });
+        }
+      } catch(e) {
+        if (isIeMobile || !isWinPhone) {
+          $plugin.$loadVideo[0].pause();
+          if (options.onError && "function" === typeof options.onError) {
+            options.onError();
+          }
+          return;
+        }
+      }
+
+      $plugin.afterLoad.call($plugin, options);
+    });
+  };
+
+  $.fn.extend({
+    videoEmbed: function (src, options) {
+      var $el = $(this);
+
+      var $videos = $el.find('video');
+      if ($videos.length < 2) {
+        if (options.onError && "function" === typeof options.onError) {
+          options.onError();
+        }
+        return;
+      }
+
+      if (!inited) {
+        init();
+      }
+
+      var $activeVideo = $videos.first();
+      var $loadVideo = $videos.last();
+
+      if ($activeVideo.css('visibility') === 'hidden' || $loadVideo.is('.loaded')) {
+
+        $videos.css({
+          'position': '',
+          'visibility': '',
+          'z-index': ''
+        });
+        $activeVideo = $loadVideo;
+        $loadVideo = $videos.first();
+      }
+
+      var promoVideo = new PromoVideo($activeVideo, $loadVideo);
+      if (promoVideo.error) {
+        if (options.onError && "function" === typeof options.onError) {
+          options.onError();
+        }
+        return;
+      }
+      if (options.probability) {
+        promoVideo.probability = options.probability;
+      }
+      if (src) {
+        if (options.autoLoad) {
+          promoVideo.embed(src, options);
+        } else {
+          promoVideo.src = src;
+        }
+      }
+      $el.data('video', promoVideo);
+    }
+  });
+})(jQuery);
+  var load = function(){
+  var $body = $('body');
+  if (!$body.is(':visible')) {
+    loadTimeout();
+    return;
+  }
+  var $activeThumb = $("img.thumb_active");
+  var firstLoaded = false;
+  if (!(isAdaptive || isSlider)) {
+    $activeThumb.data('width', $activeThumb.width());
+  } else {
+    $(window).bind('resize.adb', onAdaptiveResize);
+  }
+  $body.removeClass('load');
+
+  if (isSlider) {
+    const $items = $('.bcdb_model_item');
+    var itemHeight = $items.parent().height();
+    var itemWidth = itemHeight * 4 / 3;
+    $('.modelimage').width(itemWidth).height(itemHeight);
+    $items.parent().width((itemWidth + parseInt($items.css('margin-left'), 10) + parseInt($items.css('margin-right'), 10)) * $items.length);
+    $('.bcdb_header strong').magicText({
+      padding: '2px',
+      minLineHeight: 0.9,
+      verticalAlign: 'center',
+      minFontSize: 8
+    });
+    adjustMoreButton();
+
+    if (homeUrl) {
+      $('.more_button, .bcdb_header').bind('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        window.open(homeUrl);
+      });
+    }
+
+    $items.bind(isMobile ? 'touchstart' : 'mouseenter', function (e) {
+      liveOnDemandOn($(this));
+    });
+    $items.bind('mouseleave', function () {
+      liveOnDemandOff();
+    });
+  }
+
+  $activeThumb.one('load', function(){
+    var $this = $(this);
+    var thumbWidth = $this.data('width') || this.width;
+    var $parent = $this.parent();
+
+    if (!isSlider) {
+      $parent.css({
+        width: thumbWidth,
+        height: Math.round(thumbWidth * 3 / 4)
+      });
+    }
+
+    if (!firstLoaded) {
+      firstLoaded = true;
+      autoupdate();
+      embedThumbsCounter = 0;
+
+      if (mode === 'mode1') {
+        createStyle(thumbWidth);
+      }
+    }
+
+    initContent($this);
+  });
+
+  $('.bcdb_header img').one('load', function() {
+    adaptiveResize();
+  });
+
+  $activeThumb.each(function(){
+    if (this.complete) {
+      var $this = $(this);
+      setTimeout(function(){
+        $this.load();
+      }, 100);
+    }
+  });
+
+  groupEffect();
+
+  $body.click(onBodyClick);
+  $('a').bind('touchend', $.noop); // fix IOS 300ms delay
+
+  adaptiveResize();
+};
+
+function loadTimeout() {
+  setTimeout(function () {
+    load();
+  }, 500);
+};
+
+if (!getUrlParam('bodyonload')) {
+  $(function(){load()});
+} else {
+  $(window).one('load', function(e){load()});
+}
+
+photoEffect();
+
+function createStyle(thumbWidth) {
+  var $style = $('<style/>');
+  var styleHtml = '';
+  if (thumbWidth <= 100) {
+    langHide = true;
+    styleHtml += '.modellang {display:none !important;}';
+    styleHtml += '.bcdb_model_item {font-size:80%;}';
+    styleHtml += '.modelname {white-space:nowrap;font-size:100%;width:' + thumbWidth + 'px}';
+    styleHtml += '.modelstatus {display:none !important;}';
+  } else if (thumbWidth <= 120) {
+    styleHtml += '.bcdb_model_item {font-size:90%;}';
+    styleHtml += '.modelname {white-space:nowrap;font-size:100%}';
+  }
+  styleHtml += '.modellink {padding-bottom:1px;}';
+
+  if (isSlider) {
+  }
+  $style.html(styleHtml);
+  $('head').append($style);
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function shuffle(arr) {
+  for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+  return arr;
+}
+function getUrlParam(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (null != results && results[1]) {
+    return decodeURIComponent(results[1]);
+  }
+  return null;
+}
+
+var resizeTimeout;
+
+function onAdaptiveResize () {
+  clearTimeout(resizeTimeout);
+  $('.bcdb_header strong').css('visibility', 'hidden');
+  resizeTimeout = setTimeout(function () {
+    adaptiveResize();
+  }, 500);
+}
+
+function adaptiveResize () {
+  setContainerHeight();
+
+  var $header = $('.bcdb_header');
+  var headerHeight = $header.is(':visible') ? $header.height() : 0;
+  var $logo = $header.find('img');
+  var $text = $header.find('strong');
+  var $container = $('.bcdb_model_group_container');
+  var containerHeight = $container.data('height') || $container.height();
+  var $footer = $(".bcdb_footer");
+  var footerHeight = $footer.height();
+  var footerVisible = $footer.is(':visible');
+  var bcdbHeight = $(".bcdb").height();
+
+  if (!isSlider && (!$logo.is(':visible') || $logo.width() + $text.width() >  $header.width() - 10)) {
+    $text.css('visibility', 'hidden');
+  } else {
+    $text.css('visibility', '');
+  }
+
+  $('.bcdb_model_item').each(function () {
+    checkThumb($(this));
+  });
+
+  if (!(isAdaptive || isSlider)) {
+    if (footerCorrection + $container.height() + headerHeight + footerHeight > bcdbHeight) {
+      $footer.hide();
+      containerHeight += (bcdbHeight - containerHeight - headerHeight);
+      if (!isFullscreen) {
+        $container.height(containerHeight);
+      }
+    }
+    return;
+  }
+
+  headerHeight = $header.is(':visible') ? $header.outerHeight(true) : 0;
+  footerHeight = $footer.outerHeight(true);
+
+  //footer correction
+  if (footerCorrection + containerHeight + headerHeight + footerHeight > bcdbHeight) {
+    if (footerVisible) {
+      $footer.hide();
+      containerHeight += (bcdbHeight - containerHeight - headerHeight);
+      $container.height(containerHeight);
+    }
+  } else if (!footerVisible) {
+    $footer.show();
+    $container.height(containerHeight);
+  }
+
+  $('.cam canvas').each(function () {
+    var $canvas = $(this);
+    var thisWidth = $canvas.parent().width();
+    $canvas.width(thisWidth);
+    $canvas.height(thisWidth * 3 / 4 * 1.1);
+  });
+
+  if ($container.find('.bcdb_row.clone').length) {
+    $container.find('.bcdb_row.clone').each(function () {
+      var $this = $(this);
+      var timeoutId = $this.data('contentTimeout') || 0;
+      clearTimeout(timeoutId);
+      $this.find('video').each(function () {
+        var canvasVideo = $(this).data('canvasVideo');
+        canvasVideo && canvasVideo.destroy();
+      });
+      $this.remove();
+    });
+  }
+
+  $container.height(containerHeight);
+
+  var $groups = $('.bcdb_model_group');
+  var $rows = $groups.first().find('.bcdb_row');
+  var rowHeight = $rows.height();
+  var allRowsHeight = $rows.length * rowHeight;
+  var maxSpace = bcdbHeight - headerHeight - footerHeight;
+
+  var cloneCount = Math.floor((maxSpace - allRowsHeight) / rowHeight);
+  if (rowHeight && cloneCount) {
+    $container.height('');
+    renderClones(false, cloneCount);
+  } else {
+    replayLive();
+  }
+  $(document).trigger('sale2x:update');
+}
+
+function renderClones (isUpdate, cloneCount) {
+  if (!cloneCount) {
+    return;
+  }
+  var cloneExist = false;
+  var $groups = $('.bcdb_model_group');
+  var visibleThumbsCount = $groups.find('.bcdb_row:first .bcdb_model_item:visible').length;
+  $groups.each(function () {
+    var $group = $(this);
+    var $rows = $group.find('.bcdb_row');
+    var visibleRowsCount = $rows.length;
+    var curIndex = -1;
+    for (var i = 0; i < cloneCount; i++) {
+      var $clone = $rows.eq(i % visibleRowsCount).clone(true);
+      var $thumbs = $clone.find('.bcdb_model_item');
+      if (i % visibleRowsCount === 0) {
+        curIndex++;
+      }
+      $thumbs.first().before($thumbs.filter(':nth-child(n+' + ((curIndex + 1) * visibleThumbsCount + 1) + ')'));
+      if ($clone.find('.bcdb_model_item:nth-child(-1n+' + visibleThumbsCount + ')[data-index="0"]').length) {
+        break;
+      }
+      $clone.addClass('clone');
+      $group.append($clone);
+      cloneExist = true;
+    }
+  });
+
+  $('.bcdb_row.clone').find('.bcdb_model_item').each(function () {
+    var $item = $(this);
+    checkThumb($item);
+    if ($item.css('display') !== 'none') {
+      var $cam = $item.find('.cam');
+      $cam.html('<video autoplay muted loop playsinline webkitPlaysinline preload="auto"></video><video autoplay muted loop playsinline webkitPlaysinline preload="auto"></video>');
+      initContent($item.find('.thumb_active'), $cam.attr('data-src'), true);
+    }
+  });
+  replayLive();
+  setContainerHeight();
+}
+
+function checkThumb ($modelItem) {
+  var modelName = $modelItem.find('.modelname').html() || '';
+  var $modelLang = $modelItem.find('.modellang img');
+  var $itemStatus = $modelItem.find('.modelstatus');
+  var $itemName = $modelItem.find('.modelname');
+  var $itemLink = $modelItem.find('.modellink');
+  var imageWidth = thumbWidth;
+  var $cam = $modelItem.find('.cam');
+
+  if (mode === 'mode1' && $cam.length && $cam.width() < 90) {
+    $modelLang.hide();
+  } else if ((((mode === 'mode3') && (['160'].indexOf(window.width) > -1)) || ((['mode4', 'mode2'].indexOf(mode) > -1) && (['728', '700'].indexOf(window.width) > -1))) && (modelName.length > 8)) {
+    if (modelName.length > 11) {
+      $modelLang.filter(':nth-child(n)').hide();
+    } else {
+      $modelLang.filter(':nth-child(2)').hide();
+    }
+  } else {
+    if (modelName.length > 11) {
+      $modelLang.filter(':nth-child(n)').show();
+    } else {
+      $modelLang.show();
+    }
+  }
+
+  if (mode !== 'mode1') {
+    return;
+  }
+
+  if (imageWidth && imageWidth <= 90) {
+    $modelItem.css('font-size', '80%');
+    $itemName.css({
+      'padding-bottom': '+=1',
+      'white-space': 'nowrap',
+      'font-size': '100%'
+    });
+    $itemLink.css({
+      'margin-top': '-=1',
+      'padding-bottom': '1px'
+    });
+    $itemStatus.hide();
+    $modelLang.hide();
+  } else if (imageWidth && imageWidth <= 110) {
+    $modelItem.css('font-size', '90%');
+    $itemName.css({
+      'padding-bottom': '+=1',
+      'white-space': 'nowrap',
+      'font-size': '100%'
+    });
+    $itemLink.css({
+      'margin-top': '-=1',
+      'padding-bottom': '1px'
+    });
+    $itemStatus.show();
+    $modelLang.show();
+  } else if (mode === 'mode1') {
+    $modelItem.css('font-size', '');
+    $itemName.css({
+      'padding-bottom': '',
+      'white-space': '',
+      'font-size': ''
+    });
+    $itemLink.css({
+      'margin-top': '',
+      'padding-bottom': '1px'
+    });
+    $itemStatus.show();
+    $modelLang.show();
+  }
+}
+
+function setContainerHeight() {
+  var containerHeight = 0;
+  $('.bcdb_model_group_active .bcdb_row').each(function () {
+    containerHeight += $(this).outerHeight(true);
+  });
+
+  var $container = $('.bcdb_model_group_container');
+  if (containerHeight) {
+    $container.height(containerHeight);
+    $container.data('height', containerHeight);
+  } else {
+    $container.data('height', $container.height());
+  }
+}
+
+function adjustMoreButton() {
+  var itemHeight = $('.bcdb_model_item').height();
+  var h = itemHeight * 0.182 + 5.4;
+  var $btn = $('.more_button');
+  $btn.height(h);
+  $btn.width(itemHeight);
+  $btn.css('border-radius', h + 'px');
+  $btn.magicText({
+    padding: (h/4) + 'px' + ' ' + (h/2) + 'px',
+    minLineHeight: 0.9,
+    verticalAlign: 'center',
+    minFontSize: 4
+  });
+}
+</script>
+
+<style type="text/css">
+  html, body {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .bcdb div, .bcdb p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .bcdb img {
+    border: 0 none;
+  }
+
+  .bcdb {
+    background-color: #eeeeee;
+    color: #000000;
+    width: 300px;
+    height: 250px;
+    font-family: 'Arial';
+    overflow: hidden;
+    font-size: 12px;
+    position: relative;
+  }
+
+  .bcdb a {
+    color: #a02239;
+  }
+
+  .bcdb a {
+    text-decoration: none;
+  }
+
+  .bcdb .bcdb_container {
+            padding: 4px 5px 4px 4px;
+            padding: 0px;
+    }
+
+  
+  .bcdb .bcdb_header {
+    position: relative;
+      padding: 5px 5px 0 30px;
+  
+            display: none;
+      
+      }
+
+  .bcdb .bcdb_footer {
+      display: block !important;
+    position: absolute;
+    /*bottom: 10px;*/
+    width: 300px;
+    padding: 15px 5px 5px;
+    font-size: 130%;
+      text-align: center;
+  
+            }
+
+  
+  .bcdb .bcdb_header img {
+   height: 100%;
+    width: auto;
+    }
+
+  .bcdb .bcdb_header strong {
+    font-size: 18px;
+    position: absolute;
+   top: 14px;
+   right: 5px;
+    }
+
+  .bcdb .bcdb_model_item {
+            width: 100%;
+            }
+
+  .bcdb .bcdb_model_group {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+
+  .bcdb .bcdb_model_group_active {
+    top: 0;
+    left: 0;
+    }
+
+  .bcdb .bcdb_model_group_container {
+    position: relative;
+    overflow: hidden;
+      height: 227px;
+      
+    }
+
+  .bcdb .bcdb_model_item a {
+    text-decoration: none;
+    display: block;
+            padding: 4px 4px;
+                  padding: 4px 30px;
+      
+        }
+
+  .bcdb .bcdb_model_item a.camlink {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    z-index: 9;
+  }
+
+  .bcdb .bcdb_model_item a img.thumb {
+    display: block;
+    position: absolute;
+      width: 100%;
+  
+      }
+
+  .bcdb .bcdb_model_item .cam {
+    position: absolute;
+    z-index: 2;
+
+  }
+
+  .bcdb .bcdb_model_item a img.thumb_active {
+    z-index: 1;
+    left: 0;
+  }
+
+  .bcdb .bcdb_model_item a img.thumb_hidden {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    zoom: 1;
+    z-index: 9 !important;
+  }
+
+  .bcdb .bcdb_model_item span {
+    display: block;
+    line-height: 101%;
+    text-align: center;
+  }
+
+  .bcdb .bcdb_model_item span.modelimage {
+    position: relative;
+    overflow: hidden;
+            border: 1px solid #ffffff;
+                    }
+
+  .bcdb .bcdb_model_item a:hover span.modelimage {
+    border-color: #a02239;
+  }
+
+  .bcdb .bcdb_model_item span.modelname,
+  .bcdb .bcdb_model_item span.modellink {
+   margin-top: 4px;
+   overflow: hidden;
+  }
+
+  .bg_fon {
+    background: url('https://i.bongacash.com/dynamic_banner/images/bg_dynamic_baner.png') repeat-x;
+    width: 120px;
+    height: 21px;
+    display: block;
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .bcdb .bcdb_model_item span.modelname {
+    }
+
+  .bcdb .bcdb_model_item span.modellink {
+    font-size: 90%;
+    text-decoration: underline;
+    }
+
+  .bcdb .bcdb_model_item span.modelname {
+    color: transparent;
+  }
+
+  .bcdb .bcdb_model_item a:hover span.modellink {
+    text-decoration: none;
+  }
+
+  .bcdb .bcdb_model_item em.modelstatus {
+    background: #30a913;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    padding: 1px 4px;
+    color: #fff;
+    font-size: 9px;
+    font-style: normal;
+    position: absolute;
+    z-index: 3;
+    top: 5px;
+    left: 5px;
+    text-shadow: 0 1px 0 #006600;
+  }
+
+  .bcdb .bcdb_model_item em.modellang {
+    position: absolute;
+    z-index: 4;
+    top: 5px;
+    right: 5px;
+  }
+  .bcdb .bcdb_model_item em.modellang img {
+    display: block;
+  }
+  .bcdb .clr {
+    clear: both;
+  }
+          
+  
+  
+  .bcdb_model_item .column {
+    display: none;
+  }
+
+    .bcdb_model_item .modelstatus,
+  .bcdb .bcdb_model_item em.modellang img {
+    display: none;
+  }
+  </style>
+<style type="text/css">
+  .cam {
+  width: 100%;
+}
+
+.cam video {
+  width: 101%;
+  height: 101%;
+  background: transparent;
+}
+
+@media all and (-ms-high-contrast:none) {
+  .cam video {
+    opacity: 0.9999; /* #BCS-816 */
+  }
+}
+
+
+.cam canvas {
+  width: 101%;
+  height: 110%;
+  max-width: 100%;
+  background: transparent;
+}
+  .sale2x {
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  color: #b92640;
+}
+
+.sale2x.bordered {
+  border: solid 1px #fff;
+}
+
+.sale2x-bg {
+  background-image: url(data:image/png;base64,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);
+  height: 100%;
+  min-width: 31%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.sale2x > .sale2x-wrp {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  overflow: hidden;
+  margin: 0 4px;
+}
+
+.sale2x > .sale2x-wrp > .sale2x-line {
+  overflow: hidden;
+  font-size: 36px;
+  font-weight: bold;
+  flex: 1;
+  white-space: nowrap;
+  line-height: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sale2x > .sale2x-wrp > .sale2x-line span {
+  line-height: 1;
+}
+
+/* three-line */
+.sale2x.three-lines {
+  background: linear-gradient(to bottom, #ffffff, #d6d6d6);
+}
+
+.sale2x.three-lines .sale2x-wrp {
+
+}
+
+.sale2x.three-lines .sale2x-wrp .sale2x-tokens {
+  border: solid #ffb900 1px;
+}
+
+.sale2x.three-lines .sale2x-wrp .sale2x-tokens span {
+  padding: 2px 4px;
+}
+.sale2x.__mini.three-lines .sale2x-wrp .sale2x-tokens span {
+  padding: 1.5px 1px 1px;
+}
+
+.sale2x.three-lines .sale2x-wrp .sale2x-times {
+  border: solid #ffb900 1px;
+  background-color: #ffb900;
+  color: #ffffff;
+}
+
+.sale2x.three-lines .sale2x-wrp .sale2x-times span {
+  padding: 2px 4px;
+}
+
+.sale2x.__mini.three-lines .sale2x-wrp .sale2x-times span {
+  padding: 1px;
+}
+
+.sale2x.three-lines .sale2x-wrp .sale2x-cheaper {
+}
+
+.sale2x.three-lines .sale2x-wrp .sale2x-cheaper span {
+  padding: 2px 0;
+}
+
+
+/* two-line */
+.sale2x.two-lines .sale2x-bg {
+  min-width: 20%;
+}
+
+.sale2x.two-lines .sale2x-wrp {
+  height: 90%;
+}
+
+.sale2x.two-lines .sale2x-wrp .sale2x-tokens {
+  flex: 3;
+}
+
+.sale2x.two-lines .sale2x-wrp .sale2x-times-cheaper {
+  background-color: #ffb900;
+  color: #ffffff;
+  flex: 2;
+}
+
+.sale2x.two-lines .sale2x-wrp .sale2x-times-cheaper span {
+  padding: 2px 4px;
+}
+
+.sale2x.__mini.two-lines .sale2x-wrp .sale2x-times-cheaper span {
+  padding: 1.5px 1px 1px;
+}
+
+/* move name and link over thumb */
+.sale2x-meta-over-thumb {
+  position: absolute;
+  z-index: 10;
+  background: #ffffff80;
+  width: 100%;
+  height: 16px;
+  text-overflow: ellipsis;
+  bottom: 0;
+  white-space: nowrap;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.modelname.sale2x-meta-over-thumb {
+  left: 0;
+  text-align: left !important;
+}
+
+.modellink.sale2x-meta-over-thumb {
+  right: 0;
+  text-align: right !important;
+}
+
+.sale2x-meta-over-thumb.__half {
+  width: 50%;
+}
+
+/* hide live badge for slider */
+.bcdb_model_item.__no_before:before {
+  display: none;
+}
+
+/* flip */
+.sale2x-flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.sale2x-flip-container.__flipped .sale2x-flip-side-b  {
+  transform: rotateX(0deg);
+}
+.sale2x-flip-container.__flipped .sale2x-flip-side-a {
+  transform: rotateX(180deg);
+}
+
+.sale2x-flipper {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sale2x-flip-side-a, .sale2x-flip-side-b {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sale2x-flip-side-a {
+  z-index: 2;
+  transform: rotateX(0deg);
+}
+
+.sale2x-flip-side-b {
+  transform: rotateX(-180deg);
+}
+
+.s300x250 .sale2x-flip-container {
+  min-height: 60px;
+  overflow: hidden;
+}
+
+/* lang specific */
+
+body.lang_cn .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_cz .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_in .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_it .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_kr .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_lt .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_rs .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_si .sale2x > .sale2x-wrp > .sale2x-line span,
+body.lang_sk .sale2x > .sale2x-wrp > .sale2x-line span
+{
+  line-height: 1.2;
+}
+body.lang_lv .sale2x > .sale2x-wrp > .sale2x-line span
+{
+  line-height: 1.3;
+}
+
+body.lang_no.s720x200 .sale2x.__mini.three-lines > .sale2x-wrp > .sale2x-tokens span {
+  padding: 1px 0;
+}
+
+body.lang_ar .sale2x > .sale2x-wrp > .sale2x-line,
+body.lang_il .sale2x > .sale2x-wrp > .sale2x-line {
+  direction: rtl;
+}
+/* targeting */
+html[lang="ar"] .sale2x,
+html[lang="il"] .sale2x {
+  flex-direction: row-reverse;
+}
+</style>
+
+  
+<div class="bcdb">
+  <div class="bcdb_container">
+    
+    
+    <div class="bcdb_model_group_container">
+      <div class="bcdb_model_group bcdb_model_group_active">
+                                  
+        <div class="bcdb_model_item" data-index="0">
+                    <a target="_blank" href="https://bongacams.com/track?c=659688&ps=dynamic_banner&subid=oodZZHVTHPPRHNTU4RDOoquqnoqdRbPVVRdM6V1Esqp6pXTUXOpmdK6ap0rpXSumnundPPXZLVW6eeuyWqx0rpnSuldK6V0zpXSumc6veri7OijiWffeayii6XbeXbiniamnPSx0ruM_wnL2A25Abm57J8WPUP7pqK61WV2udK6V0rpXSulcH2A-&subid2=3595235&csurl=https://bongacams.com/AnaCarrera">
+              <span class="modelimage">
+                  <div class="column"></div>
+                                  <div class="cam">
+                    <video autoplay muted loop playsinline webkitPlaysinline preload="auto"></video>
+                    <video autoplay muted loop playsinline webkitPlaysinline preload="auto"></video>
+                  </div>
+                  <img id="th0"
+                       class="thumb thumb_active thumb_hidden"
+                       src="https://i.bongacash.com/dynamic_banner/images/video_back.gif"
+                       data-url="//i.bimbolive.com/03b/20d/028/5ba25d3d7c87f8919a7c0b63bc5ae230_thumb_medium.jpg"
+                       data-vs-url="https://db.bngpt.com/stream_AnaCarrera"
+                       alt=""
+                      >
+                                                  <em class="modelstatus">Online</em>
+                                                  <em class="modellang">
+                                      <img src="https://i.bongacash.com/dynamic_banner/images/lang/english.png">
+                                      <img src="https://i.bongacash.com/dynamic_banner/images/lang/spanish.png">
+                                    </em>
+                              </span>
+                                                          </a>
+        </div>
+                                </div>
+      <div class="clr"><!-- --></div>
+    </div>
+          <div class="bcdb_footer">
+                  Site de webcams 100% gratuito!              </div>
+      </div>
+</body>
+</html>

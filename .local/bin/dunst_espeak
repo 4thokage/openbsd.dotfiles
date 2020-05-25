@@ -1,0 +1,13 @@
+#!/bin/sh
+
+summary="$2"
+body="$3"
+
+# Check if summary is contained in body
+if echo "$body" | grep -qi "$summary"; then
+	# If so, don't read summary
+	echo "$body" | espeak -s 130
+else
+	# Else, read summary and body
+	echo "$summary $body" | espeak -s 130
+fi

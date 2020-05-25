@@ -1,0 +1,144 @@
+# restart X
+super + shift + Escape
+	doas pkill X
+
+# mouse settings {{
+# Mouse pointer raises focus on window
+~button1
+	bspc pointer -g focus
+
+# Mouse button to move and resize
+super + shift + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+super + shift + !button{1-3}
+	bspc pointer -t %i %i
+
+super + shift + @button{1-3}
+	bspc pointer -u
+# }}
+
+# bspwm related hotkeys {{
+super + {_,shift +}q
+	bspc node -{c,k}
+# Navigate layouts
+super + {_,shift + }space
+	bspc desktop --layout {next,prev}
+
+# Rotate desktop
+super + {_,shift + }r
+	bspc node @/ --rotate {90,-90}
+
+# Circulate the leaves of the tree
+super + {_,shift + }c
+	bspc node @/ --circulate {backward,forward}
+# Make split ratios balanced
+super + minus
+	bspc node @/ --balance
+# Toogle tiling of window
+super + d
+	bspc query --nodes -n focused.tiled && state=floating || state=tiled; \
+	bspc node --state \~$state
+# Toogle pseudo tiling of window
+super + p
+	bspc node --state \~pseudo_tiled
+
+# Toggle fullscreen of window
+super + f
+	bspc node --state \~fullscreen
+
+# Focus last window/desktop
+{alt,super} + grave
+	bspc {node,desktop} --focus last.local
+
+# Focus next/previous window
+alt + {_,shift} + Tab
+	bspc node --focus {prev,next}
+
+# Focus next/previous desktop
+super + {_,shift} + Tab
+	bspc desktop --focus {prev,next}.occupied
+
+# Navigate to older/newer window in history
+super + {o,n}
+	bspc wm --record-history off; \
+	bspc node --focus {older,newer}; \
+	bspc wm --record-history on
+# }}
+
+# aaplication launchers {{
+super + Return
+	$TERM
+super + Shift + Return
+	floating_terminal
+alt + space
+	dmenu_run
+super + e
+	$TERM -e $FILE
+super + y
+	$TERM -e calcurse -D $HOME/.config/calcurse
+super + w
+	$BROWSER "https://www.fast.com"
+# }}
+
+# application actions {{
+Print
+	maimpick
+# un/hide currently active window
+super + {_,shift} + u
+	~/.config/bspwm/misc/toggle {hide,show}
+# }}
+
+# media keys {{
+# --------------------------------------------------------------------
+# Fn keys
+# --------------------------------------------------------------------
+
+# Control volume
+XF86AudioMute
+  staty.sh --dunst vol toggle
+XF86AudioMicMute
+  staty.sh --dunst vol --mixer Capture toggle
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+  staty.sh --dunst vol 2%{+,-}
+
+# Kill wireless
+XF86WLAN
+  staty.sh --dunst radio toggle
+
+# Multimedia keys
+{XF86AudioPrev,XF86AudioNext}
+  staty.sh --dunst player {prev,next}
+XF86AudioStop
+  staty.sh --dunst player stop
+XF86AudioPlay
+  staty.sh --dunst player play
+
+# Show Webcam
+XF86WebCam
+  vlc -- v4l://
+
+# Reset Screens
+XF86Display
+  disper --cycle-stages='-s : -S : -e : -c' --cycle
+
+# Screen Backlight Keys
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+  staty.sh --dunst bl {inc,dec} 5
+
+# Lock Session
+XF86ScreenSaver
+  xset s activate
+
+# Other shortcuts
+XF86Calculator
+  xcalc
+XF86Explorer
+  $TERMINAL -e $FILE
+XF86HomePage
+  $BROWSER
+XF86Launch1
+  xdotool key alt+F1
+XF86Tools
+  $TERMINAL -e ncmpcpp
+# }}

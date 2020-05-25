@@ -1,0 +1,1102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIGWV9aDxACUFNVDgMEUw==",licenseKey:"6f524845d1",applicationID:"24279235"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(25),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(26),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable){var x=t(10),b=t(11),E=t(8),O=t(6),R=t(13),P=t(7),T=t(14),N=t(9),M=t("ee"),S=M.get("tracer");t(16),y.features.spa=!0;var C,L=0;M.on(u,r),M.on(p,r),M.on(d,o),M.on(l,o),M.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),R.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),P.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),N.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(M,"xhr-resolved"),a(M,"xhr-done"),a(P,m+s),a(P,m+"-done"),a(N,"new-jsonp"),a(N,"jsonp-end"),a(N,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(8),"addEventListener"in window&&t(6);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(v,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+l,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(26),a=t(25);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t("wrap-function"),a=t("ee").get("promise"),s=i(a),c=t(25),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){if(!i(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,s=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,n,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var e=!1,n=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,n=!!r.enabled),n)if(t.sameOrigin)e=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return n&&e}var a=t(23),s=t(17);e.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function o(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=c(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(17),f=t(15).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(21),m=t(20),v=t(18),w=window.XMLHttpRequest;a.features.xhr=!0,t(14),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);n&&n.header&&(e.setRequestHeader("newrelic",n.header),this.dt=n)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){var e,n=t[1]||{};"string"==typeof t[0]?e=t[0]:t[0]&&t[0].url&&(e=t[0].url),e&&(this.parsedOrigin=c(e),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in n)i[a]=n[a];i.headers=new Headers(n.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],17:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],18:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||"document"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(20);e.exports=r},{}],19:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(25),s=t(26),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],20:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],21:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],22:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&c("lcp",[n[n.length-1]])}function i(t){if(t instanceof u&&!p){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:f.now()-n,p=!0,c("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var p=!1,l=["click","keydown","mousedown","pointerdown","touchstart"];l.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],23:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],24:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],25:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],26:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],27:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function l(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(25),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(25),u=t("ee"),d=t(24),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1167.min.js"},x=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(19),t(22),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(27)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(26),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,16,5,3,4]);</script>
+<title>Free Live Adult Chat - Broadcast, Watch &amp; Chat FREE on chaturbate.com</title>
+<link rel="stylesheet" href="https://ssl-ccstatic.highwebmedia.com/CACHE/css/output.ddd82bfba28f.css" type="text/css" media="all" />
+<style>
+  body, div#main, div.content, div.block, div.section {margin: 0px; padding: 0px;}
+  body {min-width:800px;}
+  div.content {width: 100%;}
+  
+  </style>
+<script type="text/javascript">;(function(){var tsQueue=[];var tsWatcher=setInterval(function(){var tsInstance=window['tsInstance'];if(tsInstance!==undefined){clearInterval(tsWatcher);while(tsQueue.length>0){tsQueue.shift()(tsInstance);}}},50);window['tsExec']=function(func){if(window['tsInstance']!==undefined&&tsQueue.length<=0){func(window['tsInstance']);}else{tsQueue.push(func);}}})();</script>
+</head>
+<body>
+<a href="/hotfallingdevil/" target="_blank"><div id="embed_overlay"></div></a>
+<style>
+        #embed_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 999;
+        }
+    </style>
+<div>
+<div>
+<div>
+<div class="section" style="height: 100%">
+<div class="video-box-embed">
+<div id='player' style=" width:100%; height: 100%;">
+<div id='still_video_container'></div>
+<div id='movie' style="text-align: center;">
+<noscript>
+                    <br>
+                    <br>
+                    <strong>JavaScript is required. Please enable JavaScript in your browser settings.</strong>
+                </noscript>
+</div>
+<div id="player_text_container" style="display: none;">
+<h1 id="player_text_header"></h1>
+<p id="player_text_body"></p>
+<a id="enter_password_link" href="/embed/hotfallingdevil/" style="display: none;">ENTER PASSWORD</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/jsi18n/"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.b49d4b833f48.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.d45f7d7e7bd0.js"></script>
+<script type='text/javascript'>
+$.facebox.settings.loadingImage = 'https://ssl-ccstatic.highwebmedia.com/facebox/loading.gif';
+$.facebox.settings.closeImage = 'https://ssl-ccstatic.highwebmedia.com/facebox/closelabel.png';
+$(document).ready(function() {
+  $('.increase_limits a, a.increase_limits').click(function() {
+    var popupwindow = window.open("/tipping/purchase_tokens/increase_limits/", '_blank',
+            'status=0,toolbar=0,menubar=0,directories=0,resizable=1,' +
+                    'scrollbars=1,height=615,width=850');
+    popupwindow.focus();
+    return false;
+  });
+});
+
+$.ajaxSetup ({
+    // Disable caching of AJAX responses
+    cache: false
+});
+
+$(document).ready(function(){
+  var mySwfStore = new SwfStore({
+    namespace: 'ogcamsite818',
+    swf_url: 'https://ssl-ccstatic.highwebmedia.com/javascript-flash-cookies/storage.swf',
+    debug: false,
+    onready: function() {
+      
+    }
+  });
+  function should_link_accounts(){
+    var latest_username = $.cookie('latest_linked_username');
+    if (latest_username == null){
+        return true;
+    }
+    if (latest_username != ''){
+        return true;
+    }
+    var latest_update = $.cookie('latest_linked_timestamp');
+    if (latest_update == null){
+        return true;
+    }
+    var msecs = new Date().getTime() - latest_update;
+    return msecs > (60*20*1000);
+  }
+
+  function csrfSafeMethod(method) {
+      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+  $.ajaxSetup({
+      crossDomain: false,
+      beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type)) {
+              xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));
+          }
+      }
+  });
+
+    function link_accounts() {
+        if (!should_link_accounts()){
+            return false;
+        }
+        var oldval = mySwfStore.get('usernames2');
+        if (oldval == null | oldval == '') {
+            var usernames = [""];
+        } else {
+            var usernames = oldval.split(',');
+            var foundcurrent = false;
+            $.each(usernames, function (key, username) {
+                if (username != "") {
+                    setTimeout(function () {
+                        $.post("/accounts/linkaccounts/", {
+                            'username': username,
+                            'token': '',
+                            'expiration': ''
+                        });
+                    }, ((key + 1) * 100));
+                } else {
+                    foundcurrent = true;
+                }
+            });
+            if (!foundcurrent) {
+                usernames.push("");
+            }
+        }
+        mySwfStore.set('usernames2', usernames.join(','));
+        $.cookie('latest_linked_timestamp', new Date().getTime(), {expires: 1, path: '/'});
+        $.cookie('latest_linked_username', '', {expires: 1, path: '/'});
+    }
+});
+
+function recordOutboundLink(link, category, action) {
+  try {
+    var myTracker=_gat._getTrackerByName();
+    _gaq.push(['_trackEvent', category ,  action ]);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+
+$(document).ready(function(){
+    var achdismisscookie = $.cookie('ach_dismiss_');
+    if (!achdismisscookie) {
+        $('#direct_deposit_warning').show();
+        $('#direct_deposit_warning a.dismiss').click(function() {
+            $('#direct_deposit_warning').hide();
+            $.cookie('ach_dismiss_', 1, 31557600);
+        });
+    }
+
+    $('.mobile_site_redirect').click(function () {
+        $.cookie('mobile_redirect', null, { expires: 1, path: '/', domain: 'chaturbate.com'});
+    });
+
+    $('.top_alert_close').click(function () {
+        var date = new Date();
+        date.setTime(date.getTime() + (18 * 60 * 60 * 1000)); // 18 hours
+        $.cookie('mobile_redirect_hide', 'true', { expires: date, path: '/', domain: 'chaturbate.com'});
+        $('.top_alert').hide();
+    });
+    $('#mobile_dismissible_redirect').click(function() {
+        if (window.newrelic) {
+            window.newrelic.addPageAction("MobileAlertLinkClicked");
+        }
+    });
+    $('#mobile_dismissible_survey').click(function() {
+        if (window.newrelic) {
+            window.newrelic.addPageAction("MobileAlertSurveyClicked");
+        }
+    });
+});
+
+if ($.fn.hasOwnProperty('live')) {
+    $.fn.on = $.fn.live;
+} else {
+    $.fn.live = $.fn.on;
+}
+
+</script>
+<script type="text/javascript">
+  var nextroomurl = "/next/hotfallingdevil/";
+  var previousroomurl = "/prev/hotfallingdevil/";
+  var timeoutscanningurl = "/scanning/timeout/";
+  var flickering_chrome_flash = "";
+  window.new_user = false;
+  window.broadcaster = 'hotfallingdevil';
+  window.showcam = true;
+  if (window.newrelic) {
+	  window.newrelic.addPageAction("LoadRoom", {"attributes.version": 1});
+  }
+</script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.9a77c5f948b7.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.3718f6683ffb.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.795fd437ea7a.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.1d5beb0f401b.js"></script>
+<script type="text/javascript">
+/* Add experiments in case they're required by TS code and haven't been set yet. */
+if (window.experiments === undefined) {
+    window.experiments = {
+        eligible: "[\u0027EmbedCamsOnCB2Rerun\u0027, \u0027TheaterModeDefault\u0027]",
+        active: "[]",
+    };
+}
+</script>
+<script type="text/javascript">
+if (window.group_shows_enabled === undefined) {
+    window.group_shows_enabled = false
+}
+</script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/cachebust/tshandler-prod-8b7b84083.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.0a35677fee30.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.ef90841dc639.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.71c00683755c.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.1787ae4bc4eb.js"></script>
+<script>
+    function login_required() {
+      if (!is_logged_in()) {
+        tsExec(function(ts) { ts.displayLoginOverlay()})
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function registration_required() {
+      if (!is_logged_in()) {
+        window.location.href = "/accounts/register/";
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function login_required_true_if_loggedin() {
+
+      return true;
+    }
+
+    function is_logged_in() {
+      
+      return false;
+      
+    }
+
+</script>
+<form id="ignore_user_form" style="display: none">
+<input type='hidden' name='csrfmiddlewaretoken' value='4PLcgTOJKlN18ixkB24WXuyJLvg3WK1zsO5Mbfh6wePL5BBL3GK58lQdQz0LJ4rb' />
+<input id="ignore_user_form_username" type="hidden" name="username" value="" />
+<input id="ignore_user_form_remove" type="hidden" name="remove" value="" />
+</form>
+<form id="change_title_form" style="display: none">
+<input type='hidden' name='csrfmiddlewaretoken' value='4PLcgTOJKlN18ixkB24WXuyJLvg3WK1zsO5Mbfh6wePL5BBL3GK58lQdQz0LJ4rb' />
+<input id="change_title_form_room_slug" type="hidden" name="room_slug" value="" />
+<input id="change_title_form_subject" type="hidden" name="subject" value="" />
+</form>
+<form id="get_chat_user_list_form" style="display: none" action="/api/getchatuserlist/">
+<input type='hidden' name='csrfmiddlewaretoken' value='4PLcgTOJKlN18ixkB24WXuyJLvg3WK1zsO5Mbfh6wePL5BBL3GK58lQdQz0LJ4rb' />
+<input id="get_chat_user_list_form_room_sort_by" type="hidden" name="sort_by" value="" />
+<input id="get_chat_user_list_form_room_roomname" type="hidden" name="roomname" value="" />
+<input id="get_chat_user_list_form_room_private" type="hidden" name="private" value="" />
+</form>
+<script type='text/javascript'>
+$(document).ready(function() {
+    
+    $.ajax({
+        url: '/get_emoticon_abuses/'
+    }).success(function(data) {
+        defchat_settings.ignored_emoticons = data['ignored_emoticons'];
+    });
+    var report_emoticon = $('#report_emoticon');
+    var abuse_link = $('.report_abuse_link');
+    $('.facebox_link').live('mousedown', function() {
+        var image_url = $(this).find('input[name=image_url]').val();
+        var report_url = $(this).find('input[name=report_url]').val();
+        var title = $(this).find('img').attr('title');
+        report_emoticon.find('img').attr({'src': image_url, 'title': title});
+        abuse_link.attr('href', report_url);
+        
+            $('.pre_link').hide();
+            if ($.inArray(title.substring(1), defchat_settings.ignored_emoticons) >= 0) {
+                abuse_link.text('UNDO').before('<span class="pre_link">EMOTICON REPORTED - </span>');
+            } else {
+                abuse_link.text('REPORT EMOTICON');
+            }
+        
+    });
+    abuse_link.live('click', function(e) {
+        e.preventDefault();
+        if ($(this).text() == 'UNDO') {
+            $('.button_abuse_report a').last().click();
+        } else {
+            $(this).hide();
+            $('#facebox .emoticon_abuse_categories').show();
+        }
+    });
+    $('.button_abuse_cancel a').live('click', function(e) {
+        e.preventDefault();
+        $(this).parent().parent().hide();
+        $('#facebox .report_abuse_link').show();
+    });
+    $('.button_abuse_report a').live('click', function(e) {
+        e.preventDefault();
+        $(this).parent().parent().hide();
+        var link = $('#facebox .report_abuse_link');
+        var slug = link.parent().find('img').attr('title');
+        $.ajax({
+            type: "POST",
+            url: link.attr('href'),
+            data: {'category': $('.abuse_category').last().val()}
+        }).success(function(response) {
+            var img = $('.chat-list img[title="' + slug + '"]');
+            var facebox_img = $('#facebox').find('.content').find('img');
+            if (response == 'reported') {
+                link.text('UNDO').before('<span>EMOTICON REPORTED - </span>');
+                img.hide();
+                if (img.parent().find('.emoticon_slug:visible').length == 0) {
+                    img.parent().append('<span class="emoticon_slug">' + slug + '</span>');
+                }
+                defchat_settings.ignored_emoticons.push(slug.substring(1));
+                facebox_img.hide();
+                facebox_img.after('<div id="img_placeholder" style="position: relative; display: inline-block; width: ' + facebox_img.width() + 'px; height: ' + facebox_img.height() + 'px;"></div>')
+            } else if (response == 'undone') {
+                link.prev().hide();
+                link.text('REPORT EMOTICON');
+                if (defchat_settings.show_emoticons) {
+                    img.parent().find('.emoticon_slug').hide();
+                    img.show();
+                }
+                $('#img_placeholder').remove();
+                facebox_img.show();
+                defchat_settings.ignored_emoticons.pop(slug.substring(1));
+            }
+        });
+        link.show();
+    });
+    
+
+    function validateAbuseReportForm() {
+        var category = $('#id_abuse_category_select').val();
+        var comments = $('#id_additional_comments').val();
+        var button = $('#abuse_report_button');
+        var label = $('#comments_required');
+        if (category == 'other' && comments.length < 3) {
+            button.parent().removeClass('button_abuse_report');
+            button.parent().addClass('button_abuse_cancel');
+            label.show();
+        } else {
+            button.parent().addClass('button_abuse_report');
+            button.parent().removeClass('button_abuse_cancel');
+            label.hide();
+        }
+    }
+    $('#id_additional_comments, #id_abuse_category_select').live('change keyup', function() {
+        validateAbuseReportForm();
+    });
+
+    var broadcaster_rating = $('#broadcaster_rating');
+    var broadcaster_rating_tooltip = $('#broadcaster_rating_tooltip');
+    var broadcaster_rating_history = $('#broadcaster_rating_history');
+    var rating_history_list = $('#rating_history');
+    var rating_triangle = $('#rating_history_triangle');
+    var history_showing = false;
+    var first_open = true;
+    broadcaster_rating.live('mouseenter', function() {
+        if (history_showing) {
+            return;
+        }
+        broadcaster_rating_tooltip.show();
+    });
+    broadcaster_rating.live('mouseleave', function() {
+        broadcaster_rating_tooltip.hide();
+    });
+    broadcaster_rating.live('click', function(event) {
+        event.stopPropagation();
+        if (!history_showing){
+            showHistory()
+        } else {
+            hideHistory()
+        }
+    });
+    broadcaster_rating_history.live('click', function(event) {
+        event.stopPropagation();
+    });
+    function showHistory() {
+        history_showing = true;
+        broadcaster_rating_tooltip.hide();
+        if (first_open) {
+            first_open = false;
+            rating_history_list.text('Fetching rating history...');
+            fetch_rating_history()
+        }
+        broadcaster_rating_history.show(0);
+        rating_triangle.show(0);
+        listenForHideHistory();
+    }
+    function hideHistory() {
+        if (history_showing === false) {
+            return
+        }
+        history_showing = false;
+        broadcaster_rating_history.hide(0);
+        rating_triangle.hide(0);
+        stopListenForHideHistory()
+    }
+    function listenForHideHistory() {
+        $('body').live('click', hideHistory);
+    }
+    function stopListenForHideHistory() {
+        $('body').die('click', hideHistory);
+    }
+    var fetching_more_history = false;
+    function fetch_rating_history(skip) {
+        fetching_more_history = true;
+        var url = '/tipping/rating_history/';
+        if (skip) {
+            url = url + '?skip=' + skip
+        }
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'html',
+            success: function(data) {
+                if (/^\s*$/.test(data)) {
+                    if (rating_history_list.text() === 'Fetching rating history...') {
+                        rating_history_list.text('No history to show');
+                    }
+                    return;
+                }
+                fetching_more_history = false;
+                if (rating_history_list.text() === 'Fetching rating history...') {
+                    rating_history_list.text('');
+                }
+                rating_history_list.html(rating_history_list.html() + data);
+            },
+        });
+    }
+    broadcaster_rating_history.scroll(function() {
+        if ($(this)[0].scrollHeight - $(this).scrollTop() === $(this).innerHeight()) {
+            if (fetching_more_history) {
+                return;
+            }
+            fetching_more_history = true;
+            var last_item = rating_history_list.children().last();
+            var id = last_item.attr('id').replace("vote_", "");
+            fetch_rating_history(id)
+        }
+    });
+
+    var $sendtip = $("#id_sendtip");
+    var $tipAmount = $("#id_tip_amount");
+    var $sendTipButtons = $("#id_sendtip > button");
+    var $invalidTipMessage = $("#invalid_tip_message");
+
+    $tipAmount.on('keyup', function() {
+        var val = $.trim($(this).val());
+        if (new RegExp('^[1-9][0-9]*$').test(val)) {
+            $invalidTipMessage.hide();
+            $sendTipButtons.prop("disabled", false);
+            $sendtip.toggleClass("disabled", false);
+        } else {
+            $invalidTipMessage.show();
+            $sendTipButtons.prop("disabled", true);
+            $sendtip.toggleClass('disabled', true);
+        }
+    });
+
+    $sendTipButtons.click(function(event) {
+        if ($sendtip.hasClass('disabled')) {
+            event.preventDefault();
+            return false;
+        }
+    }).focus(function(event) {
+        if ($sendtip.hasClass('disabled')) {
+            event.stopPropagation();
+            $tipAmount.focus();
+        }
+    });
+
+ 
+  function log_presence() {
+    $.ajax({
+      url: '/contest/log/hotfallingdevil/',
+      type: 'GET',
+      complete: schedule_log_presence,
+      timeout: 60000,
+      dataType: 'json',
+      success: function(data) {
+        $(".password_warning").html(data.password_warning);
+        if ($('#still_video').length >= 1) {
+          $('#still_video img:first').attr('src', data.image_url);
+        }
+        if (!data.can_access) {
+          window.location.reload();
+        }
+        if (data.has_warnings) {
+          window.onbeforeunload = function() {};
+          window.location = '/accounts/site_message/?next=/embed/hotfallingdevil/';
+        }
+        if (data.is_banned) {
+          window.onbeforeunload = function() {};
+          window.location = '/';
+        }
+      }
+    });
+  }
+  function schedule_log_presence() {
+    
+  }
+  schedule_log_presence();
+    
+
+
+  $("#tooltip-subject").click(function(){
+       $(this).hide();
+       //$(".video-box .title").unbind('mouseenter mouseleave mouseover mouseout');
+       return $("#roomtitle").click();
+  });
+
+  function parse_subject(newtext){
+      var temp_item = ('<span class="temp_item" style="display:none;"></span>');
+      $(temp_item).html(newtext).appendTo('body');
+      var w = $('span.temp_item').width();
+      $("span.temp_item").remove();
+      $("#tooltip-subject").html(newtext);
+      if ( w > $("#roomtitle").width() - 5){
+         $(".video-box .title").mouseover(
+           function(){
+               if($("#roomtitleform").is(":visible")==false){
+                  $("#tooltip-subject").show();
+               }
+            }
+         );
+         $(".video-box .title").mouseout(
+           function(){
+               $("#tooltip-subject").hide();
+            }
+         );
+         return newtext;
+
+      }
+      $(".video-box .title").unbind('mouseenter mouseleave mouseover mouseout');
+      return newtext;
+  }
+    
+  function start_defchat() {
+    $.mydefchatconn = $("#defchat").defchat({
+      do_not_connect: "False" === "True",
+      embed_video_only: "1" === "1",
+      username: '__anonymous__3n9LiXd7ibe',
+      password: '{\u0022username\u0022:\u0022__anonymous__3n9LiXd7ibe\u0022,\u0022org\u0022:\u0022A\u0022,\u0022expire\u0022:1589017839,\u0022sig\u0022:\u002290fa697ebb536633040f1f4ab80c4bf734fface15dd24f495f05648c89dabd5a\u0022,\u0022room\u0022:\u0022hotfallingdevil\u0022}',
+      room_password: '015e39c58b376559ae4d0c9e6d0453abb94777ad83685195e1b19620f8c53e19',
+      edge_auth: '{\u0022username\u0022:\u0022__anonymous__3n9LiXd7ibe\u0022,\u0022org\u0022:\u0022A\u0022,\u0022expire\u0022:1589017839,\u0022sig\u0022:\u002290fa697ebb536633040f1f4ab80c4bf734fface15dd24f495f05648c89dabd5a\u0022,\u0022room\u0022:\u0022hotfallingdevil\u0022}',
+      chat_host: 'rtmp://chatws27.highwebmedia.com/live-chat',
+      domain: 'highwebmedia.com',
+      parse_subject: parse_subject,
+      room: 'hotfallingdevil@conference.highwebmedia.com',
+      private_room: 'hotfallingdevil-private@conference.highwebmedia.com',
+      my_username: '',
+      handler: TSHandler,
+      site_name: 'Chaturbate',
+      support_email: 'support@chaturbate.com',
+      is_age_verified: '',
+      chat_settings_url: "/api/viewerchatsettings/hotfallingdevil/",
+      wschat_host: 'https://chatws27.stream.highwebmedia.com/ws',
+      media_url: 'https://ssl-ccstatic.highwebmedia.com/',
+      hashtag_url: "/tag/",
+      broadcaster_gender: 'female',
+      emoticon_overlay_url: '/emoticon_overlay/',
+      change_room_title_url: '/api/change_room_title/',
+      tipping_current_tokens_url: '/tipping/current_tokens/',
+      subject: $('#roomtitle'),
+      default_subject: "Lovense: Interactive Toy that vibrates with your Tips \u002D Multi\u002DGoal :  ⭐ Dont let me stop ⭐ make me squirt and lets cumm together tonight⭐1666 whatsapp 999 snap #lovense #ohmibod #interactivetoy",
+      submenu_profile_url: '/accounts/submenuprofile/USERNAMESLUG/',
+      ban_url: '/roomban/USERNAMESLUG/hotfallingdevil/',
+      silence_url: '/roomsilence/USERNAMESLUG/hotfallingdevil/',
+      
+        allow_tipping: true,
+      
+      
+        is_broadcasting: false,
+      
+      
+        is_moderator: false,
+      
+      
+        needs_supporter_to_pm: true,
+      
+      
+        scroll_on_load: false,
+      
+      allow_anonymous_tipping: false,
+      add_moderator_url: '/addmoderator/USERNAMESLUG/hotfallingdevil/',
+      remove_moderator_url: '/removemoderator/USERNAMESLUG/hotfallingdevil/',
+      login_required_callback: login_required,
+      token_balance: 0,
+      is_private_show_owner: 0,
+      is_private_show_owner_url: "/tipping/is_private_show_owner/hotfallingdevil/",
+      tipped_performer_last_24hrs: 0,
+      last_vote_in_past_24_hours: undefined,
+      last_vote_in_past_90_days_down: false,
+      min_tips_reqd_to_vote: 25,
+      interested_in: ['f','c','s'],
+      group_show_tokens_per_minute_url: "/tipping/group_show_tokens_per_minute/hotfallingdevil/",
+      group_show_request_url: "/tipping/group_show_request/hotfallingdevil/",
+      group_show_cancel_url: "/tipping/group_show_cancel/hotfallingdevil/",
+      group_show_approve_url: "/tipping/group_show_approve/",
+      group_show_decline_url: "/tipping/group_show_decline/",
+      return_from_away_url: "/tipping/return_from_away/",
+      spy_on_private_show_tokens_per_minute_url: "/tipping/spy_on_private_show_tokens_per_minute/hotfallingdevil/",
+      private_show_tokens_per_minute_url: "/tipping/private_show_tokens_per_minute/hotfallingdevil/",
+      spy_on_private_show_request_url: "/tipping/spy_on_private_show_request/hotfallingdevil/",
+      private_show_request_url: "/tipping/private_show_request/hotfallingdevil/",
+      private_show_cancel_url: "/tipping/private_show_cancel/hotfallingdevil/",
+      private_show_approve_url: "/tipping/private_show_approve/",
+      private_show_decline_url: "/tipping/private_show_decline/",
+      rate_model_url: "/tipping/rate_model/hotfallingdevil/",
+      get_chat_user_menu_url: "/api/getchatusermenu/",
+      tips_in_last_24_url: "/tipping/tips_in_last_24/hotfallingdevil/",
+      silence_broadcasters: "false",
+      show_emoticons: true,
+      emoticon_autocomplete_delay: '0',
+      users_that_can_chat: "all",
+      spy_on_cams_url: "/spy-on-cams/",
+      num_users_waiting_for_group_show: 0,
+      num_users_required_for_group_show: 5,
+      get_panel_url: "/api/panel/hotfallingdevil/",
+      app_info_json: '[[\u0022Lovense\u002DMe\u0022,\u0022\u005C/apps\u005C/app_details\u005C/lovense\u002Dme\u005C/?slot\u003D0\u0022],[\u0022Tip Menu Plus 20\u0022,\u0022\u005C/apps\u005C/app_details\u005C/tip\u002Dmenu\u002Dplus\u002D20\u005C/?slot\u003D1\u0022],[\u0022All In One Bot\u0022,\u0022\u005C/apps\u005C/app_details\u005C/all\u002Din\u002Done\u002Dbot\u002D2\u005C/?slot\u003D2\u0022],[\u0022Roll The Dice XXX\u0022,\u0022\u005C/apps\u005C/app_details\u005C/roll\u002Dthe\u002Ddice\u002Dxxx\u002D4\u005C/?slot\u003D3\u0022]]',
+      font_size: '9pt',
+      sort_users_key: 'a',
+      room_entry_for: 'orgb',
+      room_leave_for: 'orgb',
+      chat_ignore_list_url: '/chat_ignore_list/',
+      chat_mod_list_url: '/chat_mod_list/',
+      chat_fan_list_url: '/chat_fan_list/',
+      chat_ban_list_url: '/chat_ban_list/',
+      chat_geo_list_url: '/chat_geo_list/',
+      load_ignored_users: '',
+      initial_viewer_count: '',
+      private_price: '150',
+      group_price: '30',
+      spy_price: '30',
+      
+      
+      room_goal: {},
+      
+
+      
+        
+          
+          welcome_warning: "To go to next room, press CTRL+/. To send a tip, press CTRL+S or type \u0026quot\u003B/tip 25\u0026quot\u003B. To disable emoticons or adjust autocomplete settings, click the \u0027Gear\u0027 tab above.\u003C/a\u003E",
+        
+      
+      
+      welcome_message: "Rules: No spamming. Do not insist the cam hosts to do as you please. Do not announce other rooms or websites that would conflict with this room. Avoid any argumentative and/or rude posts related to the cam viewing. Do not attempt to post your e\u002Dmail address in the public chat.",
+      
+      password_room_login_url: "/roomlogin/hotfallingdevil/",
+      room_status: "public",
+      broadcaster_on_new_chat: "False" === "True"
+    });
+  }
+
+start_defchat();
+    
+
+
+$('.share_input').live('click', function() {
+  $(this).select();
+});
+
+
+$('.button_follow').hover(
+  function() {
+    $('.follow_tooltip').show();
+  },
+  function() {
+    $('.follow_tooltip').hide();
+  }
+);
+
+function hide_rating_ctrl_tooltips() {
+  $('#rate_dim_tooltip').hide();
+  $('#rate_tooltip').hide();
+  $('#rated_tooltip').hide();
+}
+$('#model_rating_ctrl_dim, #model_rating_ctrl_dim_with_scores').hover(
+  function() {
+    $('#rate_dim_tooltip').show();
+  },
+  hide_rating_ctrl_tooltips
+);
+$('#model_rating_ctrl, #model_rating_ctrl_with_scores').hover(
+  function() {
+    if (defchat_settings.last_vote_in_past_24_hours === undefined) {
+      $('#rate_tooltip').show();
+    } else {
+      $('#rated_tooltip').show();
+    }
+  },
+  hide_rating_ctrl_tooltips
+);
+});
+</script>
+<script>
+    var EMOTICON_AUTOCOMPLETE_API = 'https://emote.highwebmedia.com/autocomplete';
+</script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.42f9f0a6ce40.js"></script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.f4c5cb1005fd.js"></script>
+<script type='text/javascript'>
+
+$(document).ready(function() {
+  if (HasFlash() && ('False' == '' || 'False' == 'False')) {
+    EmbedViewerSwf(
+        "https://ssl-ccstatic.highwebmedia.com/flash/CBV_2p690.swf",
+        "hotfallingdevil",
+        "edge140.stream.highwebmedia.com",
+        "1",
+        "0",
+        "AnonymousUser",
+        "1",
+        "anonymous",
+        "015e39c58b376559ae4d0c9e6d0453abb94777ad83685195e1b19620f8c53e19",
+        "100",
+        "100",
+        "1",
+        "{\u0022username\u0022:\u0022__anonymous__3n9LiXd7ibe\u0022,\u0022org\u0022:\u0022A\u0022,\u0022expire\u0022:1589017839,\u0022sig\u0022:\u002290fa697ebb536633040f1f4ab80c4bf734fface15dd24f495f05648c89dabd5a\u0022,\u0022room\u0022:\u0022hotfallingdevil\u0022}",
+        "0"
+    );
+} else {
+    /*jslint browser: true*/
+'use strict';
+var STALLED_SECS = 3; //seconds before we consider hls stalled
+var SUPER_STALLED_SECS = 6;
+var lastOnTimeUpdate, lastCurrentTime;
+var monitorMs = 1000;
+var RELOAD_INTERVAL_SEC = 13;  //interval between reloads
+var PAUSE_PLAY_INTERVAL_SEC = 10;  //interval between pause play
+var lastReloadTime, hlsPlayer, edgeSrc, lastPausePlayTime, lastOnWaitingTime, firstOnWaitingTime;
+var ON_WAITING_RESET_SEC = 30;
+var MAX_ON_WAITING_SEC = 60;
+
+function getCurrentTimeSec() {
+    return new Date().getTime() / 1000.0;
+}
+
+function initSettings() {
+    lastOnTimeUpdate = getCurrentTimeSec();
+    lastCurrentTime = 0;
+}
+
+function onWaiting() {
+    var curTime = getCurrentTimeSec();
+
+    if (curTime - lastOnWaitingTime >= ON_WAITING_RESET_SEC || edgeSrc == '') {
+        firstOnWaitingTime = curTime;
+    }
+    lastOnWaitingTime = curTime;
+    if (firstOnWaitingTime == 0) {
+        firstOnWaitingTime = curTime;
+    }
+    if (curTime - firstOnWaitingTime >= MAX_ON_WAITING_SEC) {
+        firstOnWaitingTime = 0;
+        lastReloadTime = curTime;
+        reloadHlsVideoAjax();
+    }
+}
+
+function initHlsPlayer(player, src) {
+    hlsPlayer = player;
+    edgeSrc = src;
+    initSettings();
+    var curTime = getCurrentTimeSec();
+    lastReloadTime = curTime;
+    lastPausePlayTime = curTime;
+    lastOnWaitingTime = curTime;
+    firstOnWaitingTime = 0;
+    if (src === '') {
+        hlsPlayer.pause();
+    }
+
+    if (window.jsplayer) {
+        hlsPlayer.on("playing", function () {
+            if (hlsPlayer.error()) {
+                // Unfortunately, videojs swallows up hls.js manifest parse errors, which, if caught, would allow us
+                // to do smarter things like look at the response status and see if we are getting a 403 while fetching
+                // the manifest, usually meaning the model went to a private show. Short of replacing the video with
+                // a "connecting" message, à la CB2, we can just clear any videojs errors still displaying when the video
+                // starts playing.
+                // the hls.js errors observed as "stuck" are, unfortunately, not of just manifest parse errors, so clear
+                // all videojs errors still displaying
+                hlsPlayer.error(null);
+            }
+        });
+        hlsPlayer.on("timeupdate", function () {
+            if (lastCurrentTime !== hlsPlayer.currentTime()) {
+                lastOnTimeUpdate = getCurrentTimeSec();
+            }
+            lastCurrentTime = hlsPlayer.currentTime();
+        });
+        hlsPlayer.on("waiting", onWaiting);
+
+        hlsPlayer.muted($.cookie('cbv_hlsmute') === 'true'|| '1' == '1');
+        hlsPlayer.volume($.cookie('cbv_hlsvol') || 1);
+
+        hlsPlayer.ready(function() {
+            hlsPlayer.play();
+            if (hlsPlayer.paused()) {
+                hlsPlayer.muted(true);
+                hlsPlayer.play();
+            }
+        });
+
+        hlsPlayer.on("volumechange", function(){
+            $.cookie('cbv_hlsmute', this.muted(), {expires: 365, path: '/'});
+            $.cookie('cbv_hlsvol', this.volume(), {expires: 365, path: '/'});
+        });
+    } else {
+        hlsPlayer.muted = '1' == '1';
+        var playPromise = hlsPlayer.play()
+        if (playPromise !== undefined) {
+            playPromise["catch"](function() {
+                hlsPlayer.muted = true;
+                hlsPlayer.play();
+            });
+        } else if (hlsPlayer.paused) {
+            hlsPlayer.muted = true;
+            hlsPlayer.play();
+        }
+
+        hlsPlayer.ontimeupdate = function () {
+            if (lastCurrentTime !== hlsPlayer.currentTime) {
+                lastOnTimeUpdate = getCurrentTimeSec();
+            }
+            lastCurrentTime = hlsPlayer.currentTime;
+        };
+        hlsPlayer.onwaiting = onWaiting;
+
+        if (window.WebKitPlaybackTargetAvailabilityEvent && window.newrelic) {
+            hlsPlayer.onwebkitcurrentplaybacktargetiswirelesschanged = function () {
+                    if (hlsPlayer.webkitCurrentPlaybackTargetIsWireless) {
+                        window.newrelic.addPageAction("Video_CastStart", {"attributes.CastType": "airplay"});
+                    } else {
+                        window.newrelic.addPageAction("Video_CastStop", {"attributes.CastType": "airplay"});
+                    }
+                };
+        }
+    }
+
+    if ('False' == 'True'){
+        if ('' != 'True') {
+            handle_room_status_change_if_non_flash('hidden', '');
+        }
+    } else if ('' != 'True') {
+        handle_room_status_change_if_non_flash('public');
+    }
+}
+
+function isStalled() {
+    return (getCurrentTimeSec() - lastOnTimeUpdate) >= STALLED_SECS;
+}
+
+function isSuperStalled() {
+    return (getCurrentTimeSec() - lastOnTimeUpdate) >= SUPER_STALLED_SECS;
+}
+
+function pausePlay() {
+    if ((getCurrentTimeSec() - lastPausePlayTime) < PAUSE_PLAY_INTERVAL_SEC) {
+        return;
+    }
+    lastPausePlayTime = getCurrentTimeSec();
+    hlsPlayer.pause();
+    if (edgeSrc === '') {
+        return;
+    }
+    if (!window.jsplayer) {
+        hlsPlayer.removeAttribute("controls");
+    }
+    setTimeout(function () {
+        hlsPlayer.play();
+    }, 10);
+}
+
+$('#still_video_object').on('click hover', function () {
+    if (!window.jsplayer) {
+        if (hlsPlayer && !hlsPlayer.hasAttribute("controls")) {
+            hlsPlayer.setAttribute("controls", "controls");
+        }
+    }
+});
+
+function monitorHls() {
+    if (!defchat_settings || !hlsPlayer) {
+        return;
+    }
+    if (isStalled()) {
+        if (defchat_settings.handler.initializer.restricted_buffer_play_in_progress) {
+            if (isSuperStalled()) {
+                defchat_settings.handler.initializer.restricted_buffer_play_in_progress = false;
+                if (defchat_settings.handler.initializer.model_status === 'away') {
+                    handle_room_status_change_if_non_flash(defchat_settings.handler.initializer.model_status);
+                }
+                return;
+            }
+            pausePlay();
+            return;
+        }
+        if ((getCurrentTimeSec() - lastReloadTime) >= RELOAD_INTERVAL_SEC && isSuperStalled()) {
+            lastReloadTime = getCurrentTimeSec();
+            reloadHlsVideoAjax();
+            return;
+        }
+        pausePlay();
+    }
+}
+
+window.loadHlsVideo = function (src) {
+    edgeSrc = src;
+    initSettings();
+    if (!src) {
+        if (window.jsplayer) {
+            window.jsplayer.src("");
+        }
+        hlsPlayer.pause();
+    } else {
+        if (window.jsplayer) {
+            window.jsplayer.src(src);
+        } else {
+            hlsPlayer.src = src;
+        }
+        hlsPlayer.play();
+    }
+};
+
+window.getCurrentEdge = function () {
+    var items = edgeSrc.split('/');
+    if (items.length >= 3) {
+        return items[2];
+    }
+    return '';
+};
+
+window.getEdgeHlsUrlAjax = function () {
+    return "/get_edge_hls_url_ajax/";
+};
+
+setInterval(monitorHls, monitorMs);
+
+    if (window.canhls == 'maybe' || window.canhls == 'probably') {
+        var posterUrl = 'https://cbjpeg.stream.highwebmedia.com/stream?room=hotfallingdevil&f=' + Math.random();
+        var html = "<div id='still_video' style='display: none'>";
+        
+        html += "<video id='still_video_object' ";
+        html += "src='https://edge140.stream.highwebmedia.com/live-hls/amlst:hotfallingdevil-sd-8cf48b942c13b98ee3a3189c0b9c7cc930eafcd98f9c427b6d5ca3cbd3fb76e4_trns_h264/playlist.m3u8' poster='" + posterUrl + "'";
+        html += "width='498px' height='312px'";
+        html += "webkit-playsinline playsinline></video></div>";
+        $('#still_video_container').html(html);
+        $('#still_video').show();
+        if (typeof(resizable_player) != "undefined") {
+            resizable_player.init('1' == '1', true);
+        }
+        initHlsPlayer($('#still_video_object')[0], 'https://edge140.stream.highwebmedia.com/live-hls/amlst:hotfallingdevil-sd-8cf48b942c13b98ee3a3189c0b9c7cc930eafcd98f9c427b6d5ca3cbd3fb76e4_trns_h264/playlist.m3u8');
+
+    } else if (Hls.isSupported()) {
+        var posterUrl = 'https://cbjpeg.stream.highwebmedia.com/stream?room=hotfallingdevil&f=' + Math.random();
+        var html = "<div id='still_video2' style='display: none'>";
+        html += "<video id='still_video_object' ";
+        html += "class='video-js vjs-default-skin vjs-16-9' "
+        html += "controls muted poster='" + posterUrl + "' ";
+        html += "webkit-playsinline playsinline autoplay><source src='https://edge140.stream.highwebmedia.com/live-hls/amlst:hotfallingdevil-sd-8cf48b942c13b98ee3a3189c0b9c7cc930eafcd98f9c427b6d5ca3cbd3fb76e4_trns_h264/playlist.m3u8' type='application/x-mpegURL' ></video></div>";
+        $('#still_video_container').html(html);
+
+        var video = document.getElementById('still_video_object');
+        window.jsplayer = videojs(video, {
+            autoplay: true,
+            html5: {
+                hlsjsConfig: {
+                    debug: false,
+                    liveSyncDuration: 3,
+                    liveSyncDurationCount: undefined,
+                    liveDurationInfinity: Infinity,
+                    liveMaxLatencyDuration: 7,
+                    liveMaxLatencyDurationCount: undefined,
+                    liveBackBufferLength: 30,
+                }
+            },
+            controlBar: {
+                playToggle: false,
+                progressControl: false,
+                remainingTimeDisplay: false,
+                durationDisplay: false,
+                currentTimeDisplay: false,
+                timeDivider: false
+            }
+        });
+        window.jsplayer.qualityPickerPlugin();
+        initHlsPlayer(jsplayer, 'https://edge140.stream.highwebmedia.com/live-hls/amlst:hotfallingdevil-sd-8cf48b942c13b98ee3a3189c0b9c7cc930eafcd98f9c427b6d5ca3cbd3fb76e4_trns_h264/playlist.m3u8');
+
+        $('#still_video2').show();
+        if (typeof(resizable_player) != "undefined") {
+            resizable_player.init('1' == '1', false);
+            resizable_player.control_bar_height = 0;
+            
+        }
+    } else {
+        //js fallback
+
+    }
+}
+
+
+if (typeof resizable_player != "undefined") {
+    resizable_player.set_resolution_to_max();
+}
+if (typeof $.mydefchatconn != "undefined") {
+    $.mydefchatconn('scroll_chat_into_view');
+}
+$(window).bind('resize', function (event) {
+    if (this == event.target) {
+        if (typeof resizable_player != "undefined") {
+            resizable_player.set_resolution_to_max();
+        }
+    }
+});
+
+
+});
+
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"6f524845d1","agent":"","transactionName":"MwYEbUdYXxJQWhULDApMIExbWkUIXldOAQsFF0hPXFxGEgtrDg0OMgoDThteVBU=","atts":"H0ETGw9CEwBfVg89BQgCAUoXAxNDHRsUAzwABhBQVlxuFUhJBEBZRgcDSl5NXhETFUMRChAGOVBRGwtQHRsEDgoDCgRVUGZCEV1QFT0XARASShcDE0F0VAMHBycCC0p6V3IjA2sEEBYKQzJRUFhFBEN0DgYGIAYAWEBVRUETFUMXAjsMFWZDXEMSWFYPQFlGQUobV1xCFW5eFAcQFzwBXFobC0NhbUNOQQEPD15cW10EbkoRDgoQPBJcRk1CPl9KQ1hBRAYLW1BdUgMDGRMNDAkVD1xCVF4FVBlDTkEREANLalBVQwsJTUARARITXEZNbgleShVAWUYADlhBTEMDUE0ETAALDkQVF0pYFVRmAA4KBRBEAxdaWQBFTBMAAhAGSFpaVBNNE0sEExYBEBJmWFxFCV5dQ1hBIyYyGxkbQQBDWAwRQV5BHWUXU14IX2YOFAYWDwdAaRsLQW0bUD5BSEM6G1ZYXBFQUAYMP0ZZRmUXTVAuQns9QE9EP0RcWFtUBW5PCAYGCzwJV1lAbUMLGT1AUjhBShlpG1UIQlgDDgY7EAlMW11tQwsZPUBSOEFKGWkbRQ5ESz1AWUQ/RF1hVAE9ExVBPkEJDARQWVxjBFVQEwcAED9EAxVlEwBETQ4+QUhDOhtBWEMGVE09QFlEP0RmV1VQD1plQx9BSEEFW2pPVBNCUA4MQV5RShtAWG4OQmYHAw4NDx8bDxt+EVRXIzEnRk9ETEZcQw9QVARAWUY8OVhbVl8+bhtNQBANFwNmUVZcAFhXQ1hBBwsHTUBLUwBFXE8BDAlBShtAWG4DQ1YWEQYWPBBcR0pYDl8bW0BSV01WGxkbQwRQVT4LE0ZZRA4CFwRVHwtTUU1VV1MbGRtTE15OEgcROwoCGw8bBlNXDVQEAF1OVFtWCRxVUwsHT1oAVwAUBwBVA1NbU1pXUFUCGxkbciduew4WQV5XVxUXTFA+VVwXCwABPABYWFBdGBMDQy0XDAYUGxkbQw5eVD4RFwUXE0oXAxMNWE8EQE9GEQNfUEtUExMDQwoXEBMVAxoWU09TXBIWAAsNElxbTVgPVUwSFhEdTRJWRRYTTRNaAA88EAIBGw8bWQUTFUMQDAsOOUxGXENDCxsJDRcCAgpVXFdWBVRPCA5BSEERVWpRXhJFG1tAAAwCEkxHW1AVVBcCDQ5GT0RLUEhEBEJNPhICEAtEAxcWVAxTXAVNCwsXAFhZVVgPVl0EFAoITEQVF0pYBl9MET0HBRcDGw8JHUNTXBIWPAMWA0pGZlgREwNDVVRKVlIXBwsCTwANVEBPRgQPTWpaXgxcUBVAWUZbBA5XAQVRCQpDTkERAjlKQUtYD1YbW0AuCxkPVVlYHlQfCUFKO1VSXRl6SVQPc2olQgIJB1ANHBlwEUFVBDUGBigPTRoPAVQfCE9TVkRLLXFhdH1NEVUICQZEJANaXlYYQWdcExEKCw1JCAYXAUFiWAcDEQ1MUAkAFwBPAAxBMRYWBUkLGwkTTRN6Jz0xBRpEAxcMCFFQDFlaVQdRX1xRWAlTHGkpOkFIQRNYaltDDkZKBBA8AgILUFlAE1sTagAEAhYKRERI","applicationID":"24279235","errorBeacon":"bam.nr-data.net","applicationTime":227}</script>
+</body>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/CACHE/js/output.92c98302d256.js"></script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                setTimeout(function () {
+                    var fossilOptions = {};
+                    Fossil.get(fossilOptions, function (components) {
+                    	var values = components.map(function (component) { return component.value });
+                        var murmur = Fossil.x64hash128(values.join(''), 31);
+                        $.post("/fossil/i/", {
+                        	'result': Base64.encode(murmur)
+                        });
+                    });
+                }, 1000);
+            });
+        </script>
+<script type="text/javascript">
+/* Add experiments in case they're required by TS code and haven't been set yet. */
+if (window.experiments === undefined) {
+    window.experiments = {
+        eligible: "[\u0027EmbedCamsOnCB2Rerun\u0027, \u0027TheaterModeDefault\u0027]",
+        active: "[]",
+    };
+}
+</script>
+<script type="text/javascript">
+if (window.group_shows_enabled === undefined) {
+    window.group_shows_enabled = false
+}
+</script>
+<script type="text/javascript" src="https://ssl-ccstatic.highwebmedia.com/cachebust/base-prod-8b7b84083.js"></script>
+<script type="text/javascript">
+    (function() {
+        // Minimal extend implementation suitable for our single use case below
+        var extend = Object.assign || function (obj) {
+            var others = Array.prototype.slice.call(arguments, 1);
+            for (var i = 0; i < others.length; i++) {
+                var other = others[i];
+                for (var key in other) {
+                    if (other.hasOwnProperty(key)) {
+                        obj[key] = other[key];
+                    }
+                }
+            }
+            return obj;
+        };
+        window["tsInstance"] = new TS(extend({
+            no_ads: true,
+            logged_in_user: JSON.parse('null'),
+            push_service_tokens: JSON.parse('null'),
+            flags: {
+                token_balance_push_enabled:true,
+                news_push_enabled:true,
+            },
+            settings: {
+                push_service_url: ''
+            },
+        }, JSON.parse('{\u0022embed_video_only\u0022: 1, \u0022room_name\u0022: \u0022hotfallingdevil\u0022}')));
+
+    })();
+</script>
+</html>

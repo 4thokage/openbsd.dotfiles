@@ -1,0 +1,1389 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="shortcut icon" href="/static/favicon.ico"/>
+
+    <title>
+    efetch error LWP::Protocol::https not installed
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    
+    
+
+        
+        <link rel="stylesheet" href="/static/CACHE/css/a263178e5ed2.css" type="text/css" />
+
+        <script type="text/javascript" src="/static/CACHE/js/6f945e6b21cf.js"></script>
+
+    
+
+    
+
+    <script type="text/javascript"
+            src="/static/lib/pagedown/Markdown.Converter.js"></script>
+    <script type="text/javascript"
+            src="/static/lib/pagedown/Markdown.Sanitizer.js"></script>
+    <script type="text/javascript"
+            src="/static/lib/pagedown/Markdown.Editor.js"></script>
+
+    
+    <link rel="stylesheet" href=/static/lib/pagedown/markdown.css>
+
+
+
+    <script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.pubads().collapseEmptyDivs(true);
+googletag.defineSlot('/64550467/special_sidebar', [220, 250], 'special_sidebar').addService(googletag.pubads());
+googletag.defineSlot('/64550467/Leaderboard', [728, 90], 'div-gpt-ad-1412001329349-0').addService(googletag.pubads());
+googletag.defineSlot('/64550467/Sidebar-220x250', [220, 250], 'div-gpt-ad-1412001329349-1').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-0135720358970849",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+
+    <script type="application/javascript">
+        
+            USER_ID = null;
+        
+        TITLE_SEARCH_URL = "/local/search/title/"
+        POST_DISPLAY_URL = "/p/"
+    </script>
+</head>
+<body>
+
+<div class="container" id="content">
+
+    
+    
+    
+
+
+<div class="row visible-lg visible-md">
+    <div class="col-md-12 text-center" id="topnav">
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Latest/">Latest</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Open/">Open</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/RNA-Seq/">RNA-Seq</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/ChIP-Seq/">ChIP-Seq</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/SNP/">SNP</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Assembly/">Assembly</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Tutorials/">Tutorials</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Tools/">Tools</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Jobs/">Jobs</a>
+                </div>
+            
+                <div class="col-md-1 ">
+                    <a href="/t/Forum/">Forum</a>
+                </div>
+            
+            <div class="col-md-1 "><a href="/planet/">Planet</a></div>
+            <div class="col-md-1 "><a href="/t/">All &raquo;</a></div>
+        </ul>
+    </div>
+</div>
+
+<div class="row visible-sm visible-xs">
+
+    <div class="col-xs-4">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                 View Posts 
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                
+                    <li>
+                        <a href="/t/Latest">Latest</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/Open">Open</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/RNA-Seq">RNA-Seq</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/ChIP-Seq">ChIP-Seq</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/SNP">SNP</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/Assembly">Assembly</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/Tutorials">Tutorials</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/Tools">Tools</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/Jobs">Jobs</a>
+                    </li>
+                
+                    <li>
+                        <a href="/t/Forum">Forum</a>
+                    </li>
+                
+                <li><a href="/planet/">Planet</a></li>
+                <li><a href="/t/">All &raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="col-xs-4 text-center" style="margin-bottom:5px">
+        <a role="button" class="btn btn-primary" href="/">
+            <i class="fa fa-star fa-1x"></i> Home </a>
+        </a>
+
+    </div>
+
+    <div class="col-xs-4 ">
+        <div class="btn-group pull-right">
+
+            
+                <div>
+                    <a class="btn btn-primary active" role="button" href="/site/login/">
+                        <i class="fa fa-user fa-1x"></i> Log In
+                    </a>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="row visible-lg visible-md">
+
+    <div class="col-md-12" id="navbar">
+
+        <div class="col-lg-3 visible-lg" id="logo">
+            <a href="/"><img src="/static/biostar2.logo.png"></a>
+        </div>
+
+        <div class="col-md-3 visible-md text-center">
+            <a href="/">
+                <a href="/"><img style="width:200px; height: auto;" src="/static/biostar2.logo.png"></a>
+            </a>
+        </div>
+
+        
+
+            <div class="col-md-9 top text-center">
+                 Welcome to Biostar!
+                <span class="pull-right">
+                    <a href="/info/about/">about</a> &bull; <a href="/info/faq/">faq</a>
+                    &bull; <a href="/info/rss/">rss <i class="fa fa-rss"></i></a>
+                </span>
+            </div>
+
+            <div class="col-md-2 col-md-offset-10 mid ">
+                <a href="/user/list/">
+                    <div><i class="fa fa-globe"></i>
+                    </div>
+                    <div>Community</div>
+                </a>
+            </div>
+
+            <div class="col-md-2 mid ">
+                <b><a href="/site/login/">
+                    <div><i class="fa fa-user fa-1x"></i></div>
+                    <div>Log In</div>
+                </a></b>
+            </div>
+
+            <div class="col-md-2 mid ">
+                <b><a href="/accounts/signup/">
+                    <div><i class="fa fa-arrow-circle-up fa-1x"></i></div>
+                    <div>Sign Up</div>
+                </a></b>
+            </div>
+
+            <div class="col-md-2 mid newpost">
+                <a href="/p/new/post/" class="navitem ">
+                    <div><i class="fa fa-plus-circle fa-1x"></i></div>
+                    <div>Add New Post</div>
+                </a>
+            </div>
+
+        
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+    <div class="row" itemscope itemtype="http://schema.org/QAPage">
+
+        <div class="col-xs-12 col-md-9">
+
+            <div id="post-details" >
+                
+                <span itemscope itemtype="http://schema.org/Question">
+                    
+
+<div class="post-body Open clearfix">
+
+
+    
+        
+
+    <div align="center" style="padding-bottom:1em">
+        <!-- Leaderboard 728x90 -->
+        <div id='div-gpt-ad-1412001329349-0' style='width:728px; height:90px;'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function () {
+                    googletag.display('div-gpt-ad-1412001329349-0');
+                });
+            </script>
+        </div>
+    </div>
+
+
+
+        <div class="title" >Question: <span itemprop="name">efetch error LWP::Protocol::https not installed</span></div>
+
+    
+
+    <div class="post vote-box visible-lg visible-md" data-post_id="275761">
+
+
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-2x"></i></div>
+
+        <div class="count" itemprop="voteCount">1</div>
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="bookmark" title="Bookmark!">
+            <i class="fa fa-book fa-2x"></i>
+        </div>
+
+        
+
+
+
+    </div>
+
+    <div>
+
+        <a name="275761"></a>
+        
+        <div class="content" >
+
+            
+
+
+
+
+<div class="col-xs-3 col-md-2 box pull-right text-center visible-lg visible-md">
+        <div><a href="/u/41005/"><img src="https://secure.gravatar.com/avatar/69a598dbad7a7f82d7d11dbe829e1ee1?s=82&d=identicon" alt="gravatar for traviata"/></a></div>
+        <div class="ago">2.6 years ago by</div>
+        <div class="uname">
+
+
+<a href="/u/41005/">traviata</a> &bull; <b>10</b></div>
+        <div class="loc"></div>
+</div>
+
+<div class="box text-center visible-sm visible-xs">
+    <div class="uname">
+
+
+<a href="/u/41005/">traviata</a> &bull; <b>10</b> wrote:</div>
+</div>
+
+            <span itemprop="text"><p>I'm trying to use fetch to download a sequence. However, I keep on getting <code>501 Protocol scheme 'https' is not supported (LWP::Protocol::https not installed)</code> even though I have ran <code>sudo cpan install LWP::Protocol::https</code></p>
+
+<p>The terminal output is as follows:</p>
+
+<pre class="pre"><code class="language-bash">$ efetch -db nuccore -id AF086833 -format fasta
+501 Protocol scheme 'https' is not supported (LWP::Protocol::https not installed)
+No do_post output returned from '<a rel="nofollow" href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&amp;id=AF086833&amp;rettype=fasta&amp;retmode=text&amp;edirect=7.00&amp;tool=edirect&amp;email=kjsdhjasv@MacBook-Air.local'">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&amp;id=AF086833&amp;rettype=fasta&amp;retmode=text&amp;edirect=7.00&amp;tool=edirect&amp;email=kjsdhjasv@MacBook-Air.local'</a>
+Result of do_post http request is
+$VAR1 = bless( {
+                 '_rc' =&gt; 501,
+                 '_content' =&gt; 'LWP will support https URLs if the LWP::Protocol::https module
+is installed.
+',
+                 '_msg' =&gt; 'Protocol scheme \'https\' is not supported (LWP::Protocol::https not installed)',
+                 '_request' =&gt; bless( {
+                                        '_method' =&gt; 'POST',
+                                        '_content' =&gt; 'db=nuccore&amp;id=AF086833&amp;rettype=fasta&amp;retmode=text&amp;edirect=7.00&amp;tool=edirect&amp;email=kjsdhjasv@MacBook-Air.local',
+                                        '_uri' =&gt; bless( do{\(my $o = '<a rel="nofollow" href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi')">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi')</a>}, 'URI::https' ),
+                                        '_headers' =&gt; bless( {
+                                                               'content-type' =&gt; 'application/x-www-form-urlencoded',
+                                                               'user-agent' =&gt; 'libwww-perl/6.26'
+                                                             }, 'HTTP::Headers' )
+                                      }, 'HTTP::Request' ),
+                 '_headers' =&gt; bless( {
+                                        'client-warning' =&gt; 'Internal response',
+                                        'content-type' =&gt; 'text/plain',
+                                        '::std_case' =&gt; {
+                                                          'client-warning' =&gt; 'Client-Warning',
+                                                          'client-date' =&gt; 'Client-Date'
+                                                        },
+                                        'client-date' =&gt; 'Mon, 02 Oct 2017 15:56:40 GMT'
+                                      }, 'HTTP::Headers' )
+               }, 'HTTP::Response' );
+</code></pre>
+</span>
+
+
+            <div class="clearfix">
+                
+                    <div class="tags clearfix" style="margin-bottom:0.5em;">
+                        
+                            <a class="tag" href="/t/efetch/">efetch</a>
+                        
+
+                    &bull; 3.6k views
+
+                    </div>
+                
+
+                
+                
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="275761" id="C275761">ADD COMMENT</span>
+
+    &bull; <a href="/p/275761/">link</a>
+    
+
+    
+        
+        &bull;
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" id="F275761" data-toggle="dropdown">
+                
+                    Not following
+                
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropup" role="menu">
+
+                <li><a href="/local/sub/275761/local/">Follow via messages</a></li>
+                <li><a href="/local/sub/275761/email/">Follow via email</a></li>
+                <li><a href="/local/sub/275761/nofollow/">Do not follow</a></li>
+            </ul>
+        </div>
+    
+
+    <span class="userlink muted">
+            
+            modified 14 months ago
+            
+                by 
+
+
+<a href="/u/6756/">indexofire</a> &bull; <b>30</b>
+            
+            &bull;
+        
+        written <span itemprop="dateCreated" content="2017-10-02T11:02:50.862698-05:00">
+        2.6 years ago</span> by 
+
+
+<a href="/u/41005/">traviata</a> &bull; <b>10</b>
+    </span>
+</div>
+
+
+            </div>
+
+            
+            <div class="comment" itemprop="comment">
+                <div class="indent">
+
+<a name="275765"></a>
+<div class="entry Open  clearfix">
+
+    <div class="comment vote-box" data-post_id="275765">
+        <div class="vote mark off " data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-1x"></i></div>
+        <div class="count"></div>
+    </div>
+
+   <p>I am unable to replicate the error, are you sure that the edirect eutils are installed properly?</p>
+
+
+    
+    
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="275765" id="C275765">ADD REPLY</span>
+
+    &bull; <a href="/p/275761/#275765">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+        written <span itemprop="dateCreated" content="2017-10-02T11:05:45.391454-05:00">
+        2.6 years ago</span> by 
+
+
+<a href="/u/9571/">Sej Modha</a> &diams; <b>4.7k</b>
+    </span>
+</div>
+
+
+</div>
+</div>
+<div class="indent">
+
+<a name="275801"></a>
+<div class="entry Open  clearfix">
+
+    <div class="comment vote-box" data-post_id="275801">
+        <div class="vote mark off " data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-1x"></i></div>
+        <div class="count"></div>
+    </div>
+
+   <p>Probably conflict of Perl versions. What is the result of </p>
+
+<pre class="pre"><code class="language-bash">which perl
+</code></pre>
+
+<p>and </p>
+
+<pre class="pre"><code class="language-bash">head -n1 $(which efetch)
+</code></pre>
+
+
+    
+    
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="275801" id="C275801">ADD REPLY</span>
+
+    &bull; <a href="/p/275761/#275801">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+        written <span itemprop="dateCreated" content="2017-10-02T14:36:44.502288-05:00">
+        2.6 years ago</span> by 
+
+
+<a href="/u/6093/">h.mon</a> &diams; <b>29k</b>
+    </span>
+</div>
+
+
+</div>
+</div>
+<div class="indent">
+
+<a name="367071"></a>
+<div class="entry Open  clearfix">
+
+    <div class="comment vote-box" data-post_id="367071">
+        <div class="vote mark off " data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-1x"></i></div>
+        <div class="count"></div>
+    </div>
+
+   <p>I've installed all the conda packages in your list. It still pop out the error msg. any ideas?</p>
+
+
+    
+    
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="367071" id="C367071">ADD REPLY</span>
+
+    &bull; <a href="/p/275761/#367071">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+        written <span itemprop="dateCreated" content="2019-03-02T20:22:50.519981-06:00">
+        14 months ago</span> by 
+
+
+<a href="/u/6756/">indexofire</a> &bull; <b>30</b>
+    </span>
+</div>
+
+
+</div>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+                </span>
+
+
+                
+                
+                    <span itemscope itemtype="http://schema.org/Answer">
+                        
+
+<div class="post-body Open clearfix">
+
+
+    
+
+    <div class="post vote-box visible-lg visible-md" data-post_id="275814">
+
+
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-2x"></i></div>
+
+        <div class="count" itemprop="voteCount">7</div>
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="bookmark" title="Bookmark!">
+            <i class="fa fa-book fa-2x"></i>
+        </div>
+
+        
+            <div class="vote mark on tip" data-toggle="tooltip" data-placement="top"
+                 data-type="accept" title="Accept!">
+                <i class="fa fa-check-circle-o fa-2x"></i>
+            </div>
+        
+
+
+
+    </div>
+
+    <div>
+
+        <a name="275814"></a>
+        
+        <div class="content" >
+
+            
+
+
+
+
+<div class="col-xs-3 col-md-2 box pull-right text-center visible-lg visible-md">
+        <div><a href="/u/22850/"><img src="https://secure.gravatar.com/avatar/a1153976bb5d406f3002a65f0ece23fe?s=82&d=identicon" alt="gravatar for tarek.mohamed"/></a></div>
+        <div class="ago">2.6 years ago by</div>
+        <div class="uname">
+
+
+<a href="/u/22850/">tarek.mohamed</a> &bull; <b>260</b></div>
+        <div class="loc"></div>
+</div>
+
+<div class="box text-center visible-sm visible-xs">
+    <div class="uname">
+
+
+<a href="/u/22850/">tarek.mohamed</a> &bull; <b>260</b> wrote:</div>
+</div>
+
+            <span itemprop="text"><p>Hi,</p>
+
+<p>How did you install Entrez direct tool?</p>
+
+<p>This is due to a mistake in the installation of Entrez direct tool. Try this code to install it!</p>
+
+<pre class="pre"><code class="language-bash">mkdir -p ~/src 
+curl <a rel="nofollow" href="https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.zip">https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.zip</a> &gt; ~/src/edirect.zip 
+unzip -o ~/src/edirect.zip  -d ~/src 
+echo 'export PATH=~/src/edirect:$PATH' &gt;&gt; ~/.bashrc 
+source  ~/.bashrc
+</code></pre>
+
+<p>Tarek</p>
+</span>
+
+
+            <div class="clearfix">
+                
+
+                
+                
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="275814" id="C275814">ADD COMMENT</span>
+
+    &bull; <a href="/p/275761/#275814">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+            modified 2.6 years ago
+            
+            &bull;
+        
+        written <span itemprop="dateCreated" content="2017-10-02T17:09:00.150627-05:00">
+        2.6 years ago</span> by 
+
+
+<a href="/u/22850/">tarek.mohamed</a> &bull; <b>260</b>
+    </span>
+</div>
+
+
+            </div>
+
+            
+            <div class="comment" itemprop="comment">
+                <div class="indent">
+
+<a name="276209"></a>
+<div class="entry Open  clearfix">
+
+    <div class="comment vote-box" data-post_id="276209">
+        <div class="vote mark off " data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-1x"></i></div>
+        <div class="count"></div>
+    </div>
+
+   <p>Your solution worked. Thanks so much!</p>
+
+
+    
+    
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="276209" id="C276209">ADD REPLY</span>
+
+    &bull; <a href="/p/275761/#276209">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+        written <span itemprop="dateCreated" content="2017-10-04T13:04:47.067882-05:00">
+        2.6 years ago</span> by 
+
+
+<a href="/u/41005/">traviata</a> &bull; <b>10</b>
+    </span>
+</div>
+
+
+</div>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+                    </span>
+                
+                    <span itemscope itemtype="http://schema.org/Answer">
+                        
+
+<div class="post-body Open clearfix">
+
+
+    
+
+    <div class="post vote-box visible-lg visible-md" data-post_id="362494">
+
+
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-2x"></i></div>
+
+        <div class="count" itemprop="voteCount">3</div>
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="bookmark" title="Bookmark!">
+            <i class="fa fa-book fa-2x"></i>
+        </div>
+
+        
+
+
+
+    </div>
+
+    <div>
+
+        <a name="362494"></a>
+        
+        <div class="content" >
+
+            
+
+
+
+
+<div class="col-xs-3 col-md-2 box pull-right text-center visible-lg visible-md">
+        <div><a href="/u/52/"><img src="https://secure.gravatar.com/avatar/a6105fd39d6148733198ccc99058b63e?s=82&d=identicon" alt="gravatar for Liam Thompson"/></a></div>
+        <div class="ago">15 months ago by</div>
+        <div class="uname">
+
+
+<a href="/u/52/">Liam Thompson</a> &bull; <b>140</b></div>
+        <div class="loc">Gothenburg, Sweden</div>
+</div>
+
+<div class="box text-center visible-sm visible-xs">
+    <div class="uname">
+
+
+<a href="/u/52/">Liam Thompson</a> &bull; <b>140</b> wrote:</div>
+</div>
+
+            <span itemprop="text"><p>For those who have installed entrez-direct using Conda virtual environment, and are encountering the error above, you can install the libraries in the following way into the already activated virtual environment.</p>
+
+<pre class="pre"><code class="language-bash">conda install perl-io-socket-ssl perl-net-ssleay perl-lwp-protocol-https entrez-direct
+</code></pre>
+</span>
+
+
+            <div class="clearfix">
+                
+
+                
+                
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="362494" id="C362494">ADD COMMENT</span>
+
+    &bull; <a href="/p/275761/#362494">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+        written <span itemprop="dateCreated" content="2019-02-07T03:41:12.950288-06:00">
+        15 months ago</span> by 
+
+
+<a href="/u/52/">Liam Thompson</a> &bull; <b>140</b>
+    </span>
+</div>
+
+
+            </div>
+
+            
+            <div class="comment" itemprop="comment">
+                <div class="indent">
+
+<a name="370432"></a>
+<div class="entry Open  clearfix">
+
+    <div class="comment vote-box" data-post_id="370432">
+        <div class="vote mark off " data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-1x"></i></div>
+        <div class="count"></div>
+    </div>
+
+   <p>add <code>-c bioconda</code> if bioconda is not in your channels already</p>
+
+
+    
+    
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="370432" id="C370432">ADD REPLY</span>
+
+    &bull; <a href="/p/275761/#370432">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+            modified 14 months ago
+            
+            &bull;
+        
+        written <span itemprop="dateCreated" content="2019-03-20T07:32:27.004445-05:00">
+        14 months ago</span> by 
+
+
+<a href="/u/53260/">russel2620</a> &bull; <b>0</b>
+    </span>
+</div>
+
+
+</div>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+                    </span>
+                
+                    <span itemscope itemtype="http://schema.org/Answer">
+                        
+
+<div class="post-body Open clearfix">
+
+
+    
+
+    <div class="post vote-box visible-lg visible-md" data-post_id="338878">
+
+
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="vote" title="Upvote!">
+            <i class="fa fa-thumbs-o-up fa-2x"></i></div>
+
+        <div class="count" itemprop="voteCount">2</div>
+
+        <div class="vote mark off tip" data-toggle="tooltip" data-placement="top"
+             data-type="bookmark" title="Bookmark!">
+            <i class="fa fa-book fa-2x"></i>
+        </div>
+
+        
+
+
+
+    </div>
+
+    <div>
+
+        <a name="338878"></a>
+        
+        <div class="content" >
+
+            
+
+
+
+
+<div class="col-xs-3 col-md-2 box pull-right text-center visible-lg visible-md">
+        <div><a href="/u/49160/"><img src="https://secure.gravatar.com/avatar/4c1cfd993ae764c716e4e17f745655f8?s=82&d=identicon" alt="gravatar for Jinguo"/></a></div>
+        <div class="ago">20 months ago by</div>
+        <div class="uname">
+
+
+<a href="/u/49160/">Jinguo</a> &bull; <b>20</b></div>
+        <div class="loc"></div>
+</div>
+
+<div class="box text-center visible-sm visible-xs">
+    <div class="uname">
+
+
+<a href="/u/49160/">Jinguo</a> &bull; <b>20</b> wrote:</div>
+</div>
+
+            <span itemprop="text"><p>I met the same problem when I use efetch, but the given solutions didn't work out.</p>
+
+<p>I tried </p>
+
+<pre class="pre"><code class="language-bash">cpanm Crypt::SSLeay IO::Socket::SSL::Utils LWP::Protocol::https
+</code></pre>
+
+<p>and it worked!</p>
+</span>
+
+
+            <div class="clearfix">
+                
+
+                
+                
+
+<div class="post-action">
+
+    <span class="label label-default add-comment" data-value="338878" id="C338878">ADD COMMENT</span>
+
+    &bull; <a href="/p/275761/#338878">link</a>
+    
+
+    
+
+    <span class="userlink muted">
+            
+            modified 3 days ago
+            
+                by 
+
+
+<a href="/u/8494/">RamRS</a> &diams; <b>27k</b>
+            
+            &bull;
+        
+        written <span itemprop="dateCreated" content="2018-09-19T21:41:11.135345-05:00">
+        20 months ago</span> by 
+
+
+<a href="/u/49160/">Jinguo</a> &bull; <b>20</b>
+    </span>
+</div>
+
+
+            </div>
+
+            
+            <div class="comment" itemprop="comment">
+                
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+                    </span>
+                
+
+                
+                <span id="csrf_token"><input type='hidden' name='csrfmiddlewaretoken' value='YsscSVmI5zXKfjc5QbBiKMaYuDQZVHjf' /></span>
+
+                
+                <div>
+
+                    
+
+                    
+                    
+                        <div class="alert alert-info">
+                            Please <a href="/site/login/">log in</a> to add an answer.
+                        </div>
+                    
+
+                    
+                    
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-3 sidebar">
+            
+                <h4>Similar posts &bull; <a href="/local/search/page/">Search &raquo;</a></h4>
+
+                
+
+                <ul class="more-like-this">
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/390888/">error while downloading taxonomy using E-utilities </a>
+
+                                    <div class="peek">   Hi,
+
+I am using below command to extract bacterial taxonomy by using gene id name in txt file,...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/366519/">How to solve the elink error ?  </a>
+
+                                    <div class="peek">Hi
+I am trying to get assembly number ( for example GCF_001166025.1 is for NZ_CQEB01000017.1) for...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/322913/">Using NCBIs EDirect to download pubmed abstract </a>
+
+                                    <div class="peek">This is what I have done:
+
+    esearch -db pubmed -query &quot;lycopene cyclase&quot; | efetch -format abst...</div>
+                                </li>
+                            
+                        
+                        
+                            
+
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/250233/"> 500 Can&#39;t verify SSL peers without knowing which Certificate Authorities to trust </a>
+
+                                    <div class="peek">   
+how to solve this? I don&#39;t know how to install Mozilla::CA module on OS X.
+
+    ➜  ~ efetch -...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/376539/">Entrez-efetch error. What could be wrong with my efetch usage? </a>
+
+                                    <div class="peek">Hey everyone, I am trying to download an sra file via the unix command line and below is my efetc...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/292625/">Efetch from nuccore db using URL / Perl fails with Bad Gateway error for GenBank, but succeeds for FASTA.  </a>
+
+                                    <div class="peek">Hello all,
+
+My previously working perl script to fetch a given region suddenly has failed. I use ...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/269860/">Using NCBIs EDirect to download mammalian refseq_rna database  </a>
+
+                                    <div class="peek">I want to download the **mammalian refseq_rna** database using NCBI&#39;s EDirect on the command line...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/255708/">Transfer GI to taxID by efetch in a loop </a>
+
+                                    <div class="peek">I am a new guy and want to add taxID to the fasta file (1.fa) which begins with GI for each line....</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/152571/">Retrieve a large dataset of biological sequences with Perl </a>
+
+                                    <div class="peek">Hi. 
+
+I am trying a Perl script from NCBI´s EUtils to retrieve a large dataset of sequences of th...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/258888/">URL for NCBI Efetch + XML with full annotation table </a>
+
+                                    <div class="peek">Looking at https://www.biostars.org/p/258878/ ? i&#39;ve tried to download the full record of **CM000...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/315950/">Unable to retrieve Fasta of certain NCBI entries given their accession number </a>
+
+                                    <div class="peek">Hello everyone
+
+I have the following perl code that prints an entry&#39;s FASTA sequence to a file gi...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                        
+                            
+                                <li>
+                                    <a href="/p/44875/">How To Properly Limit Result From Eutils To Get Tinyseq Xml Output </a>
+
+                                    <div class="peek">I have a gene of interest. Eg., TPMP
+It is this one:
+http://www.ncbi.nlm.nih.gov/sites/entrez?db=...</div>
+                                </li>
+                            
+                        
+                        
+                    
+                        
+                            
+                        
+                        
+                    
+                </ul>
+            
+        </div>
+    </div>
+    <script src="/static/lib/prism/prism.js" type="text/javascript"></script>
+
+
+
+    
+    
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row toc">
+
+            <div class="col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-3">
+                <div class="title">Content</div>
+                <ul class="flat">
+                    <li><a href="/local/search/page/">Search</a></li>
+                    <li><a href="/user/list/">Users</a></li>
+                    <li><a href="/t/">Tags</a></li>
+                    <li><a href="/b/list/">Badges</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-3 col-md-2">
+                <div class="title">Help</div>
+                <ul class="flat">
+                    <li><a href="/info/about/">About</a></li>
+                    <li><a href="/info/faq/">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-3 col-md-2 ">
+                <div class="title">Access</div>
+                <ul class="flat">
+                    <li><a href="/info/rss/">RSS</a></li>
+                    <li>Stats</li>
+                    <li><a href="/info/api/">API</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                Use of this site constitutes acceptance of our <a href="/info/policy/">User
+                Agreement
+                and Privacy
+                Policy</a>.
+            </div>
+            <div class="col-md-12 text-center">
+                Powered by <a href="https://github.com/ialbert/biostar-central">Biostar</a>
+                version 2.3.0
+            </div>
+        </div>
+    
+
+    
+    <div id="traffic">Traffic: 1202 users visited in the last hour</div>
+
+ 	<div align="center" style="margin-top:2em">
+    <script type="text/javascript"
+            src="//rh.revolvermaps.com/0/0/6.js?i=7pci0h9z8v6&amp;m=0&amp;s=300&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0"
+            async="async"></script>
+</div>
+
+</div>
+
+
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-101522-12']);
+        _gaq.push(['_setDomainName', 'biostars.org']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</body>
+</html>

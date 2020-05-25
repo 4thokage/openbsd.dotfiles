@@ -1,0 +1,943 @@
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie10 lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="no-js lt-ie10" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><!-- x --> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<link href="https://www.runescape.com/css/rsp777_basic-101.css" rel="stylesheet" type="text/css" media="all">
+
+<script src="https://www.runescape.com/js/c/responsive/vendor-1.js"></script>
+<title>Old School  Hiscores</title>
+<meta name="keywords" content="MMORPG, free RPG games online, online multiplayer, role-playing, massively multiplayer games, mmo, RuneScape, Jagex" />
+<meta name="description" content="If you're a RuneScape veteran hungry for nostalgia, get stuck right in to Old School RuneScape. Sign up for membership and re-live the adventure." />
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.runescape.com/img/global/favicon.ico" />
+<link rel="SHORTCUT ICON" href="https://www.runescape.com/img/global/favicon.ico" />
+<link rel="apple-touch-icon" href="https://www.runescape.com/img/global/mobile.png">
+<meta property="fb:app_id" content="174823375888281" />
+
+<meta property="og:title" content="Old School  Hiscores" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Oldschool RuneScape" />
+<meta property="og:image" content="https://www.runescape.com/img/rsp777/social-share-fb.jpg?1" />
+<meta property="og:url" content="https://www.runescape.com" />
+<meta property="og:description" content="If you're a RuneScape veteran hungry for nostalgia, get stuck right in to Old School RuneScape. Sign up for membership and re-live the adventure." />
+<meta name="google-site-verification" content="RFtGg-G07XweT7nQe032HocvnRPhJAsdZqrq4NX_Op8">
+<meta itemprop="name" content="RuneScape">
+<meta itemprop="description" content="If you're a RuneScape veteran hungry for nostalgia, get stuck right in to Old School RuneScape. Sign up for membership and re-live the adventure.">
+<meta name="twitter:domain" content="Oldschool.RuneScape.com">
+<meta name="twitter:url" content="https://www.runescape.com">
+<meta name="twitter:title" content="Old School  Hiscores">
+<meta name="twitter:description" content="If you're a RuneScape veteran hungry for nostalgia, get stuck right in to Old School RuneScape. Sign up for membership and re-live the adventure.">
+<meta name="twitter:image:src" content="https://www.runescape.com/img/rsp777/social-share.jpg?1">
+<meta name="twitter:site" content="@OldSchoolRS">
+<meta name='google-site-verification' content='pUwl5KYHKSZ6tbbgsR2wYNv1kbVmsYral3iFmijHTWM' />
+<link href="https://www.runescape.com/css/rsp777_hiscore-105.css" rel="stylesheet" type="text/css" media="all">
+<style>
+    
+        .leaguepoints:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_leaguepoints.png?1');
+        }
+    
+        .bountyhunterhunter:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_bountyhunterhunter.png?1');
+        }
+    
+        .bountyhunterrogue:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_bountyhunterrogue.png?1');
+        }
+    
+        .cluescrollsall:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollsall.png?1');
+        }
+    
+        .cluescrollsbeginner:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollsbeginner.png?1');
+        }
+    
+        .cluescrollseasy:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollseasy.png?1');
+        }
+    
+        .cluescrollsmedium:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollsmedium.png?1');
+        }
+    
+        .cluescrollshard:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollshard.png?1');
+        }
+    
+        .cluescrollselite:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollselite.png?1');
+        }
+    
+        .cluescrollsmaster:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cluescrollsmaster.png?1');
+        }
+    
+        .lmsrank:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_lmsrank.png?1');
+        }
+    
+        .abyssalsire:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_abyssalsire.png?1');
+        }
+    
+        .alchemicalhydra:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_alchemicalhydra.png?1');
+        }
+    
+        .barrowschests:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_barrowschests.png?1');
+        }
+    
+        .bryophyta:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_bryophyta.png?1');
+        }
+    
+        .callisto:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_callisto.png?1');
+        }
+    
+        .cerberus:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_cerberus.png?1');
+        }
+    
+        .chambersofxeric:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_chambersofxeric.png?1');
+        }
+    
+        .chambersofxericchallengemode:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_chambersofxericchallengemode.png?1');
+        }
+    
+        .chaoselemental:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_chaoselemental.png?1');
+        }
+    
+        .chaosfanatic:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_chaosfanatic.png?1');
+        }
+    
+        .commanderzilyana:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_commanderzilyana.png?1');
+        }
+    
+        .corporealbeast:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_corporealbeast.png?1');
+        }
+    
+        .crazyarchaeologist:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_crazyarchaeologist.png?1');
+        }
+    
+        .dagannothprime:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_dagannothprime.png?1');
+        }
+    
+        .dagannothrex:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_dagannothrex.png?1');
+        }
+    
+        .dagannothsupreme:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_dagannothsupreme.png?1');
+        }
+    
+        .derangedarchaeologist:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_derangedarchaeologist.png?1');
+        }
+    
+        .generalgraardor:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_generalgraardor.png?1');
+        }
+    
+        .giantmole:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_giantmole.png?1');
+        }
+    
+        .grotesqueguardians:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_grotesqueguardians.png?1');
+        }
+    
+        .hespori:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_hespori.png?1');
+        }
+    
+        .kalphitequeen:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_kalphitequeen.png?1');
+        }
+    
+        .kingblackdragon:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_kingblackdragon.png?1');
+        }
+    
+        .kraken:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_kraken.png?1');
+        }
+    
+        .kreearra:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_kreearra.png?1');
+        }
+    
+        .kriltsutsaroth:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_kriltsutsaroth.png?1');
+        }
+    
+        .mimic:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_mimic.png?1');
+        }
+    
+        .nightmare:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_nightmare.png?1');
+        }
+    
+        .obor:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_obor.png?1');
+        }
+    
+        .sarachnis:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_sarachnis.png?1');
+        }
+    
+        .scorpia:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_scorpia.png?1');
+        }
+    
+        .skotizo:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_skotizo.png?1');
+        }
+    
+        .thegauntlet:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_thegauntlet.png?1');
+        }
+    
+        .thecorruptedgauntlet:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_thecorruptedgauntlet.png?1');
+        }
+    
+        .theatreofblood:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_theatreofblood.png?1');
+        }
+    
+        .thermonuclearsmokedevil:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_thermonuclearsmokedevil.png?1');
+        }
+    
+        .tzkalzuk:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_tzkalzuk.png?1');
+        }
+    
+        .tztokjad:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_tztokjad.png?1');
+        }
+    
+        .venenatis:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_venenatis.png?1');
+        }
+    
+        .vetion:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_vetion.png?1');
+        }
+    
+        .vorkath:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_vorkath.png?1');
+        }
+    
+        .wintertodt:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_wintertodt.png?1');
+        }
+    
+        .zalcano:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_zalcano.png?1');
+        }
+    
+        .zulrah:before {
+            content: url('https://www.runescape.com/img/rsp777/game_icon_zulrah.png?1');
+        }
+    
+</style>
+</head>
+<body id="body">
+<div class="centerDiv">
+<div class="frame wide_e">
+<span style="float:right;"><a id="loginLink" href="https://secure.runescape.com/m=weblogin/loginform?theme=oldschool&mod=hiscore_oldschool&amp;ssl=1&amp;dest=overall.ws">Log in</a></span>
+</div>
+<br>
+<div class="hiscoretitlebground">
+<div class="hiscoretitleframe">
+
+<strong>Old School  Hiscores</strong><br />
+<a href="https://oldschool.runescape.com/">Home</a>
+</div>
+</div>
+<br/>
+<div align="center">
+
+<div class="ironman-nav">
+<span class="ironman-nav__option ironman-nav__option--current">Hiscores</span>
+<a class="ironman-nav__option" href="https://secure.runescape.com/m=hiscore_oldschool_ironman/">Ironman</a>
+<a class="ironman-nav__option" href="https://secure.runescape.com/m=hiscore_oldschool_ultimate/">Ultimate Ironman</a>
+<a class="ironman-nav__option" href="https://secure.runescape.com/m=hiscore_oldschool_hardcore_ironman/">Hardcore Ironman</a>
+<a class="ironman-nav__option" href="https://secure.runescape.com/m=hiscore_oldschool_deadman/">Deadman Mode</a>
+<a class="ironman-nav__option" href="https://secure.runescape.com/m=hiscore_oldschool_seasonal/">Leagues</a>
+<a class="ironman-nav__option" href="https://secure.runescape.com/m=hiscore_oldschool_tournament/">Tournament</a>
+</div>
+<div class="personal-hiscores">
+<nav class="personal-hiscores__side-banner">
+<div id="col1">
+<div id="headerCategory"></div>
+<a class="personal-hiscores__scroll-arrow personal-hiscores__scroll-arrow--up" href="#" data-js-scroll="up">Up</a>
+<div id="contentCategory">
+<a href="overall?table=0#headerHiscores" class="    Overall    ">
+Overall
+</a>
+<a href="overall?table=1#headerHiscores" class="    Attack    ">
+Attack
+</a>
+<a href="overall?table=2#headerHiscores" class="    Defence    ">
+Defence
+</a>
+<a href="overall?table=3#headerHiscores" class="    Strength    ">
+Strength
+</a>
+<a href="overall?table=4#headerHiscores" class="    Hitpoints    ">
+Hitpoints
+</a>
+<a href="overall?table=5#headerHiscores" class="    Ranged    ">
+Ranged
+</a>
+<a href="overall?table=6#headerHiscores" class="    Prayer    ">
+Prayer
+</a>
+<a href="overall?table=7#headerHiscores" class="    Magic    ">
+Magic
+</a>
+<a href="overall?table=8#headerHiscores" class="    Cooking    ">
+Cooking
+</a>
+<a href="overall?table=9#headerHiscores" class="    Woodcutting    ">
+Woodcutting
+</a>
+<a href="overall?table=10#headerHiscores" class="    Fletching    ">
+Fletching
+</a>
+<a href="overall?table=11#headerHiscores" class="    Fishing    ">
+Fishing
+</a>
+<a href="overall?table=12#headerHiscores" class="    Firemaking    ">
+Firemaking
+</a>
+<a href="overall?table=13#headerHiscores" class="    Crafting    ">
+Crafting
+</a>
+<a href="overall?table=14#headerHiscores" class="    Smithing    ">
+Smithing
+</a>
+<a href="overall?table=15#headerHiscores" class="    Mining    ">
+Mining
+</a>
+<a href="overall?table=16#headerHiscores" class="    Herblore    ">
+Herblore
+</a>
+<a href="overall?table=17#headerHiscores" class="    Agility    ">
+Agility
+</a>
+<a href="overall?table=18#headerHiscores" class="    Thieving    ">
+Thieving
+</a>
+<a href="overall?table=19#headerHiscores" class="    Slayer    ">
+Slayer
+</a>
+<a href="overall?table=20#headerHiscores" class="    Farming    ">
+Farming
+</a>
+<a href="overall?table=21#headerHiscores" class="    Runecraft    ">
+Runecraft
+</a>
+<a href="overall?table=22#headerHiscores" class="    Hunter    ">
+Hunter
+</a>
+<a href="overall?table=23#headerHiscores" class="    Construction    ">
+Construction
+</a>
+<span style="color: #d9c27e;display: block;text-align: center;">----</span>
+<a href="overall?category_type=1&table=1#headerHiscores" class="activity-link bountyhunterhunter">Bounty Hunter - Hunter</a>
+<a href="overall?category_type=1&table=2#headerHiscores" class="activity-link bountyhunterrogue">Bounty Hunter - Rogue</a>
+<a href="overall?category_type=1&table=3#headerHiscores" class="activity-link cluescrollsall">Clue Scrolls (all)</a>
+<a href="overall?category_type=1&table=4#headerHiscores" class="activity-link cluescrollsbeginner">Clue Scrolls (beginner)</a>
+<a href="overall?category_type=1&table=5#headerHiscores" class="activity-link cluescrollseasy">Clue Scrolls (easy)</a>
+<a href="overall?category_type=1&table=6#headerHiscores" class="activity-link cluescrollsmedium">Clue Scrolls (medium)</a>
+<a href="overall?category_type=1&table=7#headerHiscores" class="activity-link cluescrollshard">Clue Scrolls (hard)</a>
+<a href="overall?category_type=1&table=8#headerHiscores" class="activity-link cluescrollselite">Clue Scrolls (elite)</a>
+<a href="overall?category_type=1&table=9#headerHiscores" class="activity-link cluescrollsmaster">Clue Scrolls (master)</a>
+<a href="overall?category_type=1&table=10#headerHiscores" class="activity-link lmsrank">LMS - Rank</a>
+<a href="overall?category_type=1&table=11#headerHiscores" class="activity-link abyssalsire">Abyssal Sire</a>
+<a href="overall?category_type=1&table=12#headerHiscores" class="activity-link alchemicalhydra">Alchemical Hydra</a>
+<a href="overall?category_type=1&table=13#headerHiscores" class="activity-link barrowschests">Barrows Chests</a>
+<a href="overall?category_type=1&table=14#headerHiscores" class="activity-link bryophyta">Bryophyta</a>
+<a href="overall?category_type=1&table=15#headerHiscores" class="activity-link callisto">Callisto</a>
+<a href="overall?category_type=1&table=16#headerHiscores" class="activity-link cerberus">Cerberus</a>
+<a href="overall?category_type=1&table=17#headerHiscores" class="activity-link chambersofxeric">Chambers of Xeric</a>
+<a href="overall?category_type=1&table=18#headerHiscores" class="activity-link chambersofxericchallengemode">Chambers of Xeric: Challenge Mode</a>
+<a href="overall?category_type=1&table=19#headerHiscores" class="activity-link chaoselemental">Chaos Elemental</a>
+<a href="overall?category_type=1&table=20#headerHiscores" class="activity-link chaosfanatic">Chaos Fanatic</a>
+<a href="overall?category_type=1&table=21#headerHiscores" class="activity-link commanderzilyana">Commander Zilyana</a>
+<a href="overall?category_type=1&table=22#headerHiscores" class="activity-link corporealbeast">Corporeal Beast</a>
+<a href="overall?category_type=1&table=23#headerHiscores" class="activity-link crazyarchaeologist">Crazy Archaeologist</a>
+<a href="overall?category_type=1&table=24#headerHiscores" class="activity-link dagannothprime">Dagannoth Prime</a>
+<a href="overall?category_type=1&table=25#headerHiscores" class="activity-link dagannothrex">Dagannoth Rex</a>
+<a href="overall?category_type=1&table=26#headerHiscores" class="activity-link dagannothsupreme">Dagannoth Supreme</a>
+<a href="overall?category_type=1&table=27#headerHiscores" class="activity-link derangedarchaeologist">Deranged Archaeologist</a>
+<a href="overall?category_type=1&table=28#headerHiscores" class="activity-link generalgraardor">General Graardor</a>
+<a href="overall?category_type=1&table=29#headerHiscores" class="activity-link giantmole">Giant Mole</a>
+<a href="overall?category_type=1&table=30#headerHiscores" class="activity-link grotesqueguardians">Grotesque Guardians</a>
+<a href="overall?category_type=1&table=31#headerHiscores" class="activity-link hespori">Hespori</a>
+<a href="overall?category_type=1&table=32#headerHiscores" class="activity-link kalphitequeen">Kalphite Queen</a>
+<a href="overall?category_type=1&table=33#headerHiscores" class="activity-link kingblackdragon">King Black Dragon</a>
+<a href="overall?category_type=1&table=34#headerHiscores" class="activity-link kraken">Kraken</a>
+<a href="overall?category_type=1&table=35#headerHiscores" class="activity-link kreearra">Kree'Arra</a>
+<a href="overall?category_type=1&table=36#headerHiscores" class="activity-link kriltsutsaroth">K'ril Tsutsaroth</a>
+<a href="overall?category_type=1&table=37#headerHiscores" class="activity-link mimic">Mimic</a>
+<a href="overall?category_type=1&table=38#headerHiscores" class="activity-link nightmare">Nightmare</a>
+<a href="overall?category_type=1&table=39#headerHiscores" class="activity-link obor">Obor</a>
+<a href="overall?category_type=1&table=40#headerHiscores" class="activity-link sarachnis">Sarachnis</a>
+<a href="overall?category_type=1&table=41#headerHiscores" class="activity-link scorpia">Scorpia</a>
+<a href="overall?category_type=1&table=42#headerHiscores" class="activity-link skotizo">Skotizo</a>
+<a href="overall?category_type=1&table=43#headerHiscores" class="activity-link thegauntlet">The Gauntlet</a>
+<a href="overall?category_type=1&table=44#headerHiscores" class="activity-link thecorruptedgauntlet">The Corrupted Gauntlet</a>
+<a href="overall?category_type=1&table=45#headerHiscores" class="activity-link theatreofblood">Theatre of Blood</a>
+<a href="overall?category_type=1&table=46#headerHiscores" class="activity-link thermonuclearsmokedevil">Thermonuclear Smoke Devil</a>
+<a href="overall?category_type=1&table=47#headerHiscores" class="activity-link tzkalzuk">TzKal-Zuk</a>
+<a href="overall?category_type=1&table=48#headerHiscores" class="activity-link tztokjad">TzTok-Jad</a>
+<a href="overall?category_type=1&table=49#headerHiscores" class="activity-link venenatis">Venenatis</a>
+<a href="overall?category_type=1&table=50#headerHiscores" class="activity-link vetion">Vet'ion</a>
+<a href="overall?category_type=1&table=51#headerHiscores" class="activity-link vorkath">Vorkath</a>
+<a href="overall?category_type=1&table=52#headerHiscores" class="activity-link wintertodt">Wintertodt</a>
+<a href="overall?category_type=1&table=53#headerHiscores" class="activity-link zalcano">Zalcano</a>
+<a href="overall?category_type=1&table=54#headerHiscores" class="activity-link zulrah">Zulrah</a>
+</div>
+<a class="personal-hiscores__scroll-arrow personal-hiscores__scroll-arrow--down" href="#" data-js-scroll="down">Down</a>
+<div id="footerCategory"></div>
+</div>
+</nav>
+<div class="personal-hiscores__table">
+<div id="col2">
+<div id="headerHiscores"></div>
+<div class="hiscoresHiddenBG">
+<div id="contentHiscores">
+<table>
+<caption>
+<img class="miniimg"  src="https://www.runescape.com/img/rsp777/blank.gif" />
+&nbsp;
+Overall
+Hiscores
+</caption>
+<thead>
+<tr>
+<th class="right">Rank</th>
+<th class="left">Name</th>
+<th>Level</th><th class="right">XP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="60"></td>
+<td width="120"></td>
+<td width="70"></td><td width="100"></td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+1
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Lynx Titan">Lynx Titan</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+2
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Hey Jase">Hey Jase</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+3
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=ShawnBay">ShawnBay</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+4
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=SENZE">SENZE</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+5
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Tomdabom">Tomdabom</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+6
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Karma">Karma</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+7
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Harmony">Harmony</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,600,000,000
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+8
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=DedWilson">DedWilson</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,570,236,470
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+9
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Eeli">Eeli</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,451,831,668
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+10
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Oskar">Oskar</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,416,250,055
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+11
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Vinny">Vinny</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,255,196,219
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+12
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=borsi">borsi</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,245,460,671
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+13
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Brundeen">Brundeen</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,144,669,781
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+14
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=GodTormentor">GodTormentor</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,096,085,230
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+15
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Oslo">Oslo</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,082,860,468
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+16
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Randalicious">Randalicious</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+4,065,087,991
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+17
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Capt King">Capt King</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,989,914,104
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+18
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Joonas">Joonas</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,986,157,023
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+19
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Razor Beast">Razor Beast</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,937,951,195
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+20
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=SO0OO0O0LACE">SO0OO0O0LACE</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,904,613,158
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+21
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Henee">Henee</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,791,844,037
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+22
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=MarkoOSRS">MarkoOSRS</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,782,070,564
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+23
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Killzone">Killzone</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,716,044,080
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+24
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=abra238">abra238</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,631,918,460
+</td>
+</tr>
+<tr class="personal-hiscores__row">
+<td class="right">
+25
+</td>
+<td class="left">
+<a href="hiscorepersonal?user1=Hampus">Hampus</a>
+</td>
+<td>
+2,277
+</td>
+<td class="right">
+3,626,288,231
+</td>
+</tr>
+</tbody>
+</table>
+<nav class="personal-hiscores__pagination">
+<a class="personal-hiscores__pagination-arrow personal-hiscores__pagination-arrow--down" href="overall?table=0&page=2" title="Scroll down table">
+<img src="https://www.runescape.com/img/rsp777/hiscores/arrow_down.gif" alt="Scroll Down" />
+</a>
+</nav>
+</div>
+</div>
+<div id="footerHiscores"></div>
+</div>
+</div>
+<div class="personal-hiscores__side-input">
+
+<td valign="top">
+<form action="hiscorepersonal" method="post">
+<div class="smallBox">
+<p>
+<b>Search by name</b>
+<input class="text" maxlength="12" type="text" name="user1" value="">
+<input maxlength="12" type="submit" name="submit" value="Search">
+</p>
+</div>
+</form>
+<form action="overall?category_type=0" method="post">
+<div class="smallBox">
+<p>
+<b>Search by rank</b>
+<input class="text" maxlength="12" type="text" name="rank" value="">
+<input type="hidden" name="table" value="0">
+<input type="submit" name="submit" value="Search">
+</p>
+</div>
+</form>
+<form action="https://secure.runescape.com/m=hiscore_oldschool/compare" method="post" class="compareForm">
+<div class="largeBox">
+<p>
+<b>Compare Users</b>
+<input class="text" maxlength="12" type="text" name="user1" value="" pattern="^[a-zA-Z0-9]+([ _-&amp;nbsp;]{0,10}[0-9a-zA-Z]+)*$" title="player name" required>
+<input class="text" maxlength="12" type="text" name="user2" value="" pattern="^[a-zA-Z0-9]+([ _-&amp;nbsp;]{0,10}[0-9a-zA-Z]+)*$" title="player name" required>
+<input type="submit" name="submit" value="Compare">
+</p>
+</div>
+</form>
+<div class="largeBox">
+<div class="loginPrompt">
+<b>Friends Hiscores</b>
+To view personal<br>
+hiscores and compare<br>
+yourself to your friends<br>
+</div>
+<a href="https://secure.runescape.com/m=weblogin/oldschool_login?mod=hiscore_oldschool&amp;ssl=0&amp;dest=hiscorefriends_all" class="linkToFriends">Click here</a>
+</div>
+</td>
+</div>
+</div>
+</div>
+<div class="tandc">
+<a href="http://www.jagex.com" target="_top"><img class="footer__jagex-img" src="https://www.runescape.com/img/rsp777/jagex-logo-landscape.svg" alt="Jagex Software"></a>
+<p class="tandc__copy">This website and its contents are copyright &copy; 1999 - 2020 Jagex Ltd, 220 Science Park, Cambridge, CB4 0WA, United Kingdom.<br />Use of this website is subject to our <a href="https://www.jagex.com/g=runescape/terms/terms.ws" target="_blank">Terms &amp; Conditions</a> and <a href="http://www.jagex.com/g=runescape/privacy/privacy.ws" target="_blank">Privacy Policy</a>. <br><a href="http://www.jagex.com/g=runescape/terms/cookies.ws">Change Cookie Settings</a></p>
+<a class="osrsRSS" target="_BLANK" href="https://secure.runescape.com/m=news/latest_news.rss?oldschool=true"><img src="https://www.runescape.com/img/rsp777/rss.png" title="OSRS RSS Feed" alt="OSRS RSS Feed"></a>
+</div> <script src="https://www.runescape.com/js/c/rs3/modernizr_3_0_0_min-100.js"></script>
+<script src="https://www.runescape.com/js/rsp777_basic-105.js"></script>
+<script src="https://www.runescape.com/js/rsp777_twitter-100.js"></script>
+
+<script type="text/javascript">
+ if ($("#fb-root").length == 0){
+  $("body").prepend('<div id="fb-root" class="174823375888281"></div>');
+  window.fbAsyncInit = function() {
+   FB.init({
+    appId: '174823375888281',
+    status: false,
+    cookie: true,
+    xfbml: true,
+    oauth: true,
+    version: 'v2.8'
+   });
+};
+(function() {
+var e = document.createElement('script');
+e.async = true;
+e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
+document.getElementById('fb-root').appendChild(e);
+}());
+}
+</script>
+<a style="display:none" id="SNbuttonLink" class="thickbox"></a>
+<script type="text/javascript">
+ function fbLoginRedirect(buttonName, loginUrl, destUrl, destStr, _target){
+  $.getJSON('https://secure.runescape.com/m=sn-integration/checkLogin.ws?json=?', {"tps":0, "token":FB.getAuthResponse().accessToken, "expiry":FB.getAuthResponse().expiresIn, "signed":FB.getAuthResponse().signedRequest}, function(data) {
+   if(typeof(_target) != 'undefined' && _target != '') $("#SNbuttonLink").attr('target',_target);
+   if (data['sso']<0) {
+    
+    
+    JAGEX.socialnetworks.SNNotification("There was a problem verifying your login. Please try again.");
+   } else if (data['sso'].length > 1){
+    
+    if(data['sna']>-1) {
+     
+     
+      $("#SNbuttonLink").attr('href',loginUrl+'key='+data['sso']+'&tps=0&'+destStr+'&KeepThis=true&TB_iframe=true&height=500&width=560');
+     
+     $("#SNbuttonLink").click();
+     $("#TB_iframeContent").attr("allowTransparency", "true");
+     
+      $("#TB_iframeContent").css("padding-left", "50px");
+     
+    } else {
+     
+     var loc = destUrl+'?key='+data['sso']+'?'+destStr;
+     if(typeof(_target) != 'undefined' && _target != ''){
+      window.parent.location = loc;
+     }
+     else {
+      window.location = loc;
+     }
+    }
+   } else {
+    
+    
+     $("#SNbuttonLink").attr('href',loginUrl+destStr+'&KeepThis=true&TB_iframe=true&height=400&width=442');
+    
+    $("#SNbuttonLink").click();
+    $("#TB_iframeContent").attr("allowTransparency", "true");
+   }
+  });
+  return false;
+ }
+</script>
+<script type="text/javascript" src="https://www.runescape.com/js/rs3/plugins-100.js"></script>
+<script>
+ var RESPONSIVE = RESPONSIVE || {};
+ RESPONSIVE.constant = RESPONSIVE.constant || {};
+ 
+ 
+  RESPONSIVE.constant.user = {
+   language: 0,
+   isLoggedIn: 0
+  };
+ 
+</script>
+<script type="text/javascript" src="https://www.runescape.com/js/osrs/gtm-100.js"></script>
+</div> </body>
+</html>
